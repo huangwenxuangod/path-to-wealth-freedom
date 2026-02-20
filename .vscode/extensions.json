@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    "mushan.vscode-paste-image",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "davidanson.vscode-markdownlint",
+    "codesmith.markdown-inline-editor-vscode",
+    "hancel.markdown-image"
+  ]
+}
