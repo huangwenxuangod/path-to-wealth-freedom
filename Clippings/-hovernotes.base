@@ -4,7 +4,6 @@ filters:
     - file.folder == this.file.folder
     - not:
         - file.name.contains(".crswap")
-
 formulas:
   word_count: file.size / 5
   days_since_created: (now() - file.ctime) / (1000 * 60 * 60 * 24)
@@ -14,7 +13,6 @@ formulas:
   first_image: if(file.embeds[0], file.embeds[0], "https://hover-notes-images-prod.s3.ap-northeast-2.amazonaws.com/public/hover-notes-icon.svg")
   status_badge: if(formula.days_since_modified < 3, "NEW", if(formula.word_count > 200, "LONG", ""))
   reading_time: Math.ceil(formula.word_count / 200) + " min read"
-
 properties:
   file.name:
     displayName: Note Title
@@ -40,7 +38,6 @@ properties:
     displayName: Status
   formula.reading_time:
     displayName: Reading Time
-
 views:
   - type: cards
     name: Video Notes
