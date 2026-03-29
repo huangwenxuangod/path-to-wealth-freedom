@@ -1,110 +1,97 @@
-# CLAUDE.md
+ # AI 知识库项目
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+ ## 项目概述
+ 在飞书中创建 AI 知识库，用于存储和管理 AI 相关知识。
 
-## 项目概览
+ ## 已完成工作
 
-这是一个 **Obsidian 数字知识库**，记录一位大学生如何从 0 开始打造个人 IP、通过内容创作变现、以及用 AI 工具提升效率的完整过程。
+ ### 1. 知识库空间
+ - **名称**: AI 知识库
+ - **空间 ID**: `7622564892733656025`
+ - **描述**: 用于存储和管理 AI 相关知识的知识库
+ - **类型**: team (团队空间)
+ - **可见性**: private (私有)
 
-**核心定位**：【大学生 AI 实战家】—— 靠 AI + 技术 + 自媒体，毕业前赚 100 万的真实记录。
+ ### 2. 知识库首页文档
+ - **标题**: AI 知识库首页
+ - **节点 Token**: `X0UFwrFFkiq3AhkxUnfcvJxNnPg`
+ - **文档 Token**: `AlLSdyZDJogBGhx3GrhcnhT6nqe`
+ - **类型**: docx (新版云文档)
 
----
+ ### 3. 知识库目录多维表格
+ - **标题**: AI 知识库目录
+ - **节点 Token**: `OeM9weydwiMb7pkp4lbcOetQnmd`
+ - **Base Token**: `AAjGbmynCaRtz6sGB0qcBYAtnOg`
+ - **表名**: 知识库目录
+ - **表 ID**: `tblVM1gQIBSlQNIA`
 
-## 目录结构
+ #### 表格字段配置
+ | 字段名 | 类型 | 说明 |
+ |--------|------|------|
+ | 内容名称 | text | 主字段 |
+ | 文档链接 | text (url) | 文档链接 |
+ | 备注 | text | 备注信息 |
+ | 更新时间 | datetime | 更新时间 |
+ | ~~内容分类~~ | ~~select~~ | (待创建) |
+ | ~~状态~~ | ~~select~~ | (待创建) |
 
-```
-path-to-wealth-freedom/
-├── 内容/
-│   ├── 思考/           # 商业策略、创业思考、内容创作方法论
-│   ├── 灵感/           # 产品 Idea、内容创意、变现方向
-│   ├── 竞品文案/       # 同行研究、爆款文案拆解
-│   ├── 经验/           # 实践经验、踩坑记录、工具使用心得
-│   └── 脚本/           # 视频脚本、内容模板
-├── 素材/               # 参考资料、学习素材
-├── cover-image/        # 封面图生成模板与指南
-├── videos/             # 视频素材与项目
-├── .baoyu-skills/      # 自定义 AI 技能
-└── .obsidian/          # Obsidian 配置
-```
+ ## 常用命令参考
 
----
+ ### 知识库操作
+ ```bash
+ # 获取知识空间列表
+ lark-cli api GET wiki/v2/spaces
 
-## 核心内容文件
+ # 创建知识库节点
+ lark-cli api POST wiki/v2/spaces/<space_id>/nodes \
+   --data '{"obj_type":"docx","node_type":"origin","title":"标题"}'
 
-| 文件 | 内容概要 |
-|------|----------|
-| `坚持下来就能拿到结果.md` | 100 天 IP 坚持方案、执行流程、狠规则 |
-| `极度创业的干货中的干货.md` | 创业案例分析（00后厂长唐龙） |
-| `素材/做ip的五道门槛.md` | IP 打造的五道门槛：表达、持续、人格化、暴露感、内耗感 |
-| `内容/思考/能让人主动掏钱给你的，只有资源差和信息差。.md` | 赚钱本质思考 |
-| `内容/思考/内容创作结构的sop.md` | 内容创作 SOP：观点前置 → 解释观点 → 价值输出 |
+ # 获取知识库节点列表
+ lark-cli api GET wiki/v2/spaces/<space_id>/nodes
+ ```
 
----
+ ### 文档操作
+ ```bash
+ # 读取文档内容
+ lark-cli docs +fetch --doc <obj_token> --format pretty
 
-## 核心理念
+ # 更新文档内容 (追加)
+ lark-cli docs +update --doc <obj_token> --mode append --markdown "内容"
 
-### 做 IP 的五道门槛
-1. **表达** —— 把认知翻译成内容的能力
-2. **持续** —— 拼的不是爆发力，是续航力
-3. **人格化** —— 让人记住你这个人，而不只是内容
-4. **暴露感** —— 敢拍、敢发、敢暴露真实现状
-5. **内耗感** —— 允许自己不完美，在质疑声里继续往前走
+ # 更新文档内容 (覆盖)
+ lark-cli docs +update --doc <obj_token> --mode overwrite --markdown "内容"
+ ```
 
-### 100 天执行计划
-- 目标从"做 IP"改成"**执行 100 天**"
-- 每天 1 条，发完就算完成
-- 用流程替代意志力
+ ### 多维表格操作
+ ```bash
+ # 获取表列表
+ lark-cli base +table-list --base-token <base_token>
 
-### 内容创作 SOP
-1. **观点前置** —— 主观表达，引起争议
-2. **解释观点** —— 讲故事，自我暴露拉近距离
-3. **价值输出** —— 学到了什么？怎么泛化到普通人？
+ # 获取字段列表
+ lark-cli base +field-list --base-token <base_token> --table-id <table_id>
 
----
+ # 创建字段
+ lark-cli base +field-create --base-token <base_token> --table-id <table_id> --json
+ '{"type":"text","name":"字段名"}'
 
-## 可用 Skills
+ # 获取记录列表
+ lark-cli base +record-list --base-token <base_token> --table-id <table_id>
 
-项目使用 `.baoyu-skills/` 下的自定义技能：
-- `baoyu-cover-image` —— AI 封面图生成
-- `baoyu-image-gen` —— AI 图像生成
-- `baoyu-url-to-markdown` —— 网页内容转 Markdown
+ # 创建/更新记录
+ lark-cli base +record-upsert --base-token <base_token> --table-id <table_id> --json
+ '{"字段名":"值"}'
+ ```
 
----
+ ## 后续待办
+ - [ ] 完成多维表格的"内容分类"和"状态"字段创建
+ - [ ] 添加示例数据到多维表格
+ - [ ] 创建更多知识库文档节点
+ - [ ] 配置知识库权限
 
-## Git 工作流
-
-这是一个 Obsidian vault，使用 git 定期备份。提交信息格式通常为：`vault backup: YYYY-MM-DD HH:MM:SS`
-
----
-
-## 注意事项
-
-- 内容主要为中文
-- `.vscode/settings.json` 包含 GitHub token（敏感信息，勿提交）
-- 这是个人知识库，不是传统软件项目
-- 重点是内容创作、IP 打造、AI 变现
-
----
-
-## 工作流程
-
-### 分析项目时的重要原则
-
-在分析新项目或更新文档时：
-1. **先实际探索项目内容** —— 不要仅凭旧 README 或假设来判断项目状态
-2. **读取实际文件** —— 检查目录中的真实内容，理解项目当前的实际定位
-3. **验证假设** —— 如果发现旧文档与实际内容不符，以实际内容为准
-
-### 文档更新流程
-
-1. 探索项目目录结构，理解实际内容
-2. 读取关键文件（Markdown 文件、配置文件等）
-3. 基于实际内容更新文档，而非基于历史假设
-4. 确保文档准确反映项目当前状态
-
----
-
-## 反馈记录
-
-### 2026-03-26
-- 初次更新文档时，直接使用了旧 README 中的"产品矩阵"信息，但实际项目已完全转向内容创作/IP 打造，没有产品开发
+ ## 相关 Token 速查表
+ | 项目 | Token |
+ |------|-------|
+ | 知识库 Space ID | `7622564892733656025` |
+ | 首页文档 obj_token | `AlLSdyZDJogBGhx3GrhcnhT6nqe` |
+ | 目录多维表格 base_token | `AAjGbmynCaRtz6sGB0qcBYAtnOg` |
+ | 目录表 table_id | `tblVM1gQIBSlQNIA` |
