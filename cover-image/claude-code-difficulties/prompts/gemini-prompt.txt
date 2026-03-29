@@ -1,0 +1,21 @@
+Create a minimalist hand-drawn illustration for an article about the difficulties of using Claude Code.
+
+Style:
+- Minimalist composition with 40-60% whitespace
+- Hand-drawn style with soft, organic lines
+- Vivid color palette with bold, contrasting accent colors
+- Visual metaphor for "difficulties" or "obstacles" - a path with 3 obstacles/blocks representing 3 stages
+- Keep it abstract, NO realistic humans
+- Use simplified silhouettes or icons
+
+Text Elements (in Chinese):
+- Main Title: "用上 Claude Code 到底有多难" (display/decorative font, prominently placed)
+- Subtitle: "九九八十一难的通关指南" (smaller, clean readable font)
+
+Composition:
+- Centered or slightly left-offset visual anchor
+- Balanced, not too busy
+- Hand-drawn feel with slight irregularities
+- Vivid colors but tasteful, not overwhelming
+
+Aspect Ratio: 16:9 widescreen
