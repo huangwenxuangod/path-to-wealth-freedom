@@ -105,6 +105,21 @@ path-to-wealth-freedom/
 - `baoyu-image-gen` —— AI 图像生成
 - `baoyu-url-to-markdown` —— 网页内容转 Markdown
 
+可用的 claude-mem 系列 skills：
+- `mem-search` —— 跨会话记忆搜索，查找之前解决过的问题
+- `timeline-report` —— 项目发展历程时间线分析报告
+- `make-plan` —— 创建详细的分阶段实施计划
+- `do` —— 使用子代理执行计划
+- `knowledge-agent` —— 构建和查询 AI 知识库
+
+可用的搜索系列 skills：
+- `tavily-search` —— LLM 优化的网页搜索
+- `tavily-research` —— 全面的 AI 驱动研究（带引用）
+- `tavily-extract` —— 从特定 URL 提取纯净 Markdown 内容
+- `tavily-crawl` —— 爬取网站并提取多页内容
+- `tavily-map` —— 发现并列出网站上的所有 URL
+- `web-access` —— 所有联网操作统一入口（搜索、抓取、登录后操作等）
+
 可用的 lark 系列 skills：
 - `lark-wiki` —— 飞书知识库管理
 - `lark-doc` —— 飞书云文档操作
@@ -131,6 +146,11 @@ path-to-wealth-freedom/
 ---
 
 ## 更新日志
+
+### 2026-04-20
+- **新增 claude-mem 系列 skills**：mem-search、timeline-report、make-plan、do、knowledge-agent
+- **新增 Tavily 搜索系列 skills**：tavily-search、tavily-research、tavily-extract、tavily-crawl、tavily-map、web-access
+- **claude-mem 插件**：已安装，支持跨会话记忆和项目时间线分析
 
 ### 2026-04-16
 - **新增最高原则**：AI 原生思维（一切以此为准）
