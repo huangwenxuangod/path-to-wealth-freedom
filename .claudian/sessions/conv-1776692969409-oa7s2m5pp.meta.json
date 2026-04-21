@@ -1,0 +1,23 @@
+{
+  "id": "conv-1776692969409-oa7s2m5pp",
+  "providerId": "claude",
+  "title": "hi",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1776692969412,
+  "updatedAt": 1776734732606,
+  "lastResponseAt": 1776734732606,
+  "sessionId": "dc2cb621-b2df-405e-a82a-c37524524232",
+  "providerState": {
+    "providerSessionId": "dc2cb621-b2df-405e-a82a-c37524524232"
+  },
+  "usage": {
+    "model": "doubao-seed-2-0-code-preview-260215",
+    "inputTokens": 5682,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 24632,
+    "contextWindow": 200000,
+    "contextTokens": 30314,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}
