@@ -4,20 +4,20 @@
   "title": "hi",
   "titleGenerationStatus": "failed",
   "createdAt": 1776692969412,
-  "updatedAt": 1776759183888,
-  "lastResponseAt": 1776759183888,
+  "updatedAt": 1776824048057,
+  "lastResponseAt": 1776824048057,
   "sessionId": "dc2cb621-b2df-405e-a82a-c37524524232",
   "providerState": {
     "providerSessionId": "dc2cb621-b2df-405e-a82a-c37524524232"
   },
   "usage": {
     "model": "doubao-seed-2-0-code-preview-260215",
-    "inputTokens": 204292,
+    "inputTokens": 44130,
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 0,
     "contextWindow": 200000,
-    "contextTokens": 204292,
-    "percentage": 100,
+    "contextTokens": 44130,
+    "percentage": 22,
     "contextWindowIsAuthoritative": true
   }
 }
