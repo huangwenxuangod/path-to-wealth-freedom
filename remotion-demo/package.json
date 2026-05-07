@@ -1,0 +1,22 @@
+{
+  "name": "wealth-freedom-remotion-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node node_modules/@remotion/cli/remotion-cli.js studio src/index.ts",
+    "render": "node node_modules/@remotion/cli/remotion-cli.js render src/index.ts WealthFreedomShort out/wealth-freedom-short.mp4",
+    "still": "node node_modules/@remotion/cli/remotion-cli.js still src/index.ts WealthFreedomShort out/preview.png --frame=72",
+    "check": "node node_modules/typescript/bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.344",
+    "remotion": "4.0.344",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}
