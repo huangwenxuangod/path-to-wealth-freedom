@@ -2,12 +2,19 @@
 # =============================================================================
 # 文稿→选题 飞书多维表格同步脚本
 # Usage: ./scripts/sync-to-feishu-base.sh <transcript-file> [base-token] [table-name]
+# 特性：自动去重（按标题）、支持金句亮点字段
 # =============================================================================
 
 set -uo pipefail
 
 if [[ -n "${HERMES_HOME:-}" ]]; then
   unset HERMES_HOME
+fi
+
+# 代理问题处理
+if [[ -n "${HTTPS_PROXY:-}" ]] || [[ -n "${HTTP_PROXY:-}" ]]; then
+  unset HTTPS_PROXY
+  unset HTTP_PROXY
 fi
 
 # 默认配置
@@ -17,7 +24,7 @@ DEFAULT_TABLE="选题库"
 # 参数检查
 if [[ $# -lt 1 ]]; then
   echo "Usage: $0 <transcript-file> [base-token] [table-name]"
-  echo "   示例: $0 '内容/逐字稿/某大V视频-20260510.md'"
+  echo "   示例: $0 'Clippings/某大V视频-20260510.md'"
   echo ""
   echo "   base-token: 飞书多维表格的 base_token（可选，默认从 FEISHU_BASE_TOPIC_TOKEN 读取）"
   echo "   table-name: 表格名称（可选，默认 '$DEFAULT_TABLE'）"
@@ -42,19 +49,68 @@ if [[ -z "$BASE_TOKEN" ]]; then
   exit 1
 fi
 
-# 提取标题（第一行 # 开头）
-TITLE=$(head -n 20 "$MD_FILE" | grep -m 1 "^# " | sed 's/^# //' || echo "")
-
-# 如果找不到标题，使用文件名
+# 提取标题（YAML frontmatter 中的 title 或第一行 # 开头）
+TITLE=""
+# 先尝试从 YAML frontmatter 提取 title
+if head -n 10 "$MD_FILE" | grep -q "^title:"; then
+  TITLE=$(head -n 10 "$MD_FILE" | grep "^title:" | sed 's/^title:[[:space:]]*//' | sed 's/^"//;s/"$//' | sed "s/^'//;s/'$//" | head -n 1)
+fi
+# 如果找不到，尝试第一行 # 开头
+if [[ -z "$TITLE" ]]; then
+  TITLE=$(head -n 20 "$MD_FILE" | grep -m 1 "^# " | sed 's/^# //' || echo "")
+fi
+# 如果还找不到，使用文件名
 if [[ -z "$TITLE" ]]; then
   TITLE=$(basename "$MD_FILE" .md)
 fi
 
+echo "Syncing transcript to Feishu Base"
+echo "  Title: $TITLE"
+echo "  File: $MD_FILE"
+echo "  Base: $BASE_TOKEN"
+echo "  Table: $TABLE_NAME"
+
+# ============================================
+# 去重检查：查询Base中是否已有相同标题
+# ============================================
+echo "  Checking for duplicates..."
+
+EXISTING=$(lark-cli base +record-list \
+  --base-token "$BASE_TOKEN" \
+  --table-id "$TABLE_NAME" \
+  --field-id "标题" \
+  --format json \
+  --limit 200 2>/dev/null | \
+  jq -r --arg t "$TITLE" '
+    [range(.data.data | length)] as $indices |
+    $indices[] as $i |
+    select(.data.data[$i][0] == $t) |
+    .data.record_id_list[$i]
+  ' 2>/dev/null | head -n 1)
+
+if [[ -n "$EXISTING" ]]; then
+  echo ""
+  echo "⚠️  Duplicate detected! Record already exists."
+  echo "   Title: $TITLE"
+  echo "   Record ID: $EXISTING"
+  echo "   Skipped."
+  exit 0
+fi
+
+echo "  No duplicate found. Proceeding..."
+
 # 提取来源链接（如果有）
 SOURCE_URL=$(grep -oP 'https?://[^\s\)]+' "$MD_FILE" | head -n 1 || echo "")
 
+# 提取金句亮点（如果有）—— 查找 "### 金句" 或 "**金句**" 等标记后的内容
+GOLDEN_QUOTE=""
+if grep -q "^### 金句" "$MD_FILE" 2>/dev/null; then
+  GOLDEN_QUOTE=$(sed -n '/^### 金句/,/^### /p' "$MD_FILE" | tail -n +2 | head -n -1 | sed '/^$/d' | head -n 3 | tr '\n' ' ')
+elif grep -q "^## 金句" "$MD_FILE" 2>/dev/null; then
+  GOLDEN_QUOTE=$(sed -n '/^## 金句/,/^## /p' "$MD_FILE" | tail -n +2 | head -n -1 | sed '/^$/d' | head -n 3 | tr '\n' ' ')
+fi
+
 # 读取逐字稿内容（截取前30000字符，避免超限）
-# 使用临时文件避免jq参数过长问题
 TMP_DIR="scripts/.tmp-base"
 mkdir -p "$TMP_DIR"
 
@@ -64,18 +120,13 @@ head -c 30000 "$MD_FILE" > "$TRANSCRIPT_TMP"
 # 创建时间
 CREATED_AT=$(date "+%Y-%m-%d %H:%M:%S")
 
-echo "Syncing transcript to Feishu Base"
-echo "  Title: $TITLE"
-echo "  File: $MD_FILE"
-echo "  Base: $BASE_TOKEN"
-echo "  Table: $TABLE_NAME"
-
-# 构建JSON（使用jq --slurpfile读取大文本）
+# 构建JSON
 RECORD_JSON=$(jq -n \
   --arg title "$TITLE" \
   --arg transcript "$(cat "$TRANSCRIPT_TMP")" \
   --arg source "$SOURCE_URL" \
   --arg created "$CREATED_AT" \
+  --arg golden "$GOLDEN_QUOTE" \
   '{
     "标题": $title,
     "逐字稿": $transcript,
@@ -85,7 +136,8 @@ RECORD_JSON=$(jq -n \
     "来源类型": "文章",
     "选题领域": "AI工具",
     "预估工作量": "1天",
-    "创建时间": $created
+    "创建时间": $created,
+    "金句亮点": $golden
   }')
 
 # 写入飞书多维表格
@@ -100,10 +152,12 @@ RECORD_ID=$(echo "$RESULT" | jq -r '.record.record_id // empty' 2>/dev/null)
 rm -f "$TRANSCRIPT_TMP"
 
 if [[ -n "$RECORD_ID" ]]; then
-  echo "Synced! Record ID: $RECORD_ID"
-  echo "  Base URL: https://iigf5k70ohp.feishu.cn/base/$BASE_TOKEN"
+  echo ""
+  echo "✅ Synced! Record ID: $RECORD_ID"
+  echo "   Base URL: https://iigf5k70ohp.feishu.cn/base/$BASE_TOKEN"
 else
-  echo "Sync failed:"
+  echo ""
+  echo "❌ Sync failed:"
   echo "$RESULT"
   exit 1
 fi
