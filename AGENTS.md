@@ -105,6 +105,9 @@ path-to-wealth-freedom/
 - `baoyu-image-gen` —— AI 图像生成
 - `baoyu-url-to-markdown` —— 网页内容转 Markdown
 
+项目使用 `wenxuan-skills/` 下的搜索技能：
+- `source-router` —— 多源搜索聚合与问题到信息源路由技能，先判断该去 GitHub / Reddit / Web / 视频 / 封闭社媒 / 本地知识库中的哪里找答案，再通过聚合搜索服务执行检索；第一版已具备统一 JSON 输出、creator/账号内容抓取入口、GitHub 深度搜索与多 provider fallback 骨架
+
 可用的 Codex-mem 系列 skills：
 - `mem-search` —— 跨会话记忆搜索，查找之前解决过的问题
 - `timeline-report` —— 项目发展历程时间线分析报告
@@ -119,6 +122,7 @@ path-to-wealth-freedom/
 - `tavily-crawl` —— 爬取网站并提取多页内容
 - `tavily-map` —— 发现并列出网站上的所有 URL
 - `web-access` —— 所有联网操作统一入口（搜索、抓取、登录后操作等）
+- `source-router` —— 当问题需要先判断该去哪里找答案，而不是直接网页搜索时优先使用；内置多搜索服务聚合（Tavily、Exa、Brave、秘塔、SerpAPI、Serper、Bing、Google CSE、Firecrawl）与自动回退，适合 GitHub 项目检索、Reddit 真实反馈、视频教程查找、封闭社媒保守检索与多源证据整合
 
 可用的 lark 系列 skills：
 - `lark-wiki` —— 飞书知识库管理

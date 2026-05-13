@@ -20,3 +20,10 @@ Thumbs.db
 # 临时文件
 *.log
 *.tmp
+
+# Node / Bun dependencies
+node_modules/
+
+# HyperFrames generated assets
+HyperFrames-AI视频项目/app/assets/
+HyperFrames-AI视频项目/app/output/

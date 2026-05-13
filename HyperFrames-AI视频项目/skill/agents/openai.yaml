@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames AI Video Builder"
+  short_description: "Build refined dynamic AI videos with HyperFrames"
+  default_prompt: "Use $hyperframes-ai-video-builder to build or refine a dynamic AI video in this project and keep it aligned with the project's visual and production standard."

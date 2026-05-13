@@ -1,11 +1,23 @@
 {
-  "name": "app",
+  "name": "wenxuan-hyperframes-dynamic",
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "bun src/build.ts",
+    "tts": "bun src/tts.ts",
+    "captions": "bun src/captions.ts",
+    "snapshot": "npx --yes hyperframes@0.6.2 snapshot --time 10 --output output/preview-10s.png",
     "dev": "npx --yes hyperframes@0.6.2 preview",
     "check": "npx --yes hyperframes@0.6.2 lint && npx --yes hyperframes@0.6.2 validate && npx --yes hyperframes@0.6.2 inspect",
-    "render": "npx --yes hyperframes@0.6.2 render",
+    "render": "npx --yes hyperframes@0.6.2 render --output output/wenxuan-dynamic.mp4",
+    "all": "bun run build && bun run tts && bun run captions && bun run check && bun run render",
     "publish": "npx --yes hyperframes@0.6.2 publish"
+  },
+  "dependencies": {
+    "msedge-tts": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
   }
 }

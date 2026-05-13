@@ -1,4 +1,54 @@
-<!doctype html>
+import { mkdir, writeFile } from "node:fs/promises";
+import { accelerators, composition, floatingTools, narration, orbitTools, pipeline, scriptLines } from "./data";
+
+await mkdir("assets/audio", { recursive: true });
+await mkdir("assets/data", { recursive: true });
+await mkdir("output", { recursive: true });
+await writeFile("assets/audio/narration.txt", narration, "utf8");
+await writeFile("assets/data/timeline.json", JSON.stringify({ composition, scriptLines }, null, 2), "utf8");
+
+const floatingToolHtml = floatingTools
+  .map(
+    (tool, i) =>
+      `<div class="tool-cell tool-${i}"><span class="tool-index">${String(i + 1).padStart(2, "0")}</span><span class="tool-name">${tool}</span></div>`,
+  )
+  .join("\n");
+
+const pipelineHtml = pipeline
+  .map(
+    (item, i) =>
+      `<div class="flow-step step-${i}">
+        <span class="flow-index">${String(i + 1).padStart(2, "0")}</span>
+        <span class="flow-name">${item}</span>
+        <span class="flow-meta">${i === pipeline.length - 1 ? "Loop" : "Stage"}</span>
+      </div>`,
+  )
+  .join("\n");
+
+const systemHtml = orbitTools
+  .map(
+    (item, i) =>
+      `<div class="system-node system-${i}">
+        <span class="system-node-index">${String(i + 1).padStart(2, "0")}</span>
+        <span class="system-node-name">${item}</span>
+      </div>`,
+  )
+  .join("\n");
+
+const accelHtml = accelerators
+  .map(
+    (item, i) =>
+      `<div class="ledger-row ledger-${i}">
+        <span class="ledger-index">${String(i + 1).padStart(2, "0")}</span>
+        <span class="ledger-name">${item}</span>
+        <span class="ledger-bar"><i></i></span>
+      </div>`,
+  )
+  .join("\n");
+
+const captionHtml = scriptLines.map((line, i) => `<div class="caption cap-${i}">${line.text}</div>`).join("\n");
+
+const html = `<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -573,8 +623,8 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="76" data-width="1920" data-height="1080">
-      <audio id="narration-audio" src="assets/audio/narration.wav" data-start="0" data-duration="76" data-track-index="100"></audio>
+    <div id="root" data-composition-id="${composition.id}" data-start="0" data-duration="${composition.duration}" data-width="${composition.width}" data-height="${composition.height}">
+      <audio id="narration-audio" src="assets/audio/narration.wav" data-start="0" data-duration="${composition.duration}" data-track-index="100"></audio>
       <div class="frame-line frame-top"></div>
       <div class="frame-line frame-bottom"></div>
       <div class="frame-side frame-left"></div>
@@ -616,49 +666,11 @@
 
       <div class="headline headline-a">不是收藏工具<br />是把 AI 放进<br />真实流程</div>
       <div class="subline subline-a">当工具开始接入选题、研究、写作和分发，内容就不再是临时发挥，而是可持续的生产系统。</div>
-      <div class="tool-grid"><div class="tool-cell tool-0"><span class="tool-index">01</span><span class="tool-name">Codex</span></div>
-<div class="tool-cell tool-1"><span class="tool-index">02</span><span class="tool-name">Claude Code</span></div>
-<div class="tool-cell tool-2"><span class="tool-index">03</span><span class="tool-name">Obsidian</span></div>
-<div class="tool-cell tool-3"><span class="tool-index">04</span><span class="tool-name">飞书</span></div>
-<div class="tool-cell tool-4"><span class="tool-index">05</span><span class="tool-name">Prompt</span></div>
-<div class="tool-cell tool-5"><span class="tool-index">06</span><span class="tool-name">知识库</span></div>
-<div class="tool-cell tool-6"><span class="tool-index">07</span><span class="tool-name">自媒体</span></div>
-<div class="tool-cell tool-7"><span class="tool-index">08</span><span class="tool-name">研究</span></div>
-<div class="tool-cell tool-8"><span class="tool-index">09</span><span class="tool-name">写作</span></div>
-<div class="tool-cell tool-9"><span class="tool-index">10</span><span class="tool-name">分发</span></div></div>
+      <div class="tool-grid">${floatingToolHtml}</div>
 
       <div class="headline headline-b">认知生产流水线</div>
       <div class="subline subline-b">从灵感到结果，每一步都被拆成可以验证、可以复用、可以继续迭代的环节。</div>
-      <div class="flow-wrap"><div class="flow-step step-0">
-        <span class="flow-index">01</span>
-        <span class="flow-name">选题</span>
-        <span class="flow-meta">Stage</span>
-      </div>
-<div class="flow-step step-1">
-        <span class="flow-index">02</span>
-        <span class="flow-name">研究</span>
-        <span class="flow-meta">Stage</span>
-      </div>
-<div class="flow-step step-2">
-        <span class="flow-index">03</span>
-        <span class="flow-name">写作</span>
-        <span class="flow-meta">Stage</span>
-      </div>
-<div class="flow-step step-3">
-        <span class="flow-index">04</span>
-        <span class="flow-name">知识库</span>
-        <span class="flow-meta">Stage</span>
-      </div>
-<div class="flow-step step-4">
-        <span class="flow-index">05</span>
-        <span class="flow-name">分发</span>
-        <span class="flow-meta">Stage</span>
-      </div>
-<div class="flow-step step-5">
-        <span class="flow-index">06</span>
-        <span class="flow-name">反馈</span>
-        <span class="flow-meta">Loop</span>
-      </div></div>
+      <div class="flow-wrap">${pipelineHtml}</div>
       <div class="flow-progress"></div>
 
       <div class="headline headline-c">工具开始围绕<br />系统运转</div>
@@ -677,42 +689,13 @@
           <span class="system-core-title">AI Native<br />Workflow</span>
           <span class="system-core-copy">A system that turns tools into output.</span>
         </div>
-        <div class="system-node system-0">
-        <span class="system-node-index">01</span>
-        <span class="system-node-name">Obsidian</span>
-      </div>
-<div class="system-node system-1">
-        <span class="system-node-index">02</span>
-        <span class="system-node-name">飞书</span>
-      </div>
-<div class="system-node system-2">
-        <span class="system-node-index">03</span>
-        <span class="system-node-name">Codex</span>
-      </div>
-<div class="system-node system-3">
-        <span class="system-node-index">04</span>
-        <span class="system-node-name">Claude Code</span>
-      </div>
+        ${systemHtml}
         <div class="system-note">ONE ACCENT / ONE GRID / ONE SYSTEM</div>
       </div>
 
       <div class="headline headline-d">普通人的加速器</div>
       <div class="subline subline-d">AI 不是装饰性的技术名词，它应该直接作用在判断、产出和验证上。</div>
-      <div class="ledger-wrap"><div class="ledger-row ledger-0">
-        <span class="ledger-index">01</span>
-        <span class="ledger-name">理解行业</span>
-        <span class="ledger-bar"><i></i></span>
-      </div>
-<div class="ledger-row ledger-1">
-        <span class="ledger-index">02</span>
-        <span class="ledger-name">做出产品</span>
-        <span class="ledger-bar"><i></i></span>
-      </div>
-<div class="ledger-row ledger-2">
-        <span class="ledger-index">03</span>
-        <span class="ledger-name">验证机会</span>
-        <span class="ledger-bar"><i></i></span>
-      </div></div>
+      <div class="ledger-wrap">${accelHtml}</div>
       <div class="analysis-panel">
         <div class="analysis-card"><b>OBSERVE</b><span>先理解行业，再决定切入口。</span></div>
         <div class="analysis-card"><b>ANALYZE</b><span>把经验拆成可以复用的流程。</span></div>
@@ -733,13 +716,7 @@
       <div class="cta-note">我会继续拆解流程、公开验证、把能复用的方法做成真正可执行的系统。</div>
       <div class="cta-tag">FOLLOW<br />THE PROCESS</div>
 
-      <div class="caption cap-0">我是文轩，一个 05 后大学生 AI 实战者。</div>
-<div class="caption cap-1">我做的不是收藏工具，而是把 AI 放进真实流程。</div>
-<div class="caption cap-2">选题、研究、写作、知识库、分发，每一步都可以被系统化。</div>
-<div class="caption cap-3">我用 Obsidian 和飞书搭双知识库，也用 Codex 和 Claude Code 做内容流水线。</div>
-<div class="caption cap-4">AI 不是炫技，而是让普通人更快理解行业、做出产品、验证机会。</div>
-<div class="caption cap-5">我想验证，普通大学生能不能靠 AI、技术和持续输出，在毕业前赚到 100 万。</div>
-<div class="caption cap-6">关注我，看我怎么用 AI 把路跑通。</div>
+      ${captionHtml}
     </div>
 
     <script>
@@ -803,7 +780,7 @@
       tl.fromTo(".cta-tag", { opacity: 0, scale: .92 }, { opacity: 1, scale: 1, duration: .72, ease: "power3.out" }, 64.8);
       tl.to(".accent-rail", { width: 1664, duration: 2.8, ease: "power2.inOut" }, 64.1);
 
-      const captions = [{"start":0,"end":7,"text":"我是文轩，一个 05 后大学生 AI 实战者。"},{"start":7,"end":16,"text":"我做的不是收藏工具，而是把 AI 放进真实流程。"},{"start":16,"end":28,"text":"选题、研究、写作、知识库、分发，每一步都可以被系统化。"},{"start":28,"end":42,"text":"我用 Obsidian 和飞书搭双知识库，也用 Codex 和 Claude Code 做内容流水线。"},{"start":42,"end":54,"text":"AI 不是炫技，而是让普通人更快理解行业、做出产品、验证机会。"},{"start":54,"end":64,"text":"我想验证，普通大学生能不能靠 AI、技术和持续输出，在毕业前赚到 100 万。"},{"start":64,"end":76,"text":"关注我，看我怎么用 AI 把路跑通。"}];
+      const captions = ${JSON.stringify(scriptLines)};
       captions.forEach((cap, index) => {
         tl.fromTo(".cap-" + index, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .3 }, cap.start + .1);
         tl.to(".cap-" + index, { opacity: 0, y: -8, duration: .26 }, cap.end - .34);
@@ -812,4 +789,6 @@
       window.__timelines["main"] = tl;
     </script>
   </body>
-</html>
+</html>`;
+
+await writeFile("index.html", html, "utf8");
