@@ -11,8 +11,7 @@ tags:
   - "Codex"
   - "Cockpit-Tools"
 ---
-
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-1.png]]习惯了薅gpt plus的羊毛之后，手里一直有好几个 Codex 账号，很多时候为了白嫖额度，为了区分工作与个人的账号，每天在本地手动替换 `auth.json`、改配置文件、切Codex账号切到让我崩溃。
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T095959928Z.png)习惯了薅gpt plus的羊毛之后，手里一直有好几个 Codex 账号，很多时候为了白嫖额度，为了区分工作与个人的账号，每天在本地手动替换 `auth.json`、改配置文件、切Codex账号切到让我崩溃。
 
 你是否也是手里一堆账号，根本就不知道每个号还剩多少配额，什么时候重置？想同时跑两个项目，却没办法让两个不同的账号在不同的 Codex 实例里并行工作？
 
@@ -23,8 +22,7 @@ tags:
 整个配置过程 10 分钟不到，小白跟着这篇保姆级教程做，就能彻底告别切号焦虑。
 
 ---
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-2.png]]
-## 一、 Cockpit Tools 是什么？它能干什么？
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100048126Z.png)## 一、 Cockpit Tools 是什么？它能干什么？
 
 简单来说，**Cockpit Tools 是一个通用的 AI IDE 账号管理工具**。
 
@@ -32,8 +30,7 @@ tags:
 
 - **核心支持**：Codex, Antigravity, GitHub Copilot, Windsurf, Cursor, Trae, Zed 等等
 
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-12.png]]
-
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100129812Z.png)
 它最核心的四大杀手级功能包括：
 
 1. **一键多账号秒切**：告别繁琐的手工配置替换。在面板里点一下，底层自动更新 `auth.json` 和数据库，瞬间完成切号。
@@ -71,38 +68,39 @@ sudo xattr -rd com.apple.quarantine "/Applications/Cockpit Tools.app"
 打开软件，点击左下角的 **Settings（设置）**。检查 Codex 的可执行文件路径（App Path）是否自动识别成功。
 *如果识别失败，手动点击浏览，选择你电脑上安装的 Codex 的路径。*
 
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-5.png]]
-### 第二步：导入你的 Codex 账号
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100145858Z.png)### 第二步：导入你的 Codex 账号
 进入Codex平台的账号管理页面，点击 **Add Account（添加账号）**：
 
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-4.png]]
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100216755Z.png)
 
 - **OAuth 登录**：支持一键跳转浏览器授权登录。
 - **本地状态导入**：直接从你当前电脑上已经登录的 Codex 中，一键把当前的登录态 `auth.json` “吸”进 Cockpit Tools 里。
 - **手动导入**：直接粘贴你的账号 Token 或 `auth.json`。
 
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-6.png]]
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100229699Z.png)
 
 ### 第三步：配额监控大盘（Dashboard）
 账号导入后，回到 **Dashboard（总览页）**。
 你会看到一张极其舒适的仪表盘：每个 Codex 账号的剩余额度、下一次额度重置的倒计时、当前活跃账号的绿点标识。
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-7.png]]
+
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100239635Z.png)
 
 > **💡 提效小贴士**：在 Settings 中，建议将 **“Codex 自动刷新配额”** 设置为 **5~10 分钟**。这样它会在后台静默刷新，不占用额外性能，又能保证你看到的额度永远是最新的。
 
 ---
 
 ## 四、 进阶神技：如何实现多实例隔离多开？
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-8.png]]
+
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100318868Z.png)
 
 这是 Cockpit Tools 最强大、也是专业开发者最爱的功能——**多开实例**。
 
 假设你手里有一个“免费额度号”和一个“Plus付费号”，你想同时开两个项目，分别用不同的号跑：
 
-1. **创建实例**：在 Cockpit Tools 侧边栏选择 Codex，点击 **Instances加号图标（多开实例）**![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-9.png]]
-2. **分配账号**：为你新建的“实例 2”绑定账号 B，而“默认实例”保持绑定账号 A。![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-10.png]]
+1. **创建实例**：在 Cockpit Tools 侧边栏选择 Codex，点击 **Instances加号图标（多开实例）**!![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100332377Z.png)
+2. **分配账号**：为你新建的“实例 2”绑定账号 B，而“默认实例”保持绑定账号 A。![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100343591Z.png)
 3. **独立启动**：在实例列表里，点击实例 1 和实例 2 的 **Start图标（启动）**。
-![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-11.png]]
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100353184Z.png)
 
 
 此时，你会发现电脑上同时打开了两个独立的 Codex 客户端！
@@ -116,7 +114,7 @@ sudo xattr -rd com.apple.quarantine "/Applications/Cockpit Tools.app"
 
 很多用户一看到自己的Codex账号打不开了就慌了，第一反应是对话数据全部都不见了，但是又没有办法重新拿回来。
 
-Cockpit Tools中的会话管理功能就解决了这个问题：![[手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离-13.png]]
+Cockpit Tools中的会话管理功能就解决了这个问题：![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260527T100408007Z.png)
 
 1. **数据本地存储**：所有的对话数据都存储在了本地，可以直接复制到不同的账号实例实现Codex会话同步
 2. **数据恢复**：被移除或者删除的会话可以通过恢复会话按钮重新找回，不需要再担心自己的会话数据是否会丢失。
@@ -148,6 +146,3 @@ Cockpit Tools中的会话管理功能就解决了这个问题：![[手里攒了�
 
 ---
 
-**参考链接与开源地址：**
-- 项目源码：[https://github.com/jlcodes99/cockpit-tools](https://github.com/jlcodes99/cockpit-tools)
-- 最新版下载：[https://github.com/jlcodes99/cockpit-tools/releases](https://github.com/jlcodes99/cockpit-tools/releases)

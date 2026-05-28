@@ -1,0 +1,118 @@
+{
+  "version": "2.0",
+  "handle": "@hungxun254458",
+  "nickname": "文轩",
+  "bio": "🚀 05后AI coding \n📚 分享AI知识 + 普通人搞钱小项目\n🌱 个人成长思考 | 自媒体创业之路",
+  "directions": [
+    "AI/技术",
+    "搞钱/副业",
+    "成长/职场"
+  ],
+  "created_at": "2026-05-28T16:56:53.780698",
+  "last_analysis_date": "2026-05-28T16:56:53.780711",
+  "total_analyses": 1,
+  "baseline": {
+    "date": "2026-05-28",
+    "followers": 375,
+    "avg_imp": 52.8,
+    "monthly_new_follows": 17,
+    "reply_ratio": 0.754,
+    "top_content_type": "长文/链接",
+    "top_content_avg_imp": 420.0,
+    "viral_formula": "实操细节 + 真实痛点 + 反差观点"
+  },
+  "analyses": [
+    {
+      "id": "2026-05-28",
+      "date": "2026-05-28",
+      "mode": "FIRST_TIME",
+      "data_period": "All-time (1905 tweets)",
+      "followers_at_time": 375,
+      "stats": {
+        "total_posts": 1905,
+        "total_imp": 100590,
+        "avg_imp": 52.8,
+        "max_imp": 1495,
+        "new_follows_period": 17,
+        "reply_ratio": 0.754,
+        "type_breakdown": {
+          "回复互动": {
+            "count": 1437,
+            "avg_imp": 23.1,
+            "avg_follows": 0.0
+          },
+          "AI/技术": {
+            "count": 179,
+            "avg_imp": 139.8,
+            "avg_follows": 0.01
+          },
+          "长文/链接": {
+            "count": 14,
+            "avg_imp": 420.0,
+            "avg_follows": 1.14
+          },
+          "泛流量/生活": {
+            "count": 213,
+            "avg_imp": 128.9,
+            "avg_follows": 0.0
+          },
+          "搞钱/副业": {
+            "count": 28,
+            "avg_imp": 152.1,
+            "avg_follows": 0.0
+          },
+          "成长/职场": {
+            "count": 34,
+            "avg_imp": 139.9,
+            "avg_follows": 0.0
+          }
+        }
+      },
+      "plan": {
+        "start_date": "2026-05-29",
+        "end_date": "2026-06-28",
+        "kpi_targets": {
+          "new_followers_30d": 1000,
+          "avg_daily_imp": 15000,
+          "long_articles_per_day": 1,
+          "short_tweets_per_day": 10,
+          "reply_ratio_target": 0.2
+        },
+        "daily_ratio": {
+          "AI/技术": 0.45,
+          "搞钱/副业": 0.35,
+          "成长/职场": 0.2
+        },
+        "top3_article_topics": [
+          "【05后AI Coding】我是如何用 Claude Code + Cockpit Tools 10分钟搭建起个人的飞书AI知识库的？",
+          "所有人都在用 AI 拼命提速，我却在这个深夜关掉了我的 Cursor Copilot",
+          "【黑客松实战】零基础小白到底怎么参加黑客松？拿下莞客松三等奖的完整复盘"
+        ]
+      },
+      "self_reported_execution": null,
+      "execution_score": null
+    }
+  ],
+  "execution_history": [],
+  "viral_patterns": {
+    "confirmed_formulas": [
+      {
+        "formula": "实操细节 + 真实痛点 + 反差观点",
+        "first_seen": "2026-05-28",
+        "examples_count": 8,
+        "avg_imp": 460,
+        "still_working": true
+      }
+    ],
+    "fatigue_signals": [],
+    "emerging_patterns": []
+  },
+  "growth_milestones": [
+    {
+      "date": "2026-05-28",
+      "followers": 375,
+      "note": "首次分析基准"
+    }
+  ],
+  "notes": []
+}

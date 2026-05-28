@@ -24,6 +24,18 @@ Thumbs.db
 # Node / Bun dependencies
 node_modules/
 
+# Twitter Archive
+data/
+assets/fonts/
+assets/images/
+assets/js/
+Your archive.html
+
+# Local outputs and temporary PDFs
+test.pdf
+*.pdf
+notepix-uploads/
+
 # HyperFrames generated assets
 HyperFrames-AI视频项目/app/assets/
 HyperFrames-AI视频项目/app/output/
