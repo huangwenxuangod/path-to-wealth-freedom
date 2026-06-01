@@ -4,12 +4,13 @@
   "title": "hi",
   "titleGenerationStatus": "failed",
   "createdAt": 1776692969412,
-  "updatedAt": 1776824048057,
-  "lastResponseAt": 1776824048057,
+  "updatedAt": 1780300880516,
+  "lastResponseAt": 1780300880516,
   "sessionId": "dc2cb621-b2df-405e-a82a-c37524524232",
   "providerState": {
     "providerSessionId": "dc2cb621-b2df-405e-a82a-c37524524232"
   },
+  "currentNote": "内容/文章/AI SaaS 搞钱的残酷真相：别去碰完全不懂 AI 的人，去卷那些“懂但跟不上”的中间层.md",
   "usage": {
     "model": "doubao-seed-2-0-code-preview-260215",
     "inputTokens": 44130,
