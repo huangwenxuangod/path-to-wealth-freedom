@@ -1,0 +1,363 @@
+﻿No.,Product,Category,Commission,Cookie,Promo Link,Language,Highlights
+001,YUNWU.AI (云雾API),国内AI中转站,10% (自营) / 5%-15% (按等级),30天,https://yunwu.ai/,Chinese+English,relay代表 Claude/GPT/Gemini 直连 0.5元起充
+002,CloseAI (closeai-asia),国内AI中转站,10%-20% (一级代理),30天,https://www.closeai-asia.com/,Chinese+English,亚洲最大enterpriserelay Claude Code 满血版
+003,DMXAPI (dmxapi.cn),国内AI中转站,10%-25% (阶梯),30天,https://dmxapi.cn/,Chinese,全模型aggregator含 Claude Code
+004,UiUiAPI (sg.uiuiapi.com),国内AI中转站,8%-15% (邀请制),30天,https://sg.uiuiapi.com/,Chinese,稳定高并发东南亚节点
+005,柏拉图AI (bltcy.ai),国内AI中转站,10%-20% (推广合伙人),30天,https://wiki.bltcy.ai/,Chinese,一站式大模型aggregator含 Sora
+006,AnyRouter (anyrouter.top),国内AI中转站,10%-15% (分销),30天,https://anyrouter.top/,Chinese,信用卡subscription一站式
+007,OpenRouter (openrouter.ai),海外AI中转站,$5 推荐/被推荐,—,https://openrouter.ai/,English,海外最火模型aggregator按 token paid
+008,Helicone (helicone.ai),AI可观测性,20% 首年,60天,https://www.helicone.ai/,English,AI 应用监控+代理open source
+009,MKEAI (api.mkeai.com),国内AI中转站,8%-15%,30天,https://api.mkeai.com/,Chinese,国内relay老用户稳定
+010,LingTrue (lingtrue.com),国内AI中转站,10% (邀请返佣),30天,https://www.lingtrue.com/,Chinese,Claude/Code 满血开发者圈口碑好
+011,钱多多API (aigcbest.top),国内AI中转站,10%-20%,30天,https://api2.aigcbest.top/,Chinese,NewAPI 套壳价格低
+012,Bifrost (bifrost.io),AI网关/中转,15%-20% 终身,60天,https://bifrost.io/zh-CN/,Chinese+English,多模型统一网关open source+商业版
+013,API2D (api2d.com),国内AI中转站,5%-10%,30天,https://api2d.com/,Chinese,国内老牌relay OpenAI 兼容协议
+014,OneAPI / NewAPI (开源),开源中转,自营返佣,自定,https://github.com/songquanpeng/one-api,Chinese+English,open source自建项目可改distribution比例
+015,V3 API (api.v3.cm),国内AI中转站,8%-12%,30天,https://api.v3.cm/,Chinese,GPT-4o/Claude/Gemini 价格便宜
+016,API-GPT (api.gpt.ge),国内AI中转站,10%,30天,https://api.gpt.ge/,Chinese,国内relay适合个人开发者
+017,FastGPT (fastgpt.in),国内AI应用/中转,10%-15%,30天,https://fastgpt.in/,Chinese,知识库+模型一体企业用得多
+018,Replicate (replicate.com),AI模型托管,20% 首年,60天,https://replicate.com/,English,open source模型 API 市场
+019,Together AI (together.ai),AI推理云,15% 终身,60天,https://www.together.ai/,English,open source大模型推理
+020,Fireworks AI (fireworks.ai),AI推理,10%-15%,60天,https://fireworks.ai/,English,高性能推理
+021,阿里云百炼 / 通义,国内大模型,返佣最高 25% (云大使),90天,https://dashi.aliyun.com/activity/ydsai,Chinese,阿里云官方推荐按订单返现瓜分万元奖池
+022,腾讯云 / 混元,国内大模型,5%-20% (云推客),90天,https://cloud.tencent.com/act/cps,Chinese,腾讯云 CPS 计划混元+第三方模型
+023,火山引擎 / 豆包,国内大模型,10%-20% (伙伴合作),90天,https://partner.volcengine.com/,Chinese,字节系 CPS 含豆包大模型 API
+024,百度智能云 / 文心,国内大模型,5%-15% (伙伴中心),90天,https://cloud.baidu.com/cps,Chinese,百度云 CPS 文心+千帆
+025,Kimi (Moonshot),国内AI产品,暂无公开,—,https://kimi.moonshot.cn/,Chinese,月之暗面 Moonshot 长文本强
+026,智谱 AI (zhipu.ai),国内大模型,10%-20% (企业合作),30天,https://www.zhipu.ai/,Chinese,GLM 系列enterprise生态合作
+027,MiniMax (chat.minimax.com),国内大模型,10%-15% (商务合作),30天,https://chat.minimax.com/,Chinese,国内一线大模型有招商计划
+028,DeepSeek (deepseek.com),国内大模型,暂无公开,—,https://www.deepseek.com/,Chinese,深度求索open source大模型
+029,MiniMax海螺 AI,国内AI视频/对话,10%-20% (创作者计划),30天,https://hailuoai.com/,Chinese,MiniMax 旗下视频生成对标 Sora
+030,字节即梦 AI,国内AI视频/图像,10%-15% (创作者激励),30天,https://jimeng.jianying.com/,Chinese,剪映团队图像+视频生成
+031,快手可灵 AI (klingai.com),国内AI视频,10%-30% (创作者佣金),30天,https://klingai.com/,Chinese,快手可灵海外有 Commission Share
+032,百度文心一格,国内AI图像,10%-15%,30天,https://yige.baidu.com/,Chinese,图像生成+API
+033,通义万相,国内AI图像,10%-20% (云大使),30天,https://wanxiang.aliyun.com/,Chinese,阿里系图像生成
+034,讯飞星火 (xfyun.cn),国内大模型,10%-20% (企业合作),30天,https://www.xfyun.cn/,Chinese,科大讯飞含语音+大模型
+035,商汤日日新 (sensenova),国内大模型,10%-15% (企业合作),30天,https://platform.sensenova.cn/,Chinese,商汤大模型 B 端为主
+036,腾讯元宝,国内AI应用,暂无公开,—,https://yuanbao.tencent.com/,Chinese,C 端 AI 助手
+037,字节豆包 (Doubao),国内AI应用,暂无公开,—,https://www.doubao.com/,Chinese,C 端 AI 助手
+038,WPS AI (ai.wps.cn),国内办公AI,10%-20% (商务合作),30天,https://ai.wps.cn/,Chinese,金山办公 AI
+039,腾讯会议 AI 小助手,国内办公AI,企业版返佣,30天,https://meeting.tencent.com/,Chinese,会议转录+AI 总结
+040,法睿 (tongyi.aliyun.com/farui),国内法律AI,10%-20%,30天,https://tongyi.aliyun.com/farui/home,Chinese,阿里通义法睿法律 AI
+041,AiPPT (aippt.cn),国内AI PPT,20%-30% (CPS),30天,https://www.aippt.cn/,Chinese,一句话生成 PPT 热门 AI 工具
+042,讯飞智文 (zhiwen.xfyun),国内AI PPT,10%-20%,30天,https://zhiwen.xfyun.cn/,Chinese,讯飞系 PPT 工具
+043,笔魂AI (bihun.cn),国内AI绘画,15%-25%,30天,https://www.bihun.cn/,Chinese,国内 AI 绘画工具
+044,简单AI (jianiao.ai),国内AI图像,15%-25%,30天,https://www.jianiao.com/,Chinese,搜狐旗下 AI 图像生成
+045,言秘书 (yanmishu.com),国内AI办公,10%-20%,30天,https://www.yanmishu.com/,Chinese,AI 文档/PPT 工具
+046,即创 (jichuang),字节AI营销,10%-20% (创作者激励),30天,https://www.jichuang.com/,Chinese,巨量引擎 AI 营销平台
+047,创一AI (chuangyi.cps),AI内容创作,20%-30% (CPS),30天,https://chuangyi.com/,Chinese,AI 脚本+短视频脚本
+048,KreadoAI (kreadoai.com),AI数字人/营销,50% 一次性,30天,https://www.kreadoai.com/,Chinese+English,AI 数字人口播视频跨境营销强
+049,Nextify (nextify.cn),AI营销,15%-25%,30天,https://www.nextify.cn/,Chinese,AI 私域+营销工具
+050,夜遇AI (yeyu.ai),12-Emotional AI/Companion,10%-20%,30天,https://yeyu.ai/,Chinese,AI 陪聊应用 C 端paid
+051,Linkfox (linkfox.com),AI跨境电商,10%-20%,30天,https://www.linkfox.com/,Chinese,跨境电商 AI 选品+Listing+作图
+052,Aidge (aidc-ai.com),AI跨境电商,企业合作,30天,https://aidc-ai.com/,Chinese+English,阿里国际 AI 平台全流程赋能
+053,Anthropic Claude,海外大模型,$100M Partner Network,90天,https://www.anthropic.com/partners,English,100M Partner Network 覆盖 Claude API/Code
+054,OpenAI / ChatGPT,海外大模型,暂无公开联盟,—,https://openai.com/,English,未开放 CPS
+055,Perplexity Pro,海外AI搜索,$10/试用 + $20/年付,30天,https://www.perplexity.ai/,English,AI 搜索头部 Pro subscription
+056,Kagi (kagi.com),AI搜索,$25/订阅,30天,https://kagi.com/,English,paid搜索引擎小众高质量
+057,Mistral AI,海外大模型,暂无公开,—,https://mistral.ai/,English,法国open source大模型企业销售
+058,Cohere,海外大模型,企业销售返佣,60天,https://cohere.com/,English,企业 RAG/检索增强
+059,Grok (xAI),海外大模型,暂无公开,—,https://x.ai/,English,X 平台绑定
+060,OpenRouter,海外AI中转,$5/被推荐,—,https://openrouter.ai/,English,海外最火模型aggregator
+061,Jasper AI,AI写作,30% recurring (12月),30天,https://www.jasper.ai/affiliates,English,海外老牌 AI 写作企业customers单价高
+062,Copy.ai,AI写作,45% 首年,60天,https://www.copy.ai/affiliates,English,high rateone-timefirst year
+063,Writesonic,AI写作,30% 终身 recurring,30天,https://writesonic.com/affiliate,English,lifetimecommission稀缺款
+064,Castmagic,AI内容转写,30% recurring × 18 月,30天,https://castmagic.io/affiliates,English,音视频转博客/推文
+065,HeadshotPro,AI头像,30% recurring,—,https://www.headshotpro.com/affiliate,English,专业 AI 头像照
+066,Smartli,AI电商文案,20% recurring,30天,https://smartli.com/,English,Etsy/电商产品图+文案
+067,Logome.ai,AI Logo,50% 一次性,30天,https://www.logome.ai/affiliate,English,AI Logo 生成器
+068,Mixo,07-AI Coding/Dev/Agent,50% 一次性,90天,https://www.mixo.io/affiliate,English,AI 一句话建站
+069,Gamma,AI演示/网站,25% recurring,90天,https://gamma.app/affiliates,Chinese+English,AI 演示+文档Chinese+Englishsupport好
+070,Beautiful.ai,AI演示,30% recurring,30天,https://www.beautiful.ai/affiliates,English,演示 PPT 工具
+071,SlideSpeak,AI PPT,20% recurring,30天,https://slidespeak.co/,English,AI 总结文档生成 PPT
+072,Narrato,AI内容工作流,30% recurring (12月),60天,https://narrato.io/,English,AI 内容生产平台
+073,ArticleX,AI文章,30% recurring,—,https://www.articlex.com/,English,音视频转 SEO 文章
+074,TextCortex,AI写作,30% 终身,—,https://textcortex.com/,English,Zeno Writer 浏览器扩展
+075,Anyword,AI文案,40% recurring,90天,https://anyword.com/,English,AI 营销文案
+076,Frase,AI SEO,30% 终身 recurring,60天,https://www.frase.io/affiliate,English,SEO 内容优化
+077,Scalenut,AI SEO,30% 终身 recurring,60天,https://www.scalenut.com/affiliate,English,AI SEO 一体化
+078,Surfer SEO,AI SEO,25% 终身 recurring,60天,https://surferseo.com/affiliates,English,SEO 内容优化
+079,AISEO,AI SEO,30% recurring,30天,https://aiseo.ai/,English,E-E-A-T 优化
+080,OutlierKit,YouTube AI,20% recurring (12月),30天,https://outlierkit.com/,English,YouTube 竞品分析
+081,Otter.ai,AI会议转录,Up to 60%,30天,https://otter.ai/affiliates,English,high rate会议转录
+082,Voibe (Mac 听写),AI语音输入,25% recurring + 25% 终身,30天,https://www.getvoibe.com/affiliate,English,Mac 离线听写隐私优先
+083,Munch AI,AI视频剪辑,15% recurring (12月),60天,https://www.getmunch.com/affiliate,English,长视频自动剪短
+084,Wispr Flow,AI语音输入,25%-30% recurring (12月),30天,https://wisprflow.ai/affiliates,English,Mac/Win 听写输入
+085,Bitskout,AI文档提取,30% 终身,—,https://www.bitskout.com/,English,从文档/邮件自动抽数据
+086,Mem AI,AI笔记,20% recurring,30天,https://mem.ai/affiliates,English,AI 笔记+知识管理
+087,Reflect Notes,AI笔记,20% recurring,30天,https://reflect.app/affiliates,English,AI 笔记+双向链接
+088,Bloomfire,知识管理,20% recurring,30天,https://bloomfire.com/affiliates,English,AI 知识管理
+089,Midjourney,AI图像,暂无公开,—,https://www.midjourney.com/,English,Discord 内paid暂未开放
+090,Ideogram,AI图像,创作者俱乐部 10%-20%,30天,https://ideogram.ai/,English,高质量文字渲染图像
+091,Leonardo AI,AI图像,30% recurring,30天,https://leonardo.ai/affiliate,English,Stable Diffusion 增强版
+092,Synthesia,AI数字人,20%-25% recurring (12月),60天,https://www.synthesia.io/affiliate,English,海外数字人龙头企业customers
+093,HeyGen,AI数字人,25% recurring (12月),30天,https://www.heygen.com/affiliate,English,AI 数字人+翻译
+094,Pictory,AI视频,20%-50% 阶梯,30天,https://pictory.ai/affiliate,English,文本转视频
+095,InVideo,AI视频,25%-50% recurring,120天,https://invideo.io/affiliate,English,no threshold+长 cookie
+096,Runway (runwayml.com),AI视频,20% recurring,30天,https://runwayml.com/,English,Gen-3 视频生成
+097,Hour One,AI数字人,20% recurring (12月),—,https://hourone.ai/,English,虚拟主播
+098,Elai.io,AI数字人,25%,—,https://elai.io/,English,文本转视频
+099,Kapwing,AI视频,Up to 25%,30天,https://www.kapwing.com/affiliate,English,在线视频编辑
+100,Vidyo,AI视频,20%-35%,—,https://vidyo.ai/,English,AI 短剪
+101,BasedLabs,AI视频/图像,40% 终身,—,https://www.basedlabs.ai/,English,high ratelifetime
+102,Zebracat,AI视频,30% recurring,90天,https://zebracat.ai/,English,文本/文章转视频
+103,Fliki,AI视频,30% + 里程碑奖励,30天,https://fliki.ai/affiliate,English,图文+配音转视频
+104,VEED,AI视频,25%,7天,https://www.veed.io/affiliate,English,视频编辑平台
+105,DeepBrain,AI数字人,30%,—,https://www.deepbrain.io/,English,AI 虚拟人视频
+106,Colossyan,AI数字人,25%-50%,90天,https://www.colossyan.com/affiliate,English,企业培训 AI 视频
+107,Lensa AI,AI头像,15%-20%,30天,https://prisma-ai.com/lensa,English,AI 头像 APP
+108,Remove.bg / Canva 抠图,AI抠图,20%-30%,30天,https://www.remove.bg/api,English,经典 AI 抠图
+109,PhotoAI.com,AI图像,20%,—,https://photoai.com/,English,上传照片生成各种风格
+110,DeepSwap,AI换脸,Up to 50%,90天,https://www.deepswap.ai/,English,high rate AI 换脸
+111,LALAL.AI,AI音频分离,30%,30天,https://www.lalal.ai/,English,人声/伴奏分离
+112,Vidnoz,AI数字人,30% 终身,30天,https://www.vidnoz.com/,Chinese+English,free AI 数字人视频
+113,Descript,AI音视频,15%-30% recurring (12月),30-90天,https://www.descript.com/affiliates,English,音视频+脚本编辑器
+114,Pictory & Lumen5,AI视频,20% recurring,30天,https://lumen5.com/affiliate,English,博客转视频
+115,Lenso.ai,AI图像搜索,30%,30天,https://lenso.ai/affiliates,English,反向图像搜索
+116,ElevenLabs,AI语音,22%-55% recurring (12月),30天,https://elevenlabs.io/affiliates,Chinese+English,语音 AI 龙头多语言
+117,Murf AI,AI配音,20% recurring (24月),90天,https://murf.ai/partner-with-us/affiliate,English,enterprise配音
+118,Speechify,AI文字转语音,50% × 90 天,90天,https://speechify.com/affiliate,English,TTS+有声书
+119,Play.ht,AI语音,25%,60天,https://play.ht/affiliate,English,142+ 语言 TTS
+120,LOVO AI,AI配音,20%-30%,30天,https://www.lovo.ai/,English,视频配音
+121,Resemble AI,AI语音克隆,20% recurring,30天,https://www.resemble.ai/,English,声音克隆
+122,Wellsaid Labs,AI配音,20% recurring,30天,https://wellsaidlabs.com/,English,enterprise配音
+123,Synthflow AI,AI语音代理,20% × 12月,30天,https://synthflow.ai/affiliates,English,无代码语音 AI 代理
+124,Voiceflow,AI语音应用,20% recurring,30天,https://www.voiceflow.com/affiliates,English,无代码 AI 语音
+125,Cursor (cursor.sh),07-AI Coding/Dev/Agent,暂无公开,—,https://cursor.sh/,English,暂未公开私下有 KOL 合作
+126,Windsurf (codeium.com),07-AI Coding/Dev/Agent,暂无公开,—,https://codeium.com/windsurf,English,Codeium 系 AI IDE
+127,GitHub Copilot,07-AI Coding/Dev/Agent,GitHub Partner,30天,https://github.com/partners,English,官方合作伙伴计划
+128,Codeium,07-AI Coding/Dev/Agent,暂无公开,—,https://codeium.com/,English,free AI 代码补全
+129,Replit,07-AI Coding/Dev/Agent,Replit 联盟,30天,https://replit.com/affiliates,English,云端 IDE+Ghostwriter
+130,Lovable (lovable.dev),07-AI Coding/Dev/Agent,暂无公开,—,https://lovable.dev/,English,AI Vibe Coding 平台
+131,Bolt.new (bolt.new),07-AI Coding/Dev/Agent,暂无公开,—,https://bolt.new/,English,StackBlitz 旗下
+132,v0.dev (vercel),AI前端,暂无公开,—,https://v0.dev/,English,Vercel 旗下 AI UI 生成
+133,Runpod,07-AI Coding/Dev/Agent,10% × 6月,30天,https://runpod.io/affiliates,English,GPU 云端 AI 部署
+134,Browse AI,07-AI Coding/Dev/Agent,20% 终身,30天,https://www.browse.ai/affiliates,English,无代码网页抓取
+135,MindStudio (YouAI),07-AI Coding/Dev/Agent,20% × 18月,30天,https://youai.ai/affiliates,English,无代码 AI 代理 200+ 模型
+136,Pinecone,07-AI Coding/Dev/Agent,10% × 12月,30天,https://www.pinecone.com/affiliates,English,向量数据库龙头
+137,Base44,07-AI Coding/Dev/Agent,暂无公开,—,https://base44.com/,English,AI App 生成新秀
+138,Magic Patterns,07-AI Coding/Dev/Agent,暂无公开,—,https://www.magicpatterns.com/,English,AI 组件生成
+139,Bito AI,07-AI Coding/Dev/Agent,20% recurring,30天,https://bito.ai/affiliates,English,AI 代码审查
+140,Canva,AI设计,20% (Pro) / $36/单,30天,https://www.canva.com/affiliates,Chinese+English,全球设计工具 AI 功能齐备
+141,Webflow,07-AI Coding/Dev/Agent,50% × 12月,90天,https://webflow.com/affiliates,English,无代码建站
+142,Wix,07-AI Coding/Dev/Agent,$100/付费 + 30% 续,30天,https://www.wix.com/affiliate,Chinese+English,AI 网站搭建Chinesesupport好
+143,Squarespace,07-AI Coding/Dev/Agent,$100-$200/单,30天,https://www.squarespace.com/affiliates,English,建站平台
+144,Shopify,电商建站,200% 一次性 (最高 $150),30天,https://www.shopify.com/affiliates,Chinese+English,全球电商 SaaS 龙头
+145,Framer,07-AI Coding/Dev/Agent,暂无公开,—,https://www.framer.com/affiliates,English,无代码建站+AI
+146,Bubble,无代码,20% recurring (12月),30天,https://bubble.io/affiliates,English,无代码应用平台
+147,Leadpages,着陆页,Up to $400 + 10-50% 终身,90天,https://www.leadpages.net/affiliates,English,着陆页+AI
+148,Typeform,表单,$20 首单 + 15% recurring,—,https://www.typeform.com/affiliates,English,动态表单生成器
+149,Jotform,表单,30% × 12月 + $5 奖励,60天,https://www.jotform.com/affiliates,English,无代码表单
+150,Tally,表单,20% recurring,30天,https://tally.so/affiliates,English,free Notion-like 表单
+151,Adobe (Creative Cloud),设计,85% 月付首月 / 8.33% 年付,30天,https://www.adobe.com/affiliates,Chinese+English,Adobe 全家桶
+152,Prezi,AI演示,50% (2026/7 截止),30天,https://prezi.com/affiliates,Chinese+English,动态演示工具
+153,Elementor,建站插件,最高 65%/笔,45天,https://elementor.com/affiliates,English,WordPress 页面构建器
+154,Looka (Logo Maker),AI Logo,20% 一次性,30天,https://looka.com/affiliates,English,AI Logo 生成
+155,LogoAI (logoai.com),AI Logo,20% 一次性,30天,https://www.logoai.com/,English,AI Logo + 品牌设计
+156,Tailor Brands,AI Logo,20% 一次性,30天,https://www.tailorbrands.com/,English,AI Logo + LLC
+157,SegmentUI,UI 设计,20% recurring,30天,https://segmentui.com/affiliate,English,UI 组件库+AI
+158,Glide,无代码 App,20% recurring,30天,https://www.glideapps.com/affiliates,English,无代码应用+AI
+159,Notion (含 Notion AI),笔记/办公,50% 首年,90-180天,https://www.notion.com/affiliates,Chinese+English,Notion AI high ratecommission
+160,ClickUp,项目管理,$28/$10/$2.5 阶梯 (CPA),30天,https://clickup.com/affiliates,English,AI 生产力平台
+161,Asana,项目管理,$0.10/试用 + 5% 续,30天,https://asana.com/affiliates,Chinese+English,项目管理
+162,monday.com,项目管理,Up to 100% 首年,—,https://monday.com/affiliates,Chinese+English,高额first yearcommission
+163,Trello,看板,暂无公开,—,https://trello.com/,Chinese+English,Atlassian 旗下
+164,Airtable,表格/数据库,Up to $250/单,30天,https://airtable.com/affiliates,English,无代码数据库
+165,Reclaim.AI,AI日历,25%-40% recurring + $1/工作邮箱,90天,https://reclaim.ai/affiliates,English,AI 日历+任务规划
+166,Motion,AI日历,20% recurring,30天,https://www.usemotion.com/affiliates,English,AI 自动排程
+167,Zapier,自动化,25% recurring,30天,https://zapier.com/affiliates,English,无代码自动化+AI
+168,Make (Integromat),自动化,20% recurring,30天,https://www.make.com/en/affiliates,English,无代码自动化
+169,n8n,自动化,20% recurring,30天,https://n8n.io/affiliates,English,open source自动化
+170,Trainual,培训/流程,10% 联盟 / 20% 合作,30天,https://trainual.com/affiliates,English,员工培训+AI 流程
+171,HubSpot,CRM/营销,30% recurring × 1年,180天,https://www.hubspot.com/affiliates,Chinese+English,全栈 CRM+AI 营销 cookie 最长
+172,ActiveCampaign,邮件/自动化,20%-30% recurring,90天,https://www.activecampaign.com/affiliates,English,邮件营销+CRM
+173,GetResponse,邮件/营销,40%-60% recurring (12月) 或 $100,120天,https://www.getresponse.com/affiliate,Chinese+English,high rate邮件营销
+174,Databox,BI 看板,20% × 12月 (上限 $1200),30天,https://databox.com/affiliate,English,AI 分析仪表板
+175,Nutshell,CRM,20%-40% 首年,30天,https://www.nutshell.com/affiliates,English,CRM+营销自动化
+176,ManyChat,聊天机器人,30% recurring,30天,https://manychat.com/affiliates,English,自动化聊天营销
+177,AdCreative.ai,AI创意广告,30% 终身循环 + $2000 奖励,30天,https://www.adcreative.ai/affiliate,English,AI creative ads+高奖金
+178,Lusha,销售情报,20% × 12月,30天,https://www.lusha.com/affiliates,English,B2B 销售线索
+179,AiSDR,AI SDR,20% × 12月,30天,https://aisdr.com/affiliates,English,AI 销售外联
+180,Navan,差旅,Up to $1000/合格客,30天,https://navan.com/affiliates,English,AI 差旅+费用
+181,Synder,电商会计,10%/15%/20% 阶梯,30天,https://synder.com/affiliates,English,电商平台账务
+182,CallRail,通话追踪,$50/新客 + 代理分成,30天,https://www.callrail.com/affiliates,English,通话追踪
+183,Pipedrive,CRM,33% recurring (12月),90天,https://www.pipedrive.com/affiliates,Chinese+English,销售 CRM
+184,Apollo.io,销售情报,25% 首年,90天,https://www.apollo.io/affiliate,English,B2B 销售数据库
+185,Cognism,B2B 数据,Up to 10% recurring,60天,https://www.cognism.com/affiliates,English,B2B 数据
+186,ConvertKit (Kit),邮件,30% × 24月,90天,https://kit.com/affiliates,English,creator邮件长达 24 月
+187,Mailchimp,邮件,$150-$300/单,30天,https://mailchimp.com/affiliates,English,全球邮件营销
+188,Klaviyo,电商邮件,$25-$250/单,30天,https://www.klaviyo.com/affiliates,English,电商邮件
+189,Systeme.io,营销套件,60% 终身,90天,https://systeme.io/affiliate,English,high ratelifetime营销套件
+190,Smartlead,AI邮件外联,30% recurring,30天,https://www.smartlead.ai/affiliates,English,AI 冷邮件外联
+191,Instantly.ai,AI邮件外联,40% 终身,30天,https://instantly.ai/affiliates,English,AI 冷邮件
+192,Smartwriter,AI个性化,30% 终身,30天,https://smartwriter.ai/affiliates,English,AI 个性化邮件
+193,Flowith,AI工作流,40% recurring,30天,https://flowith.io/affiliates,Chinese+English,AI 画布+工作流
+194,Lindy.ai,AI助理,20% recurring,30天,https://www.lindy.ai/affiliates,English,AI 私人助理
+195,Crisp,AI客服,20% recurring (12月),30天,https://crisp.chat/en/affiliate,English,多渠道客服+AI
+196,Tidio,AI客服,20% recurring (12月),30天,https://www.tidio.com/partners/affiliate,English,AI 客服+聊天机器人
+197,Intercom,AI客服,20% recurring,30天,https://www.intercom.com/affiliates,English,AI 客服+Fin AI Agent
+198,Freshworks,AI营销套件,15%-20% recurring (12月),90天,https://www.freshworks.com/affiliates,English,Freshdesk+AI
+199,Zendesk,客服,10% 推荐,—,https://www.zendesk.com/affiliates,English,客服+AI
+200,Woorise,互动营销,30% 终身,90天,https://woorise.com/affiliates,English,互动活动+AI
+201,ConvertBox,弹窗,30% recurring,30天,https://convertbox.com/affiliates,English,高转化弹窗
+202,Typebot,聊天机器人,20% recurring,30天,https://www.typebot.io/affiliates,English,无代码聊天机器人
+203,Lavender,AI邮件,20% recurring,30天,https://www.lavender.ai/affiliates,English,AI 销售邮件
+204,Resume.io,AI简历,50% recurring,30天,https://resume.io/affiliates,English,AI 简历生成
+205,Zety,AI简历,$50/单,30天,https://zety.com/affiliates,English,简历制作
+206,Kickresume,AI简历,50% 终身,30天,https://www.kickresume.com/affiliates,English,AI 简历+求职信
+207,Rezi,AI简历,30% recurring,30天,https://www.rezi.ai/affiliates,English,AI 简历+ATS 优化
+208,Teal,求职平台,$20 (Teal+) / $0.10 (免费),30天,https://www.tealhq.com/affiliates,English,AI 求职平台
+209,八股文 AI 写简历,AI简历,10%-20%,30天,https://www.xiazai.cn/,Chinese,国内 AI 简历服务
+210,Replika,12-Emotional AI/Companion,20% recurring,30天,https://replika.com/affiliates,English,AI 陪伴应用
+211,Character.AI,12-Emotional AI/Companion,暂无公开,—,https://character.ai/,English,AI 角色扮演
+212,Nomi.ai,12-Emotional AI/Companion,20% recurring,30天,https://nomi.ai/affiliates,English,AI 陪伴/情感
+213,Janitor AI,12-Emotional AI/Companion,20% recurring,30天,https://janitorai.com/,English,AI 角色聊天
+214,Candy.ai,12-Emotional AI/Companion,30%-50% recurring,30天,https://candy.ai/,English,AI 女友平台高commission
+215,DreamGF,12-Emotional AI/Companion,30%-50% recurring,30天,https://dreamgf.ai/,English,AI 女友生成
+216,Kupid.ai,12-Emotional AI/Companion,30% recurring,30天,https://kupid.ai/,English,AI 虚拟约会
+217,Soulgen,12-Emotional AI/Companion,25% recurring,30天,https://www.soulgen.net/,English,AI 动漫女友生成
+218,GirlfriendGPT,12-Emotional AI/Companion,30% recurring,30天,https://girlfriendgpt.io/,English,AI 女友open source
+219,CrushOn.AI,12-Emotional AI/Companion,20% recurring,30天,https://crushon.ai/,English,AI 角色聊天 NSFW
+220,SpicyChat AI,12-Emotional AI/Companion,20% recurring,30天,https://spicychat.ai/,English,AI 角色聊天
+221,PolyBuzz,12-Emotional AI/Companion,20% recurring,30天,https://polybuzz.ai/,English,AI 角色聊天free版
+222,Talkie AI,12-Emotional AI/Companion,暂无公开,—,https://www.talkie-ai.com/,Chinese,国内 AI 角色扮演
+223,星野 (Xingye),12-Emotional AI/Companion,暂无公开,—,https://www.xingyeai.com/,Chinese,字节系 AI 角色
+224,猫箱 (Maoxiang),12-Emotional AI/Companion,暂无公开,—,https://maoxiang.doubao.com/,Chinese,豆包系 AI 角色
+225,筑梦岛 (Zhumengdao),12-Emotional AI/Companion,暂无公开,—,https://www.zhumengdao.com/,Chinese,阅文系 AI 角色
+226,聆心智能 (Lingxin),12-Emotional AI/Companion,暂无公开,—,https://www.lingxin.ai/,Chinese,清华系 AI 情感
+227,Echo AI,12-Emotional AI/Companion,20% recurring,30天,https://echo.ai/,English,AI 语音陪伴
+228,Kindroid,12-Emotional AI/Companion,25% recurring,30天,https://kindroid.ai/,English,AI 角色+记忆
+229,Botify AI,12-Emotional AI/Companion,20% recurring,30天,https://botify.ai/,English,AI 角色聊天
+230,Romantic AI,12-Emotional AI/Companion,30% recurring,30天,https://romanticai.com/,English,AI 女友
+231,MindStudio Agent Store,13-Multi-Agent/Creator Economy,20% × 18月,30天,https://youai.ai/affiliates,English,无代码 AI 代理 200+ 模型
+232,AgentPlace.io,13-Multi-Agent/Creator Economy,30% recurring,30天,https://agentplace.io/affiliates,English,Agent 市场
+233,Voiceflow Marketplace,13-Multi-Agent/Creator Economy,20% recurring,30天,https://www.voiceflow.com/affiliates,English,AI 语音应用市场
+234,Stack AI,13-Multi-Agent/Creator Economy,20% recurring,30天,https://www.stack-ai.com/,English,无代码 AI 代理
+235,Relevance AI,13-Multi-Agent/Creator Economy,20% recurring,30天,https://relevanceai.com/,English,AI Agent 团队
+236,MultiOn,13-Multi-Agent/Creator Economy,暂无公开,—,https://www.multion.ai/,English,AI 浏览器代理
+237,Adept AI,13-Multi-Agent/Creator Economy,暂无公开,—,https://www.adept.ai/,English,AI 行动代理
+238,AutoGPT,13-Multi-Agent/Creator Economy,开源/众筹,—,https://agpt.co/,English,open source AI 代理
+239,CrewAI,13-Multi-Agent/Creator Economy,暂无公开,—,https://www.crewai.com/,English,多 Agent 协作框架
+240,LangGraph,13-Multi-Agent/Creator Economy,暂无公开,—,https://langchain.com/langgraph,English,LangChain 多 Agent
+241,Flowise,13-Multi-Agent/Creator Economy,开源,—,https://flowiseai.com/,English,open source LLM 编排
+242,Dify,13-Multi-Agent/Creator Economy,20% recurring,30天,https://dify.ai/,Chinese+English,open source LLM 应用平台
+243,扣子 (Coze),13-Multi-Agent/Creator Economy,暂无公开,—,https://www.coze.cn/,Chinese,字节系 Agent 平台
+244,腾讯元器,13-Multi-Agent/Creator Economy,暂无公开,—,https://yuanqi.tencent.com/,Chinese,腾讯系 Agent 平台
+245,百度千帆 AppBuilder,13-Multi-Agent/Creator Economy,10%-20%,30天,https://cloud.baidu.com/product/AppBuilder,Chinese,百度系 Agent 平台
+246,阿里云百炼应用,13-Multi-Agent/Creator Economy,10%-20%,30天,https://bailian.console.aliyun.com/,Chinese,阿里系 Agent 平台
+247,Salesforce Einstein,传统行业AI/CRM,20%-30%,90天,https://www.salesforce.com/affiliates,English,CRM 巨头+AI
+248,Zoho AI (Zia),传统行业AI/CRM,15% recurring,30天,https://www.zoho.com/affiliates,Chinese+English,中小企业 CRM+AI
+249,ServiceNow AI,传统行业AI/ITSM,企业合作,—,https://www.servicenow.com/partners,English,企业 IT 服务+AI
+250,Workday AI,传统行业AI/HR,企业合作,—,https://www.workday.com/en-us/partners.html,English,HR SaaS+AI
+251,Veeva AI,传统行业AI/医药,企业合作,—,https://www.veeva.com/,English,医药 CRM+AI
+252,Cerner AI,传统行业AI/医疗,企业合作,—,https://www.oracle.com/health/,English,医疗 IT+AI
+253,Epic AI,传统行业AI/医疗,企业合作,—,https://www.epic.com/,English,医疗 EHR+AI
+254,Procore AI,传统行业AI/建筑,$50-$200/单,30天,https://www.procore.com/affiliates,English,建筑 SaaS+AI
+255,Autodesk AI,传统行业AI/制造,10%-15%,30天,https://www.autodesk.com/affiliates,English,CAD+AI
+256,PTC AI (Creo),传统行业AI/制造,企业合作,—,https://www.ptc.com/,English,CAD/PLM+AI
+257,UiPath AI,传统行业AI/RPA,20% recurring,30天,https://www.uipath.com/affiliates,English,RPA+AI
+258,Automation Anywhere,传统行业AI/RPA,20% recurring,30天,https://www.automationanywhere.com/affiliates,English,RPA+AI
+259,Blue Prism,传统行业AI/RPA,企业合作,—,https://www.blueprism.com/,English,RPA enterprise
+260,DocuSign AI (CLM),传统行业AI/合同,25% recurring,30天,https://www.docusign.com/affiliates,Chinese+English,电子签+AI 合同
+261,Ironclad AI,传统行业AI/法务,20% recurring,30天,https://ironcladapp.com/,English,法务合同 AI
+262,LinkSquares AI,传统行业AI/法务,20% recurring,30天,https://linksquares.com/,English,合同管理 AI
+263,LawGeex AI,传统行业AI/法务,20% recurring,30天,https://lawgeex.com/,English,AI 合同审查
+264,Evisort AI,传统行业AI/法务,20% recurring,30天,https://www.evisort.com/,English,AI 合同智能
+265,Harvey AI (法律),传统行业AI/法务,企业销售,—,https://www.harvey.ai/,English,顶级律所 AI 助手
+266,Carta AI,传统行业AI/股权,20% recurring,30天,https://carta.com/affiliates,English,股权管理+AI
+267,Brex AI,传统行业AI/金融,企业销售,—,https://www.brex.com/,English,企业卡+AI
+268,Ramp AI,传统行业AI/金融,$500-$1500/单,30天,https://ramp.com/affiliates,English,企业卡+AI
+269,Mercury AI,传统行业AI/银行,企业销售,—,https://mercury.com/,English,创业银行+AI
+270,Pilot AI (bookkeeping),传统行业AI/会计,20% recurring,30天,https://pilot.com/,English,AI 记账
+271,Bench AI (bookkeeping),传统行业AI/会计,$200-$500/单,30天,https://bench.co/affiliates,English,AI 记账
+272,Xero AI,传统行业AI/会计,区域定制,—,https://www.xero.com/affiliates,English,中小企业会计+AI
+273,QuickBooks AI,传统行业AI/会计,区域定制,—,https://quickbooks.intuit.com/affiliates,Chinese+English,中小企业会计+AI
+274,FreshBooks AI,传统行业AI/会计,Up to $200/客,30天,https://www.freshbooks.com/affiliates,English,中小企业会计+AI
+275,Plumb AI,传统行业AI/管道,20% recurring,30天,https://plumb.ai/,English,AI 行业 SaaS
+276,Jobber AI,传统行业AI/家政,20% recurring,30天,https://getjobber.com/affiliates,English,家政服务+AI
+277,ServiceTitan AI,传统行业AI/家政,企业合作,—,https://www.servicetitan.com/,English,家政 SaaS 龙头
+278,Housecall Pro AI,传统行业AI/家政,$50-$150/单,30天,https://www.housecallpro.com/affiliates,English,家政服务+AI
+279,Mindbody AI,传统行业AI/美业,企业合作,—,https://www.mindbodyonline.com/,English,美业 SaaS
+280,Booksy AI,传统行业AI/美业,20% recurring,30天,https://booksy.com/,English,美业预约+AI
+281,Square AI,传统行业AI/支付,—,—,https://squareup.com/,Chinese+English,线下支付+AI
+282,Toast AI,传统行业AI/餐饮,$100-$500/单,30天,https://pos.toasttab.com/affiliates,English,餐饮 SaaS+AI
+283,TouchBistro AI,传统行业AI/餐饮,20% recurring,30天,https://www.touchbistro.com/affiliates,English,餐饮 POS+AI
+284,Lightspeed AI,传统行业AI/零售,20% recurring,30天,https://www.lightspeedhq.com/affiliates,English,零售 POS+AI
+285,Shopify POS AI,传统行业AI/零售,（同 Shopify）,30天,https://www.shopify.com/affiliates,Chinese+English,线下零售+AI
+286,DataCamp,AI教育,30%-100%/Sale,45天,https://www.datacamp.com/affiliates,English,Python/ML/数据科学最高commission
+287,Udacity,AI教育,$100/Lead,30天,https://www.udacity.com/affiliates,English,AI/云计算/网络安全 Nanodegree
+288,Simplilearn,AI教育,10%/Sale,30天,https://www.simplilearn.com/affiliates,English,机器学习认证
+289,Coursera,AI教育,10%-45%/Sale,30天,https://www.coursera.org/affiliates,English,Deep Learning 认证
+290,edX,AI教育,5%-10%/Sale,60天,https://www.edx.org/affiliates,English,计算机科学/数据分析
+291,Pluralsight,AI教育,10%-50%/Sale,—,https://www.pluralsight.com/affiliates,English,开发/IT 含 AI 方向
+292,Skillshare,AI教育,$7/Sale,30天,https://www.skillshare.com/affiliates,English,在线课程平台
+293,Udemy,AI教育,15%/Sale,7天,https://www.udemy.com/affiliates,Chinese+English,全球课程平台
+294,MasterClass,AI教育,25%/Sale,30天,https://www.masterclass.com/affiliates,English,顶级专家课程
+295,Teachable,课程平台,30% Recurring,90天,https://teachable.com/affiliates,English,creator卖课平台
+296,Thinkific,课程平台,30% Recurring,90天,https://www.thinkific.com/affiliates,English,creator卖课
+297,Podia,课程平台,30% Recurring,15天,https://www.podia.com/affiliates,English,creator卖课
+298,Kajabi,课程平台,30% Recurring,30天,https://kajabi.com/affiliates,English,一体化知识paid
+299,LearnWorlds,课程平台,30% Recurring,90天,https://www.learnworlds.com/affiliates,English,在线学校
+300,Speak,AI英语,25% recurring,60天,https://www.speak.com/affiliates,English,AI 英语学习
+301,Babbel,AI语言,$32/Sale,45天,https://www.babbel.com/affiliates,English,在线语言学习
+302,Lingvanex,AI翻译,20% recurring,30天,https://lingvanex.com/,Chinese+English,多语言翻译 API
+303,DeepL Pro,AI翻译,20%-30% recurring,30天,https://www.deepl.com/pro,Chinese+English,AI 翻译龙头
+304,QuillBot,AI改写,Up to 20% recurring,30天,https://quillbot.com/affiliates,English,改写+语法
+305,Grammarly,AI写作,$20/订阅,90天,https://www.grammarly.com/affiliates,Chinese+English,全球 AI 写作辅助
+306,Wordtune,AI改写,20% recurring,60天,https://www.wordtune.com/affiliates,English,AI 改写
+307,ProWritingAid,AI写作,$20 + $0.20/lead,30天,https://prowritingaid.com/affiliates,English,写作助手
+308,Hemingway Editor,AI写作,20% recurring,30天,https://hemingwayapp.com/,English,写作清晰度检查
+309,Suno AI,AI音乐,积分推荐机制,—,https://suno.com/,English,AI 音乐生成invite双方得积分
+310,Udio,AI音乐,暂无公开,—,https://udio.com/,English,AI 音乐
+311,Boomy AI,AI音乐,20% recurring,30天,https://www.boomy.com/,English,AI 音乐生成+发行
+312,MusicAPI,AI音乐 API,20% recurring,30天,https://musicapi.ai/affiliates,English,AI 音乐生成 API
+313,LANDR AI,AI音乐母带,$50/单,30天,https://www.landr.com/affiliates,English,AI 母带处理
+314,Cryptohopper,AI加密交易,Up to 15% recurring,30天,https://www.cryptohopper.com/affiliate-program,English,AI 加密交易机器人
+315,Token Metrics,AI加密,40% recurring,30天,https://tokenmetrics.com/affiliates,English,AI 加密投资分析
+316,3Commas,AI加密,Up to 50% recurring,30天,https://3commas.io/affiliate,English,AI 加密交易
+317,Coinrule,AI加密,Up to 30% recurring,30天,https://coinrule.com/affiliate,English,AI 加密交易机器人
+318,Pionex,AI加密,Up to 20% recurring,30天,https://www.pionex.com/affiliate,English,AI 加密交易
+319,Bitdefender,杀毒/安全,50% 终身,30天,https://www.bitdefender.com/affiliates,Chinese+English,全球杀毒软件 AI 加持
+320,KrispCall,AI电话,30% 终身,30天,https://krispcall.com/affiliates,English,AI 电话系统
+321,Time Doctor,时间追踪,30% recurring,30天,https://www.timedoctor.com/affiliates,English,AI 远程工时
+322,1Password,密码管理,$2/注册 + 25% 首年/月,45天,https://1password.com/affiliates,Chinese+English,密码管理器
+323,Heyboss,07-AI Coding/Dev/Agent,20% 终身,30天,https://www.heyboss.com/affiliate,English,AI 一句话建站
+324,MarkovML,AI工作流,20% recurring,30天,https://markovml.com/affiliates,English,AI 决策平台
+325,Originality.ai,AI内容检测,20% recurring,30天,https://originality.ai/affiliates,English,AI 内容检测
+326,Turnitin,AI检测,暂无公开,—,https://turnitin.com/,English,学术 AI 检测
+327,Tugan.ai,AI营销内容,30% recurring,30天,https://www.tugan.ai/,English,AI 营销内容生成
+328,M1 Project,AI营销,30% recurring,30天,https://www.m1-project.com/,English,AI 营销内容
+329,TubeBuddy,YouTube,Up to 50% 终身,终身,https://www.tubebuddy.com/affiliates,English,YouTube 工具+AI
+330,VidIQ,YouTube,Up to 30% 终身,30-60天,https://vidiq.com/affiliates,English,YouTube SEO+AI
+331,Aider (aider.chat),07-AI Coding/Dev/Agent,开源,—,https://aider.chat/,English,open source AI 编程工具
+332,Cursor 中文站,07-AI Coding/Dev/Agent,私下 KOL 合作,—,https://cursor.sh/cn,Chinese+English,Cursor 非官方Chinese资源站
+333,Zoom AI Companion,AI会议,20% recurring,30天,https://zoom.us/affiliates,Chinese+English,视频会议+AI
+334,Microsoft Teams AI,AI会议,暂无公开,—,https://www.microsoft.com/microsoft-teams,Chinese+English,Teams+Copilot
+335,Google Meet AI,AI会议,暂无公开,—,https://meet.google.com/,Chinese+English,Meet+Gemini
+336,Fireflies.ai,AI会议,20% recurring,30天,https://fireflies.ai/affiliates,English,AI 会议笔记
+337,Fathom,AI会议,30% recurring,30天,https://fathom.video/affiliates,English,AI 会议转录
+338,tl;dv,AI会议,20% recurring,30天,https://tldv.io/affiliates,English,AI 会议记录
+339,MeetGeek,AI会议,30% recurring,30天,https://meetgeek.ai/affiliates,English,AI 会议 50+ 语言
+340,Hootsuite,社媒,30% recurring (12月),90天,https://www.hootsuite.com/affiliates,English,社媒管理
+341,Buffer,社媒,$300-$700/单,30天,https://buffer.com/affiliates,English,社媒管理
+342,Loom,录屏,20%-25% recurring,90天,https://www.loom.com/affiliates,English,AI 录屏
+343,Riverside.fm,录制,30% recurring (12月),60天,https://riverside.fm/affiliates,English,录制+AI
+344,Ocoya,AI社媒,20% recurring,90天,https://ocoya.com/affiliates,English,AI 社媒内容
+345,Predis.ai,AI社媒,30% recurring,30天,https://predis.ai/affiliates,English,AI 社媒生成
+346,ContentStudio,社媒,30% recurring,30天,https://contentstudio.io/affiliates,English,社媒管理
+347,Planable,社媒,20% recurring,30天,https://planable.io/affiliates,English,社媒协作
+348,聚推客 (jutuike.cn),聚合CPS,聚合返佣,30天,https://www.jutuike.cn/,Chinese,国内 CPS aggregator一键推广多家
+349,AMZ123 / 联脉 (amz123),跨境CPS,聚合返佣,30天,https://www.amz123.com/,Chinese,跨境联盟营销aggregator
+350,PartnerStack Market,聚合站,多家 AI 联盟,—,https://market.partnerstack.com/,English,PartnerStack 市场可注册多家
+351,Rewardful,联盟 SaaS,25% recurring,60天,https://www.rewardful.com/affiliate,English,做自己的联盟计划
+352,AI Affiliate Programs Directory,聚合站,导航,—,https://affiliate.watch/category/ai,English,206 个 AI 联盟项目导航
+353,Impact (impact.com),聚合平台,多家 AI 品牌,—,https://impact.com/,English,全球联盟营销平台
+354,ShareASale,聚合平台,多家品牌,—,https://www.shareasale.com/,English,老牌联盟平台
+355,CJ Affiliate,聚合平台,多家品牌,—,https://www.cj.com/,English,全球最大联盟之一
+356,Awin,聚合平台,多家品牌,—,https://www.awin.com/,English,全球联盟平台
+357,Rakuten Advertising,聚合平台,多家品牌,—,https://rakutenadvertising.com/,English,全球联盟平台
+358,Synthesia (Tier 2),AI视频,二级 10%,60天,https://www.synthesia.io/affiliate,English,可推荐下级代理赚revenue share
+359,Copy.ai Tier 2,AI写作,二级 10%,60天,https://www.copy.ai/,English,Copy.ai 推荐联盟+二级
+360,Canva Teams,AI设计,团队版高返佣,30天,https://www.canva.com/,Chinese+English,Canva 企业版commission更高
+361,Notion Plus AI,笔记,二级 15%,90天,https://www.notion.com/,Chinese+English,Notion 二级distribution
+362,AdCreative.ai Tier 2,AI广告,二级分销,30天,https://www.adcreative.ai/,English,可推荐下级代理赚revenue share

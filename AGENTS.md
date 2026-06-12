@@ -8,9 +8,9 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## 最高原则：AI 原生思维（一切以此为准）
 
-**不是人用 AI 辅助干活，而是你从一开始就按「AI 原生」来思考 —— 所有事默认 AI 能做、AI 该做、AI 先做，你只做判断。
+**不是人用 AI 辅助干活，而是你从一开始就按「AI 原生」来思考 —— 所有事默认 AI 能做、AI 该做、AI 先做，你只做判断。**
 
-**AI 能做任何事，而人在其中就是决策。
+**AI 能做任何事，而人在其中就是决策。**
 
 ---
 
@@ -19,6 +19,8 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 这是一个 **Obsidian 数字知识库 + 飞书 AI 知识库** 的双知识库项目，记录一位大学生如何从 0 开始打造个人 IP、通过内容创作变现、以及用 AI 工具提升效率的完整过程。
 
 **核心定位**：【大学生 AI 实战家】—— 靠 AI + 技术 + 自媒体，毕业前赚 100 万的真实记录。
+
+**笔名/网名**：车干
 
 **双知识库架构**：
 1. **Obsidian 本地知识库**（本仓库）—— 用于本地思考、素材积累、内容创作
@@ -36,15 +38,33 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 ```
 path-to-wealth-freedom/
 ├── 内容/
-│   ├── 归档/           # 已整理的灵感（按日期归档）
-│   └── 文章/           # 深度文章、案例拆解
-├── 提示词/             # AI 提示词系统、写作提示词、选题生成提示词
-├── cover-image/        # 封面图生成模板与指南
-├── .baoyu-skills/      # 自定义 AI 技能
-├── .obsidian/          # Obsidian 配置
+│   ├── 文章/           # 公众号深度文章、案例拆解
+│   ├── 选题/           # 每日公众号长文选题学习包（自动生成）
+│   ├── 变现/           # AI变现方向随机雷达（自动生成）
+│   ├── 资产/           # AI Skill/Prompt资产雷达 + 自媒体赛道认知库
+│   ├── 项目/           # SaaS产品创意雷达（自动生成）
+│   ├── 图片/           # 文章配图、参考图
+│   └── 归档/           # AI返佣项目库、Apple ID美区教程等
+├── 项目/
+│   └── GitHub雷达/     # 周度GitHub小项目雷达
+├── 30天2万粉，2周2000刀X工作流/  # X平台增长工作流
+├── HyperFrames-AI视频项目/       # AI视频项目
+├── wenxuan-skills/               # 自定义搜索技能
+├── cover-image/                  # 封面图生成模板与指南
+├── assets/                       # 静态资源（图片等）
+├── data/                         # 数据文件
+├── scripts/                      # 脚本工具
+├── Clippings/                    # 网页剪藏
+├── conversations/                # 对话记录
+├── Excalidraw/                   # Excalidraw 绘图
+├── image-cards/                  # 图片卡片
+├── notepix-uploads/              # NotePix 上传
+├── output/                       # 输出文件
+├── trash-auto/                   # 自动回收
+├── .obsidian/                    # Obsidian 配置
 ├── 个人专属每日工作SOP（最终版）.md  # 每日工作流程
-├── README.md           # 项目公开介绍
-└── AGENTS.md           # 本文档：Codex 项目指导
+├── README.md                     # 项目公开介绍
+└── AGENTS.md                     # 本文档：Codex 项目指导
 ```
 
 ---
@@ -55,25 +75,30 @@ path-to-wealth-freedom/
 
 | 文件 | 内容概要 |
 |------|----------|
-| `想用上Codex到底有多难.md` | Codex 使用体验 |
-| `手把手教你用 Codex + 飞书 CLI，5 分钟建一个 AI 知识库.md` | 飞书 AI 知识库搭建教程 |
-| `深度拆解- 大圣AI超级个体为什么能成功变现？.md` | 竞品案例深度拆解（展示面、内容、变现） |
-| `源代码泄露之后？Codex闲鱼副业赚钱版全流程.md` | 闲鱼变现全流程 |
-| `如何拥有强大的选题能力？.md` | 系统讲解选题方法、信息源筛选、观点构建 |
-| `你保存了一百张参考图，但你从来没办法真正用上它们.md` | image2prompt 插件开发实战，从参考图到风格复用的完整流程 |
-| `所有人都在用AI提速，我反而关掉了它.md` | AI写作深度反思：从依赖到回归手写 |
+| `想用上claude code到底有多难.md` | Claude Code 安装与使用踩坑全记录 |
+| `如何自建中转，用Codex无限烧token？.md` | GPT Plus 多账号中转站搭建教程 |
+| `手里攒了多个 Codex 账号？10分钟教你用 Cockpit Tools 实现一键秒切与多开隔离.md` | Cockpit Tools 多账号管理与配额监控教程 |
+| `GPT-image 2.0发布，图像sass天塌了？.md` | GPT-image 2.0 深度评测，最强文生图模型分析 |
+| `纯小白如何无限制调用gpt-image2.md` | chatgpt2api 部署教程，给中转站加生图接口 |
+| `零基础小白到底怎么参加黑客松？.md` | 黑客松参赛指南：信息获取、心理障碍、团队组建 |
+| `收藏了100个AI工具却赚不到钱：你不缺认知，你只是不敢丢脸.md` | 执行力反思：只学不做是认知收藏家的通病 |
 | `为什么你永远无法链接优秀的人和资源.md` | 社交能力与资源链接的自我反思 |
+| `普通人一个月从0到1万粉，我做对了什么？.md` | X平台涨粉经验（clipping） |
 
-### 🔧 提示词（提示词/）
+### 📋 选题/变现/资产/项目（自动生成，每日更新）
 
-| 文件 | 内容概要 |
-|------|----------|
-| `纯净图生成.md` | AI图像生成提示词 |
-| `全栈开发技术栈.md` | 全栈开发技术栈整理 |
-| `车干专属写作AI Prompt（重构版）.md` | 车干专属写作风格 AI 提示词 |
-| `车干选题生成AI Prompt.md` | 热点→选题生成系统（含反常识选题思路） |
-| `车干专属爆款内容结构拆解AI Prompt（终版）.md` | 爆款内容结构拆解提示词 |
-| `05后成长日记写作AI Prompt（可直接复用）.md` | 05后成长日记写作提示词 |
+- `内容/选题/` — 每日公众号长文选题学习包
+- `内容/变现/` — AI变现方向随机雷达
+- `内容/资产/` — AI Skill与Prompt资产雷达 + 自媒体赛道认知库
+- `内容/项目/` — 每日SaaS产品创意雷达
+- `项目/GitHub雷达/` — 周度GitHub小项目雷达
+
+### 📦 归档（内容/归档/）
+
+- `AI返佣项目库_最终版/` — 中英双语AI工具联盟营销返佣项目大全（含xlsx/pdf/docx/csv）
+- `AI返佣项目库_v2/` — 返佣项目大全v2
+- `Apple ID美区教程/` — 美区Apple ID注册图文教程
+- `AI工具联盟营销返佣项目大全100+.md` — 早期版本
 
 ---
 
@@ -100,36 +125,36 @@ path-to-wealth-freedom/
 
 ## 可用 Skills
 
-项目使用 `.baoyu-skills/` 下的自定义技能：
-- `baoyu-cover-image` —— AI 封面图生成
-- `baoyu-image-gen` —— AI 图像生成
-- `baoyu-url-to-markdown` —— 网页内容转 Markdown
+### 用户级 Skills（~/.workbuddy/skills/）
+- `khazix-writer` —— 卡兹克公众号长文写作（去AI味、有活人感）
+- `anti-pua` —— 反PUA自驱鞭策引擎（六大厂风味，常态化加载）
+- `learn` —— 选题深挖学习引擎（冰山理论×正反竞奇，搜索≥20轮，输出写作弹药包，逼输出后衔接wenxuan-writer）
 
+### 项目级 Skills
 项目使用 `wenxuan-skills/` 下的搜索技能：
-- `source-router` —— 多源搜索聚合与问题到信息源路由技能，先判断该去 GitHub / Reddit / Web / 视频 / 封闭社媒 / 本地知识库中的哪里找答案，再通过聚合搜索服务执行检索；第一版已具备统一 JSON 输出、creator/账号内容抓取入口、GitHub 深度搜索与多 provider fallback 骨架
+- `source-router` —— 多源搜索聚合与问题到信息源路由技能
 
-可用的 Codex-mem 系列 skills：
+### Codex-mem 系列 skills
 - `mem-search` —— 跨会话记忆搜索，查找之前解决过的问题
 - `timeline-report` —— 项目发展历程时间线分析报告
 - `make-plan` —— 创建详细的分阶段实施计划
 - `do` —— 使用子代理执行计划
 - `knowledge-agent` —— 构建和查询 AI 知识库
 
-可用的搜索系列 skills：
+### 搜索系列 skills
 - `tavily-search` —— LLM 优化的网页搜索
 - `tavily-research` —— 全面的 AI 驱动研究（带引用）
 - `tavily-extract` —— 从特定 URL 提取纯净 Markdown 内容
 - `tavily-crawl` —— 爬取网站并提取多页内容
 - `tavily-map` —— 发现并列出网站上的所有 URL
-- `web-access` —— 所有联网操作统一入口（搜索、抓取、登录后操作等）
-- `source-router` —— 当问题需要先判断该去哪里找答案，而不是直接网页搜索时优先使用；内置多搜索服务聚合（Tavily、Exa、Brave、秘塔、SerpAPI、Serper、Bing、Google CSE、Firecrawl）与自动回退，适合 GitHub 项目检索、Reddit 真实反馈、视频教程查找、封闭社媒保守检索与多源证据整合
+- `web-access` —— 所有联网操作统一入口
+- `source-router` —— 多源搜索聚合与自动回退
 
-可用的 lark 系列 skills：
+### Lark 系列 skills
 - `lark-wiki` —— 飞书知识库管理
 - `lark-doc` —— 飞书云文档操作
 - `lark-base` —— 飞书多维表格操作
 - `lark-im` —— 飞书即时通讯
-- 等等...
 
 ---
 
@@ -150,6 +175,13 @@ path-to-wealth-freedom/
 ---
 
 ## 更新日志
+
+### 2026-06-12
+- **全面更新文章列表**：替换过时引用，反映10篇实际存在的文章
+- **全面更新目录结构**：新增 选题/变现/资产/项目/GitHub雷达 等目录，删除不存在的 提示词/ 和 .baoyu-skills/
+- **更新 Skills 列表**：新增 khazix-writer、anti-pua 用户级 Skills
+- **新增归档目录说明**：AI返佣项目库、Apple ID美区教程
+- **新增笔名信息**：车干
 
 ### 2026-04-20
 - **新增 Codex-mem 系列 skills**：mem-search、timeline-report、make-plan、do、knowledge-agent
