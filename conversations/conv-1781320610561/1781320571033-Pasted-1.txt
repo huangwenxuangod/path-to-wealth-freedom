@@ -1,0 +1,514 @@
+
+Bitget_AI Docs
+
+Ctrl
+K
+
+Builder OS * Hackathon S1 CN
+Builder Base Camp * Hackathon S1
+
+Powered by GitBook
+ON THIS PAGE
+一、这场比赛
+奖项
+二、参赛流程
+时间线（UTC+8）
+参赛者需要做什么
+三、赛道、提交与评审
+赛道总览
+提交要求
+传播要求（所有赛道）
+评审标准
+四、比赛工具箱
+Bitget Playbook（Crypto & 美股 量化 Copilot）
+Bitget Agent Hub（Crypto & 美股 Agent 的交易武器库）
+通义千问 Token 补贴
+MuleRun Token 补贴
+资源与联系
+五、常见问题
+
+Copy
+
+Builder Base Camp * Hackathon S1
+2026 年，第一批真正自主运行的交易 Agent 正在被写出来。现在轮到你了。
+— Bitget AI 团队
+
+一、这场比赛
+今天我们站在下一个入口：Agentic Trading。加密市场 7×24 不停歇，但人需要睡觉。AI Agent 是第一个能读懂新闻、情绪、链上信号，并在没有预设规则的情况下自主判断、自主执行的存在——感知市场，形成策略，下单执行，管理风险，完整闭环。这是传统量化做不到的。
+
+Bitget AI Base Camp Hackathon S1 是目前全球首个系统性面向 AI × Crypto Builder 的专项赛事，也是 Bitget 面向开发者长期运营计划的起点。
+
+项目
+详情
+活动时间
+
+2026 年 5 月 27 日 – 6 月 30 日
+
+活动形式
+
+全球线上
+
+总奖金池
+
+50,000 USDT
+
+主办方
+
+Bitget
+
+战略赞助
+
+阿里云、通义千问
+
+媒体与生态支持
+
+Foresight Ventures / Foresight News
+
+奖项
+奖项
+名额
+单项奖金
+赛道
+一等奖
+
+1 名
+
+6,600 USDT
+
+全赛道共评
+
+二等奖
+
+共 3 名
+
+1,500 USDT
+
+三个赛道各 1 名
+
+三等奖
+
+共 3 名
+
+800 USDT
+
+三个赛道各 1 名
+
+最佳社区传播奖
+
+共 3 名
+
+500 USDT
+
+三个赛道各 1 名
+
+优秀参与奖
+
+符合要求的队伍
+
++50 USDT / 队伍
+
+提交 Demo + 符合要求发帖即可
+
+除奖金外，参赛还能获得：官方渠道宣发曝光、生态媒体报道、潜在孵化与投资对接、Bitget AI 新产品内测资格，以及加入 Bitget AI Builders 长期开发者社群。
+
+二、参赛流程
+时间线（UTC+8）
+时间
+节点
+5月27日 0:00
+
+报名开放，开发启动
+
+6月14日 24:00
+
+报名截止（前 500 队伍获通义千问 Token 补贴）
+
+6月15日 0:00
+
+提交窗口开放
+
+6月25日 24:00
+
+提交截止
+
+6月25–29日
+
+评审
+
+6月30日
+
+颁奖，邮件通知获奖者
+
+参赛者需要做什么
+报名（5月27日起，UTC+8）
+
+在官方报名页用绑定邮箱的 Bitget 账号填写表单，个人或组队均可（最多 5 人）
+
+报名后加入官方 Telegram 社群；前 500 支队伍在 24h 内收到通义千问 Token 补贴，进群即可领取 MuleRun Token 补贴（详见第四章）
+
+选赛道 + 开始构建（即刻起）
+
+看第三章选定赛道，接入 Bitget Agent Hub 或 Bitget Playbook 开始构建（工具使用见第四章）
+
+Demo 必须真实可运行，不接受纯概念展示；不要求真实资金，模拟交易和回测记录同样有效
+
+传播（开发期间持续）
+
+转发 Bitget 官方互动帖并发布自己的内容，带 #BitgetHackathon 并 @ Bitget AI 官号
+
+提交（6月15日 0:00 – 6月25日 24:00，UTC+8）
+
+Bitget 通过官方社媒、社群和报名邮箱发布提交链接
+
+按赛道填写表单上传材料，附上官方互动帖转发及发布内容的帖子链接参与最佳社区传播奖评选；各赛道具体提交材料见第三章
+
+等结果（6月30日）
+
+评委独立评审后，获奖者通过报名邮箱通知，结果同步公布
+
+三、赛道、提交与评审
+赛道总览
+赛道
+适合你，如果…
+具体可以做什么
+🟦 交易 Agent
+
+想做自动跑策略，或者让别人能 Vibe Trading 的工具
+
+自然语言驱动的合约交易 Agent
+BTC 趋势 + 均值回归自适应策略
+Meme 币链上信号跟单机器人
+
+🟩 交易 Infra
+
+想做让 Agent 跑得更好的底层工具或数据产品
+
+Paper Trading 沙箱
+Agent 监控面板 + 风险评分
+链上数据看板
+自然语言策略编译器
+
+🟧 美股 AI 交易
+
+想用 AI 参与美股代币化资产交易，或围绕美股交易场景解决真实问题
+
+美股代币化资产宏观情绪判断 Agent
+基于美股历史数据的回测与策略部署
+实时感知美联储动向并自动调仓的 Agent
+
+提交要求
+🟦 赛道一 — 交易 Agent
+Demo 链接（必填） — 可公开访问，必须真实可运行；附回测或模拟交易记录，无需真实资金
+
+项目说明（必填） — 200 字以内：解决什么问题、策略闭环说明（感知→决策→执行→风控）；用了哪些 Bitget AI 模块
+
+视频演示（选填） — 不超过 3 分钟
+
+🟩 赛道二 — 交易 Infra
+GitHub 仓库链接（必填） — 代码可运行，含完整 README；其他开发者能低成本接入
+
+演示视频（必填） — 不超过 3 分钟，展示核心功能及接入方式
+
+项目说明（必填） — 解决了什么问题、技术方案概述、扩展性说明
+
+🟧 赛道三 — 美股 AI 交易
+Demo 链接 或 GitHub 仓库（二选一，必填）
+
+项目说明（必填） — 200 字以内：是否围绕美股代币化交易场景解决了真实问题
+
+视频演示（选填） — 不超过 3 分钟
+
+传播要求（所有赛道）
+转发 Bitget 官方互动帖并发布项目介绍，带 #BitgetHackathon 并 @ Bitget AI 官号，提交时附上帖子链接，争取最佳社区传播奖（500 USDT × 3 名）。
+
+提交可运行 Demo + 符合要求发帖（开发日记展示你的showcase），额外获得优秀参与奖 +50 USDT。
+
+评审标准
+能打动评委的项目，往往是真正解决了一个问题、并且跑通了的那个。
+
+各赛道关注点：
+
+赛道一 — 策略闭环是否完整（感知→决策→执行→风控）；是否经过回测或模拟验证
+
+赛道二 — 其他开发者能否直接接入，上手成本低不低；是否真正解决了 Agent 开发中的痛点
+
+赛道三 — 是否围绕美股代币化交易场景解决了真实问题；有可验证的回测或模拟交易记录；用到了 Bitget 提供的美股相关数据或工具
+
+⚠️ 基础门槛：Demo 必须真实可运行；能说清楚解决了谁的什么问题；有可核查的使用记录（真实 / 模拟交易日志 / API 调用量 / 用户数任意之一）。
+
+四、比赛工具箱
+Bitget Playbook（Crypto & 美股 量化 Copilot）
+Bitget Playbook 是 AI 驱动的量化策略平台。用自然语言描述交易想法，AI 生成可执行策略，基于真实历史数据回测，查看 PnL、最大回撤、夏普比率等指标，一键部署上线自动执行。
+
+方式一：通过 Bitget 官网
+
+获取 Playbook API Key
+
+使用报名的 Bitget UID 登录 Playbook 页面，点击「创建 Agent」，按照指引创建子账户，并获取 Playbook API Key 及安装命令
+
+用 Coding Agent 完成安装、创建、回测、发布
+
+打开 Claude Code（或任意支持的 Coding Agent），将以下 prompt 完整发送：
+
+
+Copy
+1. 用 https://www.npmjs.com/package/@bitget-ai/getagent-skill 安装 getagent
+2. 使用 getagent 创建一个关于 [你的策略想法] 的策略 playbook，并上传、回测、发布
+3. 回测成功后把指标列个表格给我看看
+
+playbook 策略哲思：
+[描述你的策略核心逻辑，例如：自适应市场行情，趋势时跟踪，震荡时均值回归，不明确时空仓]
+
+playbook key：[你的 Playbook API Key]
+查看已发布的 Playbook
+
+发布成功后，直接在此页面即可看到你上传的策略
+
+方式二：通过 GetAgent Studio
+
+进群加白
+
+进入官方 Telegram 社群，联系管理员私发你的 UID 完成加白名单
+
+通过 GetAgent Studio体验完整玩法
+
+之后即可在此页面链接体验完整 Playbook 玩法
+
+Bitget Agent Hub（Crypto & 美股 Agent 的交易武器库）
+Bitget Agent Hub 是为 AI 开发者打造的交易工具平台，三层能力按需取用：
+
+模块
+内容
+帮助
+Tools
+
+58 个交易 API（现货、合约、账户等）
+
+Agent 直接下单、查仓、管理资产，无需手写 API 封装
+
+Skill Hub
+
+5 个分析师级感知 Skill（宏观、情绪、技术指标、链上、新闻）
+
+让 Agent 具备市场感知能力，几行配置即可接入
+
+MCP Server
+
+一行配置接入 Claude / Cursor / Codex
+
+用你熟悉的 AI 工具直接调用 Bitget 所有交易能力
+
+快速安装：
+
+
+Copy
+npx bitget-hub upgrade-all --target claude
+也可以部署到指定工具：
+
+
+Copy
+npx bitget-hub install --target codex
+npx bitget-hub install --target claude,codex
+配置 Bitget API Key： 登录 bitget.com → 设置 → API 管理，创建新 Key，勾选 Read 和 / 或 Trade 权限：
+
+
+Copy
+export BITGET_API_KEY="your-api-key"
+export BITGET_SECRET_KEY="your-secret-key"
+export BITGET_PASSPHRASE="your-passphrase"
+接入 MCP Server（Claude Code / Cursor）：
+
+
+Copy
+claude mcp add -s user \
+  --env BITGET_API_KEY=your-api-key \
+  --env BITGET_SECRET_KEY=your-secret-key \
+  --env BITGET_PASSPHRASE=your-passphrase \
+  bitget \
+  -- npx -y bitget-mcp-server
+Skill Hub — 5 个开箱即用的分析师级 Skill：
+
+Skill
+能力
+macro-analyst
+
+宏观与跨资产分析：美联储政策、BTC vs DXY / 纳指 / 黄金
+
+market-intel
+
+链上与机构情报：ETF 流量、鲸鱼动向、DeFi TVL
+
+news-briefing
+
+新闻聚合与叙事合成：早报生成、关键词搜索
+
+sentiment-analyst
+
+情绪与持仓分析：恐贪指数、多空比、资金费率
+
+technical-analysis
+
+技术分析：23 个指标，覆盖 6 大类别
+
+通义千问 Token 补贴
+前 500 支完成报名的队伍可获得阿里云通义千问 Token 资助。
+
+项目
+说明
+发放时间
+
+报名后 24h 内，发到报名 UID 绑定的邮箱
+
+适用范围
+
+Cursor、Codex 等主流 Coding Agent（暂不支持 Claude Code）
+
+未收到？
+
+在官方 Telegram 社群 @ 管理员，说明 UID 和报名时间
+
+通义千问配置教程
+配置项
+填写内容
+Base URL
+
+https://hackathon.bitgetops.com/v1
+
+Model（推荐）
+
+qwen3.6-plus
+
+可选模型
+
+qwen3.6-flash（极速版）
+
+⚠️ 模型名必须用连字符（如 qwen3.6-plus），不能写 qwen3.6 max（带空格）。
+
+在 Codex 中配置
+第 1 步：配置 config.toml
+
+在 Codex App 中打开配置文件：Settings → Config → Open config.toml
+
+
+
+config.toml 默认可能没有 model_provider，直接在文件顶部新增：
+
+
+Copy
+model = "qwen3.6-plus"
+model_provider = "bitget-qwen"
+
+[model_providers.bitget-qwen]
+name = "Bitget Qwen"
+base_url = "https://hackathon.bitgetops.com/v1"
+env_key = "BITGET_QWEN_API_KEY"
+wire_api = "responses"
+第 2 步：设置 API Key
+
+
+Copy
+## 不要把 Key 写进 config.toml，在终端执行：
+launchctl setenv BITGET_QWEN_API_KEY '你的真实 Key'
+
+## 验证是否成功：有输出即表示 Key 已写入。
+launchctl getenv BITGET_QWEN_API_KEY
+
+第 3 步：重启 Codex App
+
+先完成第 2 步，再彻底退出 Codex（Cmd+Q，不是只关窗口），重新打开即可。
+
+第 4 步：确认正在使用千问
+
+看 App 右下角：应显示 Bitget Qwen，而不是 GPT-5.5
+
+终端自检：/Applications/Codex.app/Contents/Resources/codex doctor | grep model，期望输出包含 qwen3.6-plus
+
+
+在 Cursor 中配置
+第 1 步：打开模型设置
+
+Cursor Settings，或快捷键 Cmd+Shift+J（macOS）/ Ctrl+Shift+J（Windows），左侧选 Models。
+
+
+第 2 步：填写 API Key & 开启 Base URL 覆盖
+
+在 OpenAI API Key 输入框粘贴你的 Key，点击 Verify 确认。
+
+找到 Override OpenAI Base URL 开关，打开，填入：(注意：必须包含 /v1 后缀。)
+
+
+Copy
+https://hackathon.bitgetops.com/v1
+
+第 4 步：添加自定义模型
+
+在 Models 列表下方点击 + Add model，输入 qwen3.6-plus，回车确认并勾选启用。如需极速版，再添加 qwen3.6-flash。
+
+
+
+第 5 步：选择模型并测试
+
+打开 Chat / Agent 面板，在顶部模型下拉框选择 qwen3.6-plus，发送测试消息确认正常回复。
+
+
+MuleRun Token 补贴
+加入官方 Telegram 社群即可领取 2,000 Credits。
+
+项目
+说明
+发放条件
+
+加入官方 Telegram 社群
+
+适用范围
+
+MuleRun 平台，涵盖主流大模型
+
+限制
+
+每邮箱限领一次
+
+第 1 步：加入官方 Telegram 社群
+
+加入官方 Telegram 社群
+
+第 2 步：注册 MuleRun
+
+注册 MuleRun：mulerun.com
+
+第 3 步：领取 Credits
+
+进入兑换页面 credits.mule.page，输入专属码 0526BITGET 领取 2,000 Credits
+
+⚠️ MuleRun Credits 仅限在 MuleRun 平台使用。在 MuleRun 上完成构建后，可直接提交 Agent 链接作为参赛 Demo。
+
+资源与联系
+资源
+链接
+Agent Hub GitHub
+
+BitgetLimited/agent_hub
+
+活动落地页
+
+bitget.com/zh-CN/activity-hub/hackathon
+
+报名入口
+
+点击报名
+
+官方 Telegram
+
+加入社群
+
+官方互动帖
+
+转发参与
+
+五、常见问题
+Bitget AI Base Camp 是一个长期计划。黑客松 S1 是起点，不是终点。你构建的 Agent，可能是 Agentic Trading 时代的第一批基础设施。
+
+加入我们。— Bitget AI 团队
+
+Last updated 2 days ago
+
