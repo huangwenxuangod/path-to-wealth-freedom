@@ -1,0 +1,114 @@
+Skip to content
+
+Find…
+F
+
+Overview
+Deployments
+Logs
+Analytics
+Speed Insights
+Observability
+Firewall
+CDN
+Environment Variables
+Domains
+Connect
+Beta
+Integrations
+Storage
+Flags
+Agent
+AI Gateway
+Sandboxes
+Workflows
+Usage
+Support
+Settings
+
+
+huangwencg-6674
+
+
+Deployments
+8XvgkfroQ
+
+Deployment
+Logs
+Resources
+Source
+Open Graph
+Deployment Details
+Build Failed
+Command "turbo run build" exited with 1
+Created
+
+huangwenxuangod
+7m ago
+Status
+Error
+Latest
+Duration
+33s
+6m ago
+Environment
+Production
+Domains
+vercel-radar-git-main-huangwencg-6674s-projects.vercel.app
+vercel-radar-ls7l04u46-huangwencg-6674s-projects.vercel.app
+Source
+main
+90427b1
+fix: resolve @/lib/utils on Vercel (add baseUrl + webpack alias)
+
+Deployment Settings
+3 Recommendations
+Build Logs
+33s
+1 line selected
+
+8
+
+3
+
+CtrlF
+web:build: npm error Lifecycle script `build` failed with error:
+web:build: npm error code 1
+web:build: npm error path /vercel/path0/apps/web
+web:build: npm error workspace web@0.1.0
+web:build: npm error location /vercel/path0/apps/web
+web:build: npm error command failed
+web:build: npm error command sh -c next build
+ ERROR  web#build: command (/vercel/path0/apps/web) /node24/bin/npm run build exited (1)
+ WARNING  finished with warnings
+Warning - the following environment variables are set on your Vercel project, but missing from "turbo.json". These variables WILL NOT be available to your application and may cause your build to fail. Learn more at https://turborepo.dev/docs/crafting-your-repository/using-environment-variables#platform-environment-variables
+[warn] web#build
+[warn]   - DATABASE_URL 
+  Tasks:    0 successful, 1 total
+ Cached:    0 cached, 1 total
+   Time:    9.716s 
+Summary:    /vercel/path0/.turbo/runs/3F4TGmfmuLHHxqv0PprZHgl5H0o.json
+ Failed:    web#build
+ ERROR  run failed: command  exited (1)
+Error: Command "turbo run build" exited with 1
+Deployment Summary
+Deployment Checks
+Assigning Custom Domains
+Runtime Logs
+
+View and debug runtime logs & errors
+
+Observability
+
+Monitor app health & performance
+
+Speed Insights
+
+Not Enabled
+Performance metrics from real users
+
+Web Analytics
+
+Not Enabled
+Analyze visitors & traffic in real-time
+

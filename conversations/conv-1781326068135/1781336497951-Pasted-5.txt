@@ -1,0 +1,13 @@
+
+157 packages are looking for funding
+  run `npm fund` for details
+7 vulnerabilities (4 moderate, 2 high, 1 critical)
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Run `npm audit` for details.
+Detected Next.js version: 15.1.9
+Running "cd apps/web && next build"
+sh: line 1: cd: apps/web: No such file or directory
+Error: Command "cd apps/web && next build" exited with 1
