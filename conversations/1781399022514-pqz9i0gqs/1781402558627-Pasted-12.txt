@@ -1,0 +1,158 @@
+# 内容/项目/ 整理迁移方案
+
+## 目标
+将 `D:\path-to-wealth-freedom\内容\项目\`（9 份文件平铺）和 `D:\path-to-wealth-freedom\项目\GitHub雷达\`（12 份文件混存）统一整理到 `内容/项目/`，按类型分 3 个子目录 + 新建 README 索引。
+
+## 用户决策（已确认）
+- **分类粒度**：三个子目录 + 索引 ✅
+- **迭代草稿**：删除 7 份 W23/W24 草稿，只留 5 份终稿 ✅
+- **根级 `项目/`**：保留原结构，不删除
+
+## 目标最终结构
+
+```
+D:\path-to-wealth-freedom\内容\项目\
+├── README.md                                       # 新建
+├── 每日SaaS产品创意雷达/                           # 新建
+│   ├── 2026-06-04-每日SaaS产品创意雷达.md
+│   ├── 2026-06-05-每日SaaS产品创意雷达.md
+│   ├── 2026-06-07-每日SaaS产品创意雷达.md
+│   ├── 2026-06-08-每日SaaS产品创意雷达.md
+│   ├── 2026-06-11-每日SaaS产品创意雷达.md
+│   ├── 2026-06-12-每日SaaS产品创意雷达.md
+│   ├── 2026-06-13-每日SaaS产品创意雷达.md
+│   └── 2026-06-14-每日SaaS产品创意雷达.md
+├── GitHub小项目雷达/                               # 新建
+│   ├── 2026-W22-GitHub小项目雷达.md                # 来自 根级项目/GitHub雷达/
+│   ├── 2026-W23-GitHub小项目雷达.md
+│   ├── 2026-W24-GitHub小项目雷达.md
+│   ├── 2026-W25-GitHub小项目雷达.md
+│   └── 2026-06-14-GitHub小项目追踪.md
+└── 方法论拆解/                                     # 新建
+    └── 抖音tiktok游戏化裂变思路.md
+```
+
+## 关键路径
+- **操作主目录**：`D:\path-to-wealth-freedom\内容\项目\`
+- **GitHub 源**：`D:\path-to-wealth-freedom\项目\GitHub雷达\`
+- **README 新建**：`D:\path-to-wealth-freedom\内容\项目\README.md`
+- **AGENTS.md 同步**：`D:\path-to-wealth-freedom\AGENTS.md`（49、94、181 行）
+
+## 实施步骤
+
+### 阶段 0：Git 备份（必做）
+```bash
+cd "D:/path-to-wealth-freedom"
+git add -A
+git commit -m "vault backup: before 内容/项目 migration 2026-06-14"
+```
+
+### 阶段 1：建子目录
+```bash
+mkdir -p "D:/path-to-wealth-freedom/内容/项目/每日SaaS产品创意雷达"
+mkdir -p "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达"
+mkdir -p "D:/path-to-wealth-freedom/内容/项目/方法论拆解"
+```
+
+### 阶段 2：移动 SaaS 8 份
+```bash
+cd "D:/path-to-wealth-freedom/内容/项目"
+mv 2026-06-04-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-05-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-07-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-08-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-11-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-12-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-13-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+mv 2026-06-14-每日SaaS产品创意雷达.md 每日SaaS产品创意雷达/
+```
+
+### 阶段 3：移动方法论 1 份
+```bash
+mv 抖音tiktok游戏化裂变思路.md 方法论拆解/
+```
+
+### 阶段 4：移动 GitHub 5 份终稿
+```bash
+cd "D:/path-to-wealth-freedom/项目/GitHub雷达"
+mv 2026-W22-GitHub小项目雷达.md "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/"
+mv 2026-W23-GitHub小项目雷达.md "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/"
+mv 2026-W24-GitHub小项目雷达.md "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/"
+mv 2026-W25-GitHub小项目雷达.md "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/"
+mv 2026-06-14-GitHub小项目追踪.md "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/"
+```
+
+### 阶段 5：核对
+```bash
+echo "SaaS: $(ls "D:/path-to-wealth-freedom/内容/项目/每日SaaS产品创意雷达/" | wc -l) 应 8"
+echo "GitHub: $(ls "D:/path-to-wealth-freedom/内容/项目/GitHub小项目雷达/" | wc -l) 应 5"
+echo "方法论: $(ls "D:/path-to-wealth-freedom/内容/项目/方法论拆解/" | wc -l) 应 1"
+```
+
+### 阶段 6：处理 7 份 GitHub 草稿
+**采用软删方案（与原决策"删除"差异说明）**：
+- 用户原决策："删除 7 份草稿"
+- 调整：`agent.md` 规定"不直接永久删除文件，所有无用文件只进入 trash-auto"
+- 软删到 `trash-auto/2026-06-14/` 既满足"草稿从主目录消失"的真实意图，又符合安全规则
+
+```bash
+mkdir -p "D:/path-to-wealth-freedom/trash-auto/2026-06-14"
+cd "D:/path-to-wealth-freedom/项目/GitHub雷达"
+mv 2026-W23-GitHub小项目雷达_20260603_094754_627.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W23-GitHub小项目雷达_20260603_100934_505.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W23-GitHub小项目雷达_20260603_101922_391.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W23-GitHub小项目雷达_20260603_124324_305.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W23-GitHub小项目雷达_20260604_084642_733.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W24-GitHub小项目雷达_20260608_101551_405.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+mv 2026-W24-GitHub小项目雷达_20260613_142416_474.md "D:/path-to-wealth-freedom/trash-auto/2026-06-14/"
+```
+
+### 阶段 7：创建 README.md 索引
+文件路径：`D:\path-to-wealth-freedom\内容\项目\README.md`
+
+内容大纲：
+1. 标题 + 更新时间 + 总文件数
+2. 目录结构 ASCII 树状图
+3. 子目录说明（频率 / 产出形式 / 使用场景）
+4. 文件清单表格（按子目录，含大小/日期）
+5. 使用建议（找 SaaS 方向 / 找 Side Project / 学方法论 / 写公众号）
+6. 未来扩展位（预留 1-2 个空位）
+
+### 阶段 8：同步 AGENTS.md
+- **第 49 行**（目录结构图）：
+  - `├── 项目/           # SaaS产品创意雷达（自动生成）` → `├── 项目/           # 项目雷达与方法论聚合（详见 内容/项目/README.md）`
+  - `├── 项目/` 节下的 `└── GitHub雷达/     # 周度GitHub小项目雷达` → `└── GitHub雷达/     # 已迁移至 内容/项目/GitHub小项目雷达/（保留空目录）`
+- **第 94 行**（自动生成清单）：合并 2 行描述为 1 行，指向新位置
+- **第 181 行**：在更新日志底部追加 `### 2026-06-14` 条目
+
+### 阶段 9：Git 提交
+```bash
+cd "D:/path-to-wealth-freedom"
+git add -A
+git commit -m "vault backup: 内容/项目 migration complete 2026-06-14 (3 subdirs + README + AGENTS.md sync)"
+```
+
+## 风险评估
+
+| 风险点 | 评估 | 缓解 |
+|--------|------|------|
+| 文件名/路径 NTFS 兼容 | ✅ 无风险（中文+短横线+下划线，远低于 255 字符限制） | — |
+| Obsidian `[[...]]` 双向链接 | ✅ 零引用（已全仓 grep 验证） | — |
+| 脚本/CI/配置引用 | ✅ 零引用（除 AGENTS.md 外） | — |
+| 移动原子性 | ✅ `mv` 在同 NTFS 卷瞬间完成 | git commit 备份 |
+| 硬删 7 份草稿误删 | ⚠️ 中风险 | 软删到 trash-auto/2026-06-14/，7 天后自动归档 |
+| `.obsidian/workspace.json` 缓存路径 | ⚠️ 打开的标签显示"文件不存在" | 重启 Obsidian 自动适配，**不要手动改 workspace.json** |
+
+## 质量门（操作完成后必做）
+
+- [ ] `每日SaaS产品创意雷达/` 8 份文件 ✅
+- [ ] `GitHub小项目雷达/` 5 份文件 ✅
+- [ ] `方法论拆解/` 1 份文件 ✅
+- [ ] 根级 `项目/GitHub雷达/` 仅剩空目录（7 份草稿已软删到 trash-auto）
+- [ ] `内容/项目/README.md` 已创建
+- [ ] AGENTS.md 3 处已同步
+- [ ] git commit 成功
+- [ ] Obsidian 重启后，3 个子目录正常显示
+
+## 预计耗时
+5-10 分钟（其中 git 操作 30 秒，文件移动 5 秒，README + AGENTS.md 写作 5-8 分钟）
