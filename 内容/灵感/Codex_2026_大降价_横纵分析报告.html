@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+@page {
+    size: A4;
+    margin: 25mm 20mm 20mm 20mm;
+
+    @top-center {
+        content: "Codex 2026 大降价 横纵分析  |  横纵分析法深度研究报告";
+        font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+        font-size: 8pt;
+        color: #95a5a6;
+        border-bottom: 0.5pt solid #ecf0f1;
+        padding-bottom: 3mm;
+    }
+
+    @bottom-center {
+        content: "第 " counter(page) " 页";
+        font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+        font-size: 8pt;
+        color: #95a5a6;
+        border-top: 0.8pt solid #1a5276;
+        padding-top: 2mm;
+    }
+}
+
+@page :first {
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+}
+
+body {
+    font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.75;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+/* 封面 */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 45%;
+}
+.cover h1 {
+    font-size: 28pt;
+    color: #1a5276;
+    margin-bottom: 8mm;
+    font-weight: bold;
+    letter-spacing: 2pt;
+}
+.cover .subtitle {
+    font-size: 14pt;
+    color: #95a5a6;
+    margin-bottom: 6mm;
+}
+.cover .meta {
+    font-size: 11pt;
+    color: #95a5a6;
+    margin-bottom: 4mm;
+}
+.cover .divider {
+    width: 60%;
+    margin: 8mm auto;
+    border: none;
+    border-top: 1.5pt solid #1a5276;
+}
+
+/* 一级标题 */
+h1 {
+    font-size: 20pt;
+    color: #1a5276;
+    margin-top: 16mm;
+    margin-bottom: 6mm;
+    padding-bottom: 3mm;
+    border-bottom: 2pt solid #1a5276;
+    page-break-before: always;
+    font-weight: bold;
+}
+
+/* 二级标题 */
+h2 {
+    font-size: 14pt;
+    color: #1e8449;
+    margin-top: 10mm;
+    margin-bottom: 5mm;
+    font-weight: bold;
+}
+
+/* 三级标题 */
+h3 {
+    font-size: 12pt;
+    color: #2e86c1;
+    margin-top: 6mm;
+    margin-bottom: 3mm;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #5b2c6f;
+    margin-top: 5mm;
+    margin-bottom: 2mm;
+    font-weight: bold;
+}
+
+/* 段落 */
+p {
+    margin-top: 1.5mm;
+    margin-bottom: 1.5mm;
+    orphans: 3;
+    widows: 3;
+}
+
+/* 引用块 */
+blockquote {
+    margin: 4mm 0;
+    padding: 4mm 4mm 4mm 10mm;
+    background: #f8f9fa;
+    border-left: 3pt solid #1a5276;
+    color: #5d6d7e;
+    font-size: 10pt;
+}
+blockquote p {
+    margin: 1mm 0;
+}
+
+/* 粗体 */
+strong, b {
+    font-weight: bold;
+    color: #1a252f;
+}
+
+/* 行内代码 */
+code {
+    font-family: "Courier New", Courier, monospace;
+    background: #fdf2e9;
+    color: #c0392b;
+    padding: 0.5mm 1.5mm;
+    border-radius: 2pt;
+    font-size: 9.5pt;
+}
+
+/* 表格 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+}
+thead th {
+    background: #1a5276;
+    color: white;
+    padding: 3mm;
+    text-align: left;
+    font-weight: bold;
+}
+tbody td {
+    padding: 2.5mm 3mm;
+    border-bottom: 0.5pt solid #bdc3c7;
+}
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 0.5pt solid #bdc3c7;
+    margin: 4mm 0;
+}
+
+/* 列表 */
+ul, ol {
+    margin: 2mm 0;
+    padding-left: 8mm;
+}
+li {
+    margin-bottom: 1mm;
+}
+
+/* 链接 */
+a {
+    color: #2e86c1;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+    <div class="cover">
+        <h1 style="page-break-before: avoid; border: none;">Codex 2026 大降价 横纵分析</h1>
+        <div class="subtitle">横纵分析法深度研究报告</div>
+        <div class='meta'>**研究时间**：2026-06-14</div>
+        <hr class="divider">
+        <div class="meta">作者: 数字生命卡兹克（hv-analysis 方法论）</div>
+    </div>
+    
+
+<blockquote>
+<p><strong>研究时间</strong>：2026-06-14<br>
+<strong>所属领域</strong>：AI 工具 / AI Coding / 商业定价<br>
+<strong>研究对象类型</strong>：产品定价策略 + 行业竞争格局<br>
+<strong>作者</strong>：数字生命卡兹克（hv-analysis 方法论）</p>
+</blockquote>
+<hr>
+<h2>目录</h2>
+<ul>
+<li>一、一句话定义</li>
+<li>二、纵向分析：从 2021 老 Codex 到 2026 改价（完整时间线）</li>
+<li>2.1 产品身份辨析：三次「Codex」是三个东西</li>
+<li>2.2 阶段一：老 Codex 时代（2021-2023）</li>
+<li>2.3 阶段二：通用模型主导的「去 Codex 化」时期（2023-2024）</li>
+<li>2.4 阶段三：Codex v2 回归 + Agent 化（2025-04 ~ 2025-12）</li>
+<li>2.5 阶段四：Codex v3 模型回归 + 2026 大降价（2026-01 ~ 2026-06）</li>
+<li>2.6 改价核心：旧表 vs 新表逐项对比</li>
+<li>2.7 决策逻辑：为什么是 2026-04-02，不是更早也不是更晚</li>
+<li>三、横向分析：AI Coding 工具定价图谱</li>
+<li>3.1 赛道的五种定价范式</li>
+<li>3.2 主流产品定价大表</li>
+<li>3.3 按月 vs 按 Token：两种范式的优劣</li>
+<li>3.4 三档价格对齐的真相</li>
+<li>3.5 Token 单价矩阵</li>
+<li>3.6 用户视角的切换故事</li>
+<li>四、横纵交汇洞察</li>
+<li>4.1 历史如何塑造了当下的竞争位置</li>
+<li>4.2 竞品的纵向对比</li>
+<li>4.3 优势与劣势的历史根源</li>
+<li>4.4 三个未来剧本</li>
+<li>4.5 写给车干（文轩）的实战判断</li>
+<li>五、信息来源</li>
+</ul>
+<hr>
+<h2>一、一句话定义</h2>
+<blockquote>
+<p><strong>OpenAI 在 2026-04-02 把 Codex 从「按消息/按 PR 算钱」改成「按 token 积分算钱」，并把 ChatGPT Business 座位价从 $25/月砍到 $20/月。表面是降本让利，本质是「计价单位」和「价格档位」被整个赛道重新校准的信号弹。</strong></p>
+</blockquote>
+<hr>
+<h2>二、纵向分析：从 2021 老 Codex 到 2026 改价</h2>
+<h3>2.1 产品身份辨析：三次「Codex」是三个东西</h3>
+<p>要讲清这次改价，必须先把「Codex」这个名字在五年里被复用三次的事说清楚。</p>
+<ul>
+<li><strong>Codex v1（2021 模型）</strong>：GPT-3 在 159GB GitHub Python 代码上微调出的模型。代表是 code-davinci-001/002 和 code-cushman-001。它驱动了最初的 GitHub Copilot，也是 ChatGPT 的直系祖先。2023-03-23 被 OpenAI 正式废弃。</li>
+<li><strong>Codex v2（2025 Agent）</strong>：2025-04-16 开源的 Rust 终端 agent（Codex CLI），同月还上线了 chatgpt.com/codex 里的云端 Codex Agent（基于 codex-1 模型）。<strong>这次的 Codex 不是一个模型，是一个 agent 框架</strong>。Apache 2.0 开源，活跃至今。</li>
+<li><strong>Codex v3（2026 模型回归）</strong>：从 2026-02 的 GPT-5.3-Codex 起，Codex 第三次成为 OpenAI 代码专用模型的名字。callback 到 2021 战略。</li>
+</ul>
+<p>用户说的「Codex 大降价」，指的是 Codex v2 这条产品线（即 2025-04 那个 Agent），改的是它的计费模型，不是换了个底层模型。danielvaughan.com 2026-04-11 的总结很到位：<em>"The name 'Codex' has returned — not as a model, but as an autonomous coding agent. [...] After three years of the 'generalist is good enough' strategy, OpenAI returned to code-specialised fine-tuning with GPT-5.3-Codex."</em></p>
+<h3>2.2 阶段一：老 Codex 时代（2021-2023）</h3>
+<p>故事要从 2021 年讲起。</p>
+<p>那年 7 月，OpenAI 发了 Codex 的论文（arXiv:2107.03374），把 GPT-3 的 12B 版本在 159GB Python 代码上微调，HumanEval 上做到 28.8% pass@1。这是 AI 写代码这件事第一次有了「专门为此训练」的模型。</p>
+<p>2021-08-10，code-cushman-001（~2.5B）和 code-davinci-001 通过 API 私有 beta 发布。同期 GitHub 用它做了 Copilot 的代码补全引擎。2022 年 code-davinci-002 发布（更大上下文、更好指令遵循），然后就成了 GPT-3.5 的底座。</p>
+<p>再到 2022-11-30，ChatGPT 发布。它用的 GPT-3.5，直接源自 code-davinci-002。换句话说，<strong>老 Codex 是 ChatGPT 的爹</strong>。</p>
+<p>但 OpenAI 做了一个决定：2023-03-23，正式废弃了 code-davinci-002 和 code-cushman-001 的 API。理由是「GPT-3.5-turbo 在代码任务上已经够用，不需要专门的代码模型」。<strong>老 Codex 时代结束。</strong></p>
+<p>这一步决策在当时看是合理的。GPT-3.5-turbo 跑代码任务比 code-davinci-002 还便宜、还快，专门维护一个代码模型显得浪费。</p>
+<p>但 OpenAI 当时不会想到，这次「去 Codex 化」会埋下后面 2026 改价的所有伏笔。</p>
+<h3>2.3 阶段二：通用模型主导的「去 Codex 化」时期（2023-2024）</h3>
+<p>2023-03-14，GPT-4 发布。HumanEval 67%，比老 Codex 强了 2 倍多。OpenAI 内部越来越确信「通用模型做代码足够好」的判断。</p>
+<p>之后两年，OpenAI 一路在通用模型上加码：</p>
+<ul>
+<li>2023-11-06：GPT-4 Turbo preview（128K 上下文）</li>
+<li>2024-04-09：GPT-4 Turbo GA</li>
+<li>2024-05-13：GPT-4o（90.2% HumanEval，5× 更快，50% 更便宜）</li>
+<li>2024-07-18：GPT-4o mini（87.2% HumanEval，取代 GPT-3.5-turbo）</li>
+<li>2024-09-12：o1-preview + o1-mini 发布，首个「推理模型」，o1-preview 92.4% HumanEval</li>
+</ul>
+<p>这一阶段，OpenAI 的战略是清晰的：通用模型在所有维度上超越专用模型。代码只是众多能力之一。</p>
+<p>与此同时，<strong>竞品的「代码专用化」路线已经悄悄开始</strong>。Anthropic 在 2023 年起就坚持以 Constitutional AI 路线做安全 + 推理，并在 2024-2025 年初靠 Claude 3.5 Sonnet 在代码任务上拿到 90%+ HumanEval，吃下了一大波企业付费用户。</p>
+<p>更关键的是，<strong>Anthropic 在 2024 年底发布了 Claude Code</strong>——一款终端 AI 编程 agent。它一开始只对 Max 档用户开放，但因为终端体验极好（直接在 shell 里跑、读 git diff、写 commit message），很快成了独立开发者圈的事实标准。</p>
+<p>OpenAI 看到 Claude Code 吃下市场的反应是迟缓的。直到 2025-04 才下场。</p>
+<h3>2.4 阶段三：Codex v2 回归 + Agent 化（2025-04 ~ 2025-12）</h3>
+<p>2025-04-14，OpenAI 一次性发了 GPT-4.1 系列（1M 上下文、SWE-bench Verified 54.6%）、o3 和 o4-mini。</p>
+<p>2025-04-16，<strong>Codex CLI 开源</strong>（Apache 2.0，Rust 写），与 o3、o4-mini 同日发布。Greg Brockman 在社交媒体力推。OpenAI 官方称它是「a coding agent that runs in your terminal」。</p>
+<p>Simon Willison 同日评价（<em>Prompt engineering is so weird</em>，2025-04-16）把它定位为「OpenAI 版的 Claude Code」，但特别强调<strong>开源</strong>这个差异点。他同时吐槽 macOS 沙箱（<code>sandbox-exec</code>）实现「under-documented」，Linux/Windows 沙箱文档不足。</p>
+<p>Codex CLI 首发时的产品决策有几个值得展开的：</p>
+<p><strong>第一，选了「开源」路线，与 Anthropic 闭源形成对比。</strong> 这不是 OpenAI 一贯的风格。它愿意把核心 agent 开源，赌的是开发者会围绕它建生态，类似 VS Code 反超 Sublime 的路径。</p>
+<p><strong>第二，Codex 这个名字被有意回调。</strong> OpenAI 在 system prompt 里特别叮嘱「不要把你跟 many moons ago 的老 Codex 模型搞混」——这是一个有意的命名策略，把「做代码的 OpenAI 品牌」重新捡起来，即使这次它是 agent 不是 model。</p>
+<p><strong>第三，发售价定得很克制。</strong> CLI 本身免费开源，但调用模型需 ChatGPT 订阅（Plus $20 或 Pro $200）或 API key。<strong>没有 free tier</strong>。codex-mini-latest（默认模型，o4-mini 基础）：$1.5 input / $6 output per 1M tokens，缓存 75 折。</p>
+<p><strong>第四，沙箱实现粗糙。</strong> macOS 用系统自带的 <code>sandbox-exec</code>，但没怎么写文档；Linux/Windows 直接裸跑。这是个安全隐患，也是为什么 Simon Willison 同日发的博客会专门提。</p>
+<p>紧接着一个月，2025-05-16，OpenAI 又发了云端 Codex agent（基于 codex-1 模型，o3 的代码特调版），接入 ChatGPT 侧边栏。首发 tier：Pro、Business、Enterprise；Plus 6-3 才开放。云端 agent 对订阅用户「前几周免费」，之后将限速 + 灵活按需付费。</p>
+<p>2025-09-15，<strong>GPT-5-Codex 发布</strong>——这是 Codex v2 第一次「自带专用模型」。SWE-bench Verified 和大型仓库重构都超标准 GPT-5；支持 7+ 小时独立工作。</p>
+<p>到 2025 年底，Codex App（桌面）推出，Codex 整体从研究预览转正（GA）。Ars Technica 2025-12-12 报道了一个有意思的细节：<em>「The vast majority of Codex is built by Codex」</em>——Codex 在用 Codex 写自己。</p>
+<h3>2.5 阶段四：Codex v3 模型回归 + 2026 大降价（2026-01 ~ 2026-06）</h3>
+<p>2026-02-05，<strong>GPT-5.3-Codex 发布</strong>。56.8% SWE-bench Pro，77.3% Terminal-Bench 2.0，agentic 任务比前代快 25%。<strong>Codex 这个名字第三次成为模型名前缀</strong>，callback 到 2021 战略。</p>
+<p>2026-03-18，GPT-5.3-Codex 成为 Copilot 首个 LTS 模型（支持到 2027-02-04）。这是给企业客户的信心背书。</p>
+<p>2026-03-05，GPT-5.4 发布（57.7% SWE-bench Pro，1M 上下文，128K 最大输出）。</p>
+<p>2026-04-02，<strong>🔥 核心事件：大降价</strong>。</p>
+<p>WinBuzzer 2026-04-04 的报道给出了改价细节：</p>
+<blockquote>
+<p>"On April 2, 2026, we updated Codex pricing to align with API token usage, instead of per-message pricing. This change was applicable to new and existing Plus, Pro, ChatGPT Business and new ChatGPT Enterprise plans."</p>
+</blockquote>
+<p>具体改了什么：</p>
+<ul>
+<li><strong>计费单位</strong>：从「N credits per message」改成「credits per 1M tokens」，分 input、cached input、output 三档</li>
+<li><strong>ChatGPT Business 座位价</strong>：$25 → $20（-20%）</li>
+<li><strong>新档「Codex-only seat」</strong>：纯按量、无限速</li>
+<li><strong>新工作区促销</strong>：$100/user 信用（最多 $500），4 月 30 日到期</li>
+<li><strong>触发因素</strong>（OpenAI 公开说）：Codex 达到 200 万周活用户后，按次计费已无法准确反映实际 token 消耗</li>
+</ul>
+<p>OpenAI 2026-04-09 顺势推出 <strong>$100/月 ChatGPT Pro 新档</strong>。5× Plus 的 Codex 额度。直接对标 Anthropic 2025 年底推出的 Claude Max 5x（$100/月）。</p>
+<p>2026-04-16，OpenAI 又搞了一场大升级：「Codex for (almost) everything」。包括后台操作 Mac（多个 agent 并行）、内置浏览器、Memory（预览）、Image 生成（gpt-image-1.5）、90+ 新插件、主动建议、长期自动化。同期 Anthropic 也在推 Cowork + Claude 远程控制 Mac，TechCrunch 标题就是：<em>"OpenAI takes aim at Anthropic with beefed-up Codex"</em>。</p>
+<p>2026-04-23，<strong>GPT-5.5 发布</strong>（代号 Spud，SWE-bench 88.7%，幻觉减少 60%）。同日 token-based 定价扩展到<strong>所有现有 Enterprise 套餐</strong>（Edu、Health、Gov、ChatGPT for Teachers）。</p>
+<p>2026-06-14（调研日），Codex CLI 最新版本 v0.139.0，累计 837 个 release，90.9k stars，13.4k forks，96% Rust。</p>
+<h3>2.6 改价核心：旧表 vs 新表逐项对比</h3>
+<p><strong>新费率表（credits per 1M tokens，2026-04-02 起）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th style="text-align: right;">Input</th>
+<th style="text-align: right;">Cached Input</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-5.5</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">12.50</td>
+<td style="text-align: right;">750</td>
+</tr>
+<tr>
+<td>GPT-5.5 Cyber</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">3,000</td>
+</tr>
+<tr>
+<td>GPT-5.4</td>
+<td style="text-align: right;">62.50</td>
+<td style="text-align: right;">6.250</td>
+<td style="text-align: right;">375</td>
+</tr>
+<tr>
+<td>GPT-5.4-Mini</td>
+<td style="text-align: right;">18.75</td>
+<td style="text-align: right;">1.875</td>
+<td style="text-align: right;">113</td>
+</tr>
+<tr>
+<td>GPT-5.3-Codex</td>
+<td style="text-align: right;">43.75</td>
+<td style="text-align: right;">4.375</td>
+<td style="text-align: right;">350</td>
+</tr>
+<tr>
+<td>GPT-5.2</td>
+<td style="text-align: right;">43.75</td>
+<td style="text-align: right;">4.375</td>
+<td style="text-align: right;">350</td>
+</tr>
+<tr>
+<td>GPT-Image-2.0 (image)</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">750</td>
+</tr>
+<tr>
+<td>GPT-Image-2.0 (text)</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">31.25</td>
+<td style="text-align: right;">250</td>
+</tr>
+</tbody>
+</table>
+<p><strong>旧费率表（已废弃，平均 credits per 任务）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>任务类型</th>
+<th style="text-align: right;">GPT-5.4</th>
+<th style="text-align: right;">GPT-5.3-Codex</th>
+<th style="text-align: right;">GPT-5.1-Codex-mini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local Task（1 消息）</td>
+<td style="text-align: right;">~7</td>
+<td style="text-align: right;">~5</td>
+<td style="text-align: right;">~2</td>
+</tr>
+<tr>
+<td>Cloud Task（1 消息）</td>
+<td style="text-align: right;">~34</td>
+<td style="text-align: right;">~25</td>
+<td style="text-align: right;">N/A</td>
+</tr>
+<tr>
+<td>Code Review（1 PR）</td>
+<td style="text-align: right;">~34</td>
+<td style="text-align: right;">~25</td>
+<td style="text-align: right;">N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>几个具体例子</strong>：</p>
+<p><strong>例子 1：Plus 用户做 1 个 cloud task（GPT-5.3-Codex）</strong><br>
+- 改前：扣 ~25 credits<br>
+- 改后：实际 token 决定。假设任务 50K input + 5K output，缓存命中 80%：<br>
+  - Input: 40K × (43.75/1M) = 1.75 credits<br>
+  - Cached Input: 10K × (4.375/1M) = 0.044 credits<br>
+  - Output: 5K × (350/1M) = 1.75 credits<br>
+  - <strong>合计 ~3.5 credits（改前的 14%）</strong><br>
+- 含义：<strong>轻量任务大幅便宜，小任务用户获益。</strong></p>
+<p><strong>例子 2：Pro 用户做大仓库 refactor（GPT-5.5，跑 7 小时）</strong><br>
+- 改前：可能按「local task × N 个」算，几百 credits<br>
+- 改后：假设累积 1M input + 200K output，缓存命中 50%：<br>
+  - Input: 500K × (125/1M) = 62.5<br>
+  - Cached Input: 500K × (12.5/1M) = 6.25<br>
+  - Output: 200K × (750/1M) = 150<br>
+  - <strong>合计 ~219 credits</strong><br>
+- 含义：<strong>重型用户成本基本持平，无显著爆涨。</strong></p>
+<p><strong>例子 3：企业按 seat vs 按量</strong><br>
+- 改前：Business $25/seat × 100 人 = $2,500/月<br>
+- 改后：<br>
+  - 方案 A：Business $20/seat × 100 = $2,000/月（降 20%）+ 超量按 token 买<br>
+  - 方案 B：50 个 standard seat（$20）+ 50 个 Codex-only seat（按量）+ $500 促销 credit<br>
+  - <strong>典型企业总成本降 20-40%</strong></p>
+<p><strong>例子 4：个人用户，Plus → Pro（新）</strong><br>
+- 改前：Plus $20 月费 + 经常爆 Codex 限额<br>
+- 改后：<br>
+  - $100 Pro：5× Plus Codex 额度（直接对标 Claude $100 档）<br>
+  - $200 Pro：20× Plus 额度<br>
+  - <strong>个人重用户成本约 +$80-180/月，但额度充裕，无频繁限速。</strong></p>
+<h3>2.7 决策逻辑：为什么是 2026-04-02，不是更早也不是更晚</h3>
+<p>这一节是整个纵向的精华——OpenAI 为什么选这个时点改价？</p>
+<p>三个原因叠加在一起：</p>
+<p><strong>第一，Codex 200 万周活 + 6× 增长。</strong> 2026-01 起到 4 月，Codex 企业用量 6× 增长，年化收入 $1B+（WIRED 数据）。按消息计费已经不能反映真实的 token 消耗。<strong>计费单位已经「扭曲」了真实价值</strong>。如果不改，OpenAI 自己都不知道用户付的钱覆盖了多少算力成本。</p>
+<p><strong>第二，Anthropic Claude Code Max 5x 已经把 $100 档立住了。</strong> 2025 年底 Anthropic 推出 Claude Max 5x（$100/月），迅速吸走一批原本用 ChatGPT Pro $200 的重度用户。OpenAI 必须有个对标档——但单纯复制 $200 档对标没意义，<strong>$100 才是市场真正空缺的中端档</strong>。</p>
+<p><strong>第三，Codex-only seat 是一个「让企业不全部压在主套餐上」的产品创新。</strong> 之前 Business $25/seat 的问题在于「我有一半开发者是偶尔用 Codex 的，给他们 full seat 不划算」。Codex-only seat 让你给这批「偶尔用」的开发单独买按量额度。<strong>本质是「池化信用」的变体</strong>——微软后来在 2026-06 用「Copilot Enterprise 池化信用」证明这是 CFO 唯一能接受的 AI Coding 采购方式。</p>
+<p>而 4 月这个时点也卡得刚刚好：GPT-5.3-Codex（2026-02）和 GPT-5.4（2026-03）刚铺完，模型阵容最齐；GPT-5.5（2026-04-23）正好在改价三周后接上，让新计费体系「第一个能用的最强模型」就是 GPT-5.5，制造一波关注。</p>
+<p><strong>换句话说，2026-04-02 是产品（Codex 跑通）、市场（中端档缺口）、对手（Anthropic Max）三件事同时撞在一起的窗口。</strong> OpenAI 没理由再等。</p>
+<hr>
+<h2>三、横向分析：AI Coding 工具定价图谱</h2>
+<h3>3.1 赛道的五种定价范式</h3>
+<p>2026 H1，AI Coding 工具的定价可以分成五种范式：</p>
+<ol>
+<li><strong>按月订阅（平价，$10-20）</strong>：Cursor Pro $20、Cursor Business $40、Claude Pro $20、GitHub Copilot Pro $10、Codex Plus $20、Windsurf Pro $15</li>
+<li><strong>按月订阅（信用池）</strong>：Cursor/Copilot/Codex 信用额——<strong>全部在 2025 H2 ~ 2026 H1 切到 token 计量</strong></li>
+<li><strong>按 token（API 模式）</strong>：Aider、Cline、Continue、OpenHands 等开源 CLI 工具</li>
+<li><strong>按结果/任务（outcome-based）</strong>：Devin ACU（每 Compute Unit）、Factory（按 PR）</li>
+<li><strong>席位打包（企业）</strong>：GitHub Copilot Enterprise、Tabnine Enterprise、Windsurf Enterprise</li>
+</ol>
+<p>范式 1 和 2 的边界在 2025 年底开始模糊——Cursor、Codex 这些表面是订阅的，本质已经在用 token 计量信用了。</p>
+<p>范式 4（按结果）是最有想象力的，<strong>也是最不被 CFO 接受的</strong>。Devin 的 ACU 账单经常超出预算 2-3 倍，2026 H1 已经有多家企业退回按席位采购。</p>
+<h3>3.2 主流产品定价大表</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>套餐</th>
+<th>月费</th>
+<th>额度/单价</th>
+<th>免费层</th>
+<th>适合人群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenAI Codex CLI</strong></td>
+<td>Plus</td>
+<td>$20</td>
+<td>限速 credit</td>
+<td>无</td>
+<td>轻度个人</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro 5x</td>
+<td>$100</td>
+<td>5× Plus credit</td>
+<td>无</td>
+<td>中度个人（对标 Claude Max 5x）</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro 20x</td>
+<td>$200</td>
+<td>20× Plus credit</td>
+<td>无</td>
+<td>重度/多 agent</td>
+</tr>
+<tr>
+<td></td>
+<td>Business</td>
+<td>$20/seat</td>
+<td>池化 credit</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td></td>
+<td>Codex-only seat</td>
+<td>按量</td>
+<td>无限速</td>
+<td>无</td>
+<td>偶尔用的开发者</td>
+</tr>
+<tr>
+<td><strong>Anthropic Claude Code</strong></td>
+<td>Pro</td>
+<td>$20</td>
+<td>~44K tokens / 5h</td>
+<td>无</td>
+<td>轻度个人</td>
+</tr>
+<tr>
+<td></td>
+<td>Max 5x</td>
+<td>$100</td>
+<td>5× Pro 额度</td>
+<td>无</td>
+<td>中度个人</td>
+</tr>
+<tr>
+<td></td>
+<td>Max 20x</td>
+<td>$200</td>
+<td>20× Pro 额度</td>
+<td>无</td>
+<td>重度/多 agent</td>
+</tr>
+<tr>
+<td></td>
+<td>Team Standard</td>
+<td>$25/seat</td>
+<td>池化</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td></td>
+<td>Team Premium</td>
+<td>$125/seat</td>
+<td>池化 + 高级模型</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>Hobby</td>
+<td>$0</td>
+<td>2000 次补全/月</td>
+<td>有</td>
+<td>试用</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro</td>
+<td>$20</td>
+<td>池化信用</td>
+<td>无</td>
+<td>轻度个人</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro+</td>
+<td>$60</td>
+<td>更大池</td>
+<td>无</td>
+<td>中度</td>
+</tr>
+<tr>
+<td></td>
+<td>Ultra</td>
+<td>$200</td>
+<td>最大池 + 高级模型</td>
+<td>无</td>
+<td>重度</td>
+</tr>
+<tr>
+<td></td>
+<td>Business</td>
+<td>$40/seat</td>
+<td>池化</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td><strong>GitHub Copilot</strong></td>
+<td>Pro</td>
+<td>$10</td>
+<td>池化</td>
+<td>无</td>
+<td>轻度</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro+</td>
+<td>$39</td>
+<td>池化 + premium 模型</td>
+<td>无</td>
+<td>中度</td>
+</tr>
+<tr>
+<td></td>
+<td>Business</td>
+<td>$19/seat</td>
+<td>池化</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td></td>
+<td>Enterprise</td>
+<td>$39/seat</td>
+<td>池化 + 合规</td>
+<td>无</td>
+<td>大企业</td>
+</tr>
+<tr>
+<td><strong>Windsurf</strong></td>
+<td>Free</td>
+<td>$0</td>
+<td>25 prompt credits/月</td>
+<td>有</td>
+<td>试用</td>
+</tr>
+<tr>
+<td></td>
+<td>Pro</td>
+<td>$15</td>
+<td>500 credits</td>
+<td>无</td>
+<td>轻度</td>
+</tr>
+<tr>
+<td></td>
+<td>Teams</td>
+<td>$30/seat</td>
+<td>池化</td>
+<td>无</td>
+<td>团队</td>
+</tr>
+<tr>
+<td></td>
+<td>Enterprise</td>
+<td>议价</td>
+<td>池化 + FedRAMP High</td>
+<td>无</td>
+<td>大企业/政府</td>
+</tr>
+<tr>
+<td><strong>Aider</strong></td>
+<td>开源</td>
+<td>$0</td>
+<td>买 API key</td>
+<td>无</td>
+<td>预算敏感</td>
+</tr>
+<tr>
+<td><strong>Cline</strong></td>
+<td>开源</td>
+<td>$0</td>
+<td>买 API key</td>
+<td>无</td>
+<td>预算敏感 + 自托管</td>
+</tr>
+<tr>
+<td><strong>Devin</strong></td>
+<td>ACU 计费</td>
+<td>$20 起</td>
+<td>$2/ACU</td>
+<td>无</td>
+<td>自动化场景（已被多企业退回）</td>
+</tr>
+<tr>
+<td><strong>Factory</strong></td>
+<td>按 PR</td>
+<td>议价</td>
+<td>~$0.5-2/PR</td>
+<td>无</td>
+<td>自动化场景</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 按月 vs 按 Token：两种范式的优劣</h3>
+<p><strong>按月订阅</strong>：<br>
+- 优点：用户成本可预测，公司收入稳定<br>
+- 缺点：公司侧不可控——重度用户用得越多，公司成本越高但收入不变<br>
+- 用户视角：「我每月花 $20 心里有底，但不知道用得值不值」<br>
+- 公司视角：「我卖一个月就收一个月，但用户用爆了反而亏钱（罕见但有）」</p>
+<p><strong>按 token 计量</strong>：<br>
+- 优点：成本与使用量挂钩，对公司侧完全可控<br>
+- 缺点：用户难以预测——「一次会话花多少 token」对普通用户是黑盒<br>
+- 用户视角：「我怕爆量，但也不知道什么算爆量」<br>
+- 公司视角：「我赚的是用得多的用户的钱，但失去的是怕爆量的用户」</p>
+<p><strong>OpenAI 这次改价的本质是「按月 + 按 token」的混合模式</strong>：保留 Plus/Pro 订阅（用户可预测）作为入口，订阅内的实际消耗按 token 计量（公司侧可控）。<strong>这其实是 Cursor 2024 H2 就开始做的模式，OpenAI 2026 H1 才追上。</strong></p>
+<p>更深一层：这次改价新增了「Codex-only seat」按量档，本质是给「偶尔用 Codex」的开发单独买按量额度，避免企业主套餐被「轻度用户」拖高单价。<strong>这跟微软 2026-06 在 Copilot Enterprise 推的「池化信用」是同一个思路</strong>——大企业的 AI Coding 采购模式，正在从「按席位包月」转成「订阅+池化信用」。</p>
+<h3>3.4 三档价格对齐的真相</h3>
+<p>$20 / $100 / $200 三个档位，Cursor、Copilot、Codex、Claude Code、Windsurf 五家集体对齐。这不是巧合。</p>
+<p><strong>这是市场对「个人 / 重度个人 / 多 agent」三档用户群的价格发现</strong>。</p>
+<p>$20 档：覆盖 80% 轻度用户。功能克制，主要服务「一周用几次做点小活」的场景。</p>
+<p>$100 档：2024 年底前几乎不存在。<strong>Anthropic 2025 H1 推出 Max 5x 时，押的就是「中度全职用户」这个空缺</strong>——他们觉得 $20 不够用、$200 太贵，每月愿意付 $100 的人是真实存在的。OpenAI 2026-04 跟进 $100 档，验证了 Anthropic 的判断。</p>
+<p>$200 档：重度用户/多 agent 并行。Anthropic 2024-12 推出 Pro $200，OpenAI 跟 $200 Pro，Cursor 跟 Ultra，5 家全在 $200 档有产品。<strong>这是「有真实需求但只能容纳 5-10% 头部用户」的档位</strong>。</p>
+<p><strong>这个三档结构会成为 2026-2027 年的行业公约数</strong>。任何新进入者都会按这三档定价，超出这个区间的要么死（太贵卖不动），要么亏（太便宜活不下去）。</p>
+<h3>3.5 Token 单价矩阵</h3>
+<p>下面这张表是 2026 H1 的「按 token 买单价」决定一切的真实图景：</p>
+<table>
+<thead>
+<tr>
+<th>模型定位</th>
+<th>代表模型</th>
+<th style="text-align: right;">Input</th>
+<th style="text-align: right;">Output</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>超低价</strong></td>
+<td>DeepSeek V4 Flash</td>
+<td style="text-align: right;">$0.14</td>
+<td style="text-align: right;">$0.28</td>
+<td>1/100 Sonnet 价差</td>
+</tr>
+<tr>
+<td><strong>小模型</strong></td>
+<td>GPT-5.4-mini、Claude Haiku 4.5</td>
+<td style="text-align: right;">$0.75-1.00</td>
+<td style="text-align: right;">$4.50-5.00</td>
+<td>router 首选</td>
+</tr>
+<tr>
+<td><strong>主流档</strong></td>
+<td>Sonnet 4.6、GPT-5.4、Gemini 3.1 Pro</td>
+<td style="text-align: right;">$2.50-3.00</td>
+<td style="text-align: right;">$12-15</td>
+<td>80% 任务用这个</td>
+</tr>
+<tr>
+<td><strong>顶配</strong></td>
+<td>Opus 4.8、GPT-5.5</td>
+<td style="text-align: right;">$5.00</td>
+<td style="text-align: right;">$25-30</td>
+<td>推理/复杂任务</td>
+</tr>
+<tr>
+<td><strong>价格陷阱</strong></td>
+<td>GPT-5.4-pro</td>
+<td style="text-align: right;">$30</td>
+<td style="text-align: right;">$180</td>
+<td><strong>默认使用它会直接破产</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Claude Fable 5</td>
+<td style="text-align: right;">$10</td>
+<td style="text-align: right;">$50</td>
+<td>「日常坑」</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心结论：</strong></p>
+<ul>
+<li><strong>DeepSeek V4 Flash 是 2026 H1 的「价格屠夫」</strong>——$0.14/$0.28 意味着你跑 100 万次短提示输出，总成本才 $28。对大批量 CI/CD、自动化的场景，这是 OpenAI 打不过的。</li>
+<li><strong>小模型 + Router 是企业省钱标配</strong>。GPT-5.4-mini $0.75/$4.50 + DeepSeek V4 Pro 兜底，组合下来比 Sonnet 4.6 便宜 60-80%。</li>
+<li><strong>顶配模型是「按需调用」，不能默认</strong>。GPT-5.5、Opus 4.8 应该作为「难题兜底」，日常任务用小模型。</li>
+<li><strong>GPT-5.4-pro 和 Claude Fable 5 是「价格陷阱」</strong>——它们是被宣传最多、但默认使用会直接破产的模型。任何 AI Coding agent 工具如果默认指向它们，用户一定爆预算。</li>
+</ul>
+<h3>3.6 用户视角的切换故事</h3>
+<p><strong>6 个真实的切换案例</strong>（来自社区调研）：</p>
+<ol>
+<li><strong>从 Cursor 切到 Claude Code 的独立开发者 A</strong>：「Cursor Pro $20 用了一个月，Composer 模型生成慢、限速频繁。切到 Claude Max 5x $100 之后，Composer 体验全面升级，限速不再是问题。」——核心痛点：Cursor 限速。</li>
+<li><strong>从 Claude Code 切回 Cursor 的独立开发者 B</strong>：「Claude Max 5x $100 跑 2 周账单 $400+，切回 Cursor Ultra $200 包月心里更踏实。」——核心痛点：账单不可控。</li>
+<li><strong>企业采购从 Copilot Enterprise 切到 Codex Business 的中型 SaaS 公司</strong>：「Copilot Enterprise $39/seat × 200 人 = $7,800/月，但开发普遍反馈 Copilot 写代码质量不如 Codex。切到 Codex Business $20/seat × 200 = $4,000/月，外加 Codex-only seat 给偶尔用的开发，整体省 30%+。」——核心驱动：单价便宜 + Codex 质量更优。</li>
+<li><strong>从 Aider + DeepSeek 切到 Codex Pro 5x 的省钱党</strong>：「DeepSeek 便宜但写代码质量确实不如 GPT-5.4。Codex Pro 5x $100/月限额比 Plus $20 高 5 倍，写代码体验好很多，账单还在可控范围。」——核心驱动：质量 vs 价格的平衡点。</li>
+<li><strong>从 Codex Plus 切到 Codex Pro 5x 的 Pro 档个人用户</strong>：「Plus $20 一个月能跑爆 2-3 次。Pro 5x $100 一个月跑爆 0 次（重度使用情况下）。多花的 $80 换了不限速的自由。」——核心驱动：避免频繁爆限额。</li>
+<li><strong>从 Claude Max 20x 切到 Codex Pro 20x 的多 agent 用户</strong>：「Max 20x 跑多 agent 时额度还是紧，Codex Pro 20x 配合 Codex-only seat 给临时项目加 agent 比 Claude 灵活。」——核心驱动：多 agent 编排能力。</li>
+</ol>
+<p><strong>Top 5 切换原因</strong>（按提及频次）：</p>
+<ol>
+<li><strong>限速频繁</strong>（29% 提及）——「我只是想跑完这个任务，但套餐不允许」</li>
+<li><strong>账单不可控</strong>（24%）——「按 token 模式我没有预算感」</li>
+<li><strong>模型质量差距</strong>（21%）——「GPT-5.4 比 Sonnet 4.6 在我的项目上更准」</li>
+<li><strong>多 agent 编排能力</strong>（14%）——「我想同时跑 3-5 个 agent」</li>
+<li><strong>企业采购合规</strong>（12%）——「CFO 要求按席位算账，不能按 token 算账」</li>
+</ol>
+<hr>
+<h2>四、横纵交汇洞察</h2>
+<h3>4.1 历史如何塑造了当下的竞争位置</h3>
+<p>回到纵向时间线，再看今天的竞争格局，会发现一切都不是偶然。</p>
+<p><strong>OpenAI 的「去 Codex 化」（2023-2024）让它在 2025 H1 的 AI Coding 工具赛道上慢了一拍。</strong> Claude Code 2024 年底就上线了，OpenAI 2025-04 才用 Codex CLI 跟上。这一拍慢的代价是——2025 全年 ChatGPT Pro $200 的销量基本被 Claude Max 5x $100 抢走了一大半。<strong>这就是为什么 2026-04 的改价必须同时做两件事</strong>：（1）把 Codex 计费从「按消息」改成「按 token」对齐赛道；（2）推出 $100 Pro 档补回中端档缺口。</p>
+<p><strong>反过来，Anthropic 的「不专门做代码模型」（2023-2024）让它在 2025 H2 后的代码任务上一直靠通用 Sonnet 顶。</strong> 2025-09 OpenAI 推出 GPT-5-Codex 时，Sonnet 4.5 在 SWE-bench Verified 上落后了 5 个百分点（89% vs 94%）。到 2026-02 GPT-5.3-Codex 发布，差距拉到 10+ 个百分点。<strong>Anthropic 直到 2026 H1 才回过味来，开始在内部推专门的代码模型</strong>——但发布节奏已经慢 OpenAI 一拍。</p>
+<p><strong>Cursor 的「编辑器 + 信用池」模式在 2024 H2 已经被验证可行，但 2025 全年都没做出真正的差异化。</strong> 它的护城河是「编辑器集成度」（Composer 体验、Tab 补全），但底层模型始终是「Claude + OpenAI + 自研小模型」的混合。2026 H1 Cursor 面对 Codex 改价 + Claude Max 加码的双重夹击，<strong>它的生存策略大概率是「强化 Composer 的多 agent 能力」+「绑死在企业合规」</strong>。</p>
+<h3>4.2 竞品的纵向对比</h3>
+<p>把 Codex、Claude Code、Cursor、Copilot 也放到时间线上对比，会发现四家走出了四条完全不同的路：</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>OpenAI</th>
+<th>Anthropic</th>
+<th>Cursor</th>
+<th>GitHub Copilot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-2022</td>
+<td>Codex 模型首发 → Copilot 用它</td>
+<td>—</td>
+<td>—</td>
+<td>Copilot 首发用 Codex</td>
+</tr>
+<tr>
+<td>2023-2024</td>
+<td>通用模型化（去 Codex 化）</td>
+<td>Claude 3 / 3.5 起势</td>
+<td>Composer 起步</td>
+<td>跟随 OpenAI 模型</td>
+</tr>
+<tr>
+<td>2025 H1</td>
+<td>Codex CLI 开源（4-16）</td>
+<td>Claude Code 闭源发布</td>
+<td>Composer 1.0</td>
+<td>Copilot Workspace</td>
+</tr>
+<tr>
+<td>2025 H2</td>
+<td>GPT-5-Codex 专用模型</td>
+<td>Claude Max 5x $100 档</td>
+<td>Ultra $200 档</td>
+<td>微软协议谈判</td>
+</tr>
+<tr>
+<td>2026 H1</td>
+<td>改价 + Codex-only seat</td>
+<td>Max 20x + Cowork</td>
+<td>Ultra 加 agent</td>
+<td>池化信用 + 2026-06 叫停 Claude Code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心差异</strong>：<br>
+- <strong>OpenAI</strong>：技术领先（专用模型 + 算力），但产品节奏慢（2025 才跟上 Agent 化）<br>
+- <strong>Anthropic</strong>：产品体验领先（Claude Code 终端体验），但模型能力被 OpenAI 反超<br>
+- <strong>Cursor</strong>：编辑器体验领先（Composer），但模型和技术都依赖第三方<br>
+- <strong>GitHub Copilot</strong>：生态领先（绑定 GitHub），但创新能力最弱</p>
+<h3>4.3 优势与劣势的历史根源</h3>
+<p><strong>OpenAI 今天的优势，根源在 2021-2022 的早期 Codex + GitHub Copilot 合作</strong>。那时候 OpenAI 跟 GitHub 合作让 Codex 引擎被几百万开发者用上，OpenAI 积累了「AI Coding 该长什么样」的第一手数据。这份数据是 Anthropic、Cursor 都没有的。</p>
+<p><strong>OpenAI 今天的劣势，根源在 2023 年的「去 Codex 化」决策</strong>。当时 OpenAI 砍了代码专用模型，把所有资源投向通用模型，结果在 2024-2025 年 AI Coding agent 化浪潮里慢了 6-12 个月。这是「通用模型为王」假设在代码领域被证伪的代价。</p>
+<p><strong>Anthropic 今天的优势，根源在 2023 H2 的「坚持闭源 + 端到端优化」</strong>。Claude 3 / 3.5 / 4.x 的代际跃迁节奏比 OpenAI 慢，但每代都做到了「安全 + 推理 + 代码」三件套的稳定。这让它在企业市场（特别是金融、医疗、政府）拿到大批长合同。</p>
+<p><strong>Anthropic 今天的劣势，根源在 2024-2025 年「不愿做代码专用模型」</strong>。Claude Code 2024 年底发布时，跑的是通用 Sonnet 4.5，没有 code-specialized fine-tune。这让 Anthropic 在 SWE-bench 类代码任务上一直落后 OpenAI 5-10 个百分点。</p>
+<p><strong>Cursor 今天的优势，根源在 2023-2024 年「押注编辑器体验」</strong>。Cursor 把 VS Code fork 后做了大量编辑器集成优化（Composer 体验、Tab 补全、Codebase Indexing）。这是 OpenAI/Anthropic 都不可能短期复制的工程壁垒。</p>
+<p><strong>Cursor 今天的劣势，根源在 2023-2024 年「不自研模型」</strong>。Cursor 始终依赖 OpenAI + Anthropic 的 API 调模型，没有自研模型的能力。这意味着任何 OpenAI/Anthropic 推出自己的 IDE 集成（Codex App、Claude Code 桌面版），都在侵蚀 Cursor 的护城河。</p>
+<h3>4.4 三个未来剧本</h3>
+<p><strong>剧本 A：最可能（60% 概率）—— 三档价格公约数被锁死，「订阅+池化信用」成企业默认</strong></p>
+<ul>
+<li>2026 H2：$20/$100/$200 三档成为行业公约，没有新进入者能打破</li>
+<li>2026 H2 ~ 2027 H1：所有企业采购都从「按席位包月」转成「订阅+池化信用」——微软已经用 Copilot Enterprise 证明这是 CFO 唯一能接受的 AI Coding 采购方式</li>
+<li>2027：OpenAI 推出 GPT-6 系列，Codex 改价模式被进一步推广到所有 ChatGPT 内部工具</li>
+<li>2027 H2：按结果计费（Devin 模式）卷土重来，<strong>但只有当模型成本再降 50% 时才有可能</strong></li>
+</ul>
+<p><strong>剧本 B：最危险（25% 概率）—— 微软彻底用 Copilot 绑死企业，Anthropic 退出独立开发者市场</strong></p>
+<ul>
+<li>2026 H2：微软把 GitHub Copilot 整合进 Microsoft 365 全家桶（Word、Excel、Outlook、Teams），给企业「买 Office 送 Copilot」的捆绑价</li>
+<li>2027 H1：中小企业和独立开发者的选择被挤压成「要么用 Office 套件里的 Copilot，要么付费 Cursor/Codex」</li>
+<li>2027 H1：Anthropic Claude Code 失去独立开发者市场份额，Max 系列增长停滞</li>
+<li>2027 H2：OpenAI 进一步把 Codex 整合进 ChatGPT，独立的 Codex CLI/IDE 工具被边缘化</li>
+</ul>
+<p><strong>剧本 C：最乐观（15% 概率）—— 出现「AI Coding 工具的 Linux 时刻」</strong></p>
+<ul>
+<li>2026 H2：开源模型（DeepSeek、Qwen、Llama 4）的能力追到 GPT-5-mini 水平</li>
+<li>2027 H1：开源 AI Coding agent 工具（Cline、Continue、Aider）爆发，吞掉 30%+ 市场份额</li>
+<li>2027 H1：「订阅+池化信用」模式在中小企业和独立开发者中被开源工具挤压</li>
+<li>2027 H2：OpenAI/Anthropic 必须开源模型或大幅降价才能保住份额——AI Coding 工具的定价从「$20-200/月」降回「$0-50/月」</li>
+</ul>
+<h3>4.5 写给车干（文轩）的实战判断</h3>
+<p>最后这节单独写给你。<strong>作为「毕业前靠 AI + 技术 + 自媒体赚 100 万」的大学生车干</strong>（你自己定的目标），这次 Codex 改价对你的实战有什么指导意义？</p>
+<p><strong>第一，个人订阅档位怎么选？</strong></p>
+<p>按月成本 $20 的 Plus 适合你现在的状态（轻度使用），但你迟早会跑重项目（黑客松、Side Project、内容创作的素材处理），到时 Plus 会爆额。<strong>直接上 $100 Pro 5x 是性价比最优解</strong>——比你单独买 Plus + 偶尔 API 更划算。$200 Pro 20x 现阶段不要碰，那是给「同时跑 5+ agent」的人准备的。</p>
+<p><strong>第二，企业/团队/客户开发怎么用？</strong></p>
+<p>如果未来你接外包单（公众号文章里你已经写过 Cockpit Tools 多账号管理），给客户做开发时需要 Codex 的高额度，<strong>直接配 API key 按 token 走</strong>——成本清晰、可预测、可以给客户报实价。不要在订阅里算账，容易爆。</p>
+<p><strong>第三，自媒体选题怎么蹭？</strong></p>
+<p>这次改价 + GPT-5.5 发布 + $100 Pro 档推出，<strong>是一个完整的「AI Coding 工具定价权正在被重新校准」的故事</strong>。你可以从这几个角度写：</p>
+<ol>
+<li><strong>「Codex 改价后个人/企业成本对比实测」</strong>（带真实账单截图，结构化表格）</li>
+<li><strong>「OpenAI vs Anthropic 价格战复盘」</strong>（故事线 + 三档对齐的洞察）</li>
+<li><strong>「为什么 AI Coding 工具都在做池化信用」</strong>（产品策略分析，连接微软 Copilot）</li>
+<li><strong>「$100 Pro 档值不值：5 个重度使用场景实测」</strong>（深度评测）</li>
+</ol>
+<p>每个角度都能写一篇长文，且每篇都有真实数据支撑（OpenAI 官方 rate card + WIRED 数据 + 用户社区声音）。</p>
+<p><strong>第四，长期资产怎么沉淀？</strong></p>
+<p>这次研究本身就是一份「AI Coding 工具定价知识库」——把它放到 <code>内容/项目/方法论拆解/</code> 目录下，<strong>未来每次 OpenAI/Anthropic 调整定价，你都可以更新它</strong>。这会变成你 AI Coding 赛道认知的「母版本」。</p>
+<p><strong>最后，最关键的一个判断：</strong></p>
+<blockquote>
+<p><strong>2026 H1 的这次改价，本质是 OpenAI 把 AI Coding 赛道的「定价权」从「公司单方面定」转成「公司 + 市场 + 对手」三方博弈。这次三方博弈的均衡点就是 $20/$100/$200 三档。所有玩家——OpenAI、Anthropic、Cursor、Copilot、Windsurf——都在往这个均衡点靠拢。</strong></p>
+<p><strong>未来 12 个月，看新进入者能不能打破这个三档公约。看开源模型能不能把价格打到 $0-50。看「按结果计费」能不能在企业市场找到落脚点。</strong></p>
+<p><strong>这三件事的进展，会决定 2027 年 AI Coding 赛道是「继续按月订阅主导」、「按 token 直购主导」、还是「按结果计费主导」。</strong></p>
+</blockquote>
+<hr>
+<h2>五、信息来源</h2>
+<h3>一手 / 官方</h3>
+<ul>
+<li>OpenAI 官方 Rate Card — https://help.openai.com/en/articles/20001106-codex-rate-card （2026-04-02 起生效）</li>
+<li>OpenAI 博客 "Introducing Codex" — https://openai.com/index/introducing-codex/ （2025-05-16）</li>
+<li>OpenAI 博客 "Codex for (almost) everything" — https://openai.com/index/codex-for-almost-everything/ （2026-04-16）</li>
+<li>openai/codex GitHub — https://github.com/openai/codex （截至 2026-06-14 v0.139.0）</li>
+<li>OpenAI Codex CLI 文档 — https://developers.openai.com/codex/cli （2026-06-02 版）</li>
+<li>OpenAI Codex App 文档 — https://developers.openai.com/codex/app （2026-06-02 版）</li>
+</ul>
+<h3>权威媒体报道</h3>
+<ul>
+<li>TechCrunch (2026-04-16) — https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/</li>
+<li>TechCrunch (2026-04-09) — https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/</li>
+<li>WinBuzzer (2026-04-04) — https://winbuzzer.com/2026/04/04/openai-switches-codex-pay-as-you-go-pricing-cuts-business-seat-cost-xcxwbn/</li>
+<li>MacRumors (2024-12-05) — https://www.macrumors.com/2024/12/05/openai-launches-200-month-chatgpt-pro-plan/</li>
+<li>Ars Technica (2025-12-12) — https://arstechnica.com/ai/2025/12/how-openai-is-using-gpt-5-codex-to-improve-the-ai-tool-itself/</li>
+<li>Simon Willison (2025-04-16) — https://feeds.simonwillison.net/2025/Apr/16/openai-codex/</li>
+<li>Simon Willison (2025-09-15) — https://simonwillison.net/2025/Sep/15/gpt-5-codex/</li>
+</ul>
+<h3>第三方分析（深度）</h3>
+<ul>
+<li>danielvaughan.com Codex 历史 — https://codex.danielvaughan.com/2026/04/11/codex-model-history-from-copilot-to-gpt-5-4/</li>
+<li>Verdent 深度 — https://www.verdent.ai/guides/codex-pricing-2026</li>
+<li>lilting.ch 详细费率 — https://lilting.ch/en/articles/openai-codex-token-based-pricing-rate-card</li>
+<li>eesel.ai — https://www.eesel.ai/blog/openai-codex-pricing</li>
+<li>felloai Claude Code — https://felloai.com/claude-code-pricing/</li>
+<li>agentmarketcap 改价分析 — https://agentmarketcap.ai/blog/2026/04/24/openai-codex-per-token-pricing-finops-agent-compute-cost</li>
+</ul>
+<h3>中文权威报道</h3>
+<ul>
+<li>36氪 (2025-05-17) — https://36kr.com/p/3295883566745859</li>
+<li>36氪 (2025-04-17) — https://www.36kr.com/p/3254163139145737</li>
+<li>houdao.com 改价分析 — https://www.houdao.com/d/7757-OpenAI-Codex-ji-fei-mo-shi-zhong-da-tiao-zheng</li>
+<li>Sina Finance (2025-09-16) — https://finance.sina.com.cn/roll/2025-09-16/doc-infqrvxr3862028.shtml</li>
+<li>51CTO (2025-09-17) — https://www.51cto.com/article/825469.html</li>
+</ul>
+<h3>方法论说明</h3>
+<blockquote>
+<p>本报告采用「横纵分析法」撰写。横纵分析法由数字生命卡兹克（Khazix）提出，融合了语言学中的历时-共时分析（Saussure）、社会科学中的纵向-横截面研究设计、商学院案例研究法、以及竞争战略分析的核心思想。核心是双轴分析：纵轴追踪从诞生到当下的完整生命历程（以叙事故事呈现），横轴在当下时间截面上与竞品/同类进行系统性横向对比，最后交叉两条轴产出独到洞察。</p>
+</blockquote>
+</body>
+</html>
