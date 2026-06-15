@@ -1,13 +1,12 @@
 ---
-title: "文轩"
-source: "huangwenxuangod.xyz"
+title: 文轩
+source: huangwenxuangod.xyz
 author:
 published:
 created: 2026-06-15
-description: "记录思考，分享所学，留住当下。"
+description: 记录思考，分享所学，留住当下。
 tags:
-  - "AI实战"
-  - "agent loop"
+  - AI实战
 ---
 
 # Loop engineering 这个事，我真没觉得它是未来
