@@ -1,0 +1,133 @@
+% !TeX program = xelatex
+\documentclass[UTF8,a4paper,10pt,fontset=none]{ctexart}
+\usepackage{iftex}
+\ifXeTeX\else
+  \PackageError{market-report}{This document must be compiled with XeLaTeX}
+  {In Overleaf, open Menu -> Settings -> Compiler and select XeLaTeX.}
+\fi
+\setCJKmainfont{FandolSong-Regular}
+\setCJKsansfont{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+\usepackage[left=1.55cm,right=1.55cm,top=1.30cm,bottom=1.30cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,enumitem,hyperref,xcolor}
+\usepackage{multicol,float,microtype}
+\hypersetup{colorlinks=true,urlcolor=blue!60!black,linkcolor=black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.65cm}
+\setlist{nosep,leftmargin=1.6em}
+\renewcommand{\baselinestretch}{0.94}
+\pagestyle{plain}
+\newcommand{\key}[1]{\textbf{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{\vspace{-1.1cm}\textbf{基于金融新闻情绪与股票价格数据的市场趋势预测研究}\\[-0.2em]
+{\large 大作业技术路线与实验计划}}
+\author{黄文轩\quad 王子轩\quad 林瀚羽\quad 彭琰轲\\深圳大学金融科技专业}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.6em}
+\begin{abstract}
+\noindent
+本文研究每日新闻情绪能否在历史量价信息之外提高道琼斯工业平均指数（DJIA）
+下一交易日涨跌方向的预测能力。研究采用公开的Combined News and DJIA数据，
+以VADER量化每日25条新闻标题的情绪，融合DJIA历史行情，比较Logistic回归、
+随机森林和XGBoost在“仅量价”与“量价+新闻”两组特征下的样本外表现。
+\end{abstract}
+
+\begin{multicols}{2}
+\section{任务目标与技术类型}
+\key{行业领域：}金融科技中的智能投研、金融舆情分析和市场风险监测。
+
+\key{技术类型：}自然语言处理、监督式二分类、时间序列特征工程和集成学习。
+核心问题为：当天可观测的新闻情绪是否能够提高DJIA下一交易日方向预测？
+\begin{equation}
+y_{t+1}=\mathbb{I}\left(\frac{P_{t+1}}{P_t}-1>0\right),
+\end{equation}
+其中$P_t$为DJIA第$t$个交易日复权收盘价。目标是预测方向而非精确点位。
+
+\section{数据来源、规模与模式}
+\key{新闻数据：}Kaggle公开的Daily News for Stock Market Prediction，
+使用其\texttt{Combined\_News\_DJIA.csv}版本。样本覆盖2008年8月至2016年7月，
+每天包含按热度排序的25条新闻标题。
+
+\key{行情数据：}配套\texttt{upload\_DJIA\_table.csv}，字段包括日期、开高低收、
+成交量和复权收盘价。合并并删除20日滚动窗口不足的记录后，预计形成约1968个
+交易日样本和约4.92万条标题。数据存为CSV，中间面板导出Parquet。
+
+\begin{table}[H]
+\centering\small
+\caption{关键字段与变量}
+\begin{tabularx}{\columnwidth}{p{1.25cm}Y}
+\toprule
+类别 & 字段或变量\\
+\midrule
+新闻 & \texttt{Date, Top1,\ldots,Top25}\\
+行情 & \texttt{Open,High,Low,Close,Volume,Adj Close}\\
+情绪 & 均值、标准差、最大/最小值、正负标题占比\\
+标签 & 下一交易日收益率是否大于0\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\key{数据分布：}报告上涨日比例、每日标题数、情绪分数分布和年度样本量。
+原数据自带的同日标签不作为主目标，避免新闻发布时间与同日收盘价之间的时点歧义。
+
+\section{存储与计算平台}
+实验使用Python、Pandas、scikit-learn、XGBoost、VADER和Matplotlib。
+CSV用于保存原始数据，Parquet保存模型面板和预测结果。样本量约2000日，
+普通笔记本CPU即可完成训练与2000次bootstrap。
+
+\columnbreak
+\section{数据预处理}
+\begin{enumerate}
+  \item 按日期升序整理新闻与行情，清除Python字节串标记、HTML实体和异常空白。
+  \item 使用VADER计算每条标题的compound情绪分数，按日聚合情绪均值、标准差、
+  极值、正负占比及一阶滞后。
+  \item 由复权收盘价计算1/5/10/20日收益率、5/20日均线差、5/20日波动率、
+  成交量变化率、日内振幅与5日动量方向。
+  \item 将$t$日新闻和量价特征与$t+1$日收益方向对齐；删除滚动窗口不足和末日
+  无下一日标签的样本。
+  \item 缺失值填补和标准化仅在每个训练窗口拟合，防止未来信息泄漏。
+\end{enumerate}
+
+\section{算法与消融实验}
+\key{模型：}Logistic回归作为线性基准；随机森林捕捉非线性关系；XGBoost通过
+梯度提升提高复杂模式识别能力\cite{xgboost}。
+
+\key{特征组：}
+\begin{itemize}
+  \item P组：仅价格、成交量和技术指标；
+  \item P+N组：P组加每日新闻情绪及其滞后变化。
+\end{itemize}
+同一模型的P+N减P结果用于衡量新闻的增量预测价值。VADER透明且可复现，
+FinBERT作为后续扩展，不与本次已完成的VADER实验混报。
+
+\section{验证策略与指标}
+采用walk-forward递增窗口。测试年份为2014、2015和2016年，每一折使用测试年前
+一年作为验证集，更早年份作为训练集；验证集和测试集开始前设置20个交易日隔离期。
+模型阈值只在验证集上按F1选择，再固定应用于测试集。
+
+\key{分类指标：}ROC-AUC、PR-AUC、F1、平衡准确率、精确率、召回率和Brier分数。
+以2000次配对bootstrap估计XGBoost中P+N相对P的AUC增量及95\%置信区间。
+
+\key{经济指标：}当P+N模型上涨概率$\geq0.55$时持有DJIA，否则持有现金；
+扣除每次仓位变化10个基点成本，报告年化收益、夏普比率和最大回撤，并与买入持有比较。
+
+\section{预期分析原则}
+若加入新闻后AUC提升且置信区间不含0，则支持新闻存在增量信息；若提升较小或不显著，
+应如实说明。进一步检查情绪在上涨日与下跌日是否存在分布差异，以及模型改进能否
+转化为交易成本后的正收益。论文不得只报告表现最好的年份，也不得用同日标签替代
+严格的下一日预测。
+\end{multicols}
+
+\vspace{-0.6em}
+\begin{thebibliography}{9}\small
+\bibitem{tetlock} Tetlock, P. C. Giving Content to Investor Sentiment. \emph{Journal of Finance}, 2007.
+\bibitem{vader} Hutto, C. J., Gilbert, E. VADER: A Parsimonious Rule-based Model for Sentiment Analysis. \emph{ICWSM}, 2014.
+\bibitem{xgboost} Chen, T., Guestrin, C. XGBoost: A Scalable Tree Boosting System. \emph{KDD}, 2016.
+\end{thebibliography}
+\end{document}
+

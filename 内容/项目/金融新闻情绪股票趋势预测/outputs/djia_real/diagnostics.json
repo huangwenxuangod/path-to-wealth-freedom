@@ -1,0 +1,29 @@
+{
+  "sample": {
+    "observations": 1968,
+    "start": "2008-09-08",
+    "end": "2016-06-30",
+    "up_share": 0.5350609756097561,
+    "headlines": 49193,
+    "sentiment_up_mean": -0.21504749576027835,
+    "sentiment_down_mean": -0.21679708453314323
+  },
+  "bootstrap": {
+    "model": "xgboost",
+    "auc_difference": 0.03482181924254946,
+    "ci_2_5": -0.0060290473066550426,
+    "ci_97_5": 0.07340328622916119,
+    "iterations": 2000
+  },
+  "strategy": {
+    "model": "xgboost",
+    "days": 575,
+    "annual_return": -0.1311912247896344,
+    "annual_volatility": 0.08692200617169332,
+    "sharpe": -1.5092981693323781,
+    "max_drawdown": -0.2945674986989104,
+    "market_annual_return": 0.08953358369347053,
+    "invested_share": 0.4852173913043478,
+    "transaction_cost": 0.001
+  }
+}
