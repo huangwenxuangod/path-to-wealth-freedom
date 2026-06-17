@@ -1,0 +1,27 @@
+{
+  "tickers": [
+    "AAPL",
+    "GOOGL",
+    "MSFT",
+    "TSLA"
+  ],
+  "articles": 1387,
+  "ticker_days_with_news": 649,
+  "midnight_share": 0.15933669790915644,
+  "after_hours_share": 0.43186733958183127,
+  "panel_rows": 2132,
+  "panel_train_rows_2019": 1088,
+  "panel_test_rows_2020": 1044,
+  "per_year": [
+    {
+      "year": 2019,
+      "articles": 687,
+      "tickers": 4
+    },
+    {
+      "year": 2020,
+      "articles": 700,
+      "tickers": 4
+    }
+  ]
+}
