@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>事件感知情绪因子 Alpha 识别研究展示稿</title>
+  <style>
+    :root {
+      --title: 58px;
+      --subtitle: 40px;
+      --body: 30px;
+      --small: 23px;
+      --caption: 20px;
+      --pad-top: 74px;
+      --pad-bottom: 64px;
+      --pad-x: 92px;
+      --title-gap: 36px;
+      --item-gap: 20px;
+      --bg: #191713;
+      --paper: #f4efe6;
+      --paper-2: #fffaf0;
+      --ink: #171717;
+      --muted: #665d51;
+      --line: #d4c7b5;
+      --accent: #a36f2c;
+      --accent-2: #355c7d;
+      --soft: #e8ddcb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+      overflow: hidden;
+    }
+
+    .stage {
+      width: 1920px;
+      height: 1080px;
+      transform-origin: top left;
+      position: relative;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+      background: var(--paper);
+      display: none;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .slide.active { display: block; }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      max-width: 1480px;
+      font-size: 76px;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    h2 {
+      max-width: 1580px;
+      font-size: var(--title);
+      line-height: 1.14;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: var(--subtitle);
+      line-height: 1.18;
+      font-weight: 850;
+    }
+
+    .kicker {
+      font-size: var(--small);
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 1420px;
+      margin-top: 36px;
+      font-size: var(--subtitle);
+      line-height: 1.34;
+      color: var(--muted);
+    }
+
+    .body {
+      font-size: var(--body);
+      line-height: 1.48;
+    }
+
+    .small {
+      font-size: var(--small);
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .footer {
+      position: absolute;
+      left: var(--pad-x);
+      right: var(--pad-x);
+      bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(116, 76, 31, 0.22);
+      padding-top: 12px;
+      color: #776d60;
+      font: 19px/1.2 Georgia, "Times New Roman", serif;
+    }
+
+    .num { color: var(--accent); font-weight: 700; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: var(--title-gap);
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: var(--title-gap);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: var(--title-gap);
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.40);
+      border: 1px solid var(--line);
+      padding: 30px 32px;
+    }
+
+    .panel h3 { margin-bottom: 18px; color: var(--ink); }
+
+    .figure-frame {
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .figure-frame img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .fig-large { height: 650px; margin-top: 32px; }
+    .fig-mid { height: 500px; }
+    .fig-small { height: 330px; }
+
+    .caption {
+      margin-top: 12px;
+      font-size: var(--caption);
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    .bullets {
+      display: grid;
+      gap: var(--item-gap);
+      margin-top: var(--title-gap);
+    }
+
+    .bullet {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 18px;
+      font-size: var(--body);
+      line-height: 1.42;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      margin-top: 14px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    .big-number {
+      font: 700 78px/1 Georgia, "Times New Roman", serif;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 25px;
+      margin-top: 28px;
+    }
+
+    .matrix th, .matrix td {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .matrix th {
+      color: var(--accent);
+      font-weight: 850;
+    }
+
+    .matrix td:last-child,
+    .matrix th:last-child { text-align: right; }
+
+    .wide-note {
+      margin-top: 26px;
+      padding: 22px 28px;
+      background: var(--paper-2);
+      border-top: 3px solid var(--accent);
+      font-size: 27px;
+      line-height: 1.42;
+    }
+
+    .formula {
+      margin-top: 24px;
+      padding: 28px 32px;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      font: 38px/1.35 Georgia, "Times New Roman", serif;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 22px;
+      margin-top: 58px;
+    }
+
+    .step {
+      min-height: 250px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.42);
+      padding: 26px 24px;
+    }
+
+    .step .tag {
+      font: 800 22px/1 Georgia, "Times New Roman", serif;
+      color: var(--accent);
+      margin-bottom: 26px;
+    }
+
+    .step .name {
+      font-size: 33px;
+      line-height: 1.2;
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+
+    .step .desc {
+      font-size: 23px;
+      line-height: 1.38;
+      color: var(--muted);
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 8px 15px;
+      margin: 0 8px 10px 0;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-size: 24px;
+    }
+
+    .quote {
+      margin-top: 70px;
+      max-width: 1500px;
+      font-size: 58px;
+      line-height: 1.32;
+      font-weight: 850;
+    }
+
+    .quote em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .cover-mark {
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(116,76,31,0.24);
+    }
+
+    .cover-mark::after {
+      content: "";
+      position: absolute;
+      inset: 70px;
+      border-radius: 50%;
+      border: 1px solid rgba(116,76,31,0.18);
+    }
+
+    .title-meta {
+      position: absolute;
+      left: var(--pad-x);
+      bottom: 104px;
+      font-size: 29px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .nav-hint {
+      position: fixed;
+      right: 18px;
+      bottom: 12px;
+      color: rgba(255,255,255,0.55);
+      font: 14px/1.2 Consolas, monospace;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <main class="stage" id="stage">
+    <section class="slide active">
+      <div class="cover-mark"></div>
+      <div class="kicker">Financial News Sentiment · Event-Aware Alpha</div>
+      <h1>基于事件感知情绪因子的公司级隔夜异常收益识别研究</h1>
+      <p class="lead">中心论点：金融新闻情绪不是直接拿来预测涨跌，而应先被事件化、公司化、短窗口化，才能更接近可交易 alpha。</p>
+      <div class="title-meta">黄文轩 · 王子轩 · 林瀚羽 · 彭琰轲<br />深圳大学金融科技专业<br />课程大作业展示稿</div>
+      <div class="footer"><span>Research Presentation</span><span class="num">01 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Executive Conclusion</div>
+      <h2>最终结论不是“情绪万能”，而是“事件感知情绪才有机会成为 alpha”</h2>
+      <div class="grid-3">
+        <div class="panel"><div class="big-number">1</div><h3>旧问题失真</h3><p class="small">日级平均情绪容易混入时间戳错位、市场状态漂移和指数 beta。</p></div>
+        <div class="panel"><div class="big-number">2</div><h3>新任务更合理</h3><p class="small">只看公司级事件新闻，并预测市场调整后的隔夜异常收益。</p></div>
+        <div class="panel"><div class="big-number">3</div><h3>增量来自交互</h3><p class="small">事件情绪在 XGBoost 中改善 rank IC 和 spread Sharpe，说明它更像非线性条件因子。</p></div>
+      </div>
+      <div class="wide-note">一句话讲清楚：本文研究的不是“新闻情绪能不能预测股票”，而是“如何把新闻情绪加工成可检验、可排序、可交易的 alpha 因子”。</div>
+      <div class="footer"><span>Main Claim</span><span class="num">02 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Research Question</div>
+      <h2>研究问题必须从二分类准确率转向横截面排序能力</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>不能只问</h3>
+          <div class="bullets">
+            <div class="bullet"><span class="dot"></span><span>新闻正负面能否预测明天涨跌？</span></div>
+            <div class="bullet"><span class="dot"></span><span>AUC 或 F1 是否略微提高？</span></div>
+            <div class="bullet"><span class="dot"></span><span>模型是否在某一年看起来有效？</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>必须追问</h3>
+          <div class="bullets">
+            <div class="bullet"><span class="dot"></span><span>哪类事件影响哪家公司？</span></div>
+            <div class="bullet"><span class="dot"></span><span>新闻在哪个可交易窗口被定价？</span></div>
+            <div class="bullet"><span class="dot"></span><span>信号能否提升 rank IC 和 Top-Bottom spread？</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>Question Reframing</span><span class="num">03 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Why The First Baseline Was Not Enough</div>
+      <h2>旧基线的问题在于“看起来能分类”，但不能说明情绪是 alpha</h2>
+      <div class="grid-2">
+        <div class="figure-frame fig-mid"><img src="assets/model_auc_comparison.png" alt="模型 AUC 对比" /></div>
+        <div class="figure-frame fig-mid"><img src="assets/yearly_xgboost_auc.png" alt="逐年 AUC 对比" /></div>
+      </div>
+      <p class="caption">旧实验图：加入新闻后模型指标不稳定，且跨年度表现漂移明显。</p>
+      <div class="wide-note">关键判断：方向分类结果无法区分“文本信号有效”和“市场状态刚好匹配”。因此旧路线只能作为诊断材料，不能作为最终论文主线。</div>
+      <div class="footer"><span>Baseline Diagnosis</span><span class="num">04 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Data And Label Mismatch</div>
+      <h2>日级新闻聚合会把真实交易时间结构压扁</h2>
+      <div class="grid-2">
+        <div class="figure-frame fig-mid"><img src="assets/sentiment_distribution.png" alt="情绪分布" /></div>
+        <div class="figure-frame fig-mid"><img src="assets/feature_correlation.png" alt="特征相关性" /></div>
+      </div>
+      <p class="caption">旧实验图：情绪分布和特征相关性只能说明样本结构，不能证明情绪本身可交易。</p>
+      <div class="footer"><span>Data Diagnosis</span><span class="num">05 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Temporal Drift</div>
+      <h2>时间维度的核心风险是训练窗口与测试窗口的市场机制不一致</h2>
+      <div class="grid-2">
+        <div class="figure-frame fig-mid"><img src="assets/timestamp_feature_drift.png" alt="时间特征漂移" /></div>
+        <div class="figure-frame fig-mid"><img src="assets/timestamp_auc_static_vs_rolling.png" alt="静态与滚动 AUC" /></div>
+      </div>
+      <p class="caption">漂移诊断图：静态跨年训练容易把阶段性结构误当成规律，滚动重训更接近实际部署。</p>
+      <div class="wide-note">这里给出研究转向的理由：不是继续堆模型，而是重定义样本、标签和验证方式，让情绪信号离交易机制更近。</div>
+      <div class="footer"><span>Time-Aware Diagnosis</span><span class="num">06 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Chosen Direction</div>
+      <h2>本文拍板采用“事件感知情绪因子 + 隔夜异常收益”作为主线</h2>
+      <div class="flow">
+        <div class="step"><div class="tag">01</div><div class="name">公司新闻</div><div class="desc">保留发布时间、文本、公司代码。</div></div>
+        <div class="step"><div class="tag">02</div><div class="name">事件过滤</div><div class="desc">只保留财报、评级、并购、监管、运营等事件。</div></div>
+        <div class="step"><div class="tag">03</div><div class="name">情绪强度</div><div class="desc">情绪必须绑定事件类别和目标公司。</div></div>
+        <div class="step"><div class="tag">04</div><div class="name">隔夜标签</div><div class="desc">次日开盘相对前收盘，并扣除 SPY。</div></div>
+        <div class="step"><div class="tag">05</div><div class="name">因子评价</div><div class="desc">rank IC、spread、Sharpe。</div></div>
+      </div>
+      <div class="footer"><span>Final Research Design</span><span class="num">07 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Sample Construction</div>
+      <h2>样本收窄不是缺陷，而是为了提高事件与价格反应的一致性</h2>
+      <div class="grid-4">
+        <div class="panel"><div class="big-number">4</div><h3>股票</h3><p class="small">AAPL、GOOGL、MSFT、TSLA。</p></div>
+        <div class="panel"><div class="big-number">419</div><h3>事件新闻</h3><p class="small">命中事件 taxonomy 的盘前/盘后新闻。</p></div>
+        <div class="panel"><div class="big-number">257</div><h3>信号日</h3><p class="small">公司、日期、事件新闻聚合后的样本。</p></div>
+        <div class="panel"><div class="big-number">2136</div><h3>面板</h3><p class="small">公司交易日级价格与新闻特征。</p></div>
+      </div>
+      <div class="wide-note">这个实验的定位是 alpha 原型验证：先验证任务定义和因子构造是否正确，再扩大股票池与年份。</div>
+      <div class="footer"><span>Sample Size</span><span class="num">08 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Event Taxonomy</div>
+      <h2>事件 taxonomy 决定情绪是否有金融含义</h2>
+      <div class="grid-2">
+        <div>
+          <span class="chip">财报指引</span><span class="chip">评级调整</span><span class="chip">并购合作</span><span class="chip">法律监管</span><span class="chip">资本配置</span><span class="chip">产品运营</span><span class="chip">管理层变动</span>
+          <div class="formula">f<sub>i,t</sub><sup>(k)</sup> = Σ 1(k ∈ E<sub>i,j,t</sub>) · s<sub>i,j,t</sub></div>
+          <p class="small" style="margin-top:20px;">同样的负面情绪，发生在财报指引、监管调查、产品召回中，价格含义不同。</p>
+        </div>
+        <div>
+          <div class="figure-frame fig-mid"><img src="assets/event_alpha_event_mix.png" alt="事件类型分布" /></div>
+          <p class="caption">事件过滤后，财报指引、产品运营、管理层变动是主要事件来源。</p>
+        </div>
+      </div>
+      <div class="footer"><span>Feature Engineering</span><span class="num">09 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Label Design</div>
+      <h2>标签必须贴近新闻被吸收的交易窗口</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>隔夜异常收益</h3>
+          <div class="formula">y<sup>ON</sup><sub>i,t+1</sub> = open<sub>i,t+1</sub> / close<sub>i,t</sub> − 1 − r<sup>MKT</sup><sub>t+1</sub></div>
+        </div>
+        <div class="panel">
+          <h3>为什么不是下一日收盘</h3>
+          <div class="bullets">
+            <div class="bullet"><span class="dot"></span><span>盘后新闻首次集中定价在次日开盘。</span></div>
+            <div class="bullet"><span class="dot"></span><span>盘中收益会混入新宏观信息和流动性冲击。</span></div>
+            <div class="bullet"><span class="dot"></span><span>扣除 SPY 后更接近公司层面的异常反应。</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><span>Target Variable</span><span class="num">10 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Validation Strategy</div>
+      <h2>验证策略同时检查跨年迁移和滚动部署</h2>
+      <div class="grid-3">
+        <div class="panel"><h3>Static</h3><p class="body">2019 年训练，2020 年测试。</p><p class="small" style="margin-top:14px;">检验跨年度迁移能力。</p></div>
+        <div class="panel"><h3>Rolling</h3><p class="body">过去 6 个月训练，下一个自然月测试。</p><p class="small" style="margin-top:14px;">更接近真实模型更新。</p></div>
+        <div class="panel"><h3>Factor Metrics</h3><p class="body">Pearson IC、rank IC、spread、Sharpe。</p><p class="small" style="margin-top:14px;">直接评价排序与组合价值。</p></div>
+      </div>
+      <div class="wide-note">指标选择的关键：alpha 不是分类标签，而是横截面排序信号；因此 rank IC 比 AUC 更接近交易问题。</div>
+      <div class="footer"><span>Evaluation Protocol</span><span class="num">11 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Main Results</div>
+      <h2>事件感知情绪对 XGBoost 有正增量，但不是线性万能变量</h2>
+      <table class="matrix">
+        <thead><tr><th>模型</th><th>特征</th><th>rank IC</th><th>Pearson IC</th><th>Spread</th><th>Sharpe</th></tr></thead>
+        <tbody>
+          <tr><td>Ridge</td><td>Price-static</td><td>.388</td><td>.457</td><td>.0164</td><td>9.29</td></tr>
+          <tr><td>Ridge</td><td>Event-static</td><td>.369</td><td>.446</td><td>.0160</td><td>9.03</td></tr>
+          <tr><td>XGB</td><td>Price-static</td><td>.309</td><td>.392</td><td>.0153</td><td>8.64</td></tr>
+          <tr><td>XGB</td><td>Event-static</td><td><strong>.336</strong></td><td><strong>.403</strong></td><td><strong>.0161</strong></td><td><strong>9.11</strong></td></tr>
+          <tr><td>XGB</td><td>Price-rolling</td><td>.311</td><td>.344</td><td>.0138</td><td>7.18</td></tr>
+          <tr><td>XGB</td><td>Event-rolling</td><td><strong>.322</strong></td><td><strong>.347</strong></td><td><strong>.0144</strong></td><td><strong>7.59</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="wide-note">解释：事件情绪不是简单线性加分项，而是与短期趋势、波动率和事件类型交互后才产生排序价值。</div>
+      <div class="footer"><span>Result Table</span><span class="num">12 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Rank IC And Sharpe</div>
+      <h2>新因子的核心证据是横截面排序能力改善</h2>
+      <div class="figure-frame fig-large"><img src="assets/event_alpha_ic_comparison.png" alt="事件情绪 IC 和 Sharpe 比较" /></div>
+      <p class="caption">XGBoost 下，加入事件感知情绪后 static 与 rolling 两类检验均有正增量。</p>
+      <div class="footer"><span>Cross-Sectional Signal</span><span class="num">13 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Cumulative Spread</div>
+      <h2>Top-Bottom 组合显示排序信号具有持续方向</h2>
+      <div class="figure-frame fig-large"><img src="assets/event_alpha_cumulative_spread.png" alt="累计 spread" /></div>
+      <p class="caption">该图不是生产级策略回测，而是用于检验排序信号是否在样本期持续累积。</p>
+      <div class="footer"><span>Portfolio Proxy</span><span class="num">14 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Old Backtest Evidence</div>
+      <h2>旧策略回测图说明“直接交易平均情绪”并不稳健</h2>
+      <div class="grid-2">
+        <div class="figure-frame fig-mid"><img src="assets/cumulative_returns.png" alt="旧策略累计收益" /></div>
+        <div class="figure-frame fig-mid"><img src="assets/threshold_sensitivity.png" alt="阈值敏感性" /></div>
+      </div>
+      <p class="caption">旧图的价值不是证明策略有效，而是说明平均情绪策略对阈值、窗口和市场年份高度敏感。</p>
+      <div class="footer"><span>Rejected Baseline Evidence</span><span class="num">15 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Probability Diagnostics</div>
+      <h2>分类概率质量也支持从“预测方向”转向“排序因子”</h2>
+      <div class="grid-2">
+        <div class="figure-frame fig-mid"><img src="assets/xgboost_roc_curve.png" alt="ROC 曲线" /></div>
+        <div class="figure-frame fig-mid"><img src="assets/calibration_curve.png" alt="校准曲线" /></div>
+      </div>
+      <p class="caption">ROC 与校准图只能评价分类模型；它们无法直接说明能否形成可交易 alpha。</p>
+      <div class="footer"><span>Classification Diagnostics</span><span class="num">16 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Interpretation</div>
+      <h2>为什么 Ridge 不提升而 XGBoost 提升</h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Ridge 的限制</h3>
+          <div class="bullets">
+            <div class="bullet"><span class="dot"></span><span>假设事件情绪以线性方式影响收益。</span></div>
+            <div class="bullet"><span class="dot"></span><span>难以表达事件类型、情绪强度、价格状态之间的条件关系。</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>XGBoost 的优势</h3>
+          <div class="bullets">
+            <div class="bullet"><span class="dot"></span><span>能捕捉非线性阈值和特征交互。</span></div>
+            <div class="bullet"><span class="dot"></span><span>更适合处理“某类事件在某种市场状态下才有效”的 alpha 结构。</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="wide-note">所以本文的关键不是模型复杂度，而是任务定义正确后，模型才有机会利用事件化情绪。</div>
+      <div class="footer"><span>Model Interpretation</span><span class="num">17 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Boundary Conditions</div>
+      <h2>当前结论的边界必须说清楚</h2>
+      <div class="grid-3">
+        <div class="panel"><h3>数据边界</h3><p class="body">样本只有 4 只高关注科技股，不能直接外推到全市场。</p></div>
+        <div class="panel"><h3>时间边界</h3><p class="body">2019--2020 存在市场状态变化，仍需更长年份验证。</p></div>
+        <div class="panel"><h3>交易边界</h3><p class="body">spread 未纳入真实做空约束、滑点、融资和新闻到达延迟。</p></div>
+      </div>
+      <div class="wide-note">严格表述：本文证明的是“事件感知情绪因子具有原型 alpha 特征”，不是证明已经形成可上线交易系统。</div>
+      <div class="footer"><span>Research Boundary</span><span class="num">18 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Next Step</div>
+      <h2>后续优化应该优先升级数据和事件标注，而不是盲目换模型</h2>
+      <div class="grid-3">
+        <div class="panel"><div class="big-number">01</div><h3>更细时间戳</h3><p class="small">从日级或半结构时间，升级为更接近真实新闻到达的分钟级/秒级时间。</p></div>
+        <div class="panel"><div class="big-number">02</div><h3>LLM 事件标注</h3><p class="small">把规则 taxonomy 升级为目标公司、事件类型、事件方向和强度的结构化抽取。</p></div>
+        <div class="panel"><div class="big-number">03</div><h3>更宽股票池</h3><p class="small">迁移到 FNSPID 等更大规模数据，检验跨行业、跨市值、跨年份稳定性。</p></div>
+      </div>
+      <div class="footer"><span>Future Work</span><span class="num">19 / 20</span></div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Final Takeaway</div>
+      <h2>本文的完整收尾：情绪要成为 alpha，必须先被金融结构化</h2>
+      <p class="quote">金融新闻情绪的价值不在于“平均正负面”，而在于<em>事件、公司、时间窗口、异常收益</em>四个条件同时成立时产生的相对排序信息。</p>
+      <div class="grid-3" style="margin-top:54px;">
+        <div class="panel"><h3>研究主张</h3><p class="small">事件感知情绪比日级平均情绪更适合 alpha 识别。</p></div>
+        <div class="panel"><h3>实验发现</h3><p class="small">XGBoost 中 rank IC 与 spread Sharpe 均有正增量。</p></div>
+        <div class="panel"><h3>现实含义</h3><p class="small">下一步应做更细时间戳和更大股票池，而不是继续堆分类指标。</p></div>
+      </div>
+      <div class="footer"><span>Conclusion</span><span class="num">20 / 20</span></div>
+    </section>
+  </main>
+
+  <div class="nav-hint">← / → 切换 · 数字键 1-9 跳页</div>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const stage = document.getElementById("stage");
+    let index = 0;
+    function scaleStage() {
+      const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      stage.style.transform = `scale(${scale})`;
+      stage.style.left = `${(window.innerWidth - 1920 * scale) / 2}px`;
+      stage.style.top = `${(window.innerHeight - 1080 * scale) / 2}px`;
+    }
+    function show(i) {
+      index = Math.max(0, Math.min(slides.length - 1, i));
+      slides.forEach((slide, n) => slide.classList.toggle("active", n === index));
+      history.replaceState(null, "", `#${index + 1}`);
+    }
+    window.addEventListener("resize", scaleStage);
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") show(index + 1);
+      if (event.key === "ArrowLeft" || event.key === "PageUp") show(index - 1);
+      if (/^[1-9]$/.test(event.key)) show(Number(event.key) - 1);
+      if (event.key === "Home") show(0);
+      if (event.key === "End") show(slides.length - 1);
+    });
+    const initial = Number(location.hash.replace("#", ""));
+    if (Number.isFinite(initial) && initial > 0) show(initial - 1);
+    scaleStage();
+  </script>
+</body>
+</html>

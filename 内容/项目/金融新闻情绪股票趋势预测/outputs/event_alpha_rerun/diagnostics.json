@@ -1,0 +1,25 @@
+{
+  "tickers": [
+    "AAPL",
+    "GOOGL",
+    "MSFT",
+    "TSLA"
+  ],
+  "articles": 419,
+  "signal_days": 257,
+  "after_hours_share": 0.5393794749403341,
+  "pre_market_share": 0.4606205250596659,
+  "midnight_share": 0.16467780429594273,
+  "panel_rows": 2136,
+  "train_rows_2019": 1088,
+  "test_rows_2020": 1048,
+  "event_counts": {
+    "earnings_guidance": 141,
+    "analyst_rating": 19,
+    "mna_partnership": 65,
+    "legal_regulatory": 63,
+    "capital_allocation": 15,
+    "product_operations": 112,
+    "management_change": 111
+  }
+}

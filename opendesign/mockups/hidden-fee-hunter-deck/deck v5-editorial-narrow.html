@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-themes="corporate-clean,swiss-grid,editorial-serif">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐性扣费猎手 · 答辩 PPT</title>
+  <link rel="stylesheet" href="../../assets/fonts.css" />
+  <link rel="stylesheet" href="../../assets/base.css" />
+  <link rel="stylesheet" id="theme-link" href="../../assets/themes/editorial-serif.css" />
+  <link rel="stylesheet" href="../../assets/animations/animations.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="tpl-fee-hunter">
+<div class="deck">
+
+  <!-- 1. 封面 -->
+  <section class="slide slide-cover" data-title="Cover">
+    <header class="slide-header">
+      <span class="header-num">№ 01 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">FINANCIAL TECHNOLOGY · 2026</span>
+    </header>
+    <div class="cover-body">
+      <p class="kicker">A 答辩作品 · 文轩</p>
+      <h1 class="h1">
+        5 亿中国用户的钱，<br/>
+        正在被 <span class="hi">0 决策地偷走</span>。
+      </h1>
+      <p class="lede">
+        「隐性扣费猎手」——基于行为金融视角的自动续费追踪与取消辅助产品<br/>
+        中国版 Rocket Money · 一份关于"用户钱去哪了"的产品设计
+      </p>
+    </div>
+    <footer class="cover-foot">
+      <div class="foot-block">
+        <span class="foot-label">讲者</span>
+        <span class="foot-value">文轩</span>
+      </div>
+      <div class="foot-block">
+        <span class="foot-label">场合</span>
+        <span class="foot-value">金融科技应用前沿 · 期末答辩</span>
+      </div>
+      <div class="foot-block">
+        <span class="foot-label">时长</span>
+        <span class="foot-value">10 分钟 / 14 页</span>
+      </div>
+      <div class="foot-block">
+        <span class="foot-label">日期</span>
+        <span class="foot-value">2026.06.25</span>
+      </div>
+    </footer>
+    <aside class="notes">
+      <p>各位老师好，我是文轩。今天汇报的产品叫"隐性扣费猎手"——中国版 Rocket Money。</p>
+      <p>请先记住一句话作为今天整场答辩的题眼——<strong>5 亿中国用户的钱，正在被 0 决策地偷走</strong>。这是我用一学期回答的问题，也是我对中国消费科技的一次具体回答。</p>
+      <p>下面我用 10 分钟展开。</p>
+    </aside>
+  </section>
+
+  <!-- 2. 目录 -->
+  <section class="slide" data-title="Agenda">
+    <header class="slide-header">
+      <span class="header-num">№ 02 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">AGENDA</span>
+    </header>
+    <p class="kicker">接下来 10 分钟 · 7 个章节</p>
+    <h2 class="h2">从黑洞到猎手 —— 一份关于"被偷走的钱"的产品答辩</h2>
+    <ol class="toc mt-l">
+      <li class="toc-row"><span class="toc-num">01</span><span class="toc-t">现状与痛点：5 亿 + 89% 的扣费黑洞</span><span class="toc-d">1.5 min</span></li>
+      <li class="toc-row"><span class="toc-num">02</span><span class="toc-t">需求分析：1,200 亿市场 + 行为金融 4 象限</span><span class="toc-d">2.0 min</span></li>
+      <li class="toc-row"><span class="toc-num">03</span><span class="toc-t">用户画像：小张 + 小李</span><span class="toc-d">0.8 min</span></li>
+      <li class="toc-row"><span class="toc-num">04</span><span class="toc-t">竞品分析：9 款扫描 + 真空结论 + SWOT</span><span class="toc-d">1.7 min</span></li>
+      <li class="toc-row"><span class="toc-num">05</span><span class="toc-t">产品设计：3 模块 + 4 轨 + 4 大创新点</span><span class="toc-d">2.2 min</span></li>
+      <li class="toc-row"><span class="toc-num">06</span><span class="toc-t">商业模式：三轨混合 + ¥1,189 万</span><span class="toc-d">0.8 min</span></li>
+      <li class="toc-row"><span class="toc-num">07</span><span class="toc-t">未来路线：2026 — 2028 三年</span><span class="toc-d">0.5 min</span></li>
+    </ol>
+    <aside class="notes">
+      <p>接下来 10 分钟，我按 7 个章节展开：先讲现状和痛点，再讲市场和用户、用户画像、竞品与 SWOT，然后是产品设计、商业模式，最后一张是 2026-2028 三年路线图。</p>
+      <p>我们先从现状说起。</p>
+    </aside>
+  </section>
+
+  <!-- 3. §1 现状 -->
+  <section class="slide" data-title="Status">
+    <header class="slide-header">
+      <span class="header-num">№ 03 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 1 · 现状</span>
+    </header>
+    <p class="kicker">§ 1</p>
+    <h2 class="h2">5 亿用户的<span class="hi">扣费黑洞</span></h2>
+    <p class="subhead mt-m">三个数字，一种现状——中国订阅经济已被默认扣费吞掉大半</p>
+
+    <div class="stat-row mt-l">
+      <div class="stat">
+        <div class="stat-num">5 <span class="unit">亿+</span></div>
+        <div class="stat-lbl">免密支付绑定用户</div>
+        <div class="stat-src">工信部 · 2025 通报</div>
+      </div>
+      <div class="stat stat-mid">
+        <div class="stat-num">89<span class="unit">%</span></div>
+        <div class="stat-lbl">用户低估订阅支出 2.5x+</div>
+        <div class="stat-src">艾瑞咨询 · 2024</div>
+      </div>
+      <div class="stat stat-end">
+        <div class="stat-num">¥ 171</div>
+        <div class="stat-lbl">洪女士被自动续费 9 次</div>
+        <div class="stat-src">中消协 · 2025.11.7</div>
+      </div>
+    </div>
+
+    <blockquote class="pull-quote mt-l">
+      <p>"首月 9 元试用 → 次月 19 元 / 7 天 → App 内无关闭入口 → 客服只退最后一次点击后的扣费。"</p>
+      <cite>—— 洪女士案 · 中消协公开点名</cite>
+    </blockquote>
+    <aside class="notes">
+      <p>各位请看一个真实案例。洪女士在某工具 App 首月只付 9 元，次月 19 元/7 天，结果被自动续费 9 次共扣 171 元，App 内还找不到关闭入口。这不是个案——</p>
+      <p>工信部数据显示，中国绑定"免密支付"的支付用户已超 <strong>5 亿</strong>；艾瑞 2024 调研更显示，<strong>89% 的中国用户低估了自己订阅支出的 2.5 倍以上</strong>。</p>
+      <p>你以为每月只花 50 块，实际可能正在为 125 元的隐性订阅买单。这背后的机制是什么？我们进入痛点分析。</p>
+    </aside>
+  </section>
+
+  <!-- 4. §1 痛点 -->
+  <section class="slide" data-title="Pain">
+    <header class="slide-header">
+      <span class="header-num">№ 04 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 1 · 痛点</span>
+    </header>
+    <p class="kicker">§ 1 · 痛点</p>
+    <h2 class="h2">行为金融 4 象限 —— <br/>为什么用户<span class="hi">从不主动取消</span>？</h2>
+
+    <div class="quad mt-l">
+      <div class="quad-cell">
+        <span class="quad-num">01</span>
+        <div class="quad-title">现状偏见</div>
+        <div class="quad-sub">Status Quo Bias</div>
+        <p class="quad-body">"我以为会自动停" —— 3 级菜单下无人主动取消</p>
+        <div class="quad-cite">Samuelson & Zeckhauser · 1988</div>
+      </div>
+      <div class="quad-cell">
+        <span class="quad-num">02</span>
+        <div class="quad-title">损失厌恶</div>
+        <div class="quad-sub">Loss Aversion</div>
+        <p class="quad-body">"懒得折腾，金额也不大" —— 9 元的痛感被稀释</p>
+        <div class="quad-cite">Kahneman & Tversky · 1979</div>
+      </div>
+      <div class="quad-cell">
+        <span class="quad-num">03</span>
+        <div class="quad-title">心理账户</div>
+        <div class="quad-sub">Mental Accounting</div>
+        <p class="quad-body">"之前的钱都白花了" —— 已付 vs 续费分账户</p>
+        <div class="quad-cite">Thaler · 1985</div>
+      </div>
+      <div class="quad-cell">
+        <span class="quad-num">04</span>
+        <div class="quad-title">锚定效应</div>
+        <div class="quad-sub">Anchoring</div>
+        <p class="quad-body">"当时是免费 / 9 元啊" —— 首月低价掩盖后续扣费</p>
+        <div class="quad-cite">Tversky & Kahneman · 1974</div>
+      </div>
+    </div>
+
+    <div class="callout mt-l">
+      <span class="callout-tag">理论收束</span>
+      <p>单次 9 元的痛感远低于累计 171 元的剧痛 —— 行为金融学的"沉默扣费"机制</p>
+    </div>
+    <aside class="notes">
+      <p>行为金融学能解释这一切。Thaler 的心理账户理论告诉我们——用户把"主动订阅"和"自动续费"放进两个不同的心理账户，前者有决策门槛，后者被默认为"无决策"。</p>
+      <p>但 Kahneman 的损失厌恶理论进一步指出：<strong>单次 9 元的痛感远低于累计 171 元的剧痛</strong>——这就是用户一直抱怨、却从不主动取消的根本原因。</p>
+      <p>再加上"现状偏见"和"锚定效应"作祟，3 级菜单找不到入口，多数人就放弃了。但市场够不够大？我们进入第二章。</p>
+    </aside>
+  </section>
+
+  <!-- 5. §2 市场 -->
+  <section class="slide" data-title="Market">
+    <header class="slide-header">
+      <span class="header-num">№ 05 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 2 · 市场</span>
+    </header>
+    <p class="kicker">§ 2 · 市场</p>
+    <h2 class="h2">¥ 1,200 亿 SaaS 订阅市场 + 5 大场景</h2>
+
+    <div class="kpi-row mt-l">
+      <div class="kpi">
+        <div class="kpi-num">¥ 1,200<span class="kpi-unit">亿</span></div>
+        <div class="kpi-lbl">中国 SaaS 订阅市场规模</div>
+        <div class="kpi-src">艾瑞咨询 · 2024</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-num">18.7<span class="kpi-unit">% CAGR</span></div>
+        <div class="kpi-lbl">年复合增长率</div>
+        <div class="kpi-src">高于全球 12% 均值</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-num">4,500<span class="kpi-unit">+</span></div>
+        <div class="kpi-lbl">月度活跃订阅类 App</div>
+        <div class="kpi-src">QuestMobile · 2025.6</div>
+      </div>
+      <div class="kpi kpi-warn">
+        <div class="kpi-num">3,852</div>
+        <div class="kpi-lbl">2025 违规 App 通报</div>
+        <div class="kpi-src">同比 +152% · 工信部</div>
+      </div>
+    </div>
+
+    <div class="scene mt-l">
+      <p class="scene-title">5 大订阅场景 · 痛点排名</p>
+      <div class="scene-row">
+        <span class="scene-rank">P0</span>
+        <span class="scene-name">平台免密支付</span>
+        <span class="scene-brands">美团 · 京东 · 拼多多</span>
+        <span class="scene-stat">5 亿绑定 · ★★★★★</span>
+      </div>
+      <div class="scene-row">
+        <span class="scene-rank">P1</span>
+        <span class="scene-name">流媒体会员</span>
+        <span class="scene-brands">爱奇艺 · 优酷 · 腾讯视频</span>
+        <span class="scene-stat">3 亿+ · ★★★★</span>
+      </div>
+      <div class="scene-row">
+        <span class="scene-rank">P2</span>
+        <span class="scene-name">海外工具</span>
+        <span class="scene-brands">Adobe · Notion · ChatGPT</span>
+        <span class="scene-stat">2,000 万 · ★★★★</span>
+      </div>
+      <div class="scene-row">
+        <span class="scene-rank">P3</span>
+        <span class="scene-name">知识付费</span>
+        <span class="scene-brands">得到 · 樊登 · 极客时间</span>
+        <span class="scene-stat">8,000 万 · ★★★</span>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>艾瑞 2024 数据显示，中国 SaaS 订阅市场规模达 <strong>1,200 亿元，年复合增长 18.7%</strong>。QuestMobile 2025 年 6 月数据进一步指出，月度活跃订阅类应用超 4,500 个。</p>
+      <p>最戏剧性的是反向证据——工信部 2025 全年通报违规 App <strong>3,852 款，是 2024 年的 2.5 倍</strong>——违规越多，需求越被低估。</p>
+      <p>5 大场景里痛点最严重的是平台免密支付（5 亿绑定、嵌在常用 App 内 + 扣费静默 + 跨渠道）——本产品的 P0 优先场景。</p>
+    </aside>
+  </section>
+
+  <!-- 6. §3 用户画像 -->
+  <section class="slide" data-title="Personas">
+    <header class="slide-header">
+      <span class="header-num">№ 06 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 3 · 用户画像</span>
+    </header>
+    <p class="kicker">§ 3</p>
+    <h2 class="h2">请记住两个人 —— <span class="hi">小张 + 小李</span></h2>
+
+    <div class="personas mt-l">
+      <article class="persona">
+        <div class="persona-head">
+          <span class="persona-tag">PERSONA · A</span>
+          <span class="persona-age">28 / 深圳</span>
+        </div>
+        <div class="persona-name">小张</div>
+        <div class="persona-role">白领 · 互联网运营 · 月薪 ¥ 1.5 万</div>
+        <div class="persona-numbers">
+          <div>
+            <span class="num-lbl">真实订阅</span>
+            <span class="num-val">¥ 600 / 月</span>
+          </div>
+          <div>
+            <span class="num-lbl">主观感知</span>
+            <span class="num-val light">¥ 200 / 月</span>
+          </div>
+        </div>
+        <div class="persona-sub">腾讯视频 · 网易云 · ChatGPT Plus · Notion · 得到 · 百度网盘</div>
+        <div class="persona-pain">
+          <span class="pain-label">痛点</span>
+          <p>ChatGPT Plus 想取消但忘了 5 月截止，已多付 2 个月共 ¥ 300。</p>
+        </div>
+      </article>
+
+      <article class="persona">
+        <div class="persona-head">
+          <span class="persona-tag">PERSONA · B</span>
+          <span class="persona-age">21 / 大三</span>
+        </div>
+        <div class="persona-name">小李</div>
+        <div class="persona-role">深大学生 · 月生活费 ¥ 2,500</div>
+        <div class="persona-numbers">
+          <div>
+            <span class="num-lbl">首月价格</span>
+            <span class="num-val light">¥ 0 (试用 7 天)</span>
+          </div>
+          <div>
+            <span class="num-lbl">次月续费</span>
+            <span class="num-val">¥ 19 / 月</span>
+          </div>
+        </div>
+        <div class="persona-sub">Keep · 百度网盘 · 某工具 App</div>
+        <div class="persona-pain">
+          <span class="pain-label">痛点</span>
+          <p>被"免费试用 7 天"套路，试用结束自动按 ¥ 19/月续费。完全不知道这笔钱去了哪里。</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout mt-l">
+      <span class="callout-tag">共性</span>
+      <p>知道在被扣，但懒得逐一查 + 找不到统一管理入口</p>
+    </div>
+    <aside class="notes">
+      <p>请记住两个人。</p>
+      <p><strong>小张</strong>，28 岁深圳运营，月薪 1.5 万，订阅腾讯视频、网易云、ChatGPT Plus、Notion、得到——<strong>每月真实订阅 ¥600，却只感知 ¥200</strong>。想取消 ChatGPT Plus 却忘了 5 月份截止，已多付 2 个月 300 元。</p>
+      <p><strong>小李</strong>，21 岁深大大三，月生活费 2500，被"免费试用 7 天"套路后自动按 19 元/月续费。</p>
+      <p>两个画像的共性一句话：<strong>知道在被扣，但懒得逐一查</strong>。国内外有现成答案吗？我们看竞品。</p>
+    </aside>
+  </section>
+
+  <!-- 7. §4 竞品 -->
+  <section class="slide" data-title="Competitors">
+    <header class="slide-header">
+      <span class="header-num">№ 07 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 4 · 竞品</span>
+    </header>
+    <p class="kicker">§ 4 · 竞品</p>
+    <h2 class="h2">9 款扫描 + <span class="hi">真空结论</span></h2>
+
+    <div class="comp-grid mt-l">
+      <div class="comp-col">
+        <p class="comp-h">海外 · 3 强</p>
+        <div class="comp">
+          <div class="comp-name">Rocket Money</div>
+          <div class="comp-meta">12.7 亿美元被收购 · Rocket Companies 2021</div>
+          <div class="comp-body">银行接入 + AI 识别 + 真人谈判双引擎，7 年累计帮用户节省超 $ 2.5B</div>
+        </div>
+        <div class="comp">
+          <div class="comp-name">Trim</div>
+          <div class="comp-meta warn">2024.11 正式关闭 · OneMain Financial 旗下</div>
+          <div class="comp-body">纯追踪模式无法独立商业化，启示：必须叠"谈判 / 降费"</div>
+        </div>
+        <div class="comp">
+          <div class="comp-name">Subby</div>
+          <div class="comp-meta">2024-2025 走红</div>
+          <div class="comp-body">AI 读 Gmail 路线 —— 启示：可平移到"读短信"</div>
+        </div>
+      </div>
+      <div class="comp-col">
+        <p class="comp-h">国内 · 6 款</p>
+        <div class="comp">
+          <div class="comp-name">订阅宝 / SubsTracker</div>
+          <div class="comp-meta warn">手动录入 + 提醒</div>
+          <div class="comp-body">❌ 无自动识别能力</div>
+        </div>
+        <div class="comp">
+          <div class="comp-name">Tellio / 钱迹 / 鲨鱼记账</div>
+          <div class="comp-meta warn">手动追踪 + 记账</div>
+          <div class="comp-body">❌ 无取消教程 / 谈判能力</div>
+        </div>
+        <div class="comp">
+          <div class="comp-name">微信支付 / 支付宝 / 云闪付</div>
+          <div class="comp-meta warn">3-4 级菜单官方入口</div>
+          <div class="comp-body">❌ 跨渠道盲区 + 无主动提醒</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vacuum mt-l">
+      <span class="vacuum-tag">核心结论</span>
+      <p class="vacuum-line">
+        跨平台识别 + 一键代取消 = <span class="vacuum-num">0 玩家</span>
+      </p>
+      <p class="vacuum-sub">全部 9 款竞品止步于"手动录入 + 提醒"——这就是市场真空</p>
+    </div>
+    <aside class="notes">
+      <p>国外最强者是 <strong>Rocket Money</strong>——2015 年成立，2021 年被 Rocket Companies 以 12.7 亿美元收购，做"银行接入 + AI 识别 + 真人谈判"双引擎。</p>
+      <p><strong>Trim</strong> 去年 11 月正式关闭，证明纯追踪无法独立商业化。<strong>Subby</strong> 2024-2025 走红，走"AI 读 Gmail"路线，给中国带来"读短信"启示。</p>
+      <p>国内我扫了 9 款——订阅宝、SubsTracker、Tellio、钱迹、鲨鱼记账、随手记，加上微信支付、支付宝、云闪付三大官方入口——<strong>全部止步于"手动录入 + 提醒"，跨平台识别 + 一键代取消 = 0 玩家</strong>。这就是市场真空。</p>
+    </aside>
+  </section>
+
+  <!-- 8. §4 SWOT -->
+  <section class="slide" data-title="SWOT">
+    <header class="slide-header">
+      <span class="header-num">№ 08 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 4 · SWOT</span>
+    </header>
+    <p class="kicker">§ 4 · SWOT</p>
+    <h2 class="h2">战略矩阵：<br/>借监管红利起飞，<span class="hi">用 4 轨混合构筑护城河</span></h2>
+
+    <div class="swot mt-l">
+      <div class="swot-cell swot-s">
+        <div class="swot-h">
+          <span class="swot-letter">S</span>
+          <span class="swot-name">内部优势</span>
+          <span class="swot-en">Strengths</span>
+        </div>
+        <ul class="swot-list">
+          <li>中国市场真空 · 无 App 实现自动跨平台 + 一键取消</li>
+          <li>监管红利 · 消保条例 + 工信部 5 日提醒</li>
+          <li>4 轨技术差异化</li>
+          <li>Rocket Money 7 年 $2.5B 已节省可对标</li>
+        </ul>
+      </div>
+      <div class="swot-cell swot-o">
+        <div class="swot-h">
+          <span class="swot-letter">O</span>
+          <span class="swot-name">外部机会</span>
+          <span class="swot-en">Opportunities</span>
+        </div>
+        <ul class="swot-list">
+          <li>5 亿免密支付用户基数</li>
+          <li>中消协点名 + 投诉量年增 32.62%</li>
+          <li>89% 用户低估订阅支出</li>
+          <li>Gen-Z 财务觉醒</li>
+        </ul>
+      </div>
+      <div class="swot-cell swot-w">
+        <div class="swot-h">
+          <span class="swot-letter">W</span>
+          <span class="swot-name">内部劣势</span>
+          <span class="swot-en">Weaknesses</span>
+        </div>
+        <ul class="swot-list">
+          <li>无银行 API 通道 · 4 轨混合方案有妥协</li>
+          <li>谈判经验不足 · 需 6-12 个月数据积累</li>
+          <li>启动期用户少 · 双边冷启动</li>
+          <li>短信读取权限获客成本高</li>
+        </ul>
+      </div>
+      <div class="swot-cell swot-t">
+        <div class="swot-h">
+          <span class="swot-letter">T</span>
+          <span class="swot-name">外部威胁</span>
+          <span class="swot-en">Threats</span>
+        </div>
+        <ul class="swot-list">
+          <li>微信 / 支付宝官方可能自做聚合入口</li>
+          <li>商家可能抵制谈判分成（30%）</li>
+          <li>数据合规风险 · 短信读取 + 谈判录音</li>
+          <li>Trim 2024.11 倒闭警示纯追踪不可持续</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>SWOT 一句话收口：内部我们有监管红利和 4 轨技术差异化，但缺银行 API 和谈判经验；外部坐拥 5 亿用户基数和监管窗口，但面临微信支付宝自做和商家抵制的威胁。</p>
+      <p><strong>战略选择：借监管红利起飞，用 4 轨混合技术构筑护城河</strong>。具体怎么做？</p>
+    </aside>
+  </section>
+
+  <!-- 9. §5 产品 -->
+  <section class="slide" data-title="Product">
+    <header class="slide-header">
+      <span class="header-num">№ 09 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 5 · 产品</span>
+    </header>
+    <p class="kicker">§ 5 · 产品</p>
+    <h2 class="h2">3 大核心模块 + <span class="hi">4 轨混合技术</span></h2>
+
+    <div class="modules mt-l">
+      <div class="module">
+        <div class="module-no">01</div>
+        <div class="module-name">追踪</div>
+        <div class="module-en">Track</div>
+        <p>自动识别所有订阅 · 标记 30 天未用 / 涨价 / 即将扣费</p>
+      </div>
+      <div class="module">
+        <div class="module-no">02</div>
+        <div class="module-name">提醒</div>
+        <div class="module-en">Alert</div>
+        <p>扣费前 5 日 + 24 小时 + 实时 · 三重微信推送</p>
+      </div>
+      <div class="module">
+        <div class="module-no">03</div>
+        <div class="module-name">取消</div>
+        <div class="module-en">Cancel</div>
+        <p>一键生成截图教程 · 真人谈判代劳 · 退费到账</p>
+      </div>
+    </div>
+
+    <div class="tracks mt-l">
+      <div class="tracks-h">
+        <span class="tracks-tag">4 轨混合技术方案</span>
+        <span class="tracks-sub">破局 · 欧美读 Gmail，中国读短信</span>
+      </div>
+      <div class="track-row">
+        <span class="track-no">A</span>
+        <span class="track-name">短信解析</span>
+        <span class="track-pct">60 %</span>
+        <span class="track-body">AI 读扣费短信 · 核心壁垒 · 用户主动授权</span>
+      </div>
+      <div class="track-row">
+        <span class="track-no">B</span>
+        <span class="track-name">截屏 OCR</span>
+        <span class="track-pct">30 %</span>
+        <span class="track-body">用户主动上传账单 · 兜底方案</span>
+      </div>
+      <div class="track-row">
+        <span class="track-no">C</span>
+        <span class="track-name">手动录入</span>
+        <span class="track-pct">10 %</span>
+        <span class="track-body">首次输入 · 低频场景</span>
+      </div>
+      <div class="track-row track-future">
+        <span class="track-no">D</span>
+        <span class="track-name">商家爬虫</span>
+        <span class="track-pct">2027</span>
+        <span class="track-body">退订页爬虫 · 未来启用</span>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>产品叫"扣费猎手"，主打 3 大模块。</p>
+      <p><strong>追踪</strong>——自动识别所有订阅，标记"30 天未用 / 本月涨价 / 即将扣费"。<strong>提醒</strong>——扣费前 5 日、24 小时、实时三重微信推送，踩中工信部 5 日前提醒要求。<strong>取消</strong>——一键生成截图教程或人工谈判代劳。</p>
+      <p>技术上我们走 <strong>4 轨混合方案</strong>：AI 短信解析（核心壁垒）、截屏 OCR、用户手动录入、商家退订页爬虫，绕开支付宝商户 API 只能服务商家的限制。这 4 轨来自 Subby 的"AI 读 Gmail"思路——<strong>欧美是读邮件，我们读短信</strong>。落到原型上。</p>
+    </aside>
+  </section>
+
+  <!-- 10. §5 原型 + 创新点 -->
+  <section class="slide" data-title="Prototype">
+    <header class="slide-header">
+      <span class="header-num">№ 10 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 5 · 原型</span>
+    </header>
+    <p class="kicker">§ 5 · 原型</p>
+    <h2 class="h2">3 张核心页 + <span class="hi">4 大创新点</span></h2>
+
+    <div class="mockups mt-l">
+      <div class="mockup">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status">09:41</div>
+            <div class="screen-label">HOME</div>
+            <div class="screen-hero">¥ 684</div>
+            <div class="screen-meta">过去 12 个月<br/>你为遗忘付出</div>
+            <div class="screen-divider"></div>
+            <div class="screen-btn">一键查看全部订阅</div>
+          </div>
+        </div>
+        <div class="mockup-caption">
+          <div class="cap-name">首页 · Home</div>
+          <div class="cap-desc">鎏金 Hero 钩子 · 病毒式分享钩子</div>
+        </div>
+      </div>
+
+      <div class="mockup">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status">09:41</div>
+            <div class="screen-label">TRACKING</div>
+            <div class="screen-row screen-warn">腾讯视频 VIP · ¥25<br/>30 天未用</div>
+            <div class="screen-row screen-bad">Keep · ¥30<br/>本月涨价 50 %</div>
+            <div class="screen-row">百度网盘 · ¥15</div>
+            <div class="screen-row">Notion · ¥80</div>
+          </div>
+        </div>
+        <div class="mockup-caption">
+          <div class="cap-name">追踪页 · Tracking</div>
+          <div class="cap-desc">智能标记警示 · 黄 / 红 / 默认 3 态</div>
+        </div>
+      </div>
+
+      <div class="mockup">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status">09:41</div>
+            <div class="screen-label">CANCEL · 1/3</div>
+            <div class="screen-meta">取消腾讯视频自动续费</div>
+            <div class="screen-step">① 微信 → 我 → 服务</div>
+            <div class="screen-step">② 钱包 → 支付设置</div>
+            <div class="screen-step">③ 自动续费 → 关闭</div>
+            <div class="screen-btn screen-btn-dark">下一步</div>
+          </div>
+        </div>
+        <div class="mockup-caption">
+          <div class="cap-name">取消页 · Cancel</div>
+          <div class="cap-desc">一键生成 3 步教程 · 带截图</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inno mt-l">
+      <div class="inno-h">4 大创新点</div>
+      <div class="inno-row">
+        <div class="inno-no">01</div>
+        <div class="inno-body">
+          <div class="inno-name">AI 短信解析引擎</div>
+          <div class="inno-desc">中国版 Subby · 读短信而非邮件</div>
+        </div>
+      </div>
+      <div class="inno-row">
+        <div class="inno-no">02</div>
+        <div class="inno-body">
+          <div class="inno-name">震惊数字</div>
+          <div class="inno-desc">Hero 钩子 · 病毒式分享设计</div>
+        </div>
+      </div>
+      <div class="inno-row">
+        <div class="inno-no">03</div>
+        <div class="inno-body">
+          <div class="inno-name">一键教程</div>
+          <div class="inno-desc">截屏 + 步骤 · 跨平台统一</div>
+        </div>
+      </div>
+      <div class="inno-row">
+        <div class="inno-no">04</div>
+        <div class="inno-body">
+          <div class="inno-name">谈判返佣</div>
+          <div class="inno-desc">合规改造 · Rocket Money 中国化</div>
+        </div>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>请看 3 张核心原型。</p>
+      <p><strong>首页</strong>用一个大数字钩住你——"过去 12 个月你为遗忘付出 ¥XXX 元"，这是病毒式钩子，一键生成可分享的截图。</p>
+      <p><strong>追踪页</strong>像支付宝账单，但多 2 个标签：黄底标"30 天未用"、红底标"本月涨价 50%"。</p>
+      <p><strong>取消页</strong>是核心创新——3 步教程带截图，从微信到支付宝到云闪付逐步拆解。</p>
+      <p>这套设计的 4 大创新点是：<strong>AI 短信解析引擎、震惊数字、一键教程、谈判返佣</strong>。这么好的产品，怎么赚钱？</p>
+    </aside>
+  </section>
+
+  <!-- 11. §6 商业模式 -->
+  <section class="slide" data-title="Business">
+    <header class="slide-header">
+      <span class="header-num">№ 11 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 6 · 商业模式</span>
+    </header>
+    <p class="kicker">§ 6 · 商业</p>
+    <h2 class="h2">三轨混合 = <span class="hi">¥ 1,189 万</span> 首年收入</h2>
+
+    <div class="revenues mt-l">
+      <div class="revenue revenue-main">
+        <div class="rev-h">
+          <span class="rev-no">60 %</span>
+          <span class="rev-label">B2C · Pro 订阅</span>
+        </div>
+        <div class="rev-formula">10 万付费 × ¥ 9.9 × 12 × 60 %</div>
+        <div class="rev-total">¥ 712.8 <span class="rev-unit">万</span></div>
+      </div>
+      <div class="revenue">
+        <div class="rev-h">
+          <span class="rev-no">30 %</span>
+          <span class="rev-label">B2B · 谈判返佣</span>
+        </div>
+        <div class="rev-formula">3 万次 × 25 % × ¥ 96 分成</div>
+        <div class="rev-total">¥ 216 <span class="rev-unit">万</span></div>
+      </div>
+      <div class="revenue">
+        <div class="rev-h">
+          <span class="rev-no">10 %</span>
+          <span class="rev-label">B2B2C · 联盟佣金</span>
+        </div>
+        <div class="rev-formula">18 万次推荐 × ¥ 5</div>
+        <div class="rev-total">¥ 90 <span class="rev-unit">万</span></div>
+      </div>
+    </div>
+
+    <div class="risk mt-l">
+      <div class="risk-h">合规边界 · 4 条铁律</div>
+      <div class="risk-row"><span class="risk-no">①</span><span class="risk-text">不做支付 · 不碰资金流</span></div>
+      <div class="risk-row"><span class="risk-no">②</span><span class="risk-text">不接管账户 · 用户主导</span></div>
+      <div class="risk-row"><span class="risk-no">③</span><span class="risk-text">透明分成 · 谈判前明示 30 %</span></div>
+      <div class="risk-row"><span class="risk-no">④</span><span class="risk-text">录音存档 · 应对《个保法》§ 13</span></div>
+    </div>
+    <aside class="notes">
+      <p>我们走<strong>三轨混合</strong>模式。</p>
+      <p>第一轨 Pro 订阅 9.9 元/月，假设 10 万付费用户乘 9.9 乘 12 = 1,188 万，净收入 712.8 万，占 60%。</p>
+      <p>第二轨谈判返佣：DAU 30 万乘 10% 触发率乘 25% 成功率乘 24 元分成 = 216 万，占 30%。</p>
+      <p>第三轨替代订阅联盟佣金，90 万，占 10%。<strong>三项合计预期年收入 1,189 万元</strong>。</p>
+      <p>合规上我们 4 条铁律：不做支付、不接管账户、谈判前透明分成 30%、全程录音应对《个人信息保护法》§13。短期到长期怎么走？</p>
+    </aside>
+  </section>
+
+  <!-- 12. §7 路线图 -->
+  <section class="slide" data-title="Roadmap">
+    <header class="slide-header">
+      <span class="header-num">№ 12 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">§ 7 · 路线图</span>
+    </header>
+    <p class="kicker">§ 7 · 路线</p>
+    <h2 class="h2">2026 — 2028 三年路线图</h2>
+
+    <div class="phases mt-l">
+      <div class="phase">
+        <div class="phase-year">2026</div>
+        <div class="phase-name">MVP 1.0</div>
+        <div class="phase-tag">验证产品价值</div>
+        <ul class="phase-list">
+          <li>微信小程序 + iOS / Android</li>
+          <li>AI 短信解析 F1 ≥ 0.92</li>
+          <li>100 商家取消教程</li>
+        </ul>
+        <div class="phase-goal">1 万付费用户</div>
+      </div>
+      <div class="phase">
+        <div class="phase-year">2027</div>
+        <div class="phase-name">多银行 2.0</div>
+        <div class="phase-tag">跨平台聚合</div>
+        <ul class="phase-list">
+          <li>云闪付 + 银行 App 试点</li>
+          <li>涨价预警模型上线</li>
+          <li>联盟 100+ 商家</li>
+        </ul>
+        <div class="phase-goal">10 万付费用户</div>
+      </div>
+      <div class="phase">
+        <div class="phase-year">2028</div>
+        <div class="phase-name">Agent 3.0</div>
+        <div class="phase-tag">自然语言代劳</div>
+        <ul class="phase-list">
+          <li>自然语言 Agent 谈判</li>
+          <li>多设备 + 家庭共享</li>
+          <li>出海新加坡 / 马来西亚</li>
+        </ul>
+        <div class="phase-goal">50 万付费用户</div>
+      </div>
+    </div>
+
+    <div class="vision mt-l">
+      <span class="vision-tag">长期愿景</span>
+      <p>中国版 Rocket Money → 全球华人订阅守护者</p>
+    </div>
+    <aside class="notes">
+      <p>最后一张图，看未来三年。</p>
+      <p><strong>2026</strong> MVP 1.0 上线微信小程序 + 三端 App，做短信解析 + 100 商家取消教程，目标 1 万付费用户。</p>
+      <p><strong>2027</strong> 多银行 2.0 接入云闪付和招商、工行、平安试点，目标 10 万。</p>
+      <p><strong>2028</strong> Agent 3.0 上自然语言谈判 + 多设备协同 + 家庭共享，并出海新加坡、马来西亚，目标 50 万。</p>
+    </aside>
+  </section>
+
+  <!-- 13. 金句索引 -->
+  <section class="slide" data-title="Quotes">
+    <header class="slide-header">
+      <span class="header-num">№ 13 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">10 MIN · 8 KEY QUOTES</span>
+    </header>
+    <p class="kicker">8 句金句索引</p>
+    <h2 class="h2">在答辩最关键的节点加重语气 —— <br/>让老师记住你的产品</h2>
+
+    <div class="quotes mt-l">
+      <div class="quote-row">
+        <span class="q-pg">P 01</span>
+        <p class="q-text">5 亿中国用户的钱，正在被 0 决策地偷走</p>
+        <span class="q-tag">题眼</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 03</span>
+        <p class="q-text">你以为每月只花 50 块，实际可能是 125</p>
+        <span class="q-tag">数据震撼</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 04</span>
+        <p class="q-text">单次 9 元的痛感远低于累计 171 元的剧痛</p>
+        <span class="q-tag">理论金句</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 05</span>
+        <p class="q-text">违规越多，需求越被低估</p>
+        <span class="q-tag">反向证据</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 07</span>
+        <p class="q-text">跨平台识别 + 一键代取消 = 0 玩家</p>
+        <span class="q-tag">真空</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 08</span>
+        <p class="q-text">借监管红利起飞，用 4 轨混合构筑护城河</p>
+        <span class="q-tag">战略</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 09</span>
+        <p class="q-text">欧美是读邮件，我们读短信</p>
+        <span class="q-tag">破局</span>
+      </div>
+      <div class="quote-row">
+        <span class="q-pg">P 14</span>
+        <p class="q-text">5 亿用户的"被偷走的钱"，一笔笔找回来</p>
+        <span class="q-tag">愿景收束</span>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>最后留 30 秒给金句索引，方便答辩前演练。这 8 句话是这场答辩的 8 个"加重语气"时刻——</p>
+      <p>我标了出处页码，你可以按 P1→P3→P4→P5→P7→P8→P9→P14 的顺序演练，每到金句停顿 0.5 秒，让老师消化。</p>
+    </aside>
+  </section>
+
+  <!-- 14. Q&A -->
+  <section class="slide slide-qa" data-title="Q&A">
+    <header class="slide-header slide-header-light">
+      <span class="header-num">№ 14 / 14</span>
+      <span class="header-rule"></span>
+      <span class="header-tag">Q &amp; A</span>
+    </header>
+    <div class="qa-body">
+      <p class="qa-kicker">THANKS FOR LISTENING</p>
+      <h1 class="qa-h1">
+        5 亿用户的<br/>
+        <span class="qa-hi">被偷走的钱</span>，<br/>
+        一笔笔找回来。
+      </h1>
+      <p class="qa-lede">—— 这是"隐性扣费猎手"的产品愿景，也是我对这个赛道的承诺</p>
+      <div class="qa-rule"></div>
+      <div class="qa-meta">
+        <span>文轩</span><span class="dot">·</span>
+        <span>深圳大学</span><span class="dot">·</span>
+        <span>金融科技应用前沿</span><span class="dot">·</span>
+        <span>2025 — 2026 学年</span>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>以上就是我的全部汇报。</p>
+      <p><strong>5 亿用户的"被偷走的钱"，一笔笔找回来</strong>——这是我的产品愿景，也是我对这个赛道的承诺。</p>
+      <p>谢谢各位老师，期待您的提问。</p>
+      <p>5 个最可能被问的 Q&A：技术可行性（4 轨方案）/ 合规风险（不做支付）/ 商业模式可持续性（Trim 倒闭启示）/ 差异化（官方入口盲区）/ 短信读取合规（Subby Gmail 模式）。</p>
+    </aside>
+  </section>
+
+</div>
+<div class="kb-hint">← → 翻页 · S 演讲者 · T 切主题 · F 全屏 · O 总览</div>
+<script src="../../assets/runtime.js"></script>
+</body>
+</html>

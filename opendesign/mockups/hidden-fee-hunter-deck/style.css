@@ -1,0 +1,518 @@
+/* course-module — 奶油纸 + Playfair 衬线 · 金融科技课程答辩
+   完全基于 OpenDesign 官方 course-module 模板改造 + 中文适配 */
+.tpl-course-module{
+  --bg:#fbfaf6;
+  --bg-soft:#f4f1e8;
+  --surface:#ffffff;
+  --surface-2:#f6f3ea;
+  --border:rgba(60,45,20,.12);
+  --border-strong:rgba(60,45,20,.24);
+  --text-1:#2a2418;
+  --text-2:#5a5140;
+  --text-3:#8a7f68;
+  --accent:#2d7d6e;
+  --accent-2:#d88a3a;
+  --accent-3:#c4593f;
+  --grad:linear-gradient(135deg,#2d7d6e,#4ea893);
+  --radius:14px;
+  --radius-lg:20px;
+  --shadow:0 12px 30px rgba(60,45,20,.07);
+  font-family:'Inter','Noto Sans SC','PingFang SC',-apple-system,sans-serif;
+}
+
+/* ============ SLIDE LAYOUT (course-module grid) ============ */
+.tpl-course-module .slide{
+  padding:48px 64px !important;
+  background:var(--bg);
+  color:var(--text-1);
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:48px;
+  align-content:start;
+  overflow:hidden;
+  justify-content:flex-start !important;
+  align-items:stretch !important;
+  box-sizing:border-box !important;
+}
+.tpl-course-module .slide.full{
+  grid-template-columns:1fr;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:left;
+}
+
+/* ============ SIDEBAR (260px 进度条) ============ */
+.tpl-course-module .sidebar{
+  border-right:1px solid var(--border);
+  padding-right:24px;
+  position:relative;
+}
+.tpl-course-module .sidebar .brand{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:700;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+.tpl-course-module .sidebar .brand::before{
+  content:"✦ ";color:var(--accent-2);
+}
+.tpl-course-module .sidebar h5{
+  font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--text-3);
+  margin:24px 0 10px;
+}
+.tpl-course-module .obj-list{list-style:none;padding:0;margin:0;font-size:12px;color:var(--text-2);line-height:1.5}
+.tpl-course-module .obj-list li{
+  padding:5px 0 5px 20px;position:relative;
+  border-bottom:1px dashed var(--border);
+}
+.tpl-course-module .obj-list li::before{content:"○";position:absolute;left:0;top:5px;color:var(--accent)}
+.tpl-course-module .obj-list li.done::before{content:"●";color:var(--accent)}
+.tpl-course-module .obj-list li.current{color:var(--text-1);font-weight:700}
+.tpl-course-module .obj-list li.current::before{content:"▸";color:var(--accent-2)}
+.tpl-course-module .sidebar .dim{color:var(--text-3)}
+
+/* ============ MAIN (右侧主内容) ============ */
+.tpl-course-module .main{min-width:0;max-width:880px}
+.tpl-course-module .kicker{
+  color:var(--accent-2);
+  font-size:13px;font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.tpl-course-module .h1{
+  font-family:'Playfair Display',serif;
+  font-size:64px;line-height:1.05;
+  font-weight:800;letter-spacing:-.02em;
+  color:var(--text-1);margin:14px 0 0;
+}
+.tpl-course-module .h1 em{font-style:italic;color:var(--accent)}
+.tpl-course-module .h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;line-height:1.1;
+  font-weight:700;letter-spacing:-.015em;
+  color:var(--text-1);margin:14px 0 0;
+}
+.tpl-course-module .grad{color:var(--accent);font-style:italic;font-weight:700}
+.tpl-course-module .lede{
+  font-size:16px;color:var(--text-2);
+  line-height:1.65;margin-top:14px;
+}
+.tpl-course-module .mt-s{margin-top:8px}
+.tpl-course-module .mt-m{margin-top:18px}
+.tpl-course-module .mt-l{margin-top:24px !important}
+
+/* ============ GRIDS (复用 course-module 命名) ============ */
+.tpl-course-module .grid{display:grid;gap:16px;margin-top:18px}
+.tpl-course-module .g1{grid-template-columns:1fr}
+.tpl-course-module .g2{grid-template-columns:1fr 1fr}
+.tpl-course-module .g3{grid-template-columns:repeat(3,1fr)}
+.tpl-course-module .row{display:flex;align-items:center;gap:12px}
+
+/* ============ CONCEPT BOX (核心卡片) ============ */
+.tpl-course-module .concept-box{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.tpl-course-module .concept-box h4{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:700;
+  color:var(--accent);
+  margin:6px 0 4px;
+}
+.tpl-course-module .concept-box .en{
+  display:block;font-size:10px;letter-spacing:.16em;
+  color:var(--text-3);text-transform:uppercase;font-weight:700;
+  margin-bottom:6px;
+}
+.tpl-course-module .concept-box .dim{
+  font-size:13px;color:var(--text-2);line-height:1.55;
+}
+.tpl-course-module .concept-box .no{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.18em;font-weight:700;
+  color:var(--accent-2);
+}
+
+/* persona concept-box (override for big card) */
+.tpl-course-module .concept-box.persona{
+  padding:20px 22px;
+}
+.tpl-course-module .persona .tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.18em;font-weight:700;
+  color:var(--accent);
+}
+.tpl-course-module .persona .age{
+  float:right;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;color:var(--text-3);
+}
+.tpl-course-module .persona .name{
+  font-family:'Playfair Display',serif;
+  font-size:42px;font-weight:800;
+  line-height:1;color:var(--text-1);
+  margin:8px 0 4px;
+}
+.tpl-course-module .persona .role{
+  font-size:12px;color:var(--text-2);
+  margin-bottom:10px;
+}
+.tpl-course-module .num-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  padding:10px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  margin-bottom:10px;
+}
+.tpl-course-module .num-row > div{display:flex;flex-direction:column;gap:2px}
+.tpl-course-module .num-row .lbl{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;
+  color:var(--text-3);text-transform:uppercase;
+}
+.tpl-course-module .num-row .val{
+  font-family:'JetBrains Mono',monospace;
+  font-size:22px;font-weight:700;
+  color:var(--text-1);
+  letter-spacing:-.02em;
+}
+.tpl-course-module .num-row .val.muted{color:var(--text-3);font-weight:500}
+.tpl-course-module .num-row .u{
+  font-size:11px;font-weight:500;color:var(--text-3);
+  margin-left:2px;
+}
+.tpl-course-module .persona .sub{
+  font-size:12px;color:var(--text-2);
+  margin:6px 0;
+}
+.tpl-course-module .persona .pain{
+  padding-top:8px;
+  border-top:1px dashed var(--border);
+  margin-top:6px;
+}
+.tpl-course-module .pain-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.16em;
+  color:var(--accent-2);text-transform:uppercase;
+  font-weight:700;display:block;margin-bottom:4px;
+}
+.tpl-course-module .persona .pain p,
+.tpl-course-module .persona .pain{font-size:12px;color:var(--text-1);line-height:1.55;margin:0}
+
+/* module concept-box (3 大核心模块) */
+.tpl-course-module .concept-box.module{text-align:left;padding:18px 20px}
+.tpl-course-module .module h4{font-size:24px;margin:6px 0}
+
+/* SWOT 4 象限（border-left 强调） */
+.tpl-course-module .concept-box.s{border-left:4px solid var(--accent)}
+.tpl-course-module .concept-box.w{border-left:4px solid var(--accent-2)}
+.tpl-course-module .concept-box.o{border-left:4px solid var(--accent-3)}
+.tpl-course-module .concept-box.t{border-left:4px solid var(--text-3)}
+.tpl-course-module .concept-box ul.l{
+  list-style:none;padding:0;margin:8px 0 0;
+}
+.tpl-course-module .concept-box ul.l li{
+  font-size:12px;color:var(--text-1);line-height:1.55;
+  padding:4px 0 4px 14px;position:relative;
+  border-bottom:1px dashed var(--border);
+}
+.tpl-course-module .concept-box ul.l li:last-child{border-bottom:none}
+.tpl-course-module .concept-box ul.l li::before{
+  content:"·";position:absolute;left:2px;color:var(--accent);font-weight:700;
+}
+
+/* inno 4 创新点 */
+.tpl-course-module .concept-box.inno{
+  display:grid;grid-template-columns:auto 1fr;gap:14px;
+  padding:14px 18px;
+  align-items:start;
+}
+.tpl-course-module .inno > div > h4{margin:0}
+.tpl-course-module .inno > div > .en{margin-bottom:0}
+
+/* phase 路线图 */
+.tpl-course-module .concept-box.phase{
+  padding:18px 20px;text-align:left;
+}
+.tpl-course-module .phase .yr{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:900;color:var(--accent);
+  line-height:1;display:block;margin-bottom:4px;
+}
+.tpl-course-module .phase.mid .yr{color:var(--accent-2)}
+.tpl-course-module .phase.hi .yr{color:var(--accent-3)}
+.tpl-course-module .phase h4{font-size:20px;margin:0 0 4px}
+.tpl-course-module .phase ul.l li{font-size:11.5px;padding:3px 0 3px 14px}
+
+/* ============ METRIC (mega 数字 96-160px) ============ */
+.tpl-course-module .metric{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:6px;
+}
+.tpl-course-module .metric .n{
+  font-family:'Playfair Display',serif;
+  font-size:48px;font-weight:900;line-height:1;
+  letter-spacing:-.025em;
+  background:var(--grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tpl-course-module .metric .u{
+  font-size:18px;font-weight:700;
+  color:var(--accent-2);
+  -webkit-text-fill-color:var(--accent-2);
+}
+.tpl-course-module .metric .l{
+  font-size:13px;color:var(--text-2);
+  line-height:1.4;
+}
+.tpl-course-module .metric .cite{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:.12em;
+  color:var(--text-3);display:block;margin-top:4px;
+}
+.tpl-course-module .metric.revenue{
+  background:var(--surface);
+  border-top:3px solid var(--accent);
+}
+.tpl-course-module .metric.revenue .lbl{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.16em;
+  color:var(--accent);font-weight:700;text-transform:uppercase;
+}
+.tpl-course-module .metric.revenue .formula{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;color:var(--text-2);
+  background:var(--bg-soft);padding:4px 6px;border-radius:4px;
+  margin-top:auto;
+}
+.tpl-course-module .metric-total{
+  text-align:center;padding:14px 0 0;
+  border-top:1px solid var(--border-strong);
+}
+.tpl-course-module .metric-total .big{
+  font-family:'Playfair Display',serif;
+  font-size:56px;font-weight:900;letter-spacing:-.02em;
+  background:var(--grad);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tpl-course-module .metric-total .dim{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.16em;color:var(--text-3);
+  display:block;margin-top:4px;
+}
+
+/* ============ CALLOUT (引文/强调条) ============ */
+.tpl-course-module .callout{
+  border-left:4px solid var(--accent-2);
+  background:var(--surface-2);
+  padding:14px 18px;
+  border-radius:0 var(--radius) var(--radius) 0;
+  margin-top:18px;
+  font-size:14px;color:var(--text-1);line-height:1.6;
+}
+.tpl-course-module .callout b{color:var(--accent-2)}
+
+/* ============ PILL ACADEMIC (封面/章节标签) ============ */
+.tpl-course-module .pill-academic{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:4px;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  color:var(--text-2);
+}
+
+/* ============ ROW (sc 场景 / tech 4 轨 / risk 合规边界) ============ */
+.tpl-course-module .row.sc{
+  display:grid;grid-template-columns:48px 1fr 1.4fr 160px;
+  align-items:center;gap:16px;
+  padding:8px 14px;
+  border-bottom:1px solid var(--border);
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  font-size:13px;
+}
+.tpl-course-module .row.sc .no{
+  font-family:'JetBrains Mono',monospace;
+  font-size:14px;font-weight:700;color:var(--accent-2);
+}
+.tpl-course-module .row.sc .name{
+  font-family:'Playfair Display',serif;
+  font-size:16px;font-weight:700;color:var(--text-1);
+}
+.tpl-course-module .row.sc .brands{font-size:12px;color:var(--text-2)}
+.tpl-course-module .row.sc .stat{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.04em;
+  color:var(--accent);font-weight:700;text-align:right;
+}
+.tpl-course-module .row.tech{
+  display:grid;grid-template-columns:48px 1fr 80px 2fr;
+  align-items:center;gap:16px;
+  padding:8px 14px;
+  border-bottom:1px solid var(--border);
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.tpl-course-module .row.tech.primary{
+  background:var(--bg-soft);
+  border-left:4px solid var(--accent);
+}
+.tpl-course-module .row.tech.future{opacity:.55}
+.tpl-course-module .row.tech .no{
+  font-family:'JetBrains Mono',monospace;
+  font-size:18px;font-weight:700;color:var(--accent);
+}
+.tpl-course-module .row.tech .name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;font-weight:700;color:var(--text-1);
+}
+.tpl-course-module .row.tech .pct{
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;font-weight:700;color:var(--accent);
+}
+.tpl-course-module .row.tech .body{font-size:12px;color:var(--text-2);line-height:1.5}
+
+.tpl-course-module .row.risk{
+  display:grid;grid-template-columns:48px 1fr;
+  align-items:center;gap:16px;
+  padding:8px 14px;
+  border-bottom:1px solid var(--border);
+  background:var(--surface);
+  border-radius:var(--radius);
+}
+.tpl-course-module .row.risk .no{
+  font-family:'Playfair Display',serif;
+  font-size:18px;font-weight:900;color:var(--accent-2);
+}
+.tpl-course-module .row.risk .body{font-size:12px;color:var(--text-1);line-height:1.5}
+.tpl-course-module .row.risk .body b{color:var(--accent);font-weight:700}
+
+/* ============ MATRIX BLOCK (page 6 3×3) ============ */
+.tpl-course-module .matrix-block{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:14px 16px;
+  box-shadow:var(--shadow);
+}
+.tpl-course-module .matrix-grid{
+  display:grid;
+  grid-template-columns:60px repeat(3,1fr);
+  grid-template-rows:auto repeat(3,72px) auto;
+  gap:0;
+  height:auto;
+}
+.tpl-course-module .m-corner{grid-row:1;grid-column:1}
+.tpl-course-module .m-axis-top{
+  grid-row:1;grid-column:2 / 5;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.18em;
+  color:var(--text-3);text-align:right;
+  padding:0 8px 6px;
+}
+.tpl-course-module .m-axis-bot{
+  display:none;
+}
+.tpl-course-module .m-row-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.18em;
+  color:var(--text-3);font-weight:700;
+  display:flex;align-items:center;justify-content:flex-end;
+  padding-right:8px;
+  text-transform:uppercase;
+}
+.tpl-course-module .m-cell{
+  padding:6px 10px;
+  border:1px solid var(--border);
+  margin:-.5px;
+  display:flex;flex-direction:column;gap:2px;
+  position:relative;
+  background:var(--surface);
+  min-height:0;
+}
+.tpl-course-module .m-cell .t{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:.16em;font-weight:700;
+  color:var(--accent);text-transform:uppercase;
+}
+.tpl-course-module .m-cell .n{
+  font-family:'Playfair Display',serif;
+  font-size:13px;font-weight:700;color:var(--text-1);
+  line-height:1.2;margin:1px 0;
+}
+.tpl-course-module .m-cell .d{font-size:10px;color:var(--text-2);line-height:1.3}
+.tpl-course-module .m-cell .f{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;letter-spacing:.06em;color:var(--text-3);
+  margin-top:auto;
+}
+.tpl-course-module .m-cell.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tpl-course-module .m-cell.hi .t,.tpl-course-module .m-cell.hi .n,.tpl-course-module .m-cell.hi .d,.tpl-course-module .m-cell.hi .f{color:#fff}
+.tpl-course-module .m-cell.hi .t{color:#fff;font-weight:700}
+.tpl-course-module .m-cell.hi .n{color:#fff}
+.tpl-course-module .m-cell.hi .d{color:rgba(255,255,255,.85)}
+.tpl-course-module .m-cell.hi .f{color:rgba(255,255,255,.7)}
+.tpl-course-module .m-cell.mid{background:var(--bg-soft)}
+.tpl-course-module .m-cell.low{background:var(--surface-2);opacity:.75}
+.tpl-course-module .matrix-axis{
+  display:flex;justify-content:space-between;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;
+  color:var(--text-3);
+}
+.tpl-course-module .matrix-axis .ax-mid{color:var(--accent);font-weight:700}
+
+/* ============ FIGURE BLOCK (5 张图嵌入) ============ */
+.tpl-course-module .figure-block{
+  margin:18px 0;
+  display:block;
+  width:100%;
+  max-width:720px;
+}
+.tpl-course-module .figure-block img{
+  display:block;
+  width:100%;height:auto;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.tpl-course-module .figure-block figcaption{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.16em;
+  color:var(--text-3);text-transform:uppercase;
+  padding:6px 0 0;text-align:left;
+  border-top:1px solid var(--border);
+  margin-top:6px;
+}
+
+/* ============ DECK FOOTER ============ */
+.tpl-course-module .deck-footer{
+  color:var(--text-3);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.14em;
+}
+.tpl-course-module .slide-number::before{content:"第 " attr(data-current) " / " attr(data-total) " 页"}
+.tpl-course-module .slide.full .h1{font-size:72px}
+.tpl-course-module .slide.full{padding:80px 100px !important}
+.tpl-course-module code{
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;
+  background:var(--bg-soft);
+  padding:2px 6px;border-radius:4px;
+}
