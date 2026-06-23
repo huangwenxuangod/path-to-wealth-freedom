@@ -120,11 +120,54 @@ doc.add_paragraph()
 
 # ============ 2. 正文解析 + 5 张图嵌入 ============
 def parse_inline(text):
-    """处理加粗、斜体、行内代码"""
-    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
-    text = re.sub(r'\*(.+?)\*', r'\1', text)
-    text = re.sub(r'`(.+?)`', r'\1', text)
-    return text
+    """处理 **加粗**、*斜体*、`行内代码` —— 真的生成 bold/italic runs，而不是剥掉符号"""
+    runs = []
+    pattern = re.compile(r'(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`)')
+    pos = 0
+    for m in pattern.finditer(text):
+        if m.start() > pos:
+            runs.append((text[pos:m.start()], False))
+        if m.group(2) is not None:        # **加粗**
+            runs.append((m.group(2), 'bold'))
+        elif m.group(3) is not None:      # *斜体*
+            runs.append((m.group(3), 'italic'))
+        elif m.group(4) is not None:      # `行内代码`
+            runs.append((m.group(4), 'mono'))
+        pos = m.end()
+    if pos < len(text):
+        runs.append((text[pos:], False))
+    if not runs:
+        runs = [(text, False)]
+    return runs
+
+
+def add_runs_to_paragraph(p, runs, base_font='宋体', base_size=12):
+    """把 [(text, format)] 列表追加到段落，format ∈ {'bold','italic','mono',False}"""
+    for txt, fmt in runs:
+        if not txt:
+            continue
+        r = p.add_run(txt)
+        r.font.name = base_font
+        r._element.rPr.rFonts.set(qn('w:eastAsia'), base_font)
+        r.font.size = Pt(base_size)
+        if fmt == 'bold':
+            r.bold = True
+        elif fmt == 'italic':
+            r.italic = True
+        elif fmt == 'mono':
+            r.font.name = 'Consolas'
+            r._element.rPr.rFonts.set(qn('w:eastAsia'), 'Consolas')
+            r.font.size = Pt(11)
+
+
+def fill_cell_with_runs(cell, runs, base_font='宋体', base_size=11):
+    """把 runs 写进表格单元格（清空默认空 run）"""
+    p = cell.paragraphs[0]
+    for run in list(p.runs):
+        run.text = ''
+    if not runs:
+        runs = [('', False)]
+    add_runs_to_paragraph(p, runs, base_font=base_font, base_size=base_size)
 
 
 def add_caption(doc, caption_text):
@@ -235,7 +278,9 @@ while i < len(lines):
         r.bold = True
         r.font.size = Pt(11.5)
     elif line.startswith('- '):
-        p = doc.add_paragraph(line[2:].strip(), style='List Bullet')
+        p = doc.add_paragraph(style='List Bullet')
+        runs = parse_inline(line[2:].strip())
+        add_runs_to_paragraph(p, runs, base_font='宋体', base_size=12)
     elif line.startswith('|'):
         if not in_table:
             in_table = True
@@ -255,17 +300,18 @@ while i < len(lines):
                     for r_idx, row in enumerate(rows):
                         for c_idx in range(n_cols):
                             cell_text = row[c_idx] if c_idx < len(row) else ''
-                            t.cell(r_idx, c_idx).text = parse_inline(cell_text)
+                            runs = parse_inline(cell_text)
+                            fill_cell_with_runs(t.cell(r_idx, c_idx), runs, base_size=11)
                             if r_idx == 0:
-                                for p in t.cell(r_idx, c_idx).paragraphs:
-                                    for r in p.runs:
-                                        r.bold = True
+                                for run in t.cell(r_idx, c_idx).paragraphs[0].runs:
+                                    run.bold = True
             in_table = False
             table_lines = []
         if line.strip():
             p = doc.add_paragraph()
             p.paragraph_format.first_line_indent = Pt(24)  # 首行缩进 2 字符
-            p.add_run(parse_inline(line))
+            runs = parse_inline(line)
+            add_runs_to_paragraph(p, runs, base_font='宋体', base_size=12)
 
     i += 1
 
@@ -282,11 +328,11 @@ if in_table and table_lines:
         for r_idx, row in enumerate(rows):
             for c_idx in range(n_cols):
                 cell_text = row[c_idx] if c_idx < len(row) else ''
-                t.cell(r_idx, c_idx).text = parse_inline(cell_text)
+                runs = parse_inline(cell_text)
+                fill_cell_with_runs(t.cell(r_idx, c_idx), runs, base_size=11)
                 if r_idx == 0:
-                    for p in t.cell(r_idx, c_idx).paragraphs:
-                        for r in p.runs:
-                            r.bold = True
+                    for run in t.cell(r_idx, c_idx).paragraphs[0].runs:
+                        run.bold = True
 
 # 落盘
 doc.save(output_path)

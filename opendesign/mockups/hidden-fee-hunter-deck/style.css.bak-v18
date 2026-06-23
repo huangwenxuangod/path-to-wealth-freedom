@@ -1,9 +1,9 @@
 /* ================================================================
    ink_jade — 新中式国潮 · 金融科技期末答辩
-   单色 + 朱红 accent · 思源黑体 · 浅米和纸 + 0.04 纸纹
-   v19 · 2026-06-22 (思源黑体替换)
+   单色 + 朱红 accent · 思源宋体 + 楷书 · 浅米和纸 + 0.04 纸纹
+   v18 · 2026-06-22
    ================================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 .tpl-ink-jade{
   --paper:        #f5f1e8;     /* 浅米和纸 */
@@ -18,9 +18,8 @@
   --vermilion-soft:   rgba(192,57,43,.12);
   --vermilion-faint:  rgba(192,57,43,.04);
   --seal-ink:     #fff8e7;     /* 印章白 */
-  --sans:         'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
-  --serif:        'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
-  --kai:          'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  --serif:        'Noto Serif SC','Source Han Serif SC','Songti SC','STSong',serif;
+  --kai:          'Ma Shan Zheng','STKaiti','Kaiti SC',cursive;
   --mono:         'JetBrains Mono','IBM Plex Mono',monospace;
 }
 
@@ -111,11 +110,11 @@
   background: var(--vermilion);
 }
 .tpl-ink-jade .lede{
-  font-family: var(--sans);
-  font-size: 16px; line-height: 1.7;
+  font-family: var(--serif);
+  font-size: 16px; line-height: 1.85;
   color: var(--ink-2);
   font-weight: 400;
-  letter-spacing: .02em;
+  letter-spacing: .04em;
   margin: 16px 0 0;
   max-width: 78ch;
 }
@@ -166,11 +165,11 @@
   margin-bottom: 8px;
 }
 .tpl-ink-jade .concept-box .dim{
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 14px;
   color: var(--ink-2);
-  line-height: 1.7;
-  letter-spacing: .02em;
+  line-height: 1.78;
+  letter-spacing: .03em;
 }
 .tpl-ink-jade .concept-box .dim strong{
   color: var(--vermilion);
@@ -446,11 +445,11 @@
   padding: 14px 20px;
   border-radius: 0;
   margin-top: 22px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 14.5px;
   color: var(--ink);
-  line-height: 1.7;
-  letter-spacing: .02em;
+  line-height: 1.8;
+  letter-spacing: .04em;
   position: relative;
 }
 .tpl-ink-jade .callout b{
@@ -772,19 +771,19 @@
   display: block;
 }
 .tpl-ink-jade .toc-card .q{
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 15px;
   color: var(--ink);
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 8px 0 0;
-  letter-spacing: .02em;
+  letter-spacing: .04em;
 }
 .tpl-ink-jade .toc-card .q strong{
   color: var(--vermilion);
   font-weight: 600;
-  font-family: var(--sans);
-  font-size: 16px;
-  letter-spacing: .04em;
+  font-family: var(--kai);
+  font-size: 17px;
+  letter-spacing: .08em;
 }
 .tpl-ink-jade .toc-card .hint{
   font-family: var(--mono);
