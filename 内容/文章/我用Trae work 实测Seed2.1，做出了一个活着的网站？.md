@@ -1,5 +1,3 @@
-# 我用Trae work 实测Seed2\.1，做出了一个活着的网站？
-
 Seed2\.1正式发布了，刚好我最近在准备参加这个Trae的AI创造力大赛，于是就直接用Seed2\.1构建了一个网站出来去参赛吧。
 
 ![Image](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGM4ZTdjZDQzZjdhZDNhZDZkZGNkMGNiYTBmMjY4YWNfOTIyMWQyZjc4OWY2NGVkMTRiMTg1NWVhNGI3MzdmM2RfSUQ6NzY1NDUyNTQ0MzAxNDM4MDcyOV8xNzgyMjY0Mjk3OjE3ODIzNTA2OTdfVjM)
@@ -10,11 +8,7 @@ Seed2\.1正式发布了，刚好我最近在准备参加这个Trae的AI创造力
 
 现在国产模型和agent也是越来越厉害了，glm、deepseek、qwen、kimi珠玉在前，workbuddy、trae work这样的agent平台虽然模型不算特别强，但是harness\+营销做的好也让这两个agent平台在国内目前还是遥遥领先。
 
-
-
 因此我们用Trae work来测试一下最新的模型seed2\.1，看看它到底是不是真的像发布会时说的那么厉害。
-
-
 
 想直接体验就直接去官网trae\.cn，直接下载对应的桌面端版本即可。
 
