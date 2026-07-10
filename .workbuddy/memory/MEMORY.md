@@ -12,11 +12,12 @@
 - `内容/项目/` SaaS + GitHub 雷达 + 方法论拆解
 - `内容/归档/` AI 返佣项目库、Apple ID 美区教程等
 
-## 已安装 Skills（用户级，截至 2026-06-23）
+## 已安装 Skills（用户级，截至 2026-06-24）
 - `wenxuan-writer` v3 — 文轩公众号长文写作（2026-06-15 v3 升级 9 项硬约束）
 - `anti-pua` — 反 PUA 自驱鞭策引擎（常态化加载）
 - `wenxuan-learn` — 选题深挖学习引擎（冰山理论 × 正反竞奇）
-- `seo` — **2026-06-23 新装**：lionkiii/claude-seo-skills 适配版，52 个 SEO 命令
+- `seo` — 2026-06-23 新装，lionkiii/claude-seo-skills 适配版，52 个 SEO 命令
+- `wenxuan-cover` v1.0 — **2026-06-24 新装**：封面图 prompt 自动生成器（文章+可选参考图 → 中文 prompt）
 
 ## 重要约定
 - 文轩哥偏好中文、风格随意轻松
