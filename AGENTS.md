@@ -37,35 +37,27 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ```
 path-to-wealth-freedom/
-├── 内容/
-│   ├── 文章/           # 公众号深度文章、案例拆解
-│   ├── 选题/           # 每日公众号长文选题学习包（自动生成）
-│   ├── 变现/           # AI变现方向随机雷达（自动生成）
-│   ├── 资产/           # AI Skill/Prompt资产雷达 + 自媒体赛道认知库
-│   ├── 项目/           # 项目雷达与方法论聚合（详见 内容/项目/README.md）
-│   ├── 图片/           # 文章配图、参考图
-│   └── 归档/           # AI返佣项目库、Apple ID美区教程等
-├── 项目/
-│   └── GitHub雷达/     # 已迁移至 内容/项目/GitHub小项目雷达/（保留空目录）
-├── 30天2万粉，2周2000刀X工作流/  # X平台增长工作流
-├── HyperFrames-AI视频项目/       # AI视频项目
-├── wenxuan-skills/               # 自定义搜索技能
-├── cover-image/                  # 封面图生成模板与指南
-├── assets/                       # 静态资源（图片等）
-├── data/                         # 数据文件
-├── scripts/                      # 脚本工具
-├── Clippings/                    # 网页剪藏
-├── conversations/                # 对话记录
-├── Excalidraw/                   # Excalidraw 绘图
-├── image-cards/                  # 图片卡片
-├── notepix-uploads/              # NotePix 上传
-├── output/                       # 输出文件
-├── trash-auto/                   # 自动回收
-├── .obsidian/                    # Obsidian 配置
-├── 个人专属每日工作SOP（最终版）.md  # 每日工作流程
-├── README.md                     # 项目公开介绍
-└── AGENTS.md                     # 本文档：Codex 项目指导
+├── 内容/                      # 所有知识内容（4 个子目录，见下）
+│   ├── 文章/                  # 已完成深度文章 + 散落手册（跨境电商手册、逐字稿对谈等）
+│   ├── 原料/                  # 所有「未成文」原料：素材(灵感/思考/采集/行业/ai-hot-briefings/提示词) + 选题 + 资产(变现/SaaS/GitHub雷达/方法论) + 归档
+│   ├── 项目/                  # 具体项目（X工作流、金融科技期末等）
+│   └── 图片/                  # 文章配图、参考图
+├── 工作区/                    # 所有辅助/工具/产出（原散落根目录的辅助夹统一收拢）
+│   ├── assets/                # 静态资源（图片等）
+│   ├── scripts/               # 脚本工具
+│   ├── output/                # 输出文件
+│   ├── reports/               # 报告
+│   ├── opendesign/            # 设计导出
+│   ├── Clippings/             # 网页剪藏
+│   ├── conversations/         # 对话记录
+│   └── translation/           # 翻译
+├── .workbuddy/                # WorkBuddy 配置与已安装 skills（wenxuan-*、anti-pua 等）
+├── .obsidian/                 # Obsidian 配置
+├── AGENTS.md                  # 本文档
+├── README.md                  # 项目公开介绍
+└── agent.md                   # agent 说明
 ```
+> 注：根目录另有一些隐藏的应用元数据/临时目录（`.TagStudio/`、`.claudian/`、`.hinote/`、`.trash/`、`.tmp_*` 等），非内容、无需关注。
 
 ---
 
@@ -129,9 +121,14 @@ path-to-wealth-freedom/
 - `anti-pua` —— 反PUA自驱鞭策引擎（六大厂风味，常态化加载）
 - `learn` —— 选题深挖学习引擎（冰山理论×正反竞奇，搜索≥20轮，输出写作弹药包，逼输出后衔接wenxuan-writer）
 
-### 项目级 Skills
-项目使用 `wenxuan-skills/` 下的搜索技能：
-- `source-router` —— 多源搜索聚合与问题到信息源路由技能
+### 项目级 Skills（.workbuddy/skills/，已安装可用）
+- `wenxuan-translate` —— 英→中翻译（人味注入 + F1–F10 质量门）
+- `wenxuan-writer` —— 公众号长文写作
+- `wenxuan-learn` —— 选题深挖学习引擎（冰山理论×正反竞奇）
+- `wenxuan-research` / `wenxuan-paper` / `wenxuan-title` —— 研究 / 论文 / 标题
+- `anti-pua` —— 反PUA自驱鞭策引擎（常态化加载）
+
+> 注：原 `wenxuan-skills/` 源码仓库当前不在根目录，但上述 skill 已复制到 `.workbuddy/skills/` 可直接调用；如需 `git pull` 更新可重新克隆 https://github.com/huangwenxuangod/wenxuan-skills 。
 
 ### Codex-mem 系列 skills
 - `mem-search` —— 跨会话记忆搜索，查找之前解决过的问题
@@ -147,7 +144,8 @@ path-to-wealth-freedom/
 - `tavily-crawl` —— 爬取网站并提取多页内容
 - `tavily-map` —— 发现并列出网站上的所有 URL
 - `web-access` —— 所有联网操作统一入口
-- `source-router` —— 多源搜索聚合与自动回退
+
+> 注：`tavily-*` 已全局配置于 `~/.agents/skills/tavily-search/`（跨 agent 可用）。
 
 ### Lark 系列 skills
 - `lark-wiki` —— 飞书知识库管理
@@ -174,6 +172,25 @@ path-to-wealth-freedom/
 ---
 
 ## 更新日志
+
+### 2026-07-10（结构精简重组）
+- **根目录从 14 个顶层 → 3 类**：`内容/` + `工作区/` + 元文件（AGENTS.md/README.md/agent.md）。
+- **`内容/` 子目录 12 → 7**：
+  - 新建 `内容/素材/`，并入 灵感/思考/采集/行业/ai-hot-briefings/提示词
+  - 新建 `内容/资产/`，并入 变现/ + 内容/项目 下的 每日SaaS产品创意雷达/GitHub小项目雷达/方法论拆解
+  - `文章/` 并入两份散落根目录的手册（跨境电商新人工具流程手册、逐字稿对谈）
+  - `项目/` 并入根目录 `30天2万粉，2周2000刀X工作流`
+  - 保留：选题/图片/归档
+- **新增 `工作区/`**，收拢根目录辅助夹：assets/scripts/output/reports/opendesign/Clippings/conversations/translation + 散落 md（2606…analysis）
+- **链接安全**：移动前核查 0 个路径式 wikilink，移动后 0 个断裂。
+- **同步 AGENTS.md**：目录树、项目级 Skills（改为 `.workbuddy/skills/` 实际安装的 wenxuan-*）、移除已不存在的 source-router/wenxuan-skills 引用。
+- 注：`wenxuan-skills/` 源码仓库当前不在根目录（skill 已装在 `.workbuddy/skills/`），如需更新可重新克隆。
+
+### 2026-07-10（二次精简）
+- **`内容/` 子目录 7 → 4**：新增 `内容/原料/`，将 素材/选题/资产/归档 整体移入（内部子结构保留）。
+- 现状：`内容/` = 文章 / 原料 / 项目 / 图片。
+- **链接安全**：再核查 0 个路径式 wikilink，0 个断裂。
+- **同步 AGENTS.md**：目录树改为 4 子目录，并补充自动生成雷达（选题/变现/SaaS/GitHub）的新写入路径说明（见下）。
 
 ### 2026-06-14
 - **整理迁移 `内容/项目/` 目录**：9 份项目文件 + 12 份 GitHub 文件 → 3 个子目录聚合
