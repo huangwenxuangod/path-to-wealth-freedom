@@ -1,0 +1,177 @@
+---
+title: "Treat Social Media Like a Video Game and Get Rich"
+source: "https://www.youtube.com/watch?v=risKXUGkKUA"
+author:
+  - "[[Neel Dhingra]]"
+published: 2026-05-05
+created: 2026-07-18
+description: "Building a personal brand often feels like an endless grind of conflicting advice and stagnant growth. What if you could view your brand as a video game with six distinct levels to master? In this vid"
+tags:
+  - "clippings"
+---
+![](https://www.youtube.com/watch?v=risKXUGkKUA)
+
+Building a personal brand often feels like an endless grind of conflicting advice and stagnant growth. What if you could view your brand as a video game with six distinct levels to master? In this video, I break down the exact roadmap I used to build two multi-seven-figure businesses and the specific skills you need to unlock to reach the next stage of your journey.  
+  
+As someone currently navigating the transition from a hands-on creator to a true CEO, I pull back the curtain on my own team structure and the systems I am implementing to stop being the bottleneck in my business. Whether you are just starting out or looking to scale to seven figures, this framework will help you identify exactly where you are and what you need to do next.  
+  
+–––––––––––––––––––––––––––––––––––––––––––––––––––  
+💡Join 25,000+ who get my weekly 'Forward Focus' Content Strategies Email → https://www.neelhome.com/  
+  
+📱 Connect w/ Neel on IG : https://www.instagram.com/neelhome/  
+💻 Copy my best performing funnels (free trial) → https://perspective.co/neel?source=youtube  
+🔴 Get special access to ManyChat → https://manychat.partnerlinks.io/ol6h530h3oyl  
+  
+CHAPTERS:  
+0:00 The 6 levels of personal branding  
+2:45 Level 1: Escaping invisibility with perspective  
+6:30 Level 2: Mastering content packaging for more views  
+10:00 Level 3: Building the bridge to sales and transactions  
+13:15 Level 4: Scaling through leadership and systems  
+16:45 My current team structure and hiring strategy  
+19:30 Moving toward level 5 and level 6  
+21:15 Designing a business that fuels your life
+
+## Transcript
+
+### The 6 levels of personal branding
+
+**0:00** · If you're trying to build a personal brand and you're getting conflicting advice, I want to save you two years of your life. I've built two multi-seven-figure businesses using my personal brand, and I've personally coached with the top creators that many of you look up to and follow. And what I've learned is this, the people who are winning are not necessarily working harder than you, they're just playing a different game. Creating content to build your personal brand is a video game. There's six levels to the game and each one has a skill you have to unlock in order to advance to the next one. I'm going to show you the full map, tell you the four levels that I've personally lived, and give you the exact skill I'm working on right now to break through.
+
+**0:31** · Now, first, here's the biggest mistake I see and it's probably the reason why you're stuck right now. See, most people aren't stuck because they're lazy, they're stuck because they're doing level four skills when they're still on level one of the game. They're listening to creators that are three or four levels ahead of them and then wondering why nothing's landing. See, you cannot skip levels of the game. You have to play and master the level that you're on. So, let's figure out which level you're currently on and what you need to unlock to move up to the \[music\] next one starting at the bottom. Now, level one is you're invisible, you're just starting, nobody knows you really exist.
+
+**0:59** · Maybe you're not posting consistently or if you are posting, it's not really getting anywhere. And what I found is people at this level are always looking for the hack. Maybe it's posting more or different times, using a new trial reels on Instagram, or a camera or lighting setup, but that's not the issue here.
+
+**1:13** · \[music\] The real issue at this level is you sound just like everybody else and you do not have a unique point of view. In 2026, if you're saying the same thing in pretty much the same way that everybody else is saying it, especially in your industry, it's just noise. Now, I've personally lived this in the real estate and mortgage game. I was posting content like three ways to buy a house or here's a new program or a market update and everything I was saying was pretty much the same as everybody else. Now, sure, it's better than nothing, but the truth is nobody really cared about this content. I could post every single day for the whole year and not really get anywhere.
+
+**1:43** · This is why being consistent is dangerous advice if you don't have the right strategy. Now, the big shift for me happened when I stopped sharing generic advice and started inserting my unique point of view or my perspective.
+
+**1:54** · I'll give you an example. I posted a video about how wealthy people use debt to their advantage. They use debt in order to acquire more assets and this makes them more wealthy. I simply showed people the difference between a good debt and a bad debt and how to apply this to investing in real estate. Now, this video took off, but more importantly, it changed the way people thought of me. I went from somebody like, "Hey, it's nice information." to "Hey, I need to work with that person.
+
+**2:15** · \[music\] I really value his opinion. He taught me something in a new way." or "I finally get it." And as a result, I got more respect, which leads to more referrals and clients. I remember somebody in my industry said, "Hey, mind if I share your video with my clients?"
+
+**2:27** · And that's when I knew I was onto something. Now, that was just one example, but there's so many more ways that you can insert your unique perspective or point of view into your content. What do people keep coming to me for? Why are people being referred to me? What's the reason there? This repetition is not random. That's the market telling you where your expertise lives. Now, the second question, and this might be your most powerful piece of content right now, \[music\] is asking yourself, "What did I learn the hard way and what do I now tell everybody as a result?" Like the mistakes you've made or the lessons that truly cost you something. That's the piece of content that nobody else can make.
+
+### Level 1: Escaping invisibility with perspective
+
+**2:57** · They can't go to chat GPT for that one. That's your unique perspective. And because it takes a little bit of vulnerability to admit you made a mistake at some point in your growth or your career, this is something that most creators won't even share. And here's why all of this matters more than anything at level one. Commodity content, the tips, tricks, hacks, this just builds an audience of consumers.
+
+**3:16** · People who want to learn from you. Now, it's better than nothing, but when you shift over into perspective content, it builds an audience of believers. They don't just consume your videos, they adopt your way of thinking. And you might even be thinking, "Man, I'm not a thought leader or a true expert yet. I'm just on my journey trying to build my personal brand." Well, here's the thing.
+
+**3:32** · If you are able to do this for a small group of people and you've gone from A to B, that means you are uniquely qualified to help more people. The biggest mistake I see people make is they discount the value of the information in their brain. They say no for the audience. They say, "Well, who's really going to care about this?" or "That's not really a big thing." \[music\] Remember, if it actually worked for for or it's actually worked for your clients in the past. This is something that the audience needs. Do not discount the value of the information or advice you have. When you do this correctly, people don't just consume your content, they adopt your way of thinking.
+
+**4:00** · Then when it comes time to pick the person they want to work with, you're the one that makes sense. So again, the thing that gets you from level one to level two is not going to be camera quality, \[music\] posting more, some new hook you saw on Instagram, it's going to be your perspective. Perspective content is the bridge from \[music\] level one to level two. Okay, level two is you've got your point of view, you've got your unique content, but you're posting and nothing's really landing. You're getting some views and likes and maybe you're even growing, you're getting hundreds of followers, even thousands of followers, but nothing's really moving the needle for you. Now, most people here think the problem is I need to go viral, I need to post more, I need to double down.
+
+**4:30** · But the actual problem here is you need to package your ideas, you need to package your content in a way that truly connects. So you've got the ideas, you've got the substance, but you don't have the packaging. Now, packaging is the way that you present your content to the audience. I have learned over the years that it's not the best content creators that win, it's not the best ideas or the the most valuable content, it's the best packaged content. Now, you could also think of packaging as the format or the framework that you put your ideas in to present to the audience online.
+
+**4:56** · Now, when this finally clicked for me, this is when things took off in terms of views, follower growth, and reach, especially on platforms like Instagram. It also works right here on YouTube. I mean, I've changed just a title or thumbnail, just one or two words, or shifted things around, and it's literally changed the trajectory of that particular video. We've seen the same idea that would have normally been stuck here get hundreds, even thousands, even 100,000 plus views because of one shift in the packaging.
+
+**5:19** · When you do this correctly, you will at a minimum double your views, but I've even seen it with myself and people in our programs 5x, 10x the views \[music\] from just small shifts in how they present. Same content, different packaging, and this is the whole definition of working smarter, not harder. You're going to take the time to make the video anyways, wouldn't it be better if you just changed a few things and got two times, three times, even 10 times the amount of people to see that piece of content?
+
+**5:44** · That's literally the definition of working smarter, not harder. Now, this doesn't guarantee that your videos are going to go viral, but what it does is it allows your ideas to reach more of the right people. The first thing to do is test two ways of starting the same video. This is also known as your hook, but it's more important than that. It could be things like the visual of how you start the video. We've seen a different visual hook, which is the text that appears on the short-form video in the beginning, but if you change a few things there, we've seen the video double or triple views just off that one change. Now, this combined with how you start the video, different music, different backgrounds, this is how you can actually move to the next level.
+
+**6:15** · What you're trying to do here is to find the version of the video that makes people stop. And you can even do this when you're testing written content. I do this a lot with my ideas on X and Threads before I turn them into videos. And so, I recently posted something on Threads, and it kind of flopped for me.
+
+**6:28** · And then I took the same exact thing 2 days later, posted it, but I took one line out in the beginning of the written post, and it took off for \[music\] me. This is the exact proof of what I'm talking about here. It was the same idea, the same brain, my thoughts put out there, but I just changed one thing in the packaging, and boom, took off.
+
+### Level 2: Mastering content packaging for more views
+
+**6:45** · People do this with trends on short-form content all the time, but it's so much more than that. It could be taking your idea, and it might be even a boring idea, but when you put it in validated content packaging, all of a sudden it can take off. And remember, you're not ripping off other creators here. You shouldn't be doing things word for word.
+
+**6:59** · What you're doing is taking a proven concept and putting your perspective in it. I'll give you an example on this, okay? And by the way, this idea is still working right now. It's blowing up, so feel free to use this one right away. I saw other creators on the platform responding to other people's comments or \[music\] quotes. And so, they would start the video with a quote of what was already being said out there, and then they would put their response or teaching below that. This could be done in written format or in a video. So then, I had a concept that I was trying to teach, and it wasn't really getting anywhere. So what I did was I put the quote of what people would say about the thing I wanted to teach.
+
+**7:28** · Maybe \[music\] it's the narrative that's out there in the marketplace, or what someone would think about what I'm about to teach. So I put that quote up there, and then I responded to it with my unique perspective. Now, I call this the quote flip method, but when I did this personally, I had a piece of content just blow up right away. I had multiple hits after this and then people in my community have been doing this with success as well. The psychology behind it is you're not coming across as the expert. You're not lecturing people.
+
+**7:51** · You're simply responding to what's already out there. It might even be an idea that was already in the viewer's mind and then now you respond to it.
+
+**7:59** · I've seen this idea work across multiple niches, so give this one a shot. So again, the skill that gets you from level two to level three is better packaging, not coming up with 100 new ideas, but taking the perspective and ideas that you already have in here and \[music\] putting them in a format that reaches way more people. That's what's going to get you to level three. Okay, now we're into level three. You're getting more views, more engagement, even follower growth is happening for you right now, but here's the issue.
+
+**8:21** · You're not getting enough clients. You're not getting paid from your content. Now, what you and many people think at this stage is I need just need more followers. I need to do more of this. I need to put my foot on the gas.
+
+**8:30** · But that's not the issue. The issue is you do not have a bridge from your content to a transaction. People are watching your content, but they're not taking the next step with you because there's no bridge. And I see this problem so often right now. Creators are making a call to action or a CTA on social media and very few, if anybody, takes them up on it. And then you hear them say, "Social media doesn't work for my business." It's not that social media doesn't work. Social media is generating the trust, the views, and the attention that you need. This content is not designed to close. This is why you need a bridge.
+
+**8:59** · See, what I found is most people on social media are not going to take this huge leap from watching your videos to working with you because they're not ready. I call this the not yet group of social media and it's largest group of people on the internet.
+
+**9:11** · Now, many of these people might be open to working with you, but they're just not going to make that huge leap. So, what they need is a next step. This is why we call it a bridge. Now, this next step could be a really good lead magnet. These still work, by the way, if you do it correctly. Or it could be a longer video where they learn more from you.
+
+**9:25** · They started with the 30-second video, now they get to a 7-minute or 12-minute video and they learn more. Or it could be a conversion event like a webinar.
+
+**9:33** · Now, this is the most powerful next step I've ever used and it's honestly been the single biggest driver of both my businesses over the years. So, you people are watching your short-form videos, maybe they're even getting your emails if you put out a newsletter, but now you're going to invite them to a specific training, and this is going to be online. It's gone Zoom for free. And what happens there is now they get immersion. You're going to teach them more, you're going to break some beliefs, and you have an opportunity to go from zero to hero with that person in a short compressed period of time. So, what a webinar does for you is it allows people to learn a specific framework from you or some lesson that you could \[music\] teach them that would help them.
+
+### Level 3: Building the bridge to sales and transactions
+
+**10:06** · And then they don't have to buy anything, they can just come there for free and learn, but in a 30-minute window, they leave with real value. Now, you can stay longer than that, but I've found that 30 minute is a small commitment that people will actually sign up for today. And even more recently, I did this for a B2B audience.
+
+**10:19** · This was for my business Forward Academy, which we put on an annual event every year. It's called the Forward Event. And so, typically, I have promote this event, I announce it, and it takes 2 to 3 months to fill this thing and sell it out, and it sells out every year, but it's a big task for me to do this. But what I did different this year was I did a big webinar where I brought on special guests, I talked about different things, I taught, brought value, and I also sold tickets to this year's event. I called it a launch of this year's event, and we ended up selling out the entire event in one single webinar.
+
+**10:46** · Now, this was a much longer webinar than my normal ones, but in any case, what happened in that window, in one day, I was able to do the work that would typically take me 2 to 3 months. And so, this was just yet another example to me at even the highest level of not selling the end thing that you actually want \[music\] to sell, but selling the step in the middle. Getting people to come to this webinar \[music\] before they actually came to the event was they unlock for me to fill the entire event in one single day. Now again, that's a B2B example, but this also works for B2C or whatever it is that you're offering at the end.
+
+**11:16** · Just think about what would be the step before that, and then sell that thing instead of your actual end goal. Just back up the truck a little bit and watch what happens to your business and your conversions. So again, the skill that gets you from level three to level four is a bridge, the thing that sits \[music\] between your content and the transactions action. All right, now we're in level four and I'm just going to be straight with you. This is the level that I'm currently at right now.
+
+**11:36** · At this point, the business is working.
+
+**11:38** · We're generating multiple seven figures a year. The content is doing well. I'm reaching millions of people every single month on Instagram. And so everything's just kind of clicking. The conversion events, we're getting the sales, all the next steps are in place. They could be better and I'm always making tweaks, \[music\] but at the end of the day, there's just one thing that's kind of keeping me stuck at this level and that is people. Right now at this level, if I'm being straight up with you, there are periods and I'm I'm not complaining by the way. I love what I do, but there are periods where I'm just exhausted because there's just so much on me. I'm becoming the bottleneck at \[music\] this stage of the business.
+
+**12:07** · Everything is like I have a bunch of helpers, but everything comes back to me and ends up on my shoulders. So at this level, you cannot simply work harder. Like I can't put in any more hours and I don't want to put in any more hours because that would take away from my family time and honestly, I've done the periods where I worked 60-80 hour weeks in the past and I just don't want to do that life anymore. The other thing is you cannot simply AI your way out of this step.
+
+**12:29** · I've already done that too. I've got Claude working. I've got all the different things going. You actually have to build a solid team at this stage and that's the one thing I'm working really hard on right now is acquiring more talented people to come to our team, leadership, \[music\] training, onboarding, all the different things that you do in your business and just getting people to take ownership of their role here within our company. Now I've done this with sales people, especially in the mortgage game over the years where we brought in loan officers and sales people and helped them and developed them and then they crushed it, so in turn we crushed it.
+
+**12:55** · So I've done that part, but when you get into the higher levels of the game with systems and leadership roles, it's a totally different animal. Like what got me to level four in terms of both businesses, mortgage real estate and also with Forward Academy and the B2B game, what got me here is not going to get me to levels five and six, which is the next levels of the game. I'm not going to lie to you and tell you I've already graduated level four because I'm in level four, but what I can share with you is the things I'm actually working on right now.
+
+### Level 4: Scaling through leadership and systems
+
+**13:18** · Now I will tell you that beyond sales people, the most important hire, the first real hire that I made in this business was an executive \[music\] assistant or this can also become your chief of staff. Now, you can even start with a VA, but the thing is if you are still doing things that could be delegated to an assistant, \[music\] then you are the assistant. Actually, Dan Martell wrote an entire book on this.
+
+**13:37** · It's called Buy Back Your Time, and he tells people that the first hire needs to be this role. You need someone that can just manage the day-to-day ops of your life, your calendar, your appointments, your bookings, all the different things. And what happens here is even if you're truly not ready to bring on this person, you could bring them on, like I said, a virtual assistant.
+
+**13:53** · \[music\] But what happens is when you bring this person on, you start to actually go through your day and see what you shouldn't be doing, what you should be doing, \[music\] and what you could delegate to this individual. This will be the highest leverage hire you make, and \[music\] it will change the game for you, trust me.
+
+**14:06** · It's probably the most valuable thing I've done in my business. Now, the next hire that I made as I'm scaling \[music\] the current business I'm in right now is a content creator. I did this a few years ago, and it was a game-changer.
+
+**14:16** · See, in the beginning, you're doing all the content. Maybe you hire some editors. Maybe you hire some freelancers to work on stuff, but it all comes back to you, and again, you become the bottleneck. What you need is a content creator. Like even right now, this video that you guys are watching on YouTube, I filmed it, of course, but then it was handed off to a content creator that's on my team right now. This person edited the video, packaged it, got it up on YouTube, and I was just doing my day-to-day. I'm on to the next thing, right? And so, this person can shoot, \[music\] edit, and post. More importantly, they can actually post content to your platforms that you want them to work on.
+
+**14:44** · And again, you can give your approvals at first, but at some point, they need to take ownership of the role and actually push content out there. This is what will remove the bottleneck and get more stuff out in the world. If you look at anybody who's crushing it with not just content, but an actual business, they have this role, and probably they have multiple of these people in their business right now. Now, at this level, there's also systems that are going to be required. Right now, we're actually building a task management system in AirTable. It's actually connected to Clod, and we're working on all that stuff. But in the past, it was like, "Hey, man, we're just writing notes, losing stuff in between."
+
+**15:16** · There was a whole mess of just stuff getting lost in the sauce, things falling through the cracks, and we're fixing all that now with an actual system to run the business. We're also doing task management and project management using a tool Asana. So, there's just different things that you have to implement at level four that are going to get you to the next level, and that's what I'm doing right now. The other thing I'm doing right now, which might help some of you, is if you're running ads, you might be working with an agency. You might be \[music\] hiring people to run your ad campaign, and then you don't really have full ownership of this process. These people work for many different clients, and maybe you might be low man on the totem pole, who knows?
+
+**15:49** · And so, what I'm doing right now is actually bringing a media buyer in-house, so that way we can do this internally. \[music\] And this is the big shift that I've seen people make when they're going from level four to the next level is they start \[music\] hiring these people internally, and not just relying on freelancers and agency, which in the beginning that's totally fine. I've been doing that for many years, but now as we transition, I just need to bring these roles \[music\] in-house. I'll actually break down what my team looks like right now because many of people have asked me this. So, first of all, it's a chief of staff, like I told you, EA. We also have a VA for customer support and other administrative tasks. We have \[music\] a long-form content creator, a short-form content creator.
+
+**16:20** · These are all people on payroll. And we also have freelance editors. These are not people on payroll, but these are people that we reach out to when we need editing help over and beyond what we can handle internally. We also have a graphic designer that we use, again, on a freelance basis. We're not using this person all the time, so I can't hire them full-time. And then we have trusted vendors for big moments throughout the year. So, for example, when I do my big event, I don't need a huge media team all throughout the year, but I need them on those three days. So, we have to bring in vendors that I trust, and these are vendors that have worked with for years.
+
+### My current team structure and hiring strategy
+
+**16:51** · There's people that I have in like a a trusted circle that I can hire.
+
+**16:56** · And so, if you don't need someone all the time, at least have those trusted contacts that you can reach out to at specific moments when you actually have things that you need to hire for. Now, this is a small team, especially when you compare it to some of the bigger companies and organizations, but I'm really proud of the fact that I'm able to generate a net income of multiple seven figures off of a relatively small overhead. And I'm reinvesting a lot of the profit back into the business so that I can graduate to the next level.
+
+**17:20** · And I'll share with you one thing I've learned most recently. A lot of the people that I've hired over the years have been what I would consider helpers.
+
+**17:26** · These are people that you tell them what to do and then they go do it and maybe they can do it at a great capacity and they're they're on they're awesome. This is a great role. But what you need at a certain point \[music\] is leaders. People that actually own the outcomes. Like you could give them a task and they could take ownership of it. Yes, they come back to you for certain things in meetings, but at the end of the day they're responsible for their own output and their own outcome. This is the single move that would stop me from becoming the bottleneck and get me from level four to level five. Move that would stop me from becoming the bottleneck and get me from level four to level five.
+
+**17:56** · So again, the skill that's going to get you and me out of level four is hiring the right people and having the right \[music\] systems in your business. People get this twisted and they start working on this stuff first when the reality is you should work on this last. I remember I make this joke but it's so true. I see so many people working on this elaborate CRM system and all these things and they don't even really have any business. Yeah, you should have like a foundation system for yourself to actually grow, but I will tell you the truth like in the very beginning of both of my businesses, we literally used Google Sheets as our CRM.
+
+**18:29** · We just duct taped things with Zapier to make it work, right? And so that actually got me to seven figures using Google Sheets. And so I'm not ashamed to say that because I truly think that when you should actually dial in all these things is as you grow. I'm a \[snorts\] perfect example of building the plane as you fly because not everything was perfect honestly in the very beginning.
+
+**18:47** · It was kind of messy, but I learned these things along the way and that's what I want to share with you guys in this video. And another thing I'm noticing right now finally at this stage of building my personal brand is your personal brand increases the quality of people that will reach out to you. Like you can actually attract talented individuals to come work with you because maybe they've been following your stuff for a while. Maybe they've been watching your videos. Maybe they've been reading your emails, coming to your events. And so at that point now I'm getting a better quality individual to come on the team and that I think is going to be the unlock for me long-term.
+
+**19:14** · And so guys, I am not done with this game. I'm actually playing it right alongside you, but I'm sharing with you the real-life things that I'm working on today to get to the next level. So, when you truly get to level five, which I should be at soon, then you're no longer the bottleneck, you're actually a real CEO running an organization. And then the next level is going to be level six where your brand outlives you. That's where you've actually built something real with maybe enterprise value that you could even sell in the future. I'm not really worried about that.
+
+### Moving toward level 5 and level 6
+
+**19:38** · I have this thing called key man risk where I'm truly involved in the business, like my personal brand drives a lot of the business, and I think that's okay for most creators. But at some point you may want to build a business that you could eventually exit, and that's where level six would come into play. Now, the reason why I love teaching this as a video game, I think about content as a game, it's just like how do we hack attention? How do we get more people to watch our videos? Because when you focus on it like a game, you can just focus on the level you're at. Instead of thinking about this huge overwhelming structure, I think most people right now are extremely overwhelmed.
+
+**20:07** · You have so many ideas, there's so many things you could do. You're hearing a new AI tool, a new strategy every other day. It's like squirrel, you go here, there, everywhere, but then at the end of the day, you're not making progress towards your end goal. But when I broke it down in this structure, that's when I truly got results. Because now I'm only focused on getting to the next level, and then getting to the next level. And that's the way I played video games as a kid, and that's the way I'm playing this game of entrepreneurship. People telling you that they need a team of 20 people doing all these things, but you're still on level two, well, that's not going to matter. Like you need to finish level two first, and then move on to the next step.
+
+**20:39** · Yes, there's some things you could overlap along the way, but for the most part, I would say the greatest advice I can give you today is just to make sure you fix these issues \[music\] at the current level that you're at. Identify where you're at, fix the issue, and then move on to the next level. Like for me personally, winning the game is not necessarily having a hundred million dollars in this huge exit. I'm just trying to make a really good living while having a really high quality of life. \[music\] Like I think the new rich is actually being happy with the way you do your business.
+
+**21:06** · Like so I actually want to build a business that doesn't completely drain \[music\] me and just make me feel like I'm totally exhausted at the end of the day. I want to build a business that I love. And it doesn't mean that everything I do every day is that I'm going to love it. Like half the stuff I do isn't the most fun right now.
+
+### Designing a business that fuels your life
+
+**21:22** · But at the end of the day, majority of my time is spent doing things that bring me fulfillment. That makes me happy. That's what makes this whole thing sustainable. I heard this quote from somebody where they said, "Hey man, \[music\] if you're having fun at work, just imagine the competitive advantage you have over people. Because what they would consider work, you consider fun." That's a huge advantage for me right now. Like I love making this content. I love putting these videos out there and teaching and going through this stuff. It gives me a lot of fulfillment.
+
+**21:47** · When people leave comments or when people come to our events or when people say, "Hey man, I I put I put what you taught into practice and here's the results I got." Like I know it sounds cheesy, but that is even more powerful than money at many points throughout my career. So, I just share this because not everything has to be according to somebody else's plan. Yes, there are structures that I've been teaching you, but you need to define what is success for you. And my business coach taught me this years ago. He said, "Design your life and then the \[music\] business." Most people design the business and then end up with a prison that maybe they didn't sign up for.
+
+**22:18** · Like there would be nothing worse than putting in all the effort, climbing to the top of a mountain, you know, like all the stress, the sleepless nights, the bags under your eyes. And then you get there and you're like, "Man, I don't like this. Like I climbed the wrong mountain or I thought I wanted the idea of this, but I don't like it. It's not what I signed up for." And so, I've seen this happen with a lot of entrepreneurs and I don't want to see that happen to you guys. In the comments, let me know what level you're currently on and what is one skill or thing you're struggling with in order to get to the next level.
+
+**22:45** · I read every single comment. My team and I are going to go through all of these and we're going to make future content based on what you guys actually \[music\] need help with. So, I'll see you guys in the comments. And until next time, I'll see you on the next video.

@@ -30,10 +30,10 @@
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
-      "enableOpus1M": false,
-      "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "sonnet",
+      "modelEnvironmentType": "model",
+      "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_AUTH_TOKEN=6590239f-8273-4462-84ef-b7afd73a6a07\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215",
       "environmentHash": "ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding|ANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215"
     },
@@ -49,7 +49,12 @@
       "installationMethodsByHost": {
         "device:3a016af4-3b94-417c-b8a0-c5150d255c71": "native-windows"
       },
-      "wslDistroOverridesByHost": {}
+      "wslDistroOverridesByHost": {},
+      "discoveredModels": [],
+      "modelAliases": {},
+      "visibleModels": null,
+      "catalogTimestamp": 0,
+      "catalogFingerprint": ""
     },
     "opencode": {
       "cliPath": "",
@@ -88,6 +93,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
+  "pendingProviderSessionInvalidations": {},
   "lastCustomModel": "claude-code/doubao-seed-2-0-code-preview-260215",
   "maxTabs": 3,
   "enableAutoScroll": true,
