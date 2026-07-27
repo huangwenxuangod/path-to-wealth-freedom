@@ -118,3 +118,20 @@
 - **产品价值 = 思考「人应通过产品获取什么」** → 再追问「如何让自己的注意力每天花在该花的地方」。
 - **与 anti-pua 的关系**：这是一个更深层的进化——从「骂你让你做」升级到「在你注意力跑偏时，用进入点精准介入把注意力拉回」。可作为新产品的底层逻辑。
 - **可落地方向**：① 基于「进入点」理念做注意力管理工具；② 直接变成一篇公众号文章（框架图已用 Visualizer 画出）；③ 每天用「先定义3件事 + 先禁娱乐」作为个人 SOP。
+## 车干认知升级（2026-07-22）
+- 用户顿悟：对想搞流量但怕面子的人，最直接=面向产品搞流量——发疯做产品、做好产品、做别人愿意用的产品。
+- 逻辑链：空谈(车轱辘话)→焦虑面子→不敢做；做产品→从0到1拿结果→自信油然而生→流量自然来。
+- 与现有打法不矛盾：非推翻"先用别人品测爆款结构"，而是把"做产品"时点提前——产品本身就是最硬的内容素材与底气，非验证完才上。
+- 含义：怕丢脸是因为没结果；产品做出来(哪怕小)就是结果。没人看的是空谈，不是产品。
+
+## 异常猎手项目（2026-07-24 立项，Market Anomaly Hunter）
+- **定位纠偏（用户亲自研究后纠正 AI）**：不做"内幕发现器"（成功率 5/100，且真内幕常在链外），做 **Market Microstructure Anomaly Engine（市场微结构异常引擎）**。成功率：发现市场异常 75/100、Smart Money SaaS 85/100、内容+SaaS+社群 90/100。
+- **护城河 = 特征工程（约 70%）**，不是 PyOD/PyGOD/Neo4j。顶级量化团队 80% 做 feature engineering。
+- **监控单元 = Cluster（簇）不是钱包**：新地址靠"时间/买入/金额/Gas/Funding/行为"六维同步聚类捞出来；Lookonchain 式已知钱包监控已 price-in 没价值。
+- **技术栈（用户指定轻量，拒绝过度架构）**：Helius + Python + Redis + PyOD + NetworkX + Supabase + Telegram。**不上 Kafka/Flink/Feost/Neo4j/ClickHouse**（过度架构是 90% 项目死因）。
+- **MVP = Solana-only**：监控 Swap/Transfer/Create Pool/LP/Deploy Token，只取异常分 >99%（top 0.1%）。
+- **成本现实**：Helius Developer $49/月（Enhanced WSS txSubscribe 监控主要 DEX 程序）；全市场 gRPC 扫描 = Business $499/月。
+- **开源底座（替代 DJMIN/signle-bot，后者偏交易Bot不适合）**：sol-parser-sdk-python(PyPI,Python gRPC消费端)、grmarag/blockchain-analyzer(HDBSCAN+孤立森林+中心性)、nice-bills/chain-segment(行为persona聚类)、PyOD/PyGOD/River、NetworkX+Supabase。
+- **叙事异常(Narrative Intelligence)是更大机会**：链上+Twitter+GitHub+TG+KOL+交易行为多源收敛检测叙事轮动，内容价值>交易价值；商业对标 Kaito Pro($833/月)。
+- **本次先不管 IP/社群/卖课变现**，只调研"发现市场异常行为并判断"的技术链路。
+- **合规红线**：分析公开数据合法；用 non-public info 下注美股重罪、crypto 灰色。
