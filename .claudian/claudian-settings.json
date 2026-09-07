@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "claude-code/doubao-seed-2-0-code-preview-260215",
+  "model": "doubao-seed-2-0-code-preview-260215",
   "thinkingBudget": "low",
   "effortLevel": "high",
   "serviceTier": "default",
@@ -14,13 +14,11 @@
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
   "customContextLimits": {},
-  "customModelAliases": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
     "scrollDownKey": "s",
     "focusInputKey": "i"
   },
-  "requireCommandOrControlEnterToSend": false,
   "locale": "zh-CN",
   "providerConfigs": {
     "claude": {
@@ -30,10 +28,10 @@
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
+      "enableOpus1M": false,
+      "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "sonnet",
-      "modelEnvironmentType": "model",
-      "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_AUTH_TOKEN=6590239f-8273-4462-84ef-b7afd73a6a07\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215",
       "environmentHash": "ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding|ANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215"
     },
@@ -47,14 +45,10 @@
       "environmentVariables": "",
       "environmentHash": "",
       "installationMethodsByHost": {
-        "device:3a016af4-3b94-417c-b8a0-c5150d255c71": "native-windows"
+        "device:3a016af4-3b94-417c-b8a0-c5150d255c71": "native-windows",
+        "lovelykind": "native-windows"
       },
-      "wslDistroOverridesByHost": {},
-      "discoveredModels": [],
-      "modelAliases": {},
-      "visibleModels": null,
-      "catalogTimestamp": 0,
-      "catalogFingerprint": ""
+      "wslDistroOverridesByHost": {}
     },
     "opencode": {
       "cliPath": "",
@@ -79,27 +73,55 @@
       "preferredThinkingByModel": {},
       "toolMode": "all",
       "visibleModels": []
+    },
+    "grok": {
+      "catalogsByHost": {},
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "",
+      "modelAliases": {},
+      "planBasePermissionMode": "normal",
+      "preferredReasoningByModel": {},
+      "visibleModels": null
     }
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "claude-code/doubao-seed-2-0-code-preview-260215"
+    "claude": "doubao-seed-2-0-code-preview-260215"
   },
   "savedProviderEffort": {
     "claude": "high"
   },
   "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {},
+  "savedProviderThinkingBudget": {
+    "claude": "low"
+  },
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "pendingProviderSessionInvalidations": {},
-  "lastCustomModel": "claude-code/doubao-seed-2-0-code-preview-260215",
+  "lastCustomModel": "doubao-seed-2-0-code-preview-260215",
   "maxTabs": 3,
+  "tabBarPosition": "input",
   "enableAutoScroll": true,
   "deferMathRenderingDuringStreaming": true,
-  "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
   "hiddenProviderCommands": {},
-  "tabBarPosition": "input"
+  "titleGenerationLocale": "",
+  "customModelAliases": {},
+  "requireCommandOrControlEnterToSend": false,
+  "lastSelectedChatModel": {
+    "providerId": "claude",
+    "model": "claude-code/doubao-seed-2-0-code-preview-260215"
+  },
+  "pendingProviderSessionInvalidations": {},
+  "maxWarmAgentProcesses": 5,
+  "expandFileEditsByDefault": false,
+  "enableDualPane": true,
+  "enableFilePane": true,
+  "dualPaneSide": "right",
+  "sessionManagerOrganization": "list",
+  "sessionManagerSort": "last-updated",
+  "pinnedLinkedNotePaths": []
 }
