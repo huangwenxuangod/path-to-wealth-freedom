@@ -1,11 +1,12 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "doubao-seed-2-0-code-preview-260215",
+  "model": "claude-code/doubao-seed-2-0-code-preview-260215",
   "thinkingBudget": "low",
   "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
+  "titleGenerationLocale": "",
   "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
@@ -14,26 +15,30 @@
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
   "customContextLimits": {},
+  "customModelAliases": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
     "scrollDownKey": "s",
     "focusInputKey": "i"
   },
+  "requireCommandOrControlEnterToSend": false,
   "locale": "zh-CN",
   "providerConfigs": {
     "claude": {
+      "enabled": true,
       "safeMode": "acceptEdits",
       "cliPath": "",
       "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
-      "enableOpus1M": false,
-      "enableSonnet1M": false,
       "customModels": "",
+      "defaultModel": "opus",
       "lastModel": "sonnet",
+      "modelEnvironmentType": "model",
+      "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_AUTH_TOKEN=6590239f-8273-4462-84ef-b7afd73a6a07\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding|ANTHROPIC_MODEL=doubao-seed-2-0-code-preview-260215"
+      "environmentHash": "runtime-input:v1:37dcf36de0b15c75739bed5d366424c0cf082ab49f3a7708491d7a595b3e6786"
     },
     "codex": {
       "enabled": false,
@@ -45,10 +50,16 @@
       "environmentVariables": "",
       "environmentHash": "",
       "installationMethodsByHost": {
-        "device:3a016af4-3b94-417c-b8a0-c5150d255c71": "native-windows",
-        "lovelykind": "native-windows"
+        "lovelykind": "native-windows",
+        "device-d9afeb03798c6cc9d075735fc7295ec718e43e42605b8f8ea55ddc8d28fef21d": "native-windows"
       },
-      "wslDistroOverridesByHost": {}
+      "wslDistroOverridesByHost": {},
+      "discoveredModels": [],
+      "modelAliases": {},
+      "visibleModels": null,
+      "enableUltraEffort": false,
+      "catalogTimestamp": 0,
+      "catalogFingerprint": ""
     },
     "opencode": {
       "cliPath": "",
@@ -88,40 +99,38 @@
     }
   },
   "settingsProvider": "claude",
+  "lastSelectedChatModel": {
+    "providerId": "claude",
+    "model": "claude-code/doubao-seed-2-0-code-preview-260215"
+  },
   "savedProviderModel": {
-    "claude": "doubao-seed-2-0-code-preview-260215"
+    "claude": "claude-code/doubao-seed-2-0-code-preview-260215"
   },
   "savedProviderEffort": {
     "claude": "high"
   },
   "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {
-    "claude": "low"
-  },
+  "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
+  "pendingProviderSessionInvalidations": {},
   "lastCustomModel": "doubao-seed-2-0-code-preview-260215",
-  "maxTabs": 3,
-  "tabBarPosition": "input",
+  "maxWarmAgentProcesses": 5,
   "enableAutoScroll": true,
   "deferMathRenderingDuringStreaming": true,
-  "chatViewPlacement": "right-sidebar",
-  "hiddenProviderCommands": {},
-  "titleGenerationLocale": "",
-  "customModelAliases": {},
-  "requireCommandOrControlEnterToSend": false,
-  "lastSelectedChatModel": {
-    "providerId": "claude",
-    "model": "claude-code/doubao-seed-2-0-code-preview-260215"
-  },
-  "pendingProviderSessionInvalidations": {},
-  "maxWarmAgentProcesses": 5,
   "expandFileEditsByDefault": false,
+  "chatViewPlacement": "right-sidebar",
   "enableDualPane": true,
-  "enableFilePane": true,
   "dualPaneSide": "right",
+  "restoreTabsOnStartup": true,
+  "collabEnabled": false,
+  "collabProjectsFolder": "workspace",
+  "collabGitPath": "",
   "sessionManagerOrganization": "list",
   "sessionManagerSort": "last-updated",
-  "pinnedLinkedNotePaths": []
+  "pinnedLinkedContentPaths": [],
+  "hiddenProviderCommands": {},
+  "maxTabs": 3,
+  "tabBarPosition": "input"
 }

@@ -1,0 +1,1 @@
+<!doctype html><html><head><script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script></head><body><div data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920"></div><script>window.__timelines=window.__timelines||{};window.__timelines.main=gsap.timeline({paused:true});</script></body></html>
