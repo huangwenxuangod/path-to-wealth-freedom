@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Quick Launch</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0a0a0f; }
+      body { color: #f7f4ed; font-family: Georgia, "Times New Roman", serif; }
+      [data-composition-id="main"] { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0a0a0f; }
+      .scene-content { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%; height: 100%; padding: 120px 150px; gap: 28px; position: relative; z-index: 2; }
+      .kicker { font: 800 24px/1 Arial, sans-serif; letter-spacing: .24em; color: #ffd60a; text-transform: uppercase; }
+      .title { max-width: 1500px; font: 900 148px/.88 Arial, sans-serif; letter-spacing: -.055em; }
+      .accent { color: #ff3b30; }
+      .subtitle { max-width: 900px; font: 350 34px/1.35 Georgia, serif; color: #f7f4ed; }
+      .rule { width: 560px; height: 10px; background: #3a86ff; transform-origin: left center; }
+      .orb { position: absolute; width: 620px; height: 620px; right: -90px; top: -70px; border: 3px solid #3a86ff; border-radius: 50%; opacity: .24; }
+      .orb::after { content: ""; position: absolute; inset: 90px; border: 2px solid #ffd60a; border-radius: 50%; }
+      .stamp { position: absolute; right: 130px; bottom: 105px; font: 800 26px/1 Arial, sans-serif; letter-spacing: .18em; color: #ffd60a; transform: rotate(-7deg); }
+      .grain { position: absolute; inset: 0; opacity: .09; background-image: radial-gradient(#f7f4ed 0.8px, transparent 0.8px); background-size: 9px 9px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+      <div class="grain" data-layout-ignore></div>
+      <div class="orb" data-layout-allow-overflow></div>
+      <div class="scene-content">
+        <div class="kicker">HyperFrames · 6 second demo</div>
+        <div class="title">想法，<span class="accent">现在</span>变成视频。</div>
+        <div class="rule"></div>
+        <div class="subtitle">一次创建、检查、渲染，快速跑通完整流程。</div>
+      </div>
+      <div class="stamp">READY TO SHIP</div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".kicker", { y: 28, opacity: 0, duration: 0.45, ease: "power2.out" }, 0.2);
+      tl.from(".title", { x: -90, opacity: 0, duration: 0.75, ease: "expo.out" }, 0.35);
+      tl.from(".accent", { scale: 1.35, opacity: 0, duration: 0.5, ease: "back.out(1.7)" }, 0.75);
+      tl.from(".rule", { scaleX: 0, duration: 0.55, ease: "power4.out" }, 0.95);
+      tl.from(".subtitle", { y: 35, opacity: 0, duration: 0.55, ease: "sine.out" }, 1.1);
+      tl.from(".stamp", { rotation: -18, scale: 1.8, opacity: 0, duration: 0.5, ease: "back.out(2)" }, 1.45);
+      tl.from(".orb", { scale: 0.72, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.25);
+      tl.to(".orb", { rotation: 18, scale: 1.04, duration: 4.4, ease: "sine.inOut" }, 1.1);
+      tl.to([".scene-content", ".stamp", ".orb"], { opacity: 0, duration: 0.45, ease: "power2.in" }, 5.4);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
+
