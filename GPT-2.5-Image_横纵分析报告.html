@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+@page {
+    size: A4;
+    margin: 25mm 20mm 20mm 20mm;
+
+    @top-center {
+        content: "GPT-2.5 Image  |  横纵分析法深度研究报告";
+        font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+        font-size: 8pt;
+        color: #95a5a6;
+        border-bottom: 0.5pt solid #ecf0f1;
+        padding-bottom: 3mm;
+    }
+
+    @bottom-center {
+        content: "第 " counter(page) " 页";
+        font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+        font-size: 8pt;
+        color: #95a5a6;
+        border-top: 0.8pt solid #1a5276;
+        padding-top: 2mm;
+    }
+}
+
+@page :first {
+    @top-center { content: none; }
+    @bottom-center { content: none; }
+}
+
+body {
+    font-family: "Droid Sans Fallback", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.75;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+/* 封面 */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 45%;
+}
+.cover h1 {
+    font-size: 28pt;
+    color: #1a5276;
+    margin-bottom: 8mm;
+    font-weight: bold;
+    letter-spacing: 2pt;
+}
+.cover .subtitle {
+    font-size: 14pt;
+    color: #95a5a6;
+    margin-bottom: 6mm;
+}
+.cover .meta {
+    font-size: 11pt;
+    color: #95a5a6;
+    margin-bottom: 4mm;
+}
+.cover .divider {
+    width: 60%;
+    margin: 8mm auto;
+    border: none;
+    border-top: 1.5pt solid #1a5276;
+}
+
+/* 一级标题 */
+h1 {
+    font-size: 20pt;
+    color: #1a5276;
+    margin-top: 16mm;
+    margin-bottom: 6mm;
+    padding-bottom: 3mm;
+    border-bottom: 2pt solid #1a5276;
+    page-break-before: always;
+    font-weight: bold;
+}
+
+/* 二级标题 */
+h2 {
+    font-size: 14pt;
+    color: #1e8449;
+    margin-top: 10mm;
+    margin-bottom: 5mm;
+    font-weight: bold;
+}
+
+/* 三级标题 */
+h3 {
+    font-size: 12pt;
+    color: #2e86c1;
+    margin-top: 6mm;
+    margin-bottom: 3mm;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #5b2c6f;
+    margin-top: 5mm;
+    margin-bottom: 2mm;
+    font-weight: bold;
+}
+
+/* 段落 */
+p {
+    margin-top: 1.5mm;
+    margin-bottom: 1.5mm;
+    orphans: 3;
+    widows: 3;
+}
+
+/* 引用块 */
+blockquote {
+    margin: 4mm 0;
+    padding: 4mm 4mm 4mm 10mm;
+    background: #f8f9fa;
+    border-left: 3pt solid #1a5276;
+    color: #5d6d7e;
+    font-size: 10pt;
+}
+blockquote p {
+    margin: 1mm 0;
+}
+
+/* 粗体 */
+strong, b {
+    font-weight: bold;
+    color: #1a252f;
+}
+
+/* 行内代码 */
+code {
+    font-family: "Courier New", Courier, monospace;
+    background: #fdf2e9;
+    color: #c0392b;
+    padding: 0.5mm 1.5mm;
+    border-radius: 2pt;
+    font-size: 9.5pt;
+}
+
+/* 表格 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4mm 0;
+    font-size: 9.5pt;
+}
+thead th {
+    background: #1a5276;
+    color: white;
+    padding: 3mm;
+    text-align: left;
+    font-weight: bold;
+}
+tbody td {
+    padding: 2.5mm 3mm;
+    border-bottom: 0.5pt solid #bdc3c7;
+}
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 0.5pt solid #bdc3c7;
+    margin: 4mm 0;
+}
+
+/* 列表 */
+ul, ol {
+    margin: 2mm 0;
+    padding-left: 8mm;
+}
+li {
+    margin-bottom: 1mm;
+}
+
+/* 链接 */
+a {
+    color: #2e86c1;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+    <div class="cover">
+        <h1 style="page-break-before: avoid; border: none;">GPT-2.5 Image</h1>
+        <div class="subtitle">横纵分析法深度研究报告</div>
+        <div class='meta'>研究时间：2026-09-09 | 所属领域：生成式图像 | 研究对象类型：产品传闻/型号</div>
+        <hr class="divider">
+        <div class="meta">作者: 数字生命卡兹克</div>
+    </div>
+    
+
+<blockquote>
+<p>研究时间：2026-09-09 | 所属领域：生成式图像 | 研究对象类型：产品传闻/型号</p>
+</blockquote>
+<h2>一、一句话定义</h2>
+<p>截至 2026-09-09，公开可核验资料不足以证明 OpenAI 发布过名为“GPT-2.5 Image”的正式模型；该称呼更可能混合了 GPT Image、ChatGPT 图像生成能力与非官方营销命名。</p>
+<h2>二、纵向分析：从 GPT-4o 图像能力到名称混淆</h2>
+<p>OpenAI 的图像产品线长期采用“模型能力名”和“ChatGPT 产品名”并行的方式。2024 年 GPT-4o 发布后，图像理解与多模态交互成为主线；随后 ChatGPT 内置图像生成、编辑和对话式修改逐步产品化。官方文档通常通过 API 模型列表、图像生成指南和发布说明更新，而不是用“2.5”作为独立品牌。</p>
+<p>“GPT-2.5 Image”缺少三个关键证据：OpenAI 官方博客中的发布日期与模型卡、platform.openai.com/docs/models 中的模型 ID、以及 API 参考中的可调用端点。Bing 对精确短语的检索主要返回 ChatGPT 下载页和第三方 SEO 页面，没有出现 OpenAI 一手公告。由此不能把社交媒体截图、测评视频标题或第三方代充页面当作发布事实。</p>
+<p>这一命名混淆有现实原因：用户会把“GPT-4o image generation”“GPT Image API”“ChatGPT Images”压缩成一个版本号；第三方也可能用“2.5”表达中间代际或营销升级。若没有可复制的模型 ID、价格、速率限制和官方文档，所谓新模型无法进入工程采购或生产依赖。</p>
+<h2>三、横向分析：真实可比对象</h2>
+<h3>GPT Image / ChatGPT 图像生成</h3>
+<p>优势是对话式编辑、上下文理解和产品入口统一；短板是模型 ID、区域可用性、版权与人物一致性政策会随产品层变化。判断性能时应以官方 API 返回字段、延迟、失败率和单位图像成本为准。</p>
+<h3>Google Imagen、Adobe Firefly、Midjourney</h3>
+<p>Imagen强调提示词到图像质量，Firefly强调商业工作流与授权叙事，Midjourney强调审美风格与社区。它们与“GPT-2.5 Image”并非同一已证实产品，不能用营销榜单替代可重复基准。</p>
+<h3>开源扩散模型</h3>
+<p>SDXL、Flux 等提供权重或可部署生态，适合成本与可控性优先的团队；代价是部署、显存、版权筛查和运维复杂度。若 OpenAI 真推出新图像模型，其竞争关键将是可靠 API、编辑一致性、文字渲染和企业合规，而非单张样图。</p>
+<h2>四、横纵交汇洞察</h2>
+<p>历史路径说明 OpenAI 更倾向把图像能力嵌入统一模型与 ChatGPT 工作流，而不是公开一个“2.5 Image”式孤立品牌。今天最大的信号不是性能，而是可验证性：没有官方 ID 就没有版本锁定、账单核算和回滚路径。</p>
+<p>三个剧本：最可能是该名称继续作为社区俗称，最终对应 GPT Image 的某次迭代；最危险是团队据此购买第三方服务，遭遇模型冒充、数据泄露或价格漂移；最乐观是 OpenAI 发布正式图像模型卡与 API，带来更稳定的文字、布局和多轮编辑能力。</p>
+<h2>五、核验清单</h2>
+<ol>
+<li>以 OpenAI News、模型文档、API <code>/v1/models</code> 三处同时出现为发布门槛。</li>
+<li>记录模型 ID、发布日期、价格、输入输出限制和区域可用性。</li>
+<li>用固定提示集测试文字准确率、人物一致性、编辑保持率、延迟和失败率。</li>
+</ol>
+<h2>六、信息来源</h2>
+<ul>
+<li>OpenAI News：https://openai.com/news/ （访问：2026-09-09）</li>
+<li>OpenAI Models：https://platform.openai.com/docs/models （访问：2026-09-09）</li>
+<li>OpenAI Image generation guide：https://platform.openai.com/docs/guides/image-generation （访问：2026-09-09）</li>
+<li>OpenAI API Models endpoint：https://platform.openai.com/docs/api-reference/models （访问：2026-09-09）</li>
+<li>Reuters Technology：https://www.reuters.com/technology/ （用于英文权威媒体交叉检索，未发现该精确型号，访问：2026-09-09）</li>
+<li>The Verge AI：https://www.theverge.com/ai-artificial-intelligence （用于英文媒体交叉检索，未发现该精确型号，访问：2026-09-09）</li>
+</ul>
+<p>方法论说明：本报告用横纵分析法，沿时间轴追踪产品演进，并在当前截面比较相邻产品；对无法由一手来源证实的内容明确标注为未核验。</p>
+</body>
+</html>

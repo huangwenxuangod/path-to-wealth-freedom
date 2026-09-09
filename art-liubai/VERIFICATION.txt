@@ -1,0 +1,76 @@
+Changed field: default blank composition -> 留白 / 32s / 1920x1080 / 24fps / original art and stereo sound.
+MODIFIED_FILE: /Users/ai1/path-to-wealth-freedom/art-liubai/index.html
+DIFF_FILE: /Users/ai1/path-to-wealth-freedom/art-liubai/DIFF_FILE.patch
+VERIFICATION: /Users/ai1/path-to-wealth-freedom/art-liubai/VERIFICATION.txt
+ROLLBACK: /Users/ai1/path-to-wealth-freedom/art-liubai/ROLLBACK.sh
+Working directory: /Users/ai1/path-to-wealth-freedom/art-liubai
+ORIGINAL.txt SHA256: 4ffe08f87cbf3967056cbc746ae52cb6c353aedc9efd68c0cf89530c92eb9197
+index.html SHA256: 74fdc4d488a6c1b9866add320d51e8e8375468bc8f1ffd0efc4653988bccba11
+liubai.mp4 SHA256: 17365634f1272b841838055522fc9e5664fbef07373e98e0ce44519b22642b99
+
+BASELINE command: python3 verify.py ORIGINAL.txt baseline
+Input: ORIGINAL.txt
+Literal output: BASELINE_OK: original template SHA256 matches
+
+Exit status: 0
+
+MODIFIED command: python3 verify.py index.html modified
+Input: index.html
+Literal output: MODIFIED_OK: 32s, 1920x1080, 4 scenes, 4 original artworks, stereo score
+
+Exit status: 0
+
+ROLLBACK command: ./ROLLBACK.sh rollback-test.txt
+Input: rollback-test.txt (separate copy)
+Literal output: ROLLBACK_OK: original template restored byte-for-byte
+
+Exit status: 0
+
+RESTORED command: python3 verify.py rollback-test.txt baseline
+Input: rollback-test.txt
+Literal output: BASELINE_OK: original template SHA256 matches
+
+Exit status: 0
+
+PROBE command: /opt/homebrew/bin/ffprobe -v error -show_entries stream=codec_name,codec_type,width,height,r_frame_rate -show_entries format=duration,size -of json liubai.mp4
+Input: liubai.mp4
+Literal output: {
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1"
+        },
+        {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0"
+        }
+    ],
+    "format": {
+        "duration": "32.000000",
+        "size": "75445422"
+    }
+}
+
+Exit status: 0
+
+DECODE command: /opt/homebrew/bin/ffmpeg -v error -i liubai.mp4 -f null -
+Input: liubai.mp4
+Literal output: (empty)
+Exit status: 0
+Restored status: test copy matches ORIGINAL.txt byte-for-byte; index.html remains the finished composition.
+Framework command: HYPERFRAMES_BROWSER_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' npm run check
+Framework result: exit 0; no lint/runtime/layout/motion errors or warnings. Five contrast warnings at 8.889s occur during the intentional dark-to-light dissolve. Hero frames checked visually at 5,13,21,29s.
+Render command: HYPERFRAMES_BROWSER_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' HYPERFRAMES_FFMPEG_PATH=/opt/homebrew/bin/ffmpeg HYPERFRAMES_FFPROBE_PATH=/opt/homebrew/bin/ffprobe npx --yes hyperframes@0.8.30 render -o liubai.mp4 --fps 24 --quality high --workers 1
+Render exit status: 0
+Animation map: node inspect.cjs -> ANIMATION_MAP_OK: 34 tweens; seekable timeline ends at 32s; exit 0. Transition sets at 9.7/17.7/25.7s clean up only after incoming dissolve finishes. Sustained artwork motions keep the scene alive while text holds.
+Reusable prompt: Create a 32-second 16:9 cinematic motion poem using original engraved SVG landscapes, a recurring circular motif, Songti typography, four slow dissolves, deterministic GSAP motion and original synthesized stereo sound. Render high-quality H.264 MP4; verify frames and full audio/video decode.

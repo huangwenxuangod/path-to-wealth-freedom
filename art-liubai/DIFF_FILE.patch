@@ -1,0 +1,91 @@
+--- ORIGINAL.txt
++++ index.html
+@@ -1,59 +1,29 @@
+-<!doctype html>
+-<html lang="en">
+-  <head>
+-    <meta charset="UTF-8" />
+-    <meta name="viewport" content="width=1920, height=1080" />
+-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+-    <style>
+-      * {
+-        margin: 0;
+-        padding: 0;
+-        box-sizing: border-box;
+-      }
+-      html,
+-      body {
+-        margin: 0;
+-        width: 1920px;
+-        height: 1080px;
+-        overflow: hidden;
+-        background: #000;
+-      }
+-      body {
+-        font-family: "Inter", sans-serif;
+-      }
+-      code,
+-      pre,
+-      .monospace {
+-        font-family: "JetBrains Mono", monospace;
+-      }
+-    </style>
+-  </head>
+-  <body>
+-    <div
+-      id="root"
+-      data-composition-id="main"
+-      data-start="0"
+-      data-duration="10"
+-      data-width="1920"
+-      data-height="1080"
+-    >
+-      
+-      
+-
+-      <!--
+-        Add your clips here. Example:
+-        <div id="title" class="clip" data-start="0" data-duration="5" data-track-index="1"
+-             style="font-size: 64px; color: #fff; padding: 40px">
+-          Hello World
+-        </div>
+-      -->
+-    </div>
+-
+-    <script>
+-      window.__timelines = window.__timelines || {};
+-      const tl = gsap.timeline({ paused: true });
+-      // Example: tl.from("#title", { opacity: 0, y: -50, duration: 1 }, 0);
+-      window.__timelines["main"] = tl;
+-    </script>
+-  </body>
+-</html>
++<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><script src="gsap.min.js"></script><style>
++@font-face{font-family:Poem;src:local('Songti SC')}@font-face{font-family:Editorial;src:local('Helvetica Neue')}
++*{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#111b20;color:#efe5cf}#root{position:relative;width:1920px;height:1080px;overflow:hidden}.scene{position:absolute;inset:0;background:#111b20;overflow:hidden}#sand,#water,#paper{opacity:0}#sand,#paper{background:#efe5cf;color:#3d3127}.art{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;transform-origin:63.3% 48%}.scene-content{position:relative;width:100%;height:100%;padding:108px 156px 104px;display:flex;flex-direction:column;gap:22px;justify-content:center;pointer-events:none}.caption{font:300 23px Editorial,sans-serif;letter-spacing:5px;margin:0}.verse{font:400 36px Poem,serif;letter-spacing:6px;line-height:1.75;margin:0;max-width:650px}.title{font:400 146px Poem,serif;letter-spacing:24px;margin:0 0 14px -8px;line-height:1.15}.fine{font:300 20px Editorial,sans-serif;letter-spacing:3px;margin:0}.topline{display:flex;justify-content:space-between;width:100%;margin-bottom:auto}.bottomline{display:flex;justify-content:space-between;margin-top:auto;width:100%;align-items:end}.text{display:flex;flex-direction:column;gap:26px;width:610px}.rule{width:64px;height:1px;background:currentColor;margin:2px 0 8px}.smalltitle{font:400 104px Poem,serif;letter-spacing:18px;margin:0;line-height:1.2}#sand .scene-content{justify-content:start}#sand .text{margin-top:40px}#sand .topline{margin-bottom:0}#water .text{margin-top:45px}#water .topline{margin-bottom:0}#paper .title{font-size:118px}.seal{display:flex;align-items:center;justify-content:center;width:46px;height:54px;border:2px solid #a54232;color:#a54232;font:400 22px Poem,serif}.blackout{position:absolute;inset:0;background:#111b20;opacity:0;pointer-events:none}
++</style></head><body><main id="root" data-composition-id="main" data-start="0" data-duration="32" data-width="1920" data-height="1080">
++<section id="light" class="scene"><img class="art" src="eclipse.svg" data-layout-ignore alt="黑暗中细密铜色刻线形成的日蚀"><div class="scene-content"><div class="topline"><p class="fine">A STUDY IN STILLNESS</p><p class="fine">光 / I</p></div><div class="text"><p class="caption">THE SHAPE OF SILENCE</p><h1 class="title">留白</h1><div class="rule"></div><p class="verse">光，在暗处发生。</p></div><div class="bottomline"><p class="fine">AN ORIGINAL MOTION POEM</p><p class="fine">2026</p></div></div></section>
++<section id="sand" class="scene"><img class="art" src="dunes.svg" data-layout-ignore alt="宣纸色沙丘上由风形成的等高刻线"><div class="scene-content"><div class="topline"><p class="fine">THE EARTH REMEMBERS</p><p class="fine">风 / II</p></div><div class="text"><p class="caption">TRACES OF THE INVISIBLE</p><h2 class="smalltitle">风有形</h2><p class="verse">因为沙，记得。</p></div><div class="bottomline"><p class="fine">TIME, WRITTEN IN LINES</p><p class="fine">02</p></div></div></section>
++<section id="water" class="scene"><img class="art" src="sea.svg" data-layout-ignore alt="朱红月亮与墨色海面上的金色倒影"><div class="scene-content"><div class="topline"><p class="fine">NOTHING STAYS. EVERYTHING RETURNS.</p><p class="fine">潮 / III</p></div><div class="text"><p class="caption">THE ART OF RETURNING</p><h2 class="smalltitle">潮有信</h2><p class="verse">来过，便有回响。</p></div><div class="bottomline"><p class="fine">A HORIZON WITHOUT AN END</p><p class="fine">03</p></div></div></section>
++<section id="paper" class="scene"><img class="art" src="enso.svg" data-layout-ignore alt="纸上一圈有缺口的朱砂笔触"><div class="scene-content"><div class="topline"><p class="fine">LESS, BUT MORE DEEPLY.</p><p class="fine">空 / IV</p></div><div class="text"><p class="caption">LEAVE ROOM FOR WONDER</p><h2 class="title">留一处空</h2><div class="rule"></div><p class="verse">让万物，自由发生。</p></div><div class="bottomline"><p class="fine">THE SHAPE OF SILENCE · END</p><div class="seal">白</div></div></div></section>
++<div class="blackout"></div><audio id="score" src="silence.wav" data-start="0" data-duration="32" data-track-index="2" data-volume="1"></audio></main>
++<script>
++const tl=gsap.timeline({paused:true});
++tl.from('#light .art',{opacity:0,scale:1.045,duration:2.5,ease:'sine.out'},.1);
++tl.to('#light .art',{rotation:3,duration:9.8,ease:'sine.inOut'},.2);
++for(const [id,t] of [['light',0],['sand',8],['water',16],['paper',24]]){
++ if(t)tl.fromTo('#'+id,{opacity:0},{opacity:1,duration:1.7,ease:'sine.inOut'},t);
++ tl.from('#'+id+' .topline > *',{opacity:0,y:8,duration:1.1,stagger:.16,ease:'power2.out'},t+1.8);
++ tl.from('#'+id+' .caption',{opacity:0,x:-16,duration:1.2,ease:'sine.out'},t+1.95);
++ tl.from('#'+id+' h1, #'+id+' h2',{opacity:0,y:24,duration:1.65,ease:'power3.out'},t+2.15);
++ tl.from('#'+id+' .verse',{opacity:0,y:12,duration:1.35,ease:'power1.out'},t+3.1);
++ if(id==='light'||id==='paper')tl.from('#'+id+' .rule',{scaleX:0,transformOrigin:'left',duration:1.4,ease:'expo.out'},t+1.5);
++ tl.from('#'+id+' .bottomline > *',{opacity:0,duration:1.3,stagger:.18,ease:'sine.out'},t+2.5);
++}
++tl.fromTo('#sand .art',{x:-26,y:130,scale:1.035},{x:22,y:130,scale:1.035,duration:9.7,ease:'sine.inOut'},8);
++tl.fromTo('#water .art',{scale:1.025,y:14},{scale:1.025,y:-8,duration:9.7,ease:'sine.inOut'},16);
++tl.fromTo('#paper .art',{scale:1.05,rotation:-3},{scale:1,rotation:0,duration:7.9,ease:'sine.inOut'},24);
++tl.set('#light',{opacity:0},9.7);tl.set('#sand',{opacity:0},17.7);tl.set('#water',{opacity:0},25.7);
++tl.to('.blackout',{opacity:1,duration:1.3,ease:'sine.inOut'},30.7);
++window.__timelines={main:tl};
++</script></body></html>
