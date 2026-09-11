@@ -1,0 +1,54 @@
+VERIFICATION
+
+BRANCH: main
+CHANGED_FIELD: research-clarity/SKILL.md -> research completion workflow (definition, why-now, longitudinal-horizontal analysis, evidence ledger, hands-on test, judgment confidence, boundaries and unknowns)
+
+FOUR_ARTIFACT_PATHS:
+1. MODIFIED_FILE: D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\MODIFIED_FILE.md
+2. DIFF_FILE: D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\DIFF_FILE.patch
+3. VERIFICATION: D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\VERIFICATION.txt
+4. ROLLBACK: D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\ROLLBACK.sh
+
+INSTALLED_PATH: C:\Users\37453\.codex\skills\research-clarity\SKILL.md
+ORIGINAL_SKILL_PATH: C:\Users\37453\.agents\skills\hv-analysis\SKILL.md
+ORIGINAL_SHA256: 898F21B1F7B45456A54419B1B31765C896662A1E3F614D2C3413F809824DE3A2
+MODIFIED_SHA256: 4B0F30FD29A34AF74B5C6777EA89DDE698CD52177247404640785DD8D31D395C
+
+BASELINE
+COMMAND: py C:\Users\37453\.codex\skills\.system\skill-creator\scripts\quick_validate.py C:\Users\37453\.agents\skills\hv-analysis
+INPUT: C:\Users\37453\.agents\skills\hv-analysis
+LITERAL_OUTPUT:
+Skill is valid!
+EXIT=0
+EXIT_STATUS: 0
+RESULT: existing hv-analysis skill was structurally valid before installation.
+
+MODIFIED
+COMMAND: py C:\Users\37453\.codex\skills\.system\skill-creator\scripts\quick_validate.py C:\Users\37453\.codex\skills\research-clarity
+INPUT: C:\Users\37453\.codex\skills\research-clarity
+LITERAL_OUTPUT:
+Skill is valid!
+EXIT=0
+EXIT_STATUS: 0
+
+CAPABILITY_TEST
+COMMAND: py -c <read SKILL.md and assert seven required research-closure phrases>
+INPUT: 一句话定义; 为什么是现在; 纵向追时间，横向追同期; 证据账本; 对可操作对象做实测; 输出判断与边界; 仍不知道什么
+LITERAL_OUTPUT:
+PASS research closure capabilities present
+EXIT=0
+EXIT_STATUS: 0
+RESULT: the installed skill contains the requested research-completion gates.
+
+ROLLBACK
+COMMAND: C:\Program Files\Git\bin\bash.exe D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\ROLLBACK.sh D:\path-to-wealth-freedom\.codex-skill-audit\research-clarity\research-clarity-test
+INPUT: a separate copy of the installed research-clarity skill
+LITERAL_OUTPUT:
+PRE_EXISTS=False
+ROLLBACK_OK removed: /d/path-to-wealth-freedom/.codex-skill-audit/research-clarity/research-clarity-test
+RESTORED original hv-analysis remains installed
+EXIT=0
+TEST_TARGET_EXISTS=False
+INSTALLED_TARGET_EXISTS=True
+EXIT_STATUS: 0
+RESTORED_BEHAVIOR_STATUS: rollback removes only the copied new skill; original hv-analysis remains installed and valid. The real research-clarity installation remains changed and present.
