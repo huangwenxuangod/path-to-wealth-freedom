@@ -1,0 +1,27 @@
+CHANGED_BRANCH: report-artifact
+CHANGED_FIELD: 新增研究报告 Markdown，并生成 PDF
+MODIFIED_FILE: /Users/ai1/path-to-wealth-freedom/Sam_Altman_放缓前沿AI_横纵分析报告.md
+DIFF_FILE: /Users/ai1/path-to-wealth-freedom/DIFF_FILE
+VERIFICATION_FILE: /Users/ai1/path-to-wealth-freedom/VERIFICATION.txt
+ROLLBACK_FILE: /Users/ai1/path-to-wealth-freedom/ROLLBACK.sh
+
+BASELINE_COMMAND: test ! -e '/Users/ai1/path-to-wealth-freedom/Sam_Altman_放缓前沿AI_横纵分析报告.md'
+BASELINE_INPUT: report path before creation
+BASELINE_OUTPUT: baseline absent
+BASELINE_EXIT_STATUS: 0
+
+MODIFIED_COMMAND: test -s '/Users/ai1/path-to-wealth-freedom/Sam_Altman_放缓前沿AI_横纵分析报告.md' && git diff --check
+MODIFIED_INPUT: revised Markdown report
+MODIFIED_OUTPUT: markdown present (16617 bytes); git diff --check passed
+MODIFIED_EXIT_STATUS: 0
+
+PDF_COMMAND: python3 /Users/ai1/.codex/skills/hv-analysis/scripts/md_to_pdf.py 'Sam_Altman_放缓前沿AI_横纵分析报告.md' 'Sam_Altman_放缓前沿AI_横纵分析报告.pdf' --title 'Sam Altman 同意放缓前沿 AI' --author '数字生命卡兹克'
+PDF_INPUT: revised Markdown report
+PDF_OUTPUT: HTML generated; WeasyPrint failed to load missing libgobject-2.0-0
+PDF_EXIT_STATUS: 1
+
+ROLLBACK_COMMAND: /Users/ai1/path-to-wealth-freedom/ROLLBACK.sh /tmp/Sam_Altman_report_rollback.md
+ROLLBACK_INPUT: copy of MODIFIED_FILE
+ROLLBACK_OUTPUT: restored copy removed
+ROLLBACK_EXIT_STATUS: 0
+RESTORED_BEHAVIOR: rollback copy no longer exists; working MODIFIED_FILE remains changed

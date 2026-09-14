@@ -1,0 +1,119 @@
+--- a/SKILL.md
++++ b/SKILL.md
+@@ -5,15 +5,17 @@
+ 
+ # EVT：预期违背
+ 
+-内容的价值，是让受众带走一种之前没有的感受、经验或理解。
++内容的价值，是让受众带走一种之前没有的感受、经验或判断方式。
+ 
++预期违背不是“找一个反常点”，而是让受众的既有预测被一个重要事实纠正。违背只负责抓住注意力，证据负责完成认知更新。
++
+ 只走这一条思维链：
+ 
+ ```text
+ 他想要什么
+ → 他原以为什么
+ → 事实偏偏是什么
+-→ 原来为什么
++→ 最强反方会问什么，证据支持什么
+ → 他最终带走什么
+ ```
+ 
+@@ -23,20 +25,21 @@
+ 
+ 1. **他想要什么：** 目标受众为什么愿意看这件事？只选一个最强欲望。
+ 2. **他原以为什么：** 用一句人话写出受众进入内容前的常识或直觉。
+-3. **事实偏偏是什么：** 用真实事实打破这一直觉。
+-4. **原来为什么：** 给出比表面答案更深、又能被证据支持的解释。
+-5. **他最终带走什么：** 写出受众看完后新增的感受、经验或判断方式。
++3. **事实偏偏是什么：** 用一个可核实、与其欲望相关的事实打破这一直觉。
++4. **证据支持什么：** 先提出最强反方问题。涉及真实事件或因果判断时，搜索具名反方、替代解释和反证，再裁决哪些成立、哪些夸张、哪些未知。没有证据的动机只能标为“待验证假设”。
++5. **他最终带走什么：** 写出受众以后可以复用的新判断方式，而不只是一句新结论。
+ 
+ 然后按这五句话直接生成内容骨架。不要输出预期分类、欲望分类、理论分析表或冗长诊断。
+ 
+ ## 短视频
+ 
+-前三秒直接说出“他原以为什么 + 事实偏偏是什么”。不要先铺背景。
++前三秒让受众同时听懂“对象 + 原有预期 + 违背事实”。不要先铺背景，也不要只说一个脱离语境的怪事。
+ 
+ ```text
+ 前三秒：最不可能做 X 的人，偏偏做了 X。
+-展开：大家以为是 A，但更深的原因可能是 B。
+-兑现：所以真正发生变化的不是 C，而是 D。
++追问：如果表面解释成立，最强反方会追问什么？
++裁决：证据支持 A；B 只是可能；C 与事实冲突。
++兑现：所以以后判断这类事情，要看 D。
+ ```
+ 
+ 三秒是创作约束，不是平台效果保证。事实、推测和当事人动机必须分开。
+@@ -47,14 +50,16 @@
+ 受众想要：[一句话]
+ 原本以为：[一句话]
+ 偏偏发生：[一句话]
+-深层原因：[一句话]
++反方追问：[一句话]
++证据裁决：[成立 / 夸张 / 未知]
+ 最终带走：[一句话]
+ 
+ 内容骨架：
+ 1. [三秒预期违背]
+ 2. [事实展开]
+-3. [深层解释]
+-4. [新理解与回扣]
++3. [最强反方追问]
++4. [证据裁决]
++5. [新判断标准与回扣]
+ ```
+ 
+ 如果用户要求完整文稿，就沿骨架直接写稿；如果只要求分析，到骨架为止。
+@@ -63,7 +68,9 @@
+ 
+ - 与受众欲望无关的反常，只是噪音。
+ - 没有真实预期，就没有预期违背。
++- 违背必须来自事实，不来自偷换概念或故意隐瞒前提。
+ - 没有新理解的反转，只是标题党。
+-- 不把作者推测写成当事人的真实动机。
++- 不搜索最强反方，就不下“深层原因”的结论。
++- 不把相关性写成因果，不把可能动机写成真实动机。
+ 
+ 需要理解心理学依据时再读 [references.md](references.md)，正常创作不要展示理论。
+--- a/references.md
++++ b/references.md
+@@ -6,6 +6,14 @@
+ 
+ **Writing consequence:** identify whose expectation is being violated, make the deviation legible, and provide enough credibility or evidence for the audience to treat it as relevant rather than random.
+ 
++For content creation, keep three things separate:
++
++1. **Expectation:** what this audience would reasonably predict in this situation.
++2. **Violation:** the observable event that differs from that prediction.
++3. **Evaluation:** whether the audience should treat the violation as meaningful, beneficial, threatening, strategic, or still unexplained.
++
++The third step cannot be inferred from surprise alone. Communicator credibility, context, and competing explanations affect how the same violation is evaluated.
++
+ Source: [Wiley reference](https://onlinelibrary.wiley.com/doi/full/10.1002/9781118540190.wbeic102).
+ 
+ ## Prediction Error and Attention
+@@ -46,6 +54,20 @@
+ 
+ Use it as an editorial gate: the first beat should expose topic plus deviation. Validate it with actual retention data.
+ 
++## Adversarial Evidence Gate
++
++Expectation violation creates a question; it does not prove an explanation. Before writing the causal payoff:
++
++1. Find the strongest named counterargument, not a weak objection invented by the writer.
++2. Search for evidence that could disprove the preferred explanation.
++3. Separate observable facts, interpretations, and claims about motive.
++4. Mark the verdict as **supported**, **overstated**, or **unknown**.
++5. Convert the verdict into a reusable judgment rule for the audience.
++
++Use primary sources for what a person or organization said and independent or authoritative sources for contested factual claims. Multiple articles repeating one original statement count as one source, not several.
++
++This gate prevents a common failure: using a surprising event to smuggle in an attractive but unsupported “deep reason.”
++
+ ## Desire Model
+ 
+ | Desire | Viewer wants to leave with | Useful violation |
