@@ -11,3 +11,9 @@
 - `bun run typecheck`、`bun run check`、对应 render preset、`bun run verify` 通过后再宣布交付。
 - 默认使用本机 Chrome；跨机通过 CHROME_PATH 指定浏览器路径。
 - 不提交或推送，除非用户明确要求；不要修改平级 HyperFrames 工程。
+
+## 新视频的设计与素材
+
+- 每条新视频先用 frontend-design 根据主题、受众和内容设计；旧片的黑底、荧光绿和大字不是全工程默认。
+- Magic UI 按官方 registry 管理组件源码及实际依赖，并在镜头中真实使用；视频动画改为 frame/fps 驱动，记录来源、许可和改编。
+- 主动上网查证事实、寻找官方 Logo 与素材，本地保存并记录来源 URL、时间、SHA256 与使用条件；原创示意和官方实录分开标注。

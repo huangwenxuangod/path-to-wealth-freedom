@@ -47,3 +47,15 @@ Studio：http://localhost:3000/AgentWorkflow 。macOS 默认使用已安装的 G
 ```
 
 ROLLBACK.sh 仅将原始文档快照恢复到一个新目录，并校验原哈希；当前工程和全局插件保持现状。
+
+## Astra6 总分总动画
+
+新增 `AstraOverview`：36 秒、1920×1080、30fps，冷白工作台视觉，包含总述、软件操作、工程执行、专业交付、总结。四个 Magic UI 组件源码已接入，视频版按 frame/fps 驱动。
+
+```sh
+bun run check:astra
+bun run render:astra
+bun run verify:astra
+```
+
+输入：`data/astra6.json`。输出：`renders/astra6-overview.mp4`。设计：`docs/ASTRA6_DESIGN.md`，事实和素材：`docs/ASTRA6_SOURCES.md` 与 `public/astra6/assets.json`，组件来源：`docs/MAGIC_UI.md`。素材中的 OpenAI 标识来自官方 GitHub 组织；软件和文档画面为明确标注的原创流程示意。无配音。

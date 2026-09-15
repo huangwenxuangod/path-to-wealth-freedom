@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-15",
+  "registry": [
+    {
+      "component": "safari",
+      "url": "https://magicui.design/r/safari.json",
+      "sha256": "8e50e929a19b82cc70930b1572d37179ffc2516174892e12b56bc39b15d801aa",
+      "status": "inspected; not installed in project"
+    },
+    {
+      "component": "terminal",
+      "url": "https://magicui.design/r/terminal.json",
+      "sha256": "05f5c6ae595956464eee5b60e40f25dd2824413ca10bbb5ee0dcaf027758299d",
+      "status": "inspected; not installed in project"
+    },
+    {
+      "component": "number-ticker",
+      "url": "https://magicui.design/r/number-ticker.json",
+      "sha256": "c4808c7218100b218df9ada8e5d1ff21ce99045b41468131534b3d8db61122a7",
+      "status": "inspected; not installed in project"
+    },
+    {
+      "component": "animated-beam",
+      "url": "https://magicui.design/r/animated-beam.json",
+      "sha256": "4b68e61eb2cfa71bbf4bff6ea50665be6e04dd9168f40b86de13a406eb49fcef",
+      "status": "inspected; not installed in project"
+    },
+    {
+      "component": "blur-fade",
+      "url": "https://magicui.design/r/blur-fade.json",
+      "sha256": "5161e38f05b5898ee42892daa9c133688f528b20817bb4c62ae79f68967a88ba",
+      "status": "inspected; not installed in project"
+    }
+  ],
+  "frontendDesignInstalled": true
+}

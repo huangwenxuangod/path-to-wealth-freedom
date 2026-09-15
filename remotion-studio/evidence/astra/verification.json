@@ -1,0 +1,23 @@
+{
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_frames": "1080"
+      }
+    ],
+    "format": {
+      "duration": "36.000000"
+    }
+  },
+  "repeat": true,
+  "fpsParity": true,
+  "fullDecode": true,
+  "framesChecked": 17,
+  "sourceSha256": "850f9966569b51b39b8b841ea5a1b54fa0373e4dd0aa256b5908cec0285a0ea9"
+}

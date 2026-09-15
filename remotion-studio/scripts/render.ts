@@ -1,5 +1,5 @@
 import {bundle} from '@remotion/bundler';
-import {enableTailwind} from '@remotion/tailwind-v4';
+import {configureBundler} from '../bundler';
 import {openBrowser, renderMedia, selectComposition} from '@remotion/renderer';
 import {mkdirSync, readFileSync, renameSync, writeFileSync} from 'node:fs';
 import {resolve} from 'node:path';
@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 import {projectRoot, validateAssets} from './check';
 
 export async function prepare() {
-  const serveUrl = await bundle({entryPoint: resolve(projectRoot, 'src/index.ts'), rspack: true, bundlerOverride: enableTailwind});
+  const serveUrl = await bundle({entryPoint: resolve(projectRoot, 'src/index.ts'), rspack: true, bundlerOverride: configureBundler});
   const browser = await openBrowser('chrome', {browserExecutable: process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
   return {serveUrl, browser};
 }

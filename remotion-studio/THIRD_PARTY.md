@@ -7,3 +7,6 @@
 - `src/components/AnimatedBeam.tsx`：改编 Magic UI Animated Beam 的 SVG 底轨与透明渐变视觉结构；以显式坐标和 Remotion 秒数替代 DOM 测量及 Motion 自运行时钟。原始文件：https://github.com/magicuidesign/magicui/blob/main/apps/www/registry/magicui/animated-beam.tsx 。MIT 许可见 evidence/MAGIC_UI_LICENSE.txt。
 - BorderSweep 为本项目独立的 SVG 描边实现，不宣称复制 Magic UI Border Beam 源码。
 - GSAP、Remotion 使用各包附带许可。此工程没有捆绑 React Bits 或 Aceternity 组件源码。
+
+- `public/astra6/openai-logo.png`：OpenAI 官方 GitHub 组织头像，https://avatars.githubusercontent.com/u/14957082?v=4 ，用于介绍 OpenAI 模型，保留原图；属于 OpenAI 品牌标识，不授予第三方商标权利。
+- `src/components/magicui/`：Magic UI 官方 registry 的 Safari、Terminal、Number Ticker、Animated Beam，MIT；`src/components/video/` 是视频时间改编，详见 docs/MAGIC_UI.md。软件操作、终端和成果版面为原创示意。

@@ -6,9 +6,9 @@
  */
 
 import { Config } from "@remotion/cli/config";
-import { enableTailwind } from '@remotion/tailwind-v4';
+import {configureBundler} from './bundler';
 
 Config.setRspack(true);
 Config.setBrowserExecutable(process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 Config.setVideoImageFormat("png");
-Config.overrideBundlerConfig(enableTailwind);
+Config.overrideBundlerConfig(configureBundler);

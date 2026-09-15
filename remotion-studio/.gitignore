@@ -14,13 +14,20 @@
 
 # Rendered media and visual inspection outputs
 /renders/
-/evidence/*.png
-/evidence/*.jpg
-/evidence/*.jpeg
-/evidence/*.mp4
-/evidence/*.mov
+/evidence/**/*.png
+/evidence/**/*.jpg
+/evidence/**/*.jpeg
+/evidence/**/*.mp4
+/evidence/**/*.mov
 /evidence/studio-drag-before-reset.tsx
 
 # Override the parent archive rule: these are required video inputs.
 !/data/
 !/data/**
+
+# Local rollback snapshots and duplicate source exports
+/evidence/astra-baseline/
+/evidence/**/MODIFIED_FILE
+/evidence/**/DIFF_FILE
+/evidence/**/ROLLBACK.sh
+/evidence/**/VERIFICATION.txt

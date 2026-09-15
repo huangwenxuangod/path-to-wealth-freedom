@@ -1,0 +1,36 @@
+{
+  "template": "astra-overview",
+  "fps": 30,
+  "durationSeconds": 36,
+  "format": "landscape",
+  "title": "把任务推进到成果",
+  "summary": "让 AI 承接更完整的工作。",
+  "logo": "astra6/openai-logo.png",
+  "advantages": [
+    {
+      "id": "computer-use",
+      "title": "直接在软件里\n推进任务",
+      "subtitle": "浏览、整理、检查，连成一个工作流。",
+      "sourceId": "openai-computer"
+    },
+    {
+      "id": "coding",
+      "title": "从写代码\n到运行和验证",
+      "subtitle": "工程能力，延伸到真实的执行与验证。",
+      "sourceId": "openai-coding"
+    },
+    {
+      "id": "artifacts",
+      "title": "把结果做成\n可用的成果",
+      "subtitle": "文档、表格、演示稿，更贴近工作要求。",
+      "sourceId": "openai-artifacts"
+    }
+  ],
+  "benchmark": {
+    "name": "Terminal-Bench 4.0",
+    "astra": 57.9,
+    "sol": 37.3,
+    "unit": "%",
+    "sourceId": "openai-coding"
+  }
+}

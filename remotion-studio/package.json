@@ -11,11 +11,14 @@
     "@remotion/gsap": "4.0.524",
     "@remotion/renderer": "4.0.524",
     "@remotion/tailwind-v4": "4.0.524",
+    "clsx": "2.1.1",
     "gsap": "3.15.0",
     "lucide-react": "1.46.0",
+    "motion": "13.3.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.524",
+    "tailwind-merge": "3.7.0",
     "tailwindcss": "4.0.0",
     "zod": "4.5.4"
   },
@@ -23,6 +26,7 @@
     "@types/bun": "1.4.2",
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
+    "shadcn": "4.21.0",
     "typescript": "5.9.3"
   },
   "scripts": {
@@ -33,7 +37,10 @@
     "render:benchmark": "bun scripts/render.ts benchmark",
     "render:portrait": "bun scripts/render.ts portrait",
     "render:overlay": "bun scripts/render.ts overlay",
-    "verify": "bun scripts/verify.ts"
+    "verify": "bun scripts/verify.ts",
+    "render:astra": "bun scripts/render-astra.ts",
+    "check:astra": "bun scripts/check-astra.ts",
+    "verify:astra": "bun scripts/verify-astra.ts"
   },
   "sideEffects": [
     "*.css"
