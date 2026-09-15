@@ -1,0 +1,16 @@
+# Track independent composition sources despite the repository videos/ rule.
+!videos/
+
+# Local generated outputs and verification fixtures.
+**/renders/
+**/evidence/
+**/.thumbnails/
+**/.hyperframes/
+**/node_modules/
+**/MODIFIED_FILE
+**/DIFF_FILE.patch
+**/VERIFICATION.txt
+**/ROLLBACK.sh
+**/*.zip
+
+**/.waveform-cache/

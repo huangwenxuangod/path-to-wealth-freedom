@@ -1,0 +1,10 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@layer base { * {margin:0;padding:0;box-sizing:border-box;border:0 solid} html {line-height:1.5} img {max-width:100%;height:auto} }
+@source "./index.html";
+@theme { --font-sans: Pilot, sans-serif; --font-mono: Pilot, monospace; --color-paper:#f3f0e8; --color-ink:#171d20; --color-accent:#b83225; }
+@font-face{font-family:Pilot;src:url('./han.woff2') format('woff2');font-weight:100 900}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#171d20;font-family:Pilot,sans-serif}
+*{box-sizing:border-box} .shot{position:absolute;inset:0;width:1920px;height:1080px;padding:90px 110px;overflow:hidden}
+.grid-paper{background-image:linear-gradient(#171d2009 1px,transparent 1px),linear-gradient(90deg,#171d2009 1px,transparent 1px);background-size:64px 64px}

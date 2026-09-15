@@ -1,0 +1,16 @@
+{
+  "name": "studio-pilot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.40 preview",
+    "check": "npm run build:css && npx --yes hyperframes@0.8.40 check",
+    "render": "npx --yes hyperframes@0.8.40 render",
+    "publish": "npx --yes hyperframes@0.8.40 publish",
+    "build:css": "tailwindcss -i styles.css -o assets/style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.2.4",
+    "tailwindcss": "4.2.4"
+  }
+}
