@@ -16,6 +16,8 @@
 
 第一步，安装Codex，现在也叫Chatgpt。
 
+![](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/20260915T134343954Z.png)
+
 第二步，使用浏览器插件Browser, 我用的是下面这段prompt
 
 ![[Pasted image 20260915143845.png]]
@@ -32,7 +34,7 @@
 
 但是在点击出现贪吃蛇之后，它吃到了第一个豆，然后就没有操作了，什么情况？
 
-我看了一下，第一个是因为chatgpt现在每次生图速度都特别快，可能不到几十秒就生成好了，根本没办法玩完。
+我看了一下，第一个原因是因为chatgpt现在每次生图速度都特别快，可能不到几十秒就生成好了，根本没办法玩完。
 
 第二个就是，每一次转向对于Codex来说都是一次新的指令，它需要不断获取最新的情况再反馈，再给出新的指令。
 
