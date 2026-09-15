@@ -1,0 +1,12 @@
+{
+  "mode": "portrait",
+  "output": "agent-workflow-portrait.mp4",
+  "sourceSha256": "1e31e166eb1f4941cc10b064bc15e25909593045d116a887a99f6fbfb23f79c2",
+  "seconds": 23.57,
+  "processRssBytes": 108806144,
+  "concurrency": 2,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 240
+}

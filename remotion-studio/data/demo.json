@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "template": "agent-workflow",
+  "title": "让每一份资料都有回应",
+  "subtitle": "理解资料，连接下一步。",
+  "productName": "Agent Demo",
+  "logo": "logos/demo.svg",
+  "theme": "editorial-lime",
+  "format": "portrait",
+  "fps": 30,
+  "durationSeconds": 8,
+  "seed": "two-node-demo-v1",
+  "tools": [
+    {"id": "document", "label": "项目资料", "icon": "document"},
+    {"id": "sheet", "label": "进度数据", "icon": "sheet"}
+  ],
+  "outputBackground": "opaque"
+}

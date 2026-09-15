@@ -39,3 +39,13 @@ notepix-uploads/
 # HyperFrames generated assets
 HyperFrames-AI视频项目/app/assets/
 HyperFrames-AI视频项目/app/output/
+
+# Video project caches and generated deliverables
+.hyperframes/
+/agent-ui-film/renders/
+/agent-ui-film/evidence/
+/agent-ui-film/agent-ui-source.zip
+/agent-ui-film/MODIFIED_FILE
+/agent-ui-film/DIFF_FILE.patch
+/agent-ui-film/VERIFICATION.txt
+/agent-ui-film/ROLLBACK.sh

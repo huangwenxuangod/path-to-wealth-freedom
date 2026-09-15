@@ -1,0 +1,12 @@
+{
+  "mode": "benchmark",
+  "output": "agent-workflow.mp4",
+  "sourceSha256": "1e31e166eb1f4941cc10b064bc15e25909593045d116a887a99f6fbfb23f79c2",
+  "seconds": 31.76,
+  "processRssBytes": 194478080,
+  "concurrency": 2,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 240
+}

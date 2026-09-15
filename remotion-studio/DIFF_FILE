@@ -1,0 +1,48 @@
+--- /dev/null
++++ src/AgentWorkflow.tsx
+@@ -0,0 +1,45 @@
++import {useGsapTimeline} from '@remotion/gsap';
++import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
++import {graphemes, type VideoSpec} from './spec';
++import {color, layout, progress, timing} from './tokens';
++import {AnimatedBeam} from './components/AnimatedBeam';
++import {AgentCore, HighlightText, ToolCard} from './components/Visuals';
++import './fonts';
++
++export function AgentWorkflow(spec: VideoSpec) {
++  const {fps, width, height} = useVideoConfig();
++  const frame = useCurrentFrame();
++  const seconds = frame / fps;
++  const portrait = spec.format === 'portrait';
++  const {cards, agent} = layout(portrait, spec.tools.length);
++  const scope = useGsapTimeline<HTMLDivElement>(({timeline, selector}) => {
++    timeline.fromTo(selector('[data-eyebrow]'), {opacity: 0, y: 10}, {opacity: 1, y: 0, duration: 0.45, ease: 'power2.out'}, 0.1);
++    timeline.fromTo(selector('[data-card]'), {opacity: 0, y: 36}, {opacity: 1, y: 0, duration: 0.65, stagger: 0.16, ease: 'power3.out'}, 0.28);
++    timeline.fromTo(selector('[data-heading]'), {opacity: 0, y: 24}, {opacity: 1, y: 0, duration: 0.7, ease: 'power3.out'}, 0.6);
++    timeline.fromTo(selector('[data-agent]'), {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 0.75, ease: 'power3.out'}, 1.1);
++    timeline.to(selector('[data-agent-logo]'), {scale: 1.055, duration: 0.18, ease: 'power2.out'}, 5.2)
++      .to(selector('[data-agent-logo]'), {scale: 1, duration: 0.55, ease: 'power2.out'}, 5.38);
++  }, {dependencies: [spec.format, spec.tools.map((t) => t.id).join(','), spec.logo]});
++  return <AbsoluteFill ref={scope} className="film" style={{
++  background: spec.outputBackground === 'opaque' ? color.bg : 'transparent',
++  color: color.paper
++}}>
++    <div data-eyebrow className="absolute flex justify-between items-center" style={{left: portrait ? 90 : 112, right: portrait ? 90 : 112, top: portrait ? 160 : 84, color: color.muted, fontSize: portrait ? 22 : 20, letterSpacing: 3}}>
++      <span className="flex items-center gap-4"><i className="rounded-full" style={{width: 7, height: 7, background: color.accent}}/>工作资料，连成一体</span>
++      {!portrait && <span className="mono" style={{fontSize: 15}}>01 / CONNECTED WORKSPACE</span>}
++    </div>
++    <div data-heading className="absolute" style={{left: portrait ? 90 : 112, top: portrait ? 258 : 178, width: portrait ? 890 : 1700, fontSize: portrait ? (graphemes(spec.title).length > 10 ? 62 : 84) : graphemes(spec.title).length > 10 ? 80 : 110, lineHeight: 1.3, fontWeight: 600, letterSpacing: -3, zIndex: 3}}>
++      <span data-readable style={{display: portrait ? 'block' : 'inline', marginRight: 25}}>你的工作，</span>
++      <span data-readable><HighlightText seconds={seconds}>{spec.title}</HighlightText></span>
++    </div>
++    <svg className="absolute inset-0 pointer-events-none" width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
++      {cards.map((box, i) => <AnimatedBeam key={spec.tools[i].id} vertical={portrait} from={portrait ? {x: i % 2 === 0 ? box.x + box.w : box.x, y: box.y + box.h / 2} : {x: box.x + box.w, y: box.y + box.h / 2}} to={portrait ? {x: agent.x, y: agent.y - 8} : {x: agent.x - 84, y: agent.y + 84}} seconds={seconds} start={timing.beam + i * timing.beamGap}/>)}
++    </svg>
++    {spec.tools.map((tool, i) => <div data-card key={tool.id} className="absolute" style={{left: cards[i].x, top: cards[i].y, zIndex: 2}}><ToolCard tool={tool} box={cards[i]} index={i} seconds={seconds} scanStart={timing.scan + i * timing.scanGap}/></div>)}
++    <div data-agent className="absolute" style={{left: agent.x - 185, top: agent.y, zIndex: 2}}><AgentCore spec={spec} seconds={seconds}/></div>
++    <div className="absolute" style={{left: portrait ? 90 : 112, right: portrait ? 90 : 112, bottom: portrait ? 176 : 90, borderTop: `1px solid ${color.line}`, paddingTop: 28, opacity: progress(seconds, timing.result, 0.45)}}>
++      <div data-readable style={{fontSize: portrait ? 42 : 36, lineHeight: 1.5, maxWidth: portrait ? 900 : 1300}}>{spec.subtitle}</div>
++      <div className="mono" style={{color: color.muted, fontSize: portrait ? 16 : 14, letterSpacing: 2, marginTop: 18}}>DOCUMENTS / DATA / CALENDAR / WORKFLOWS</div>
++    </div>
++  </AbsoluteFill>;
++}

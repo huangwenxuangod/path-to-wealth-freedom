@@ -1,0 +1,26 @@
+# Dependencies and build caches
+/node_modules/
+/dist/
+/out/
+/.cache/
+/.remotion/
+*.tsbuildinfo
+
+# Local configuration
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Rendered media and visual inspection outputs
+/renders/
+/evidence/*.png
+/evidence/*.jpg
+/evidence/*.jpeg
+/evidence/*.mp4
+/evidence/*.mov
+/evidence/studio-drag-before-reset.tsx
+
+# Override the parent archive rule: these are required video inputs.
+!/data/
+!/data/**

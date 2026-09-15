@@ -1,0 +1,12 @@
+{
+  "mode": "overlay",
+  "output": "beam-overlay.mov",
+  "sourceSha256": "1e31e166eb1f4941cc10b064bc15e25909593045d116a887a99f6fbfb23f79c2",
+  "seconds": 16.63,
+  "processRssBytes": 126812160,
+  "concurrency": 2,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 90
+}

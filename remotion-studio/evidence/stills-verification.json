@@ -1,0 +1,27 @@
+{
+  "frameOrder": {
+    "frames": [
+      120,
+      0,
+      239,
+      120
+    ],
+    "hashes": [
+      "8a98531214ac453590b41622f961200d13982e97d6487e58ce573546225e6311",
+      "00790936abaa5cd92b88e4564978f04ea357858f009b2962f45f4b9ee14d825d",
+      "6745dd1cb6c1a9b1b3dd7d0329493934308335eae8c39cc4b4d04403f0c52b6d",
+      "8a98531214ac453590b41622f961200d13982e97d6487e58ce573546225e6311"
+    ],
+    "equalRepeat": true
+  },
+  "fps": {
+    "sameSecond": 4,
+    "exactPixels": true
+  },
+  "variants": [
+    "portrait-four",
+    "portrait-demo",
+    "single-node",
+    "long-text"
+  ]
+}

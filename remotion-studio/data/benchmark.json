@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "template": "agent-workflow",
+  "title": "全部了解",
+  "subtitle": "从分散资料，到完整上下文。",
+  "productName": "豆包工作",
+  "logo": "logos/product-logo.png",
+  "theme": "editorial-lime",
+  "format": "landscape",
+  "fps": 30,
+  "durationSeconds": 8,
+  "seed": "connected-workspace-v1",
+  "tools": [
+    {"id": "document", "label": "文档", "icon": "document"},
+    {"id": "sheet", "label": "表格", "icon": "sheet"},
+    {"id": "calendar", "label": "日历安排", "icon": "calendar"},
+    {"id": "approval", "label": "请假审批", "icon": "approval"}
+  ],
+  "outputBackground": "opaque"
+}

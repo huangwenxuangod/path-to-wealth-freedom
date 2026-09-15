@@ -1,0 +1,63 @@
+Remotion Studio 验收记录 — 2026-09-15
+变更：文档项目 -> Bun/TS/React/Tailwind/Remotion 运行工程；AgentWorkflow 与 BeamOverlay。
+字段：根 AbsoluteFill 的 translate 已按用户确认移除；画布归位。
+MODIFIED_FILE=/Users/ai1/path-to-wealth-freedom/remotion-studio/MODIFIED_FILE
+DIFF_FILE=/Users/ai1/path-to-wealth-freedom/remotion-studio/DIFF_FILE
+VERIFICATION.txt=/Users/ai1/path-to-wealth-freedom/remotion-studio/VERIFICATION.txt
+ROLLBACK.sh=/Users/ai1/path-to-wealth-freedom/remotion-studio/ROLLBACK.sh
+MODIFIED_FILE 是当前 AgentWorkflow.tsx 的逐字节副本，DIFF_FILE 是其新增源码 diff，不代表全工程 diff。
+原始文件哈希：evidence/baseline-hashes.json；快照：baseline-README.md、baseline-docs。
+
+BASELINE
+cwd：原仅文档项目
+command：bun run check
+input：原文档快照，无 package.json/check 脚本
+literal output：error: Script not found "check"
+exit：1
+
+MODIFIED
+cwd：/Users/ai1/path-to-wealth-freedom/remotion-studio
+command：bun run check
+input：scripts/check.ts、src/spec.ts、两组 JSON 和本地资产
+literal output：$ bun scripts/check.ts
+CHECK_PASS 27 cases; assets, input boundaries, fps, layouts, versions
+exit：0
+command：bun run typecheck
+literal output：$ tsc --noEmit
+exit：0
+command：bun scripts/verify.ts stills
+literal output：STILLS_PASS repeated-frame pixels; 30/60fps parity; 4 input/layout variants; 7 keyframes
+exit：0
+command：bun scripts/verify.ts media
+literal output：MEDIA_PASS 3 videos; full decode; dimensions/fps/duration; alpha; PNG sequence
+exit：0
+inputs：renders 中三个最终视频；30fps 横屏/竖屏各240帧，透明层90帧。
+
+ROLLBACK
+cwd：/Users/ai1/path-to-wealth-freedom/remotion-studio
+command：./ROLLBACK.sh /tmp/remotion-studio-rollback-final-20260915
+input：原始三份文档快照与 SHA256，目标目录原先不存在
+literal output：ROLLBACK_PASS 3 original document hashes; live project unchanged
+exit：0
+cwd：/tmp/remotion-studio-rollback-final-20260915
+command：bun run check
+literal output：error: Script not found "check"
+exit：1
+restored status：独立目录恢复原始仅文档状态，行为与 baseline 相同；当前运行工程保持修改状态。
+脚本只支持新目标目录；不会删除当前工程、还原插件或改写其他工作区文件。
+
+渲染命令（均 exit 0）：bun run render:benchmark；bun run render:portrait；bun run render:overlay。
+三份渲染 manifest 的 sourceSha256 均为 1e31e166eb1f4941cc10b064bc15e25909593045d116a887a99f6fbfb23f79c2，已核对对应六个视觉源码。
+sourceSha256 仅覆盖脚本列出的六个视觉源码；完整资产校验清单另见 evidence/deliverable-hashes.json。
+实际媒体信息：evidence/media-verification.json；取帧证据：evidence/stills-verification.json。
+完整解码通过；ProRes 4444 解码像素格式 yuva444p12le，alpha 统计有效，RGBA PNG 共90张。
+
+Studio：同一已挂载画布 120 -> 0 -> 239 -> 120 的 HTML 一致；独立 renderStill 像素测试与此为两种检查。
+播放已实测，最终 pause 后 seek210，get_current_error 返回 null；目视画布归位、字样完整。
+根画布拖动前快照：evidence/studio-drag-before-reset.tsx；恢复得到用户明确确认。
+官方 Codex Remotion 插件 installed/enabled；项目 skill 官方 validator：Skill is valid!（exit 0）。
+未验证新任务的自动 skill 发现；当前任务已读取插件 skill 并执行。
+剪映导入未实测。未提交或推送；已有用户改动保留。
+
+收尾：PROJECT_WHITESPACE_PASS（本次 src/scripts/data/.agents 文件，exit 0）。
+全仓 git diff --check exit 2：用户既有文章第23行尾空白、第52行文件尾空行；未修改该文章。
