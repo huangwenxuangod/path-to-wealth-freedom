@@ -44,22 +44,22 @@
 
 ## 4. 技术栈逐项判断
 
-| 技术 | 职责 | 可行性与接法 | 初版决策 |
-|---|---|---|---|
-| Bun | 安装依赖、脚本、TS 运行 | Remotion 官方支持 `bun create video` 与 `remotionb` | 使用 |
-| TypeScript | 组件、数据输入、校验 | TS 类型不替代 JSON 的运行时校验 | 使用 |
-| React | 视频画面的声明式结构 | 每条视频是 Composition，镜头是 Sequence 中的组件 | 使用 |
-| Remotion | 帧时钟、预览、合成与输出 | 统一媒体等待、fps、画布、帧序列 | 主引擎 |
-| Tailwind v4 | 排版、间距、边框、颜色 | 官方 `@remotion/tailwind-v4`；不要混用 v3 插件 | 使用 |
-| Magic UI | 视觉结构和效果源码 | 按组件移植，不加载整套库 | 首批选 Animated Beam、Border Beam 类效果 |
-| GSAP | 多元素编排、stagger、路径描边、复杂缓动 | `@remotion/gsap`，只使用其支持的模式 | 使用核心时间轴 |
-| Motion for React | 实时网页交互动画 | 官方 Remotion 文档仍写明无直接 Framer Motion 集成 | 成片内部默认移除自运行时钟；后续编辑器界面可用 |
-| Aceternity UI | 聚光、层次、空间构图 | 保留视觉机制，替换交互与时间驱动 | 按镜头引入 |
-| React Bits | 字效、背景、Shader 等视觉爆点 | 按组件审计 RAF/WebGL/物理依赖与许可 | 精选，不整包分发 |
-| Motion Primitives | 文字、分组、过渡等简洁动画结构 | 是基于 Motion 的组件集，不是统一时间引擎 | 参考编排、按需移植 |
-| shadcn/ui | 源码分发、基础控件 | 可协助获取 registry 组件；不必为成片安装整套表单控件 | 按需 |
-| Zod | 运行时输入校验 | 验证文本长度、路径、时长、节点数量、主题枚举 | 使用一份 schema |
-| Lucide | 通用语义图标 | 只导入使用的图标；品牌 Logo 用真实资产 | 使用 |
+| 技术                | 职责                      | 可行性与接法                                         | 初版决策                              |
+| ----------------- | ----------------------- | ---------------------------------------------- | --------------------------------- |
+| Bun               | 安装依赖、脚本、TS 运行           | Remotion 官方支持 `bun create video` 与 `remotionb` | 使用                                |
+| TypeScript        | 组件、数据输入、校验              | TS 类型不替代 JSON 的运行时校验                           | 使用                                |
+| React             | 视频画面的声明式结构              | 每条视频是 Composition，镜头是 Sequence 中的组件            | 使用                                |
+| Remotion          | 帧时钟、预览、合成与输出            | 统一媒体等待、fps、画布、帧序列                              | 主引擎                               |
+| Tailwind v4       | 排版、间距、边框、颜色             | 官方 `@remotion/tailwind-v4`；不要混用 v3 插件          | 使用                                |
+| Magic UI          | 视觉结构和效果源码               | 按组件移植，不加载整套库                                   | 首批选 Animated Beam、Border Beam 类效果 |
+| GSAP              | 多元素编排、stagger、路径描边、复杂缓动 | `@remotion/gsap`，只使用其支持的模式                     | 使用核心时间轴                           |
+| Motion for React  | 实时网页交互动画                | 官方 Remotion 文档仍写明无直接 Framer Motion 集成          | 成片内部默认移除自运行时钟；后续编辑器界面可用           |
+| Aceternity UI     | 聚光、层次、空间构图              | 保留视觉机制，替换交互与时间驱动                               | 按镜头引入                             |
+| React Bits        | 字效、背景、Shader 等视觉爆点      | 按组件审计 RAF/WebGL/物理依赖与许可                        | 精选，不整包分发                          |
+| Motion Primitives | 文字、分组、过渡等简洁动画结构         | 是基于 Motion 的组件集，不是统一时间引擎                       | 参考编排、按需移植                         |
+| shadcn/ui         | 源码分发、基础控件               | 可协助获取 registry 组件；不必为成片安装整套表单控件                | 按需                                |
+| Zod               | 运行时输入校验                 | 验证文本长度、路径、时长、节点数量、主题枚举                         | 使用一份 schema                       |
+| Lucide            | 通用语义图标                  | 只导入使用的图标；品牌 Logo 用真实资产                         | 使用                                |
 
 ### Bun 到底是不是渲染引擎
 
