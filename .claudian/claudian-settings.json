@@ -82,7 +82,6 @@
       "environmentHash": "",
       "environmentVariables": "",
       "modelAliases": {},
-      "planBasePermissionMode": "normal",
       "preferredReasoningByModel": {},
       "visibleModels": null
     }
@@ -117,6 +116,7 @@
   },
   "pendingProviderSessionInvalidations": {},
   "maxWarmAgentProcesses": 5,
+  "showMessageTimestamps": false,
   "expandFileEditsByDefault": false,
   "enableDualPane": true,
   "dualPaneSide": "right",
