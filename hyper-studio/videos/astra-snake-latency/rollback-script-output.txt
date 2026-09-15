@@ -1,0 +1,1 @@
+ROLLBACK_OK target=D:\path-to-wealth-freedom\hyper-studio\videos\astra-snake-latency-rollback-test/index.html sha256=BCC8E06B9F47E99E7FC3FA65E2597AB40A472F4A2DD066839B2F0BC5173B4BAA

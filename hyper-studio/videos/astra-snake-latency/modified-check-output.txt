@@ -1,0 +1,65 @@
+
+> check
+> npx --yes hyperframes@0.8.40 check
+
+◆  Checking astra-snake-latency
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (Intel)" renderer="ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+Lint
+  ◇ 0 errors, 0 warnings
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ⚠ t=5.88-6.13s (3 samples) content_overlap h1.question.s1title inside div.kicker.s2e "为什么最会操控电脑的 Astra，玩不好贪吃蛇？" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=6-6.13s (2 samples) content_overlap h1.question.s1title inside h2.title.s2title "为什么最会操控电脑的 Astra，玩不好贪吃蛇？" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=11.5-11.63s (2 samples) content_overlap article.cause.cause-a > p:nth-of-type(1) inside div.node.n1 > span:nth-of-type(1) "ChatGPT 可能不到几十秒就完成生成，小游戏的存活窗口先关闭了。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=11.5-11.63s (2 samples) content_overlap article.cause.cause-b > h3:nth-of-type(1) inside div.kicker.s3e "每次转向，都是新指令" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=23.5-23.63s (2 samples) content_overlap div.lane.lane-agent > div:nth-of-type(1) > span:nth-of-type(1) inside h2.s5title "≈ 2.0s / LOOP" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=36.5-36.63s (2 samples) content_overlap h2.title.s6title inside div.mast.s7e > span:nth-of-type(1) > strong:nth-of-type(1) "差别不只是难度，而是反馈频率。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=36.5-36.63s (2 samples) content_overlap article.mode.static-mode > p:nth-of-type(1) inside h2.final-title "状态保持不变，模型可以充分观察、推理，再行动。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ⚠ t=36.5-36.63s (2 samples) content_overlap div.foot.s6e > span:nth-of-type(1) inside h2.final-title "DISCRETE STATE / CONTINUOUS STATE" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.38s content_overlap article.cause.cause-a > p:nth-of-type(1) inside div.mast.s3e > span:nth-of-type(1) "ChatGPT 可能不到几十秒就完成生成，小游戏的存活窗口先关闭了。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.38s content_overlap article.cause.cause-b > p:nth-of-type(1) inside div.mast.s3e > span:nth-of-type(2) "看屏幕、理解局面、计算动作、再把方向键发回去；一次转向就是一整轮。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.38s content_overlap article.cause.cause-b > div:nth-of-type(3) > span:nth-of-type(1) inside div.kicker.s3e "SEE" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.5s content_overlap article.cause.cause-a > div:nth-of-type(1) inside div.mast.s3e > span:nth-of-type(1) "01" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.5s content_overlap article.cause.cause-a > p:nth-of-type(1) inside div.node.n1 > strong:nth-of-type(1) "ChatGPT 可能不到几十秒就完成生成，小游戏的存活窗口先关闭了。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=11.63s content_overlap article.cause.cause-b > p:nth-of-type(1) inside h2.s3title "看屏幕、理解局面、计算动作、再把方向键发回去；一次转向就是一整轮。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=17.25s content_overlap div.mast.s3e > span:nth-of-type(1) inside div.mast.s4e > span:nth-of-type(1) > strong:nth-of-type(1) "03 / ONE TURN = ONE ROUND TRIP" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=23.63s content_overlap div.lane.lane-snake > div:nth-of-type(1) > strong:nth-of-type(1) inside div.mast.s5e > span:nth-of-type(1) "贪吃蛇 / WORLD STATE" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=23.63s content_overlap div.lane.lane-snake > div:nth-of-type(1) > span:nth-of-type(1) inside div.mast.s5e > span:nth-of-type(2) "≈ 0.18s / TICK" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=29.63s content_overlap div.mast.s5e > span:nth-of-type(2) inside div.mast.s6e > span:nth-of-type(1) "01:15 → 01:21" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=36.63s content_overlap h2.title.s6title inside div.mast.s7e > span:nth-of-type(1) "差别不只是难度，而是反馈频率。" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  0 error(s), 8 warning(s), 11 info(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 65/65 text checks pass WCAG AA
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed
+
