@@ -1,1 +1,0 @@
-![Pasted image 20260915111528](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20image%2020260915111528.png)
