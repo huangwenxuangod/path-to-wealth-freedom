@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<title>全部了解 — 工作资料连接动画</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:FilmHan;src:url('assets/han.woff2') format('woff2');font-weight:100 900}
+@font-face{font-family:FilmMono;src:url('assets/mono.woff2') format('woff2');font-weight:400}
+*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+body{font-family:FilmHan,sans-serif;color:#f1f0e8;-webkit-font-smoothing:antialiased}
+#film{width:1920px;height:1080px;position:relative;overflow:hidden;background:transparent}
+.scene-content{width:100%;height:100%;padding:106px 140px 88px;display:flex;flex-direction:column;gap:32px}
+.topline{display:flex;align-items:center;justify-content:space-between;height:42px;font-size:24px;color:#aab4ad;letter-spacing:3px}
+.mono{font-family:FilmMono,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{display:flex;align-items:center;gap:18px}.dot{width:10px;height:10px;background:#b5ff38;border-radius:50%}.edition{font-size:20px}
+.headline{height:166px;display:flex;align-items:center;gap:27px;white-space:nowrap}
+h1{font-size:112px;line-height:1.15;font-weight:700;letter-spacing:-5px}.muted-title{color:#f1f0e8}.highlight{position:relative;display:inline-block;color:#090c0b;padding:0 18px 5px;z-index:1}.marker{position:absolute;inset:5px -4px 1px;background:#b5ff38;z-index:-1;transform:rotate(-1.5deg);transform-origin:left center;border-radius:3px}.period{color:#b5ff38;display:inline-block;margin-left:18px}
+.stage{height:454px;display:flex;align-items:center;gap:200px;position:relative}
+.workspace{width:830px;height:454px;flex-shrink:0;display:grid;grid-template-columns:1.04fr 1fr;grid-template-rows:260px 160px;gap:22px;position:relative;z-index:2}
+.card{border:1px solid #39443c;border-radius:14px;overflow:hidden;position:relative;background:#1c2220}
+.card-header{height:76px;padding:18px 25px;display:flex;align-items:center;gap:13px;font-size:37px;font-weight:600;line-height:1}
+.symbol{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.symbol svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.code{font:16px FilmMono,monospace;margin-left:auto;opacity:.65;letter-spacing:1px}
+.document{background:#f1f0e8;color:#222b25;border-color:#f1f0e8;transform:rotate(-2deg)}
+.document .card-header{border-bottom:1px solid #c5ccc2}
+.doc-body{padding:21px 26px}.doc-name{font-size:25px;font-weight:600;margin-bottom:17px}.rule{height:6px;background:#c5cbc0;margin:12px 0;border-radius:2px}.rule.wide{width:93%}.rule.medium{width:78%}.rule.short{width:56%}.doc-tag{margin-top:17px;font:15px FilmMono;color:#50634c}
+.sheet{transform:translateY(10px) rotate(1deg)}.sheet .symbol{color:#b5ff38}.sheet .card-header{border-bottom:1px solid #39443c}.sheet-body{padding:7px 22px}.row{display:grid;grid-template-columns:1.3fr 1fr .9fr;padding:7px 0;font:21px FilmMono;border-bottom:1px solid #364138;color:#e0e5df;gap:10px}.row.head{font:18px FilmHan;color:#b8c4ba;padding-top:4px}.row .bar{height:7px;margin-top:8px;background:#b5ff38;opacity:.75;width:88%}.row:nth-child(3) .bar{width:61%;opacity:.5}.row:nth-child(4) .bar{width:76%;opacity:.6}
+.calendar{display:flex;align-items:center;padding:25px;gap:24px;transform:translateX(12px)}.date{width:79px;flex-shrink:0;border:1px solid #586551;border-radius:9px;text-align:center;overflow:hidden}.date small{display:block;background:#b5ff38;color:#090c0b;font:14px FilmMono;padding:4px}.date strong{display:block;font:44px FilmMono;padding:6px}.small-title{font-size:34px;line-height:1.3}.small-detail{font-size:21px;color:#b2bdb5;margin-top:7px}
+.approval{display:flex;align-items:center;padding:26px;gap:20px;transform:translateY(10px)}.check-box{width:57px;height:57px;border:1px solid #819773;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#b5ff38;font-size:30px}.tiny-pill{font-size:17px;color:#b5ff38;margin-top:7px;letter-spacing:2px}
+.agent{width:400px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:22px;position:relative;z-index:3;margin-left:130px}
+.logo-shell{width:174px;height:174px;position:relative;background:#fff;border-radius:39px;overflow:hidden;box-shadow:0 0 0 1px #dbe3da,0 20px 60px #00000044}.logo-shell img{width:100%;height:100%;object-fit:cover}.agent-name{font-size:51px;font-weight:600;letter-spacing:1px}.agent-caption{font:19px FilmMono;color:#aab4ad;letter-spacing:3px}.connected{display:flex;align-items:center;gap:12px;padding:10px 18px;border:1px solid #668537;border-radius:50px;font-size:24px;color:#b5ff38;background:#182315}
+.wires{position:absolute;inset:0;width:1640px;height:454px;overflow:visible;z-index:1;pointer-events:none}.wire{fill:none;stroke:#b5ff38;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}.port{fill:#b5ff38}.receiver{fill:none;stroke:#b5ff38;stroke-width:2;opacity:.8}
+.footer{display:flex;justify-content:space-between;align-items:flex-end;padding-top:34px;margin-top:auto;border-top:1px solid #3b463d}.footer-copy{font-size:36px;letter-spacing:1px}.footer-copy span{color:#b5ff38}.footer-meta{font-size:18px;color:#aab4ad;letter-spacing:2px;line-height:1.7;text-align:right}
+</style></head><body>
+<div data-hf-id="hf-cq3v" id="film" data-composition-id="agent-film" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-fps="30">
+<div data-hf-id="hf-cn5c" id="scene-main" class="scene-content clip" data-start="0" data-duration="6" data-media-start="0">
+<div data-hf-id="hf-o5lv" class="topline"><div data-hf-id="hf-rk6h" class="eyebrow"><i data-hf-id="hf-6bgx" class="dot"></i><span data-hf-id="hf-k7wa">工作资料，连成一体</span></div><span data-hf-id="hf-qfxe" class="edition mono">01 / CONNECTED WORKSPACE</span></div>
+<div data-hf-id="hf-sodk" class="headline"><h1 data-hf-id="hf-m3fm"><span data-hf-id="hf-bunm" class="muted-title">你的工作，</span><span data-hf-id="hf-acew" class="highlight"><i data-hf-id="hf-fyz6" class="marker"></i>全部了解</span><span data-hf-id="hf-1nr0" class="period">.</span></h1></div>
+<div data-hf-id="hf-tan6" class="stage">
+<div data-hf-id="hf-e8vj" class="workspace">
+<div data-hf-id="hf-vag5" class="card document"><div data-hf-id="hf-fvvq" class="card-header"><span data-hf-id="hf-m9wl" class="symbol"><svg data-hf-id="hf-161r" viewBox="0 0 32 32"><path data-hf-id="hf-66ez" d="M8 3h11l6 6v20H8z M19 3v7h6 M12 16h9 M12 21h9" /></svg></span>文档<span data-hf-id="hf-05ec" class="code">DOC</span></div><div data-hf-id="hf-qvab" class="doc-body"><div data-hf-id="hf-tzbt" class="doc-name">项目计划 · 最新版本</div><div data-hf-id="hf-vhlz" class="rule wide"></div><div data-hf-id="hf-wwqb" class="rule medium"></div><div data-hf-id="hf-e4dw" class="rule short"></div><div data-hf-id="hf-5s0r" class="doc-tag">WORKSPACE / KNOWLEDGE</div></div></div>
+<div data-hf-id="hf-22nr" class="card sheet"><div data-hf-id="hf-kkjk" class="card-header"><span data-hf-id="hf-5b09" class="symbol"><svg data-hf-id="hf-o57j" viewBox="0 0 32 32"><rect data-hf-id="hf-lvrd" x="4" y="4" width="24" height="24" rx="2" /><path data-hf-id="hf-ncru" d="M4 12h24 M4 20h24 M13 4v24" /></svg></span>表格<span data-hf-id="hf-p6d6" class="code">DATA</span></div><div data-hf-id="hf-z5qa" class="sheet-body"><div data-hf-id="hf-w11e" class="row head"><span data-hf-id="hf-csr6">项目</span><span data-hf-id="hf-qby0">进度</span><span data-hf-id="hf-792c">数量</span></div><div data-hf-id="hf-thy4" class="row"><span data-hf-id="hf-p81i">01</span><i data-hf-id="hf-31m3" class="bar"></i><span data-hf-id="hf-8nqy">128</span></div><div data-hf-id="hf-lt04" class="row"><span data-hf-id="hf-pmcj">02</span><i data-hf-id="hf-54nf" class="bar"></i><span data-hf-id="hf-4g01">064</span></div><div data-hf-id="hf-km31" class="row"><span data-hf-id="hf-q0nk">03</span><i data-hf-id="hf-4qce" class="bar"></i><span data-hf-id="hf-o0bs">096</span></div></div></div>
+<div data-hf-id="hf-ipjw" class="card calendar"><div data-hf-id="hf-5cd8" class="date"><small data-hf-id="hf-klxi">MON</small><strong data-hf-id="hf-rlfe">26</strong></div><div data-hf-id="hf-yeow"><div data-hf-id="hf-yee4" class="small-title">日历安排</div><div data-hf-id="hf-lb4k" class="small-detail">会议 · 待办 · 提醒</div></div></div>
+<div data-hf-id="hf-rfjn" class="card approval"><div data-hf-id="hf-37hl" class="check-box">✓</div><div data-hf-id="hf-y7yw"><div data-hf-id="hf-k3x0" class="small-title">请假审批</div><div data-hf-id="hf-7xvd" class="tiny-pill">流程与状态</div></div></div>
+</div>
+<svg data-hf-id="hf-wvju" class="wires" viewBox="0 0 1640 454" aria-hidden="true" data-layout-ignore="">
+<path data-hf-id="hf-850a" class="wire" pathLength="1" d="M843 78 H913 C989 78 1009 128 1090 128 H1264" />
+<path data-hf-id="hf-l3f4" class="wire" pathLength="1" d="M843 170 H913 C989 170 1009 128 1090 128 H1264" />
+<path data-hf-id="hf-eoqu" class="wire" pathLength="1" d="M843 292 H913 C1009 292 1010 128 1120 128 H1264" />
+<path data-hf-id="hf-rwd6" class="wire" pathLength="1" d="M843 382 H913 C1039 382 1040 128 1160 128 H1264" />
+<circle data-hf-id="hf-pc5t" class="port" cx="843" cy="78" r="5" /><circle data-hf-id="hf-e7qk" class="port" cx="843" cy="170" r="5" /><circle data-hf-id="hf-hg9z" class="port" cx="843" cy="292" r="5" /><circle data-hf-id="hf-y0kl" class="port" cx="843" cy="382" r="5" />
+<circle data-hf-id="hf-ecpo" class="receiver" cx="1264" cy="128" r="13" />
+</svg>
+<div data-hf-id="hf-omaj" class="agent"><div data-hf-id="hf-4a4w" class="logo-shell"><img data-hf-id="hf-vmqz" src="assets/product-logo.png" alt="豆包工作 Logo"></div><div data-hf-id="hf-v8wd" class="agent-name">豆包工作</div><div data-hf-id="hf-586f" class="agent-caption">CONTEXT → ACTION</div><div data-hf-id="hf-ji9v" class="connected"><i data-hf-id="hf-0j5x" class="dot"></i>工作上下文已连接</div></div>
+</div>
+<div data-hf-id="hf-yh7l" class="footer"><div data-hf-id="hf-d9u5" class="footer-copy">从分散资料，到<span data-hf-id="hf-kw3n">完整上下文。</span></div><div data-hf-id="hf-m4kr" class="footer-meta mono">DOCUMENTS / DATA / CALENDAR / WORKFLOWS</div></div>
+</div></div>
+<script>
+const tl=gsap.timeline({paused:true});
+window.__timelines=window.__timelines||{};window.__timelines['agent-film']=tl;
+tl.from('.topline',{opacity:0,y:12,duration:.4,ease:'power2.out'},.15);
+tl.from('.document',{opacity:0,x:-50,rotation:-5,duration:.6,ease:'power3.out'},.25);
+tl.from('.sheet',{opacity:0,y:38,duration:.55,ease:'power2.out'},.4);
+tl.from('.calendar',{opacity:0,x:-25,duration:.4,ease:'sine.out'},.6);
+tl.from('.approval',{opacity:0,scale:.94,duration:.42,ease:'back.out(1.15)'},.75);
+tl.from('.logo-shell',{opacity:0,scale:.86,duration:.6,ease:'power3.out'},.45);
+tl.from('.agent-name',{opacity:0,y:12,duration:.4,ease:'sine.out'},.75);
+tl.from('.agent-caption',{opacity:0,duration:.35,ease:'power1.out'},.9);
+tl.from('.muted-title',{opacity:0,y:23,duration:.5,ease:'power3.out'},1.1);
+tl.from('.highlight',{opacity:0,y:18,duration:.42,ease:'power2.out'},1.45);
+tl.from('.marker',{scaleX:0,duration:.48,ease:'expo.out'},1.5);
+tl.from('.period',{opacity:0,scale:.5,duration:.25,ease:'back.out(1.4)'},1.85);
+tl.from('.port',{opacity:0,duration:.2,stagger:.1,ease:'none'},2.05);
+tl.from('.wire',{strokeDashoffset:1,duration:.75,stagger:.1,ease:'power2.inOut'},2.2);
+tl.from('.receiver',{opacity:0,scale:.4,transformOrigin:'center',duration:.35,ease:'back.out(1.3)'},2.94);
+tl.to('.logo-shell',{scale:1.055,duration:.14,ease:'power2.out'},2.95);
+tl.to('.logo-shell',{scale:1,duration:.38,ease:'sine.out'},3.10);
+tl.from('.connected',{opacity:0,y:10,duration:.4,ease:'power2.out'},3.28);
+tl.from('.footer',{opacity:0,y:12,duration:.55,ease:'sine.out'},3.35);
+tl.to('.scene-content',{opacity:0,y:-8,duration:.45,ease:'power2.in'},5.55);
+</script></body></html>
