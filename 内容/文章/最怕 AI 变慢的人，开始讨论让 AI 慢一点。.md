@@ -1,15 +1,15 @@
-![[最怕 AI 变慢的人，开始讨论让 AI 慢一点。-4.png]]
+![最怕 AI 变慢的人，开始讨论让 AI 慢一点。 4](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/%E6%9C%80%E6%80%95%20AI%20%E5%8F%98%E6%85%A2%E7%9A%84%E4%BA%BA%EF%BC%8C%E5%BC%80%E5%A7%8B%E8%AE%A8%E8%AE%BA%E8%AE%A9%20AI%20%E6%85%A2%E4%B8%80%E7%82%B9%E3%80%82-4.png)
 最近，Dario Amodei发文说，我们必须放慢前沿AI的脚步，引得Sam Altman、马斯克都纷纷赞同。
 
 但是，在以天为迭代周期的AI战场上，为什么前不久还针锋相对的竞争对手，此刻都纷纷想暂缓AI的发展速度？
 
-![[Pasted Image 20260914141008_543.png]]
+![Pasted Image 20260914141008 543](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914141008_543.png)
 
 首先我们必须明确，他们说的是Pace暂缓，而不是Pause 完全暂停对AI的发展了。那为什么要暂缓？原因只有一个，那就是安全。
 
 Dario在文中提到，一种名为“递归自我改进”的发展方式正在让AI的能力呈现指数级的增长，一句话概括就是AI研究怎么提升自己，速度已经远超让
 
-![[Pasted Image 20260914142641_693.png]]
+![Pasted Image 20260914142641 693](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914142641_693.png)
 
 人类+AI研究的速度了，所以必须立刻踩刹车，留给人类理解和控制这个黑盒的时间。
 
@@ -19,7 +19,7 @@ Dario在文中提到，一种名为“递归自我改进”的发展方式正在
 
 第二点就是OAI-HF 事件，在26年7月，OpenAI在内部的模型测试中，模型突破了OpenAI划定的封闭沙箱，连上了互联网。
 
-![[Pasted Image 20260914144548_133.png]]
+![Pasted Image 20260914144548 133](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914144548_133.png)
 
 模型在逃出之后，进一步渗透进了Hugging Face，全球最知名的开源模型托管平台，就这样被1200个agent自发形成一个组织
 
@@ -37,15 +37,15 @@ Dario在文中提到，一种名为“递归自我改进”的发展方式正在
 
 所以，这次Dario的振臂一呼，很难不被外界解读成一场面向政治作秀。
 
-David Sacks就直接指出，不要再假装减速的动机是完全处于利他主义，不要再假装需要别人的许可了。潜台词就是如果实验室中的模型真的这么可怕，你不需要拉着大家都一起陪你停下，自己还要继续自进化模型，扩大自己的垄断优势。![[Pasted Image 20260914150828_135.png]]
+David Sacks就直接指出，不要再假装减速的动机是完全处于利他主义，不要再假装需要别人的许可了。潜台词就是如果实验室中的模型真的这么可怕，你不需要拉着大家都一起陪你停下，自己还要继续自进化模型，扩大自己的垄断优势。![Pasted Image 20260914150828 135](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914150828_135.png)
 
 尤其是Dario这篇文章又是反复提到了中国的威胁，表示说如果我们放慢了节奏，那么中国的模型就会取得优势，会对美国及世界产生严重的威胁，也提到之前对于国内大模型公司对于Claude的蒸馏问题。总而言之就是一边要保持优势，一边要放慢节奏。一边要严厉打击，一边要停止合作。
 
-![[Pasted Image 20260914152024_740.png]]
+![Pasted Image 20260914152024 740](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914152024_740.png)
 
 不管怎么说，Dario也还是提出了一些限制AI发展的措施，包括第三方的评估者，民主的协商和协调，限制性地与中国合作等等。
 
-![[Pasted Image 20260914151644_288.png]]
+![Pasted Image 20260914151644 288](https://raw.githubusercontent.com/huangwenxuangod/path-to-wealth-freedom/main/assets/Pasted%20Image%2020260914151644_288.png)
 
 但是我个人认为，这个文件与其说是呼吁全球暂缓AI发展，不如说是政治性拉满的拉边站队，这实在是让我觉得有点难绷啊。
 
