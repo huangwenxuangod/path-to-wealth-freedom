@@ -35,6 +35,18 @@ Your archive.html
 test.pdf
 *.pdf
 notepix-uploads/
+/output/
+
+# Local Excalidraw verification and rollback artifacts
+/Excalidraw/*.DIFF_FILE
+/Excalidraw/*.ORIGINAL_SHA256.txt
+/Excalidraw/*.ROLLBACK.sh
+/Excalidraw/*.VERIFICATION.txt
+/Excalidraw/*.baseline.md
+
+# Local-only images referenced by the in-progress hwx drawing
+/assets/Pasted Image 20260916180819_886.png
+/assets/Pasted Image 20260916181234_845.png
 
 # HyperFrames generated assets
 HyperFrames-AI视频项目/app/assets/
