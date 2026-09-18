@@ -1,0 +1,10 @@
+BRANCH/FIELD: AI 封面 Prompt v2.0 / 虚拟关联场景优先、虚化背景、图形化可选、摄影真实禁用默认项
+ACTIVE PROMPT: /Users/ai1/path-to-wealth-freedom/内容/提示词/文轩_AI封面_Prompt工程规范_v2.0.md
+BASELINE COMMAND: find 内容/提示词 -maxdepth 1 -type f -print | sort
+BASELINE LITERAL OUTPUT: (empty before v2.0 rebuild)
+BASELINE EXIT: 0
+MODIFIED COMMAND: sha256sum 内容/提示词/文轩_AI封面_Prompt工程规范_v2.0.md && grep -q '除非用户特别要求，不生成摄影真实背景' 内容/提示词/文轩_AI封面_Prompt工程规范_v2.0.md && grep -q '虚化的虚拟空间' 内容/提示词/文轩_AI封面_Prompt工程规范_v2.0.md
+MODIFIED RESULT: hash recorded in MODIFIED_SHA256.txt; photography-real removed from default; virtual/blurred/graphic routes present; exit 0
+ROLLBACK COMMAND: sh 内容/提示词/.v2.0-transaction/ROLLBACK.sh (run on a copied fixture)
+ROLLBACK RESULT: copied fixture removed the v2.0 prompt and returned to the empty baseline state; exit 0
+RESTORED BEHAVIOR/STATUS: active prompt remains the updated v2.0 document after verification.

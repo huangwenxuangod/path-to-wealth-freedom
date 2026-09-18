@@ -1,0 +1,5 @@
+BASELINE STATE BEFORE REBUILD
+Path checked: 内容/提示词/
+Command: find 内容/提示词 -maxdepth 2 -type f -print | sort
+Literal output: (empty)
+Result: no active prompt document existed at the start of this rebuild turn.
