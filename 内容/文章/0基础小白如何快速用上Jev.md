@@ -1,0 +1,69 @@
+7s内查询到google航班信息，Mine craft 0手法拿下僵尸，快速获取高质量广告内容。
+
+这些效果都是推上的博主用Jev这个模型做出来的，如果你也想要做出类似这样的效果
+
+那在这个视频中，我会从0到1详细讲清楚从获取模型api key，到完整跑通一个项目的全部流程。
+
+图文版的教程我也会整理成文档，需要可以自取。
+
+首先第一步，申请api key
+
+我们找到TypeSafe AI，点击右上角申请白名单
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=MjFlODk5MGM3NDFhODAyMGM1YWM5OWQ5N2I1NGQxZmJfRmVzUWloYWlBcDNSZmRmQkthTG1yMDJWZzNPcjUxVmpfVG9rZW46U0JGRWI0ZXBwb2VTd1N4TkFEVGM4NWxXblZlXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+输入自己的邮箱，我是在昨天中午申请的，今天就成功通过了。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTQ1Zjc0YTNiNTdkMGJiZTkyYTI2MzkyNTE1ZTU0M2ZfdWVrUnhRRGpZckl5aGs2UXJyYWJKT0FEVTNnNDI0aGZfVG9rZW46RzhMamJPTHpwbzl1eDl4emhYTGNIY1p2blFmXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+通过后，在邮箱中找到找到类似这样的内容，点击创建账户
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=MTkwZmUwZGE4ZWY3ZDIyMTVkYjIzZjU1MzM5ZGNlYTFfWWFSVjJwRHlVQzNwZmdYTmdzS01iWlVaNWQ1UnpldUVfVG9rZW46RlRFWmJ1ek83b2JDQjV4WlF4Y2NvNlpFbktiXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+创建账户完成之后，有两件事要做，第一件事是生成对应的API Key，第二件事是复制右边的提示词。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=MzA5MzBiMjQ5ZWVhZDcwMzIzNzEzNTViOTQ4ZmJkYmVfdUt2TWYxY1lGN1VxVTVOY1RxOUpEek5oMDdyT3phUmlfVG9rZW46RlpoMmJWSE1ab0xkV2V4UTRqUWNoUm5FbkdmXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+第一步，点击左侧API Keys，点击右上角创建密钥，创建完之后复制保存好
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=ODk3NzYzMGEwZDNhNDMyODM2MTM1YjY3ZDdjYzczMTZfUkNaS1FNcmxtcjU2eHhVOHVXem5Hb0xGRXVyb2xIaFNfVG9rZW46UUZoYmJFRVF3b2tiQjF4SFVIT2NVUVN4bkdiXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+第二步，回来点击右边的复制提示词，去到你喜欢的任何一个agent粘贴进去
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=OTY2MjNjNTgyN2ZmMjFjNzAwZDUyZTk0YzFlZjczMWFfZ0JMMEZuaVhoWGd1VXh4UVFrUTNRazZMSGg3NFBYYkJfVG9rZW46RzVTTWJ4b2tRbzJudEZ4YmNlVmN1Sm9MbjZmXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+我这里用的是Codex，输入后等待一会就成功了。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=NjgxZDJmY2ZmNjI1MzcxMmY5OGJiMTQzMzQxMTRmYmVfS2VvS3VsR05Ha0ZWV0liVnNDbmlPUWxuOTBoZmtUZ2JfVG9rZW46RUNxZWJpS3N4b2FCcU14T3RCdGNiYzdnbjliXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+接下来，我们要准备尝试复刻这个7s内查询google航班这个项目的实现效果，这个是用Jev实现的快速操作浏览器查询google航班，项目目前已经将近1万个star了
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=NmM5NmQyZjJmMzkwYTFmNzg5Y2ZlYTJhZTkzODI4MTRfZ0d5cmZlSkkxV2JjYkEwdWhtWnV2N1JoOElWSmhSN2NfVG9rZW46STZNMWJQclZJb3dsN1h4VENiMWNtSnptbjNqXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+点击右侧绿色的按钮，我们直接直接复制地址
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=MDVmYmFlMDcyODUzMTIxNjUyZmJkZDE2ZmRmNjk1MjdfS2ZiVUljTWRUajRTbTFoY096U1U5djBvNEIwbTJEanBfVG9rZW46RjA4bWJkRmt1bzVveFF4UTNpUGM0OXB2bjJjXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+然后贴过来Codex这里，让它直接克隆这个项目到我们本地这里
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=YjE5MjM1ZmJjM2FiMjU0ZjNkYTRmNjQ2MTk3ZjJjNmRfRXkxN3QxanBTUUJOUjBjdHM3Q0dJa2tVWHMyQ0pIbE5fVG9rZW46R09SUmJDNDdOb3ZpWUt4VFREVmNLcVZNblpnXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+接着在项目中找到环境配置文件，将刚刚保存的密钥填写进去，还有一个文本模型的密钥，建议这里可以直接让它换成Deepseek的。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=NjQyMDM3YzkyYjk5OGJjMjNlZDIyNDZjMmFhZTQzNzBfSmg2eFFVWG8wODdmdzE4RHhuYW9tclhTazBKNWk3NjZfVG9rZW46TVg4d2JJY3Btb3NPcXp4d0RwcGM1UDM4bndjXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+本地的运行环境问题，直接跟Codex说，帮我补全运行的环境，看到图示就是运行成功了。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=NjZmOTkxOWVkZmJkMTQ2MjkyYjhkMmUwYzY2NWVjYmNfalo3U09Ld0M3UjZnREtxeFZsb21oTnpFcUVrTG9zMUlfVG9rZW46UXZ5c2J3YVZKb3UyNWp4ZFp0d2NnNVNpbkN4XzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+实测发现，想要让它直接操作浏览器，还需要在google中允许远程调试连接，到这一步就可以直接开始正式运行了。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGVhOWFlMjc5MGJlYWExZmJkM2E4YjMzMTk2ZWJjMDVfMDRoZm9GcXY4aFB5dVhwMDZvUUN0Z1RaT25RRVFEWjBfVG9rZW46WmRBUGJqZ09zbzZsZkF4VFUwa2NQOGVtblFnXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+让Codex直接开始启动后，就能点击看到这样的页面，第一步点击Start demo，第二步点击自动运行。
+
+![](https://iigf5k70ohp.feishu.cn/space/api/box/stream/download/asynccode/?code=YmM1YzY3NzNkYzg5YTk0MWE3OTg5NjFjNjFkN2EyYTNfWjlqSEl0bmhmREVMNU5OOGJMcG9vbEFiZ2E4SzV0cjBfVG9rZW46STZmbWJ5ak5rb0xmWTZ4V3hFNmNmenJ5bk5DXzE3ODk4MTUzNzQ6MTc4OTgxODk3NF9WNA&add_watermark=true&scene_type=CCM)
+
+实测下来，确实是能成功搜索到对应的航班信息，但似乎会更久一点，这可能和我用的是本地的千问模型有关。
+
+但不得不说，Jev的能力确实是完全颠覆了过往的模型训练思维，让我们重新开始思考AI的本质到底是什么，想要使用Jev的就快去试试吧！
