@@ -32,7 +32,7 @@ Thumbs.db
 *.log
 *.tmp
 *.cache
-
+*.mp4
 # ===== Node / Bun 依赖 =====
 node_modules/
 /.report_deps/
