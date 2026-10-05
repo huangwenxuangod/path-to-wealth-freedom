@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI赚钱产业链：五层结构的横纵分析</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23A62B2B'/%3E%3Crect x='7' y='20' width='18' height='3' fill='%23FBF9F5'/%3E%3Crect x='7' y='14' width='12' height='3' fill='%23FBF9F5'/%3E%3Crect x='7' y='8' width='15' height='3' fill='%23FBF9F5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --paper:#FAF9F5;
+  --card:#FFFFFF;
+  --ink:#1E1C19;
+  --ink-soft:#5C574F;
+  --ink-faint:#8A847A;
+  --line:#E5E1D8;
+  --line-strong:#CFC9BC;
+  --accent:#A62B2B;
+  --accent-deep:#7E1F1F;
+  --accent-wash:#F3E9E7;
+  --serif:'Noto Serif SC','Songti SC','STSong','SimSun',serif;
+  --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:56px 32px 96px}
+
+/* ===== 刊头 ===== */
+.masthead{border-top:4px solid var(--ink);padding-top:26px;margin-bottom:14px}
+.mast-meta{
+  display:flex;flex-wrap:wrap;gap:8px 18px;
+  font-size:12.5px;letter-spacing:.08em;color:var(--ink-faint);
+  margin-bottom:22px;
+}
+.mast-meta span{white-space:nowrap}
+h1.title{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(30px,4.6vw,52px);line-height:1.18;letter-spacing:.01em;
+}
+.title-red{color:var(--accent)}
+.mast-sub{
+  margin-top:20px;font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);
+  color:var(--ink-soft);line-height:1.9;max-width:820px;
+  border-left:3px solid var(--accent);padding-left:18px;
+}
+.rule{height:1px;background:var(--line-strong);border:0;margin:40px 0}
+
+/* ===== 章节 ===== */
+section{margin-top:56px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sec-num{
+  font-family:var(--serif);font-weight:900;color:var(--accent);
+  font-size:15px;letter-spacing:.1em;white-space:nowrap;padding-top:4px;
+}
+h2.sec-title{
+  font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,30px);
+  line-height:1.3;padding-bottom:14px;border-bottom:1px solid var(--line-strong);
+  flex:1;
+}
+.sec-lead{color:var(--ink-soft);font-size:15.5px;margin:18px 0 8px;max-width:860px}
+h3{
+  font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.45;
+  margin:34px 0 12px;padding-left:12px;border-left:3px solid var(--accent);
+}
+h4{font-family:var(--sans);font-weight:700;font-size:16px;margin:22px 0 8px}
+p{margin:12px 0;max-width:880px}
+strong{font-weight:700;color:var(--ink)}
+.src{color:var(--ink-faint);font-size:13.5px}
+.judg{
+  background:var(--accent-wash);border-left:3px solid var(--accent);
+  padding:14px 18px;margin:18px 0;font-size:15px;color:var(--ink);
+}
+.judg p{margin:6px 0;max-width:none}
+
+/* ===== 时间轴（grid 三列：时间 / 轴 / 内容） ===== */
+.tl{display:grid;grid-template-columns:120px 30px 1fr;margin:0}
+.tl-time{
+  text-align:right;padding:4px 18px 0 0;
+  font-family:var(--serif);
+}
+.tl-time .stage{display:block;font-weight:700;font-size:14px;color:var(--accent);letter-spacing:.02em}
+.tl-time .yr{display:block;font-size:12.5px;color:var(--ink-faint);margin-top:2px;line-height:1.5}
+.tl-axis{position:relative}
+.tl-axis::before{
+  content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
+  transform:translateX(-50%);background:var(--line-strong);
+}
+.tl-dot{
+  display:block;margin:9px auto 0;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--accent);
+  position:relative;z-index:1;box-sizing:content-box;
+}
+.tl-body{padding:0 0 36px 22px}
+.tl-body h4{margin-top:0;font-family:var(--serif);font-size:17.5px;font-weight:700}
+.tl-body p{font-size:14.5px;line-height:1.8;margin:8px 0;max-width:none}
+.tl:last-child .tl-body{padding-bottom:8px}
+
+/* ===== 图表容器 ===== */
+.chart-card{
+  background:var(--card);border:1px solid var(--line);
+  padding:22px 22px 12px;margin:22px 0;
+}
+.chart-title{font-family:var(--serif);font-weight:700;font-size:16px;margin-bottom:2px}
+.chart-note{font-size:12.5px;color:var(--ink-faint);margin-bottom:8px}
+.chart{width:100%;height:340px}
+
+/* ===== 表格 ===== */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;border:1px solid var(--line-strong)}
+table{width:100%;table-layout:fixed;border-collapse:collapse;background:var(--card);font-size:13.5px;line-height:1.6}
+thead th{
+  background:#F1EEE7;font-weight:700;text-align:left;
+  padding:10px 12px;border-bottom:2px solid var(--line-strong);
+  font-size:13px;vertical-align:bottom;word-break:break-word;
+}
+tbody td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;word-break:break-word}
+tbody tr:last-child td{border-bottom:0}
+td.lv{font-family:var(--serif);font-weight:700;color:var(--accent)}
+
+/* ===== 五层结构图 ===== */
+.stack{margin:24px 0;border:1px solid var(--line-strong);background:var(--card)}
+.stack-row{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line)}
+.stack-row:last-child{border-bottom:0}
+.stack-lv{
+  font-family:var(--serif);font-weight:700;padding:16px 14px;
+  display:flex;align-items:center;font-size:15px;
+}
+.stack-body{padding:14px 18px;border-left:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
+.stack-body b{color:var(--ink)}
+.lv-user{background:#EFE4E2}.stack-lv.user{color:var(--accent-deep)}
+.lv-dist{background:#F2EEE7}.stack-lv.dist{color:#6B5D4E}
+.lv-app{background:#ECEEEA}.stack-lv.app{color:#3F5A45}
+.lv-model{background:#E8EBEE}.stack-lv.model{color:#34495E}
+.lv-infra{background:#E7E3DE}.stack-lv.infra{color:#4A4038}
+.stack-flow{
+  font-size:12.5px;color:var(--ink-faint);padding:10px 18px;
+  border-top:1px dashed var(--line-strong);background:#FBF9F3;
+}
+
+/* ===== 剧本卡片 ===== */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.card{
+  background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);
+  padding:18px 18px 14px;
+}
+.card.c2{border-top-color:var(--ink-soft)}
+.card.c3{border-top-color:#5C7A5A}
+.card-tag{font-size:12px;letter-spacing:.1em;color:var(--ink-faint);margin-bottom:6px}
+.card h4{font-family:var(--serif);font-size:16.5px;margin:0 0 10px;line-height:1.4}
+.card p{font-size:13.5px;line-height:1.75;margin:8px 0;max-width:none}
+
+/* ===== 来源 ===== */
+.src-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px;margin-top:16px}
+.src-block h5{font-family:var(--serif);font-size:15px;margin:18px 0 6px;color:var(--accent-deep)}
+.src-block ul{list-style:none}
+.src-block li{
+  font-size:13px;color:var(--ink-soft);padding:4px 0 4px 14px;position:relative;
+  line-height:1.6;word-break:break-all;
+}
+.src-block li::before{content:'';position:absolute;left:0;top:13px;width:6px;height:1px;background:var(--ink-faint)}
+.src-block a{color:var(--ink-soft)}
+.method-note{
+  margin-top:26px;padding:16px 18px;background:#F1EEE7;font-size:13.5px;color:var(--ink-soft);
+  border-left:3px solid var(--line-strong);
+}
+.foot{margin-top:60px;padding-top:20px;border-top:1px solid var(--line-strong);
+  font-size:12.5px;color:var(--ink-faint)}
+
+/* ===== 响应式 ===== */
+@media (max-width:820px){
+  .wrap{padding:36px 18px 64px}
+  .tl{grid-template-columns:84px 22px 1fr}
+  .tl-body{padding-left:14px}
+  .cards{grid-template-columns:1fr}
+  .src-grid{grid-template-columns:1fr}
+  .chart{height:300px}
+  table{min-width:680px}
+  .stack-row{grid-template-columns:84px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== 刊头 ===== -->
+  <header class="masthead">
+    <div class="mast-meta">
+      <span>研究时间 2026-10-04</span>
+      <span>领域 · AI 商业化与商业模式</span>
+      <span>研究对象 · 概念（商业模式结构）</span>
+      <span>方法 · 横纵分析（HV）</span>
+    </div>
+    <h1 class="title">AI赚钱产业链：<br><span class="title-red">五层结构</span>的横纵分析</h1>
+    <p class="mast-sub">把「智能」从实验室里的烧钱技术，变成一门门真实生意的完整链条——最底层卖算力与硬件，往上卖模型能力、卖产品体验、倒卖额度，最上面离人最近：自媒体、数字产品、社群陪跑、代做服务、数据标注。</p>
+  </header>
+
+  <!-- ===== 一、一句话定义 ===== -->
+  <section id="s1">
+    <div class="sec-head">
+      <div class="sec-num">壹</div>
+      <h2 class="sec-title">一句话定义</h2>
+    </div>
+    <p>AI 赚钱产业链，是把「智能」从实验室里的烧钱技术，变成一门门真实生意的完整链条。最底层是卖算力与硬件的<strong>基建层</strong>，往上是卖模型能力的<strong>模型层</strong>，再往上是卖产品体验的<strong>应用层</strong>，接着是钻规则空子倒卖额度的<strong>分销层</strong>，最上面是离人最近的<strong>用户层</strong>——自媒体、数字产品、社群陪跑、代做服务、数据标注。</p>
+    <p>这五层不是五个孤立的行业，而是一条「钱逐层长出来」的流水线。每一层赚的钱，都来自上一层没做透、或者懒得去做的事。研究清楚这五层各自怎么赚钱、谁在抽谁的血、护城河在哪里，就基本看懂了今天 AI 产业链上所有的钱。</p>
+  </section>
+  <!-- ===== 二、纵向分析 ===== -->
+  <section id="s2">
+    <div class="sec-head">
+      <div class="sec-num">贰</div>
+      <h2 class="sec-title">纵向分析：从算力到流量，AI 商业化的十年演进</h2>
+    </div>
+    <p class="sec-lead">纵轴追踪 2015—2026 年这条链怎么一层层长出来：每一层都诞生于上一层的过剩或缝隙。</p>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段一</span><span class="yr">2015—2016</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>世界第一次相信「算力可以买到智能」</h4>
+        <p>2016年3月9日，首尔四季酒店，AlphaGo 与李世石的第一局棋，全球超过 2 亿人围观（来源：DeepMind 官网）。那场 4:1 的对局奖金是 100 万美元，但它真正定价的是另一件事：人类第一次在大众层面相信，机器可以通过「大量计算」获得某种接近智能的东西——<strong>算力可以买到智能</strong>。</p>
+        <p>同年10月4日，Google 在 Pixel 发布会上宣布从 mobile-first 转向 AI-first，皮查伊原话是「evolving from mobile-first to an AI-first world」（来源：blog.google）。这段历史最大的遗产不是哪款产品，而是一个信念：智能是可以被买到的商品，而卖「算力」就是卖「智能的原材料」。后来英伟达 5.64 万亿美元市值的种子，种在这里。</p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段二</span><span class="yr">2017—2020</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>范式确立，「按 token 卖模型」成为一门生意</h4>
+        <p>2017年6月12日，八位 Google Brain 研究员把《Attention Is All You Need》挂上 arXiv（arXiv:1706.03762）。此后的故事都是它的注脚——2018年10月 BERT（Base 1.1 亿参数、Large 3.4 亿参数，刷掉 11 项 NLP 纪录）；2019年2月14日 GPT-2（15 亿参数）；2020年6月11日 GPT-3 落地（1750 亿参数）。</p>
+        <p>真正的商业化转折是 2019年7月22日：微软宣布向 OpenAI 投资 10 亿美元，并让 Azure 成为其独家云供应商（来源：news.microsoft.com）——第一次「模型公司 + 云公司」以股权和算力互相锁死。2020年6月 GPT-3 开放 API，是「按 token 卖模型」的起点，今天所有 API 计费、分销层的中转生意都从这一刻长出来。</p>
+        <p class="judg"><p>2020 年之前，AI 产业链只有两层半——卖算力的（英伟达）、卖模型的（OpenAI 们），和一小撮给企业做项目的咨询公司。应用层、分销层、用户层都还不存在，因为它们都在等一个让普通人愿意掏钱的产品。</p></p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段三</span><span class="yr">2021—2022</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>产品破土，ChatGPT 点燃一切</h4>
+        <p>2021年1月5日 DALL·E 发布（120 亿参数文生图）；6月29日 GitHub Copilot 开放技术预览——「模型能力包装成订阅制开发工具」的第一次完整演示，一个月 10 美元（后涨到 20 美元）。2022年8月22日 Stable Diffusion 把权重直接开源，C 端 AI 绘图热潮从这一刻开始。</p>
+        <p>然后是 2022年11月30日。ChatGPT 以 research preview 上线（跑 GPT-3.5），发布后 5 天注册破 100 万；到 2023年1月底月活约 1 亿——UBS 估计这是消费级产品史上最快的 adoption 曲线，比 TikTok 还快（来源：UBS 报告，2023-02）。差别在「壳」：GPT-3 只有 API，ChatGPT 第一次把模型塞进普通人能直接对话的界面——<strong>对话即产品</strong>，应用层这个概念那天就诞生了。2023年1月23日，微软追加约 100 亿美元投资 OpenAI（英国 CMA 文件显示累计投入超 130 亿）。</p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段四</span><span class="yr">2023</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>投资狂潮与「卖铲子」叙事</h4>
+        <p>2023年3月14日 GPT-4 发布、多模态；OpenAI 估值一年内跳两次：2023年4月约 290 亿美元（tender offer），10月约 800 亿。5月30日英伟达盘中市值首次突破 1 万亿美元（当天收盘约 9920 亿，正式收盘破万亿在后续交易日，来源：Fortune）。「淘金热里卖铲子最赚钱」在这一年彻底确立——2023 年英伟达股价翻三倍，而绝大多数 AI 应用公司还在烧钱。</p>
+        <p>Stanford HAI 注脚：2024 全年全球企业 AI 投资 2523 亿美元，生成式 AI 私人投资 339 亿美元（同比 +18.7%，是 2022 年的 8.5 倍）；其中美国 1091 亿、中国 93 亿。2025 年全球私人 AI 投资约 5810 亿美元，美国 2859 亿、中国 124 亿，生成式 AI 私人投资同比再增约 200%（来源：Stanford AI Index 2025）。</p>
+        <p class="judg"><p>2023 是「信仰定价」的一年：市场为「AI 一定会改变世界」付钱，而不是为「AI 已经赚到钱」付钱。这个信仰撑起了英伟达的万亿市值，也撑起了 OpenAI 的 800 亿估值。</p></p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段五</span><span class="yr">2024</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>应用爆发，模型层开始打价格战</h4>
+        <p>2024年2月15日 Sora 公布 60 秒文生视频 demo；3月 Cognition 放出 Devin（自称「首个 AI 软件工程师」），demo 视频 72 小时播放破 2000 万，4月融 1.75 亿、估值 20 亿。</p>
+        <p>但最被低估的事件在中国 API 价格战：5月11日智谱 GLM-3 Turbo 降价 80%（5 元降到 1 元每百万 tokens）；5月15日字节豆包 pro-32k 打到 0.0008 元每千 tokens，比行业均价低 99.3%——「以厘计价」时代开启；5月21日阿里 Qwen 降价 97%、百度文心直接免费。一年内通义累计降价 97%，DeepSeek-V2 把输入打到 1 元每百万 tokens。信号意义：模型能力不再是利润中心，变成获客入口。</p>
+        <p>同一时期一级市场为「分发与品牌」付钱：2024年10月2日 OpenAI 完成 66 亿美元融资、投后 1570 亿（Thrive 领投、英伟达与微软参投）；Anthropic 从 2024年3月 184 亿涨到 11月 410 亿以上。</p>
+        <p class="judg"><p>2024 年完成两件事——中国把模型的边际成本打了下来（为分销层提供温床），美国把模型的资本市场定价打了上去（为军备竞赛续燃料）。</p></p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段六</span><span class="yr">2025</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>DeepSeek 冲击与 Agent 元年</h4>
+        <p>2025年1月20日 DeepSeek R1 开源，论文声称训练成本约 557.6 万美元。一周后 1月27日，英伟达单日市值蒸发 5890 亿美元、股价跌 17%，创美股史上最大单日市值损失，纳指跌 3.1%（来源：Nasdaq；CGTN 写「近6000亿」，本报告取 5890 亿口径）——「卖铲子」叙事第一次被正面质疑。但同日（1月21日）特朗普在白宫宣布 Stargate：4 年投 5000 亿、首期 1000 亿，OpenAI、软银、甲骨文、MGX 参与。便宜模型没有减少算力总需求，反而把蛋糕做大。</p>
+        <p>「Agent 元年」：3月6日 Manus 邀请码内测，邀请码一度炒到 1 万美元以上；4月 Benchmark 投 7500 万、估值 5 亿；12月17日 ARR 破 1 亿（8 个月从 0 到 1 亿）；12月29日 Meta 宣布 20 亿+美元收购。AI 编程最硬：Cursor 6月5日 C 轮 9 亿、投后 99 亿、ARR 破 5 亿；11月13日 D 轮 23 亿、投后 293 亿。OpenAI 3月完成 400 亿融资、投后 3000 亿；Anthropic 3月 E 轮 615 亿、9月 F 轮 130 亿、投后 1830 亿。ChatGPT 周活年底破 8 亿、企业客户破 100 万。2025年11月3日 Michael Burry 的 13F 显示重仓做空英伟达与 Palantir，put 合约约 11 亿美元、占组合 80%。</p>
+        <p class="judg"><p>2025 年把产业链撕成两半——一半继续相信「智能可以买到」（Stargate、英伟达、云厂商），一半开始怀疑「智能的定价是否过高」（DeepSeek、Burry）。钱悄悄流向第三类东西：能把活干完的 Agent。</p></p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-time"><span class="stage">阶段七</span><span class="yr">2026</span></div>
+      <div class="tl-axis"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>资本化冲刺，电力成为新瓶颈</h4>
+        <p>中国大模型集体冲进二级市场：1月8日智谱以 2513.HK 上市，发行价 116.2 港元、超购 1159 倍；1月9日 MiniMax 以 00100.HK 上市、首日涨 109%；6月22日智谱市值破 1 万亿港元。月之暗面：2月破 100 亿、5月7日破 200 亿、7月30日 F 轮 35 亿投后 350 亿、9月3日秘密递表港交所、Pre-IPO 投前 500 亿。</p>
+        <p>美国数字游戏更夸张：3月31日 OpenAI 完成 1220 亿融资、投后 8520 亿（史上最大单轮，ChatGPT 周活超 9 亿、付费订阅超 5000 万）；9月15日 FT 报道商谈 1.2 万亿估值。Anthropic 2月 G 轮投后 3800 亿，5月28日 H 轮 650 亿、投后 9650 亿，6月交 S-1；4月 Amazon 追加 50 亿、Google 最高 400 亿，Anthropic 承诺十年内向 AWS 采购超 1000 亿美元算力。英伟达 5月13日盘中破 5.5 万亿（全球首家），10月2日收于约 5.64 万亿（苹果 4.87 万亿、微软 3.84 万亿）。</p>
+        <p>两个新信号：一是「工具被平台收编」——6月16日宣布、8月14日交割，SpaceX 以 600 亿美元全股票收购 Cursor（ARR 超 40 亿），独立 AI 应用的天花板首次被如此明确展示（多源转引，SpaceX 官方未发公告）。二是「电」取代「芯片」成为瓶颈叙事主角：博通 CEO Hock Tan 敢给 FY2028 年 2300 亿美元 AI 芯片展望，约束在数据中心场址与晶圆/基板/HBM 供应；美国数据中心用电负荷从 2023 年 23 GW 涨到 2026 年约 42 GW，机构预测 2030 年 134.4 GW；微软与 Constellation Energy 签下三里岛 835 MW 二十年供电协议。9月23日 Meta Connect 发布 349 美元 Ray-Ban Meta Audio 无摄像头 AI 眼镜。</p>
+      </div>
+    </div>
+
+    <h3>纵轴小结：每一层都是从上一层「长」出来的</h3>
+    <p>把十年压缩成一句话：<strong>钱沿着「卖算力 → 卖模型 → 卖应用 → 卖额度 → 卖服务」的路径逐层下渗，每一层都诞生于上一层的过剩或缝隙。</strong></p>
+    <p>卖算力（2015—2019）→ 卖模型（2019—2022）→ 卖 C 端应用与流量（2022—2023）→ 卖额度与套利（2024）→ 卖 Agent 与工作流（2025）→ 卖内容、服务、硬件与资本市场门票（2026）。「卖铲子」本身也分三层：物理铲子（英伟达、台积电、SK 海力士）、电力铲子（Vertiv、Vistra、Stargate 数据中心）、云铲子（Azure 分销 OpenAI、AWS 绑定 Anthropic 千亿云消费、Google Cloud 一边投 Anthropic 一边做 Gemini）。</p>
+
+    <!-- 图1：英伟达市值 vs OpenAI 估值 -->
+    <div class="chart-card">
+      <div class="chart-title">英伟达市值与 OpenAI 估值：两条曲线的斜率对比（亿美元）</div>
+      <div class="chart-note">数据点按本报告正文口径取整标注；单轴同尺度，不做双轴。英伟达 = 市值，OpenAI = 投后/商谈估值。</div>
+      <div id="chart1" class="chart"></div>
+    </div>
+  </section>
+  <!-- ===== 三、横向分析 ===== -->
+  <section id="s3">
+    <div class="sec-head">
+      <div class="sec-num">叁</div>
+      <h2 class="sec-title">横向分析：五层结构，2026年10月的横截面</h2>
+    </div>
+
+    <h3>3.1 五层全景：一张表看全产业链</h3>
+    <div class="tbl-wrap">
+      <table>
+        <colgroup>
+          <col style="width:8%"><col style="width:21%"><col style="width:15%"><col style="width:14%"><col style="width:19%"><col style="width:12%"><col style="width:11%">
+        </colgroup>
+        <thead>
+          <tr><th>层级</th><th>核心玩家</th><th>卖什么</th><th>商业模式</th><th>赚钱逻辑</th><th>进入门槛</th><th>主要风险</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lv">基建层</td>
+            <td>英伟达、AMD、博通、台积电、SK海力士、中际旭创、Vertiv、电力公司</td>
+            <td>芯片、HBM、光模块、液冷、数据中心、电</td>
+            <td>卖硬件+产能，B端批发</td>
+            <td>卡住不可替代的瓶颈，赚超额毛利</td>
+            <td>极高（资本+技术双壁垒）</td>
+            <td>算力需求不及预期、AI泡沫破裂</td>
+          </tr>
+          <tr>
+            <td class="lv">模型层</td>
+            <td>OpenAI、Anthropic、DeepSeek、Kimi、智谱、Google、Meta</td>
+            <td>模型能力（订阅+API）</td>
+            <td>订阅制+按量计费</td>
+            <td>垄断前沿能力，资本输血换份额</td>
+            <td>极高（烧钱+人才）</td>
+            <td>军备竞赛烧穿现金流、被开源打穿</td>
+          </tr>
+          <tr>
+            <td class="lv">应用层</td>
+            <td>ChatGPT、Claude、Cursor、Manus、LibTV、YouMind、RunningHub、TapNow</td>
+            <td>产品体验（对话、工作流、创作）</td>
+            <td>订阅+按量 credits</td>
+            <td>流量×场景，把模型能力打包溢价卖</td>
+            <td>中（技术低，流量高）</td>
+            <td>模型厂商自带应用碾压、同质化</td>
+          </tr>
+          <tr>
+            <td class="lv">分销层</td>
+            <td>孙宇晨 B.AI、EasyRouter、各大中转站、合租卖家</td>
+            <td>模型额度的转售与中转</td>
+            <td>订阅拆卖+API 中转赚差价</td>
+            <td>赚订阅与 API 的差价、汇率差</td>
+            <td>低（一天搭一个站）</td>
+            <td>官方风控、监管、价格差被焊死</td>
+          </tr>
+          <tr>
+            <td class="lv">用户层</td>
+            <td>卡兹克、影视飓风、生财有术、闲鱼卖家、数据标注公司、FDE</td>
+            <td>内容、课程、数字产品、社群、代做服务</td>
+            <td>卖内容/卖课/卖服务/卖注意力</td>
+            <td>流量×信任变现，离人最近</td>
+            <td>低（几乎无门槛）</td>
+            <td>供给无限、价格地板、割韭菜污名</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>先给结论：这张表从左往右，门槛递减、玩家数量递增、单客收入递减，但「离钱的距离」递增——最上层的人离用户最近，最底层的人离钱最近。</p>
+
+    <!-- 五层结构图 -->
+    <div class="stack" aria-label="五层结构示意图">
+      <div class="stack-row lv-user">
+        <div class="stack-lv user">用户层</div>
+        <div class="stack-body"><b>离人最近，钱最碎</b> · 自媒体 / 数字产品 / 教培社群 / FDE·代做 / 数据标注 —— 定价权来自流量与信任</div>
+      </div>
+      <div class="stack-row lv-dist">
+        <div class="stack-lv dist">分销层</div>
+        <div class="stack-body"><b>钻规则空子</b> · 订阅拆卖 + API 中转赚差价 —— 抽模型层的血，干应用层的活</div>
+      </div>
+      <div class="stack-row lv-app">
+        <div class="stack-lv app">应用层</div>
+        <div class="stack-body"><b>卖产品体验</b> · harness（对话/工作流/创作）—— 头顶悬着模型厂商自带应用这把刀</div>
+      </div>
+      <div class="stack-row lv-model">
+        <div class="stack-lv model">模型层</div>
+        <div class="stack-body"><b>卖智能</b> · 订阅制 + 按 token 计费 —— 亏损换份额、资本输血续命</div>
+      </div>
+      <div class="stack-row lv-infra">
+        <div class="stack-lv infra">基建层</div>
+        <div class="stack-body"><b>离钱最近</b> · 芯片 / HBM / 光模块 / 液冷 / 电 —— 唯一对五层都有定价权的层</div>
+      </div>
+      <div class="stack-flow">层间关系：模型厂自带 harness 挤压应用层；应用层把 API 打包加价（模型的分销商、分销的竞争者）；用户层给模型层供标注养料、也买它的订阅，而模型层正在用 AI 取代底层标注工——养料和食客是同一物种。</div>
+    </div>
+
+    <h3>3.2 基建层：离钱最近的一层，蓝领就业的真相</h3>
+    <p><strong>今天的赚钱格局，一句话：越卡在瓶颈上越赚钱。</strong></p>
+    <p>英伟达：截至 2026年7月26日的季度总营收 962 亿美元、同比 +106%，其中数据中心 890 亿、同比 +117%，毛利率 75%；市值 10月2日约 5.64 万亿美元全球第一，董事会追加 1500 亿美元回购；2026 上半年累计营收 1778 亿美元，几乎追平 FY2026 全年 2159 亿（来源：NVIDIA 官方新闻稿）。</p>
+    <p>台积电：2026 Q2 营收约 402 亿美元、同比 +33.7%，毛利率 67.7%、营业利润率 60.3%，AI 加速器占营收约 66%；CoWoS 先进封装月产能从 2024 年底 3.5 万片扩到 2026 年底目标 12—14 万片，2026 资本开支上调到 600—640 亿美元（来源：TSMC 官方、AInvest、INDmoney）。</p>
+    <p>SK 海力士：2026 Q2 营业利润率 76%——一家做内存的公司，利润率压过绝大多数软件公司。HBM 全球市场 2026 年预测 546 亿美元、同比 +58%，SK 占 50%、三星 32%、美光 18%，三家 2026 年产能全部售罄（来源：SK hynix Newsroom、Counterpoint）。</p>
+    <p>中际旭创：2026 上半年营收 417.78 亿元、同比 +182%，归母净利 136.51 亿元、同比 +242%，净利率 35.3%（来源：公司半年报、证券时报）。Vertiv：2025 全年净销售额 102 亿美元、同比 +28%，调整后经营利润率 20.4%，积压订单约 150 亿，Q4 有机订单增速 +252%（来源：Vertiv 2025 Shareholder Letter）。</p>
+
+    <div class="chart-card">
+      <div class="chart-title">基建层盈利能力阶梯（%）</div>
+      <div class="chart-note">口径不同（毛利率 / 营业利润率 / 净利率 / 经营利润率），已在轴标签逐家注明，仅作量级对照。</div>
+      <div id="chart2" class="chart"></div>
+    </div>
+
+    <p><strong>需求侧的燃料是云厂商的资本开支。</strong>微软 2026 财年资本开支约 1900 亿美元（从 1200 亿上调），Alphabet 1950—2050 亿，亚马逊约 2200 亿，Meta 1300—1450 亿——四家合计约 7200—7450 亿美元，比 2025 年约 4100 亿增长约 78%（来源：财新、FinanceBuzz、yieldtheory 追踪）。</p>
+
+    <div class="chart-card">
+      <div class="chart-title">四大云厂商 2026 财年资本开支（亿美元）</div>
+      <div class="chart-note">区间值取中点标注：Alphabet 取 1950—2050 亿中值 2000；Meta 取 1300—1450 亿中值 1375。</div>
+      <div id="chart3" class="chart"></div>
+    </div>
+
+    <p><strong>轮动叙事在过去两年被反复验证。</strong>GPU（英伟达）→ HBM（SK 海力士利润率从 41% 飙到 76%）→ 光模块（中际旭创净利 +242%）→ 液冷/电力设备（Vertiv 2026年3月入标普500）→ 核电/电网（Constellation Energy，微软签下三里岛 835 MW 二十年协议）。2026 年瓶颈叙事从「芯片不够」切到「电不够」。</p>
+
+    <h4>关于蓝领就业：这层最需要祛魅的命题</h4>
+    <p>结论先行：AI 基建确实大量雇用蓝领，但雇的几乎全是「临时建筑技工」，不是「稳定运维岗」；当前主要矛盾是「缺人」，不是「创造就业」。美国劳工统计局预测含数据中心运营的行业 2025—2035 年增长 25.1%（远高于全经济 3.5%）；但 USC/Hamm Institute 现场用工模型（2025年12月）显示：高度自动化超大规模园区（&gt;100 MW）建成后每 100 MW 只需 20—30 个常驻运维，标准情景下全美数据中心运维全职岗位到 2030 年才累计约 5 万个、年新增峰值约 6000 个（2028年）。</p>
+    <p>真正的蓝领红利在建筑工地，但是项目制、两三年一波：Meta 路易斯安那 2000 MW 园区 5000+ 峰值建筑工人；OpenAI Stargate 德州 Abilene 4500 MW 项目 6000+ 日工人；亚马逊印第安纳 110 亿美元项目 1000+ 建筑与运营岗。AGC 2026 劳动力调查：做数据中心建筑的公司里 81% 反映电工招不满、机工 79%、HVAC 77%、混凝土工 76%；JLL 估计到 2030 年美国可能缺 210 万技工；转入数据中心的专业技工薪资上浮 25—30%。芯片厂线：台积电亚利桑那厂已雇 3500+ 人，三座厂建成后约 6000 个直接高科技岗、累计带来 2 万+ 建筑岗。国内：低端是芜湖、济南 4000—10000 元/月机房巡检倒班岗；高端「千卡 GPU 集群/IB 无损网络 L2 运维经理」上海给到 50—80k×15 薪（来源：USC/Hamm Institute、AGC、JLL、Sutherland Institute 等）。</p>
+    <p class="judg"><p>基建层的就业结构是「建筑技工盛宴、运维白领薄利、芯片巨头暴利」。它不会把大量普通人变成中产，但确实在短期内把电工、管道工的工资打上去了——这已是蓝领在 AI 时代能拿到的最大红利。</p></p>
+
+    <h3>3.3 模型层：卖智能的人，把定价权攥在最贵的地方</h3>
+    <p>模型层是五层里「账面数字最大」的一层，也是最烧钱的一层。2026年10月的玩家格局：</p>
+    <div class="tbl-wrap">
+      <table>
+        <colgroup>
+          <col style="width:10%"><col style="width:24%"><col style="width:24%"><col style="width:14%"><col style="width:16%"><col style="width:12%">
+        </colgroup>
+        <thead>
+          <tr><th>公司</th><th>估值</th><th>营收/ARR</th><th>订阅定价</th><th>API 定价</th><th>来源/时间</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lv">OpenAI</td>
+            <td>投后 8520 亿美元（1220 亿轮，2026-03-31）；9月商谈 1.2 万亿</td>
+            <td>2023年 20 亿 → 2024年 60 亿 → 2025年 200 亿+美元；2026-08 中年化 run-rate 破 400 亿</td>
+            <td>Free / Go $8 / Plus $20 / Pro $100—200</td>
+            <td>按量分档</td>
+            <td>OpenAI 官方；证券时报 2026-04；ventureatlas 2026-10</td>
+          </tr>
+          <tr>
+            <td class="lv">Anthropic</td>
+            <td>投后 9650 亿美元（H 轮 650 亿，2026-05-28，全球最贵私有 AI）；6月交 S-1</td>
+            <td>ARR：2026-02 约 140 亿 → 05 约 470 亿 → 07 底破 650 亿美元</td>
+            <td>Free / Pro $20 / Max $100—200</td>
+            <td>按量，上架 AWS/GCP/Azure</td>
+            <td>anthropic.com；证券时报 2026-08</td>
+          </tr>
+          <tr>
+            <td class="lv">DeepSeek</td>
+            <td>2026 年中首轮外部融资约 500 亿元人民币，投后约 450—500 亿美元</td>
+            <td>无公开营收</td>
+            <td>无 C 端订阅，主走 API</td>
+            <td>deepseek-chat 输入 0.5/2 元、输出 8 元每百万 tokens（2026-08-17 V4 高峰输出涨至 27 元）</td>
+            <td>api-docs.deepseek.com；新浪财经 2026-08</td>
+          </tr>
+          <tr>
+            <td class="lv">Kimi 月之暗面</td>
+            <td>F 轮投后 350 亿美元（2026-07-30）；G 轮(Pre-IPO)投前 500 亿；9-03 秘密递表港交所</td>
+            <td>未披露</td>
+            <td>具体档位暂缺</td>
+            <td>按量</td>
+            <td>财联社、36氪、证券时报 2026</td>
+          </tr>
+          <tr>
+            <td class="lv">智谱 GLM</td>
+            <td>港股 2513.HK，市值 2026-06 一度破 1 万亿港元</td>
+            <td>2025 营收 7.24 亿元(+132%)、亏 47.18 亿；2026H1 营收 9.54 亿(+约400%)，API 占 86.5%</td>
+            <td>GLM Coding Plan Lite/Pro/Max</td>
+            <td>按量，平台毛利率从 2024 年 3% 升到 2026-03 的 18.9%</td>
+            <td>财新 2026-06；证券时报 2026-09</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>两种收费模式的商业逻辑，是理解这层的关键。</strong>订阅制的本质是「用量封顶打包」：把重度用户的边际推理成本装进月费，轻度用户补贴重度用户。Claude Pro 一个月 20 美元，但重度编程用户按 API 折算月消耗可轻松破百美元——所以 Anthropic 推 Max $100—200 档承接。API 计费按 token 计量，毛利取决于推理成本的压价能力，这就是 Anthropic 绑亚马逊 Trainium、OpenAI 自建算力的原因。Manus 自己不训模型，Starter $39/月（3900 credits）、Pro $199/月（19900 credits）——本质是替用户把 Claude/GPT 的 API 账单「打包再加价」，应用层赚的就是这个打包差。</p>
+    <p><strong>中国模型层的价格战走了完整的弧线。</strong>2024年5月 DeepSeek-V2 输入打到 1 元每百万 tokens，当月智谱、字节、阿里、百度、讯飞、腾讯全部跟进，降幅 80—97%；一年内通义累计降价 97%、豆包低至 0.0008 元每千 tokens。2025年2月26日 DeepSeek 夜间错峰再降 75%。转折点在 2025年8月：36氪统计 17 家厂商里超七成开始涨价，DeepSeek 从 9月6日起最低调用价反升约 50%；2026年8月17日 DeepSeek V4 高峰输出价涨到此前的 4.5 倍，智谱一年内三次涨价——从「卷低价」转向「K 型分化」（来源：36氪 2025-08-24；ChinaBizInsight 2026-08-29）。</p>
+    <p class="judg"><p>模型层是「亏损换份额、资本输血续命」的重资产游戏，估值曲线远陡于营收曲线。OpenAI 8520 亿、Anthropic 9650 亿的估值赌的是推理成为水电煤；中国模型公司的出路是开源（DeepSeek）+ 港股证券化（智谱、MiniMax、月之暗面）。</p></p>
+    <h3>3.4 应用层：技术同质化的时代，流量比技术贵</h3>
+    <p>先说清楚概念：<strong>harness</strong> 是模型外层的壳——对话界面、工作流、工具调度、账号体系，用户真正「摸到」的东西。模型厂商自己做 harness（ChatGPT、Claude、Gemini、豆包、Kimi），掌握流量入口和模型本体；第三方应用（Cursor、Manus、YouMind、LibTV、RunningHub、TapNow）不训模型，靠场景深度和产品体验立足。</p>
+    <p>流量格局：a16z 2026年3月榜单（SimilarWeb+SensorTower 口径）——ChatGPT 周活约 9 亿居首，是第二名 Gemini 的 2.7 倍，其后是 Perplexity、Claude、Canva；ChatGPT 与 Claude 用户重叠仅 11%，说明「模型是模型、用户是用户」，换壳成本极低。中国团队在移动端 Top50 里占了近半（来源：a16z.news，2026-03-09）。</p>
+    <h4>明星玩家的生意模式</h4>
+    <p><strong>Manus（蝴蝶效应）</strong>——把「套壳」做成现象级生意。2025年3月靠邀请码排队爆火，不自研模型；4月 Benchmark 领投 7500 万美元、估值 5 亿；12月17日 ARR 破 1 亿（8 个月从 0 到 1 亿）；12月29日 Meta 宣布 20 亿+美元收购，并入广告体系后日收入从 30 万美元涨到 150 万。转折在 2026年4月：中国发改委以国家安全审查禁止该收购——2021 年《外商投资安全审查办法》以来首个被公开叫停的 AI 外资案；7月创始团队按 20 亿美元原价从 Meta 回购，腾讯成为最大外部股东，9月1日恢复独立；9月17日彭博报道 5 亿美元融资将完成、估值翻倍至 40 亿美元，或赴港 IPO，此时 ARR 已达 4—5 亿（来源：36氪 2026-09-18；财新周刊 2026-01-10）。</p>
+    <p><strong>YouMind AI（思维天空）</strong>——玉伯（前阿里前端、前飞书 VP）创办，新加坡主体 MIND MOTOR，2024年12月内测。定位「先攒素材再创作」的项目制创作工作台，Freemium：Free $0（2000 credits）/ Pro $20（20000）/ Max $100（200000）。流量靠创始人个人品牌加排队内测，两个月估值破亿人民币。</p>
+    <p><strong>LibTV（演语科技）</strong>——前身 LiblibAI（哩布哩布），2026年3月上线视频平台：无限画布节点式工作流加 100+ 专业导演沉淀的 Skill，第一天就同时为「人」和「Agent」设计。2026年6月18日完成近 3 亿美元 B+、投后超 20 亿美元（Granite Asia、腾讯、顺为领投）。上线首月单日收入破百万美元，5月月收入达首月 13 倍，集团 ARR 近 3 亿美元、预计年底破 6 亿，2026年5月同比增速超 3000%（来源：爱范儿 2026-06-18）。</p>
+    <p><strong>RunningHub</strong>——ComfyUI 工作流云加模型 API 聚合。运行按秒计费，24G 任务 0.2 RH 币/秒、48G 0.4/秒；注册送 1000、每日登录 100、邀请好友各 500；非订阅约 18000 币/$10、订阅约 40000/$10，独占 GPU $149—239/月；Seedance 2.5 低至 0.21 元/秒，靠「1 亿补贴」拉新（来源：RunningHub 官方页，2026-08）。</p>
+    <p><strong>TapNow</strong>——香港背景 AI 创意画布，节点式编排 35+ 模型（Seedance、Sora2 Pro、VEO3.1、Kling3.0），免费层加 Basic 约 $9/月、Max 约 $432/月。它与影视飓风合作的 49 元引流课（13 万付费用户）是教科书级漏斗：低价课做入口，订阅做出口。底座层还有 Coze/Dify：扣子（字节）海外 Lite $9、Premium $19/月；Dify 开源（Apache-2.0）自托管免费。</p>
+    <p><strong>「流量&gt;技术」被反复验证，但要打个补丁。</strong>靠流量起量的：Manus 不训模型照样 8 个月 ARR 破亿；RunningHub 靠邀请送币和 1 亿补贴买量。反例同样清晰：Cursor 不卷模型、卷开发者工作流深度，ARR 从 2025年1月的 1 亿涨到 2026年5月约 40 亿，企业客户占 75%，超过 70% 的财富 1000 强在用（来源：valueaddvc 2026-06）。流量是放大器，不是发动机；真正的发动机是「场景深度×分发渠道」的乘积。</p>
+    <p class="judg"><p>应用层的钱分两种——赚「打包差价」的钱（Manus、RunningHub）和赚「场景溢价」的钱（Cursor、LibTV）。前者靠流量、天花板是流量成本，正在被模型厂自带应用和分销层两头夹击；后者才是应用层活下来的方向。</p></p>
+
+    <h3>3.5 分销层：钻规则空子的生意，缝隙正在被焊死</h3>
+    <p>分销层存在前提很简单：模型厂商的订阅价和 API 价之间、不同区域之间存在缝隙，有人钻进去倒卖赚差价。</p>
+    <p><strong>技术底座已完全开源化。</strong>国内中转站底层几乎全是两个开源项目：one-api（songquanpeng，MIT，GitHub 约 2.9 万星）和二开版 new-api（QuantumNous，AGPL-3.0，约 4.9 万星）。掘金从业者原话：市面上 80% 以上商业中转站底层都是 one-api 或其衍生版本，只是套了个壳（来源：掘金，2026-05）。技术壁垒为零，价格战必然发生。</p>
+    <p><strong>名人下场是油水最大的证据，也是草根模式的丧钟。</strong>2026年5月1日孙宇晨推出 AI 中转站 B.AI，口号「一个 API Key = Claude + GPT + Gemini + 国产大模型全系列」，核心卖点是「无身份」——TRON 链钱包登录、USDT 结算、免注册免信用卡免 KYC；孙宇晨自称每天补贴 10 万元加 100 亿 Token，5月7日宣布注册用户破 170 万（来源：36氪《Token贩子的盛宴》2026-05-25；每日经济新闻）。TRON 网络截至 2026年4月有 3.76 亿账户、860 亿美元 USDT 流通量。同一周傅盛上线 EasyRouter（全场 8.5 折、40+ 模型），特朗普家族旗下 WLFI 上线同形态 WorldClaw——36氪拆解为「四层收割」：API 差价、强制 USD1 稳定币结算、锁仓 WLFI 代币换积分（Pro 档锁 25 万枚）、9999 美元 Max 套餐附海湖庄园晚宴抽签。</p>
+    <p><strong>跨区订阅汇率差套利，红利期已过。</strong>OpenAI 2026年1月16日全球发布三档：Go $8 / Plus $20 / Pro $200。土耳其 Plus 区价格 2026年6月已涨到 ₺9,999.99、约合 21.66 美元——比美区 19.99 美元还贵 8%（来源：掘金 2026-06-11）。闲鱼代充市场价（2026年7月）：GPT Plus 菲律宾区约 31.5 元/美区 33.9 元，Claude Pro 约 32.7 元，Claude Max 5x 约 177 元。虚拟卡成本：野卡 WildCard 月费 7.99 美元加 3.5% 充值手续费，RDVCC 打包「Plus only」约 20.9 美元/月。一个 Plus 订阅月费 20 美元、代充收 33.9 元人民币——扣掉虚拟卡成本单客毛利可能只有几块钱，靠走量。</p>
+    <p><strong>风控与合规正在收紧。</strong>OpenAI《账户共享政策》2026年9月更新，明确禁止共享账户与转售，多人/多设备/多网络同登即触发可疑活动警报；2026年9月10日起暂停 Pro 200 美元档新订阅。中转站黑幕有实锤：套壳小模型收大模型的钱、Token 虚报（实测某网关收费虚高 62.8%）、截留缓存折扣、Prompt 静默存档后卖给国内大模型公司做 SFT 素材。国内监管侧，国家计算机病毒应急处理中心多次预警，无证中转站涉 IDC/ICP 许可问题。市场规模只有一条存疑数据：「2025 下半年中转站交易量超 10 亿元」出自 36氪单文引述的未具名机构，本报告标注存疑。</p>
+    <p class="judg"><p>分销层的本质是「规则套利」，套利空间由官方定价纪律决定。它作为窗口期生意曾经成立，作为长期职业不成立——会从「信息差套利」滑向「灰产服务」。</p></p>
+
+    <h3>3.6 用户层：离人最近，钱最碎，流量与信任是唯一的定价权</h3>
+    <p>用户层是五层里门槛最低、玩家最多、单客收入最碎的一层。包含四条线：内容与流量（AI 自媒体）、数字产品、教培社群、以及「用 AI 干活」的服务（FDE、freelancer、数据标注）。</p>
+    <h4>AI 自媒体：流量就是货币，但变现路数各不相同</h4>
+    <p>数字生命卡兹克（张仁杰）是中文 AI 圈最完整的变现样本：微博 25 万粉、B 站 1.7 万粉、公众号发文 600+ 篇（来源：36氪 2026-08）；名下虚实传媒签约 160 位 AI 博主，兼任《流浪地球3》AI 顾问、北大校外教师。2026年4月主办 AIFUT 北京亦庄 AI 未来大会——官方口径两天 2000+ 人、3500㎡ 展区 34 个展位（来源：北京市科委 2026-04-09）。变现链是「流量 → MCN 签约博主矩阵 → 政府背书的大会 IP」。</p>
+    <p>影视飓风是单笔变现最硬的案例：2026年7月14日抖音直播间上线 AI 实战课，原价 99 元券后 49 元、16 节 5—17 分钟短课；首日销量破 10 万份、单日收入 490 万+；到7月底全平台超 13 万单、收入超 637 万（来源：36氪 2026-07-21/07-30）。口碑两极，差评集中在「花 49 元看几小时广告」——课程与第三方平台 TapNow 深度绑定，闲鱼随即出现 1.1 元录屏倒卖。本质是头部博主把 AI 工具订阅的分销渠道权变现：49 元的课是钩子，真正的账单在后续 Token 消耗。</p>
+    <p>秋芝2046：B 站 AI 科普 UP 主，定位「工具红黑榜、入门保姆教程」，2026 年初任全网首届「AI 春晚」总导演。用户提到的「炉子 agent」未检索到对应公开信息，标注暂缺。</p>
+    <h4>数字产品：订单海量、客单地板</h4>
+    <p>2026 上半年闲鱼 AI 服务订单 981.6 万、近 500 万人购买（来源：光明网 2026-07-29），但卖家人均月成交只有 897 元，18—35 岁占六成、女性卖家 62.4%。价格带：老照片修复 50 元/单、AI 代做 PPT/文案 20—30 元/单、AI 建站 300—2000 元。面包多收 5% 服务费、支持自动发货；小报童头部专栏「生财有术项目精选」30,517 人订阅、69 元/份，累计约 210 万元（2026-10）。这是「订单海量、单价地板、覆盖广但赚不到大钱」的长尾市场，月入过万属头部极少数。</p>
+    <h4>教培社群：教你赚钱的生意，真假交付一眼可分</h4>
+    <p>生财有术（亦仁，2017 年建）是交付相对最实的标杆：知识星球官方页累计 80,000+ 人付费加入（2026-09）；2025年4月第 9 年「418 活动」迎来第 70,000 名圈友，价格从 2765 元阶梯上调至 3365 元；5 年以上连续在籍老圈友续费 0 元；第三方估算其 1.69 万会员时年门票收入约 2266 万元（非官方）。WaytoAGI（AJ）走相反的路：免费开源知识库，自称 900 万学习者，明码标价「没有 VIP 群、没有付费课」，靠 300 多人共创的 AI 春晚（30+ 节目、播放 200 万+）和 37 城线下切磋大会立住门派（来源：36氪 2026-07-09）。程前朋友圈是争议样本：访谈对象付费上镜（单条「几十万」）、私域会员 2198 元/年、私董会 59,800 元/年约 100 人——光私董会一年约 600 万；2024年1月怼周鸿祎翻车后掉粉，舆论核心质疑是「付费广告伪装成创业访谈」（来源：红星资本局/每经 2024-01）。</p>
+    <p>怎么分辨真假交付？看它卖什么：生财有术卖「可复用的项目信息网络」，有退款机制、老用户免单的续费率逻辑，交付物可被用户带走；程前模式卖「上镜打广告的流量位」，更像广告位出租。凡是「担保你百分百赚钱」的，一定是割韭菜。</p>
+    <h4>FDE：用户层里唯一的重交付、高毛利方向</h4>
+    <p>FDE（Forward Deployed Engineer）源自 Palantir 的职位——工程师驻场到客户公司，把技术嵌进业务流。2026 年走红，是因为企业 AI 试点失败率高达 43%（来源：腾讯研究院/亿欧 2026-09）。岗位数据：Indeed 上 FDE 岗位从 2025年4月的 643 个暴增到 2026年4月的 5,330 个，同比 +729%；LinkedIn 口径 2023—2025 年 FDE 职位增长 42 倍，远超 AI 工程师的 13 倍。薪资：海外底薪中位 21 万美元、总包最高 50 万；OpenAI 开 16.2—28 万/年，Anthropic 20—30 万；国内字节 FDE 专家 3—5 万/月×15 薪、蚂蚁数科 4—6 万/月、智谱 FDE 负责人 6—8 万/月（来源：36氪 2026-09-28）。全球 AI 咨询市场 2025 年 110.7 亿美元、2026 年预计 140.7 亿（Future Market Insights）。</p>
+    <h4>Freelancer 代做与数据标注</h4>
+    <p>Upwork 上提示工程师 35—60 美元/时；Fiverr 入门 gig 20—50 美元；高客单侧出现 2500 美元/次的 Claude Code 工作坊、8000 美元/月的 retainer（来源：Entrepreneur 2026-10）。国内闲鱼对应物就是「人均月成交 897 元」的低价海——同一个「用 AI 干活」的需求，跨境差价高达几十倍。</p>
+    <p>数据标注：Scale AI 2025年6月被 Meta 以 143 亿美元买下 49% 股份、隐含估值 292 亿美元，收入从 2024 年 8.7 亿涨到 2025 年约 20 亿——但 Meta 入股后 OpenAI、Google、xAI 削减合作，2026 年指引回落至约 10 亿（来源：Reuters 等）。普通标注合约岗 18 美元/时（持安全许可 24 美元）；国内 85% 标注员月薪 3—6K（来源：职友集 2026-10）。结构性变化：简单图像标注单价已跌到 3—4 分钱、跌幅超 90%；钱流向「懂业务、懂模型」的评估与 RLHF 岗位——DeepSeek 2025年2月招「AGI 数据百晓生」，月薪 1.5—3 万、实习日薪 500+、本科起步（来源：澎湃 2026-04）。数据标注正从「人力密集型」变成「智能密集型」。</p>
+    <p class="judg"><p>用户层是「无限供给 × 需求分散」的完全竞争市场。唯一的定价权来自流量（卡兹克、影视飓风）和信任（生财有术、FDE）。值得普通人认真投入的只有三条线：做有流量的内容、做重交付的企业服务（FDE 方向）、做标注产业链里「上层」的评估类岗位。</p></p>
+
+    <h3>3.7 层间关系：五层不是金字塔，是互相抽血的生态</h3>
+    <p>把五层放到一起看，真正有意思的不是每一层本身，而是层与层之间的「侵蚀关系」：</p>
+    <p>模型厂商自带 harness，用 ChatGPT、Claude、Gemini 直接挤压第三方应用层——应用层头顶一直悬着这把刀。应用层把模型 API 打包成订阅卖给用户（Manus 把 Claude 账单加价转卖），既给模型层导流，也吃掉差价——它是模型层的分销商，也是分销层的竞争者。分销层钻订阅与 API 的价差，抽的是模型层的血，干的是应用层的活。用户层给模型层供数据标注的养料，也买它的订阅；反过来模型层正在用 AI 取代底层标注工——养料和食客是同一物种。基建层最超然：不管上面哪一层赚不赚钱，每一层都要付算力钱，它是唯一对五层都有定价权的层。</p>
+    <p class="judg"><p>利润像水，往「不可替代」和「离钱近」两头流——一头是基建层的瓶颈芯片，一头是用户层的流量与信任；中间三层（模型、应用、分销）都在互相挤压，谁都没有定价权。这正是整条产业链 2026 年最核心的结构特征。</p></p>
+  <!-- ===== 四、横纵交汇洞察 ===== -->
+  <section id="s4">
+    <div class="sec-head">
+      <div class="sec-num">肆</div>
+      <h2 class="sec-title">横纵交汇洞察：五层结构的深层逻辑与三个未来</h2>
+    </div>
+
+    <h3>4.1 历史回答当下：为什么利润只认两个方向</h3>
+    <p>纵轴讲完十年，横轴看完五层，两个坐标交叉，第一个判断自然浮出来：<strong>这条产业链的利润，只向两个方向流动——「不可替代」和「离钱近」。</strong></p>
+    <p>「不可替代」的一端是基建层。英伟达 75% 的毛利率、SK 海力士 76% 的营业利润率、台积电 67.7% 的毛利率，不是产品卖得贵，而是全球能造的东西只有它们能造：GPU 设计、HBM 堆叠、CoWoS 先进封装。「离钱近」的一端是用户层。卡兹克的大会门票、影视飓风的 49 元课、生财有术的 3365 元年费——共同点是直接向「人」收费，不需要等企业预算、不需要赌技术路线。流量和信任是这里唯一的护城河，而这两样东西恰好无法被模型能力替代。</p>
+    <p>中间的三层全部在互相挤压，因为它们卖的东西本质同源——模型能力——而模型能力正在被开源与价格战快速平权。2024 年中国价格战把 API 打到 0.0008 元每千 tokens，2025 年 DeepSeek 用 557 万美元训练成本打穿「模型必须烧千亿」的信仰，这两件事已经永久性地改写中间三层的定价权。</p>
+
+    <h3>4.2 就业命题的历史视角：蓝领红利是真的，但是项目制的</h3>
+    <p>AI 基建创造的岗位结构与互联网时代完全不同。互联网的物理基建建成后是长寿命资产、运维持续爬坡；AI 基建自动化程度让每 100 MW 只需 20—30 个常驻人员，全美到 2030 年累计才约 5 万个运维岗位。真正的用工高峰在施工期：Meta 的 2000 MW 园区 5000+ 建筑工人，Stargate 的 4500 MW 项目 6000+ 日工人——岗位是真的、薪资是真的（技工溢价 25—30%）、缺人也是真的（81% 公司电工招不满），但它们是项目制的，两三年一波，楼盖完就撤。</p>
+    <p class="judg"><p>AI 基建给蓝领的红利是「脉冲式」的——2026—2028 年给电工、管道工、混凝土工送上一波历史性溢价，然后随建设高峰回落。想抓住这波红利的人，要趁现在，不要等 2030 年。</p></p>
+
+    <h3>4.3 三个剧本：未来三年，这条链会走向哪里</h3>
+    <div class="cards">
+      <div class="card">
+        <div class="card-tag">剧本一 · 最可能</div>
+        <h4>K 型分化，电成为新瓶颈，中国链证券化</h4>
+        <p>模型层继续「头部吃定价权、腰部贴成本卖」；应用层跑出 3—5 个有真实场景深度的龙头（编程、视频、Agent 工作流各一），其余套壳产品批量死亡；基建层瓶颈叙事从芯片切到电，电力、电网、SMR 成为新领涨板块；中国大模型公司完成港股证券化；分销层与教培收缩到灰色合规边界。普通人最现实的入场点仍是用户层：有流量的人、能交付的人、懂场景的人。</p>
+      </div>
+      <div class="card c2">
+        <div class="card-tag">剧本二 · 最危险</div>
+        <h4>泡沫破裂，链条自下而上崩塌</h4>
+        <p>触发点是算力需求增长不及预期——企业 AI 试点 43% 失败率若持续，2027 年云厂商 capex 首次收缩，基建层戴维斯双杀（英伟达从 5.64 万亿回到 2 万亿以下是可能的，Dalio 泡沫指标 75 分、Burry 11 亿做空仓位都不是玩笑）；模型层估值被重估到现金流倍数；应用层流量泡沫率先破灭；分销层差价归零；用户层教培最先死。历史参照是 2000 年：互联网没死，纳斯达克死了 78%。AI 技术本身不会退，但 AI 的定价会。</p>
+      </div>
+      <div class="card c3">
+        <div class="card-tag">剧本三 · 最乐观</div>
+        <h4>推理成本指数下降，AI 水电煤化</h4>
+        <p>推理成本下降速度快于算力投入，Agent 真正重构企业软件（FDE 岗位 42 倍增长就是前兆）；AI 创作者经济成型——一个人 + Agent 团队做出过去 10 人公司的产品；中国开源生态与港股流动性让国产 AI 链获得全球定价权；数据标注完成从人力到智能的转型，评估师成为新专业阶层。前提只有一个：AI 的使用成本在某个时点低到让「用」的人比「看」的人多。</p>
+      </div>
+    </div>
+
+    <h3>4.4 结尾：回到那句开场白</h3>
+    <p>回到开头那句话——智能是可以被买到的商品。十年下来，这句话被证明了一半：智能确实可以买到，英伟达卖出了 5.64 万亿美元；但「买到智能」不等于「赚到钱」，五层结构里每一层都在用不同方式回答同一个问题：买来的智能，怎么卖出去？</p>
+    <p>基建层把它卖给模型厂，模型厂把它卖给应用，应用把它卖给用户，分销层把它卖给规则缝隙，用户层把它卖给信任。这就是 AI 产业链的全部秘密：<strong>它不是一条从算力到用户的直线，而是一条每一层都在替上一层背锅、又向下一层收税的链条。</strong>谁站在链条的哪一环，决定了你能赚到什么钱。</p>
+  </section>
+
+  <!-- ===== 五、信息来源 ===== -->
+  <section id="s5">
+    <div class="sec-head">
+      <div class="sec-num">伍</div>
+      <h2 class="sec-title">信息来源</h2>
+    </div>
+    <p>本报告全部外部事实均来自联网检索，检索与交叉验证时间：2026年10月4日。一手来源优先（公司财报、官方公告、官方博客），权威媒体原创报道交叉验证；个别无法核实的数字在正文中已标注「存疑」或「暂缺」。</p>
+    <div class="src-grid">
+      <div class="src-block">
+        <h5>纵轴（演进史与关键事件）</h5>
+        <ul>
+          <li>DeepMind 官网 AlphaGo 页面：deepmind.google/research/alphago</li>
+          <li>Google 官方博客（AI-first）：blog.google</li>
+          <li>Transformer 论文：arxiv.org/abs/1706.03762</li>
+          <li>微软官方公告（2019年10亿美元投资）：news.microsoft.com</li>
+          <li>Fortune（英伟达盘中破万亿美元，2023-05-30）：fortune.com</li>
+          <li>Stanford HAI《AI Index 2025》企业投资数据：hai.stanford.edu</li>
+          <li>OpenAI 官方公告（2024-10 融资；2025-01 Stargate；2026-03 融资）：openai.com</li>
+          <li>Nasdaq（英伟达 2025-01-27 单日蒸发 5890 亿美元）</li>
+          <li>Anthropic 官方公告（2025-03 E轮；2026-02 G轮；2026-05 H轮与 S-1）：anthropic.com</li>
+          <li>财新、证券时报（智谱 2513.HK 上市、市值破万亿港元，2026-01/06）</li>
+          <li>财联社、36氪、证券时报（月之暗面估值轨迹，2026-02 至 09）</li>
+        </ul>
+      </div>
+      <div class="src-block">
+        <h5>横轴 · 基建层</h5>
+        <ul>
+          <li>NVIDIA 官方新闻稿与 CFO Commentary（FY27 Q2，截至 2026-07-26）；同花顺 NVDA 利润表（FY2026）</li>
+          <li>AMD 10-Q（2026 Q1/Q2 数据中心营收）</li>
+          <li>Broadcom Q3 FY26 财报会（2026-09-02，AI 营收与指引）</li>
+          <li>TSMC 官方 Earnings Release（2026 Q2）；AInvest；INDmoney/Trader Central（CoWoS 产能）</li>
+          <li>SK hynix Newsroom（2026 Q2 业绩，2026-07-29）；Counterpoint（HBM 份额，2026 Q2）</li>
+          <li>中际旭创 2026 半年报（HKEXnews，截至 2026-06-30）；证券时报（2026-08）</li>
+          <li>Vertiv 2025 Shareholder Letter 与 Q4 2025 Earnings Release</li>
+          <li>财新（微软 2026 财年 capex，2026-04-29）；FinanceBuzz；yieldtheory（Meta capex 与四家合计）</li>
+          <li>TechFastForward、liveinthefuture（美国数据中心用电负荷，2026-06）</li>
+          <li>USC/Hamm Institute 用工模型（2025-12）；AGC 2026 劳动力调查；JLL；Sutherland Institute；ZipRecruiter；BLS</li>
+          <li>stargate.how（Stargate 投资与电力，2026-09）</li>
+        </ul>
+      </div>
+      <div class="src-block">
+        <h5>横轴 · 模型层</h5>
+        <ul>
+          <li>OpenAI 官方公告（2026-03-31）；证券时报（2026-04-01）；ventureatlas（2026-10）</li>
+          <li>Anthropic 官方（2026-02-12、05-28、04-20）；证券时报（2026-08-18）；nextfin（2026-10-03）</li>
+          <li>DeepSeek 官方 API 文档：api-docs.deepseek.com；新浪财经（2026-08-20）；金融界（2026-06-16）</li>
+          <li>财联社、36氪、证券时报——月之暗面（2026）</li>
+          <li>财新（2026-06-18）；证券时报（2026-09-01）；中国经济网（2026-09-04）——智谱</li>
+          <li>36氪（2025-08-24，价格战转折）；ChinaBizInsight（2026-08-29，DeepSeek V4 提价）</li>
+        </ul>
+      </div>
+      <div class="src-block">
+        <h5>横轴 · 应用层</h5>
+        <ul>
+          <li>a16z 2026-03 AI 应用榜：a16z.news</li>
+          <li>36氪（Manus 全历程，2026-09-18）；财新周刊（2026-01-10）；彭博（2026-09-17）</li>
+          <li>爱范儿（LibTV/演语科技 B+ 轮，2026-06-18）</li>
+          <li>RunningHub 官方页（RH 币与定价，2026-08）</li>
+          <li>Sacra（Manus 定价，2026-10-03）；valueaddvc（Cursor ARR 与估值，2026-06）</li>
+        </ul>
+      </div>
+      <div class="src-block">
+        <h5>横轴 · 分销层与用户层</h5>
+        <ul>
+          <li>36氪《Token贩子的盛宴》（2026-05-25）；每日经济新闻（2026-05）——B.AI/孙宇晨</li>
+          <li>掘金（one-api/new-api 生态、土耳其区定价，2026-05/06）</li>
+          <li>OpenAI《账户共享政策》更新（2026-09）</li>
+          <li>光明网（闲鱼 AI 服务数据，2026-07-29）；钛媒体（2026-08）</li>
+          <li>北京市科委（AIFUT 大会，2026-04-09）；36氪（卡兹克、影视飓风 AI 课，2026-07/08）</li>
+          <li>知识星球官方页（生财有术，2026-09）；36氪（WaytoAGI，2026-07-09）；红星资本局、每经（程前朋友圈，2024-01）</li>
+          <li>腾讯研究院、亿欧（FDE 岗位数据，2026-09）；36氪（国内 FDE 薪资，2026-09-28）；Future Market Insights</li>
+          <li>Entrepreneur（freelancer 高客单 AI 服务，2026-10）</li>
+          <li>Reuters（Scale AI 被 Meta 收购与收入指引）；职友集（国内标注薪资，2026-10）；澎湃（DeepSeek 标注岗位，2026-04）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="method-note">
+      <strong>方法论说明：</strong>本报告使用横纵分析法（Horizontal-Vertical Analysis）——该框架由数字生命卡兹克提出，融合索绪尔历时-共时语言分析、社会科学纵向-横截面研究设计与竞争战略分析：纵轴追踪研究对象从诞生到当下的完整演进史（以叙事呈现），横轴在当下时间切面与同类进行系统对比，两条轴交叉后产出综合判断。研究对象为「AI 商业化赚钱结构」这一概念：纵轴为 2015—2026 年 AI 商业化演进史，横轴为五层结构（基建/模型/应用/分销/用户）在同一时间截面的对比。
+    </div>
+  </section>
+
+  <div class="foot">
+    AI赚钱产业链：五层结构的横纵分析 · 研究时间 2026-10-04 · 本报告为研究分析，不构成投资建议。
+  </div>
+</div>
+
+<script>
+/* ===== ECharts 加载：jsDelivr 主，cdnjs 备用 ===== */
+(function(){
+  function loadScript(src, onload, onerror){
+    var s = document.createElement('script');
+    s.src = src; s.onload = onload; s.onerror = onerror;
+    document.head.appendChild(s);
+  }
+  function start(){ initCharts(); }
+  if (window.echarts) { start(); return; }
+  loadScript('https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js', start, function(){
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js', start, function(){
+      console.warn('ECharts CDN 均加载失败');
+    });
+  });
+})();
+
+function initCharts(){
+  if (!window.echarts) return;
+  var FONT = "'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";
+  var INK = '#1E1C19', SOFT = '#5C574F', FAINT = '#8A847A', LINE = '#E5E1D8';
+  var RED = '#A62B2B', GREY = '#8A847A';
+  var baseTooltip = { trigger:'axis', confine:true, textStyle:{fontFamily:FONT, fontSize:12},
+    axisPointer:{lineStyle:{color:LINE}} };
+  var charts = [];
+
+  /* ---- 图1：英伟达市值 vs OpenAI 估值 ---- */
+  var c1 = echarts.init(document.getElementById('chart1'));
+  var cats = ['2023-04','2023-05','2023-10','2024-03','2024-06','2024-10','2025-03','2026-03','2026-05','2026-09','2026-10'];
+  var nvda = [null,9920,null,20000,30000,null,null,null,55000,null,56400];
+  var openai = [290,null,800,null,null,1570,3000,8520,null,12000,null];
+  c1.setOption({
+    textStyle:{fontFamily:FONT},
+    grid:{left:56,right:70,top:30,bottom:36},
+    tooltip: baseTooltip,
+    xAxis:{ type:'category', data:cats,
+      axisLine:{lineStyle:{color:LINE}}, axisTick:{show:false},
+      axisLabel:{color:FAINT, fontSize:11, rotate:38} },
+    yAxis:{ type:'value', name:'亿美元', nameTextStyle:{color:FAINT,fontSize:11},
+      axisLabel:{color:FAINT, fontSize:11, formatter:function(v){return v>=10000? (v/10000)+'万亿' : v;}},
+      splitLine:{lineStyle:{color:LINE}} },
+    series:[
+      { name:'英伟达市值', type:'line', data:nvda, connectNulls:true,
+        symbol:'circle', symbolSize:7, lineStyle:{color:RED, width:2.5}, itemStyle:{color:RED},
+        label:{show:true, position:'top', color:RED, fontSize:10,
+          formatter:function(p){ return p.value? (p.value>=10000? (p.value/10000)+'万亿' : p.value) : ''; } } },
+      { name:'OpenAI 估值', type:'line', data:openai, connectNulls:true,
+        symbol:'circle', symbolSize:7, lineStyle:{color:GREY, width:2, type:'solid'}, itemStyle:{color:GREY},
+        label:{show:true, position:'bottom', color:SOFT, fontSize:10,
+          formatter:function(p){ return p.value? p.value : ''; } } }
+    ]
+  });
+  charts.push(c1);
+
+  /* ---- 图2：基建层盈利阶梯（横向条形） ---- */
+  var c2 = echarts.init(document.getElementById('chart2'));
+  c2.setOption({
+    textStyle:{fontFamily:FONT},
+    grid:{left:150,right:50,top:10,bottom:30},
+    tooltip: Object.assign({}, baseTooltip, {
+      formatter:function(ps){ var p=ps[0]; return p.name + '<br/>' + p.value + '%'; } }),
+    xAxis:{ type:'value', max:100,
+      axisLabel:{color:FAINT, fontSize:11, formatter:'{value}%'},
+      splitLine:{lineStyle:{color:LINE}} },
+    yAxis:{ type:'category',
+      data:['Vertiv（经营利润率）','中际旭创（净利率）','台积电（毛利率）','博通（毛利率）','英伟达（毛利率）','SK海力士（营业利润率）'],
+      axisLine:{show:false}, axisTick:{show:false},
+      axisLabel:{color:INK, fontSize:11.5} },
+    series:[{ type:'bar', barWidth:16,
+      data:[20.4, 35.3, 67.7, 75, 75, 76],
+      itemStyle:{color:RED},
+      label:{show:true, position:'right', color:SOFT, fontSize:11, formatter:'{c}%'} }]
+  });
+  charts.push(c2);
+
+  /* ---- 图3：四大云厂商 2026 capex ---- */
+  var c3 = echarts.init(document.getElementById('chart3'));
+  c3.setOption({
+    textStyle:{fontFamily:FONT},
+    grid:{left:90,right:60,top:10,bottom:30},
+    tooltip: Object.assign({}, baseTooltip, {
+      formatter:function(ps){ var p=ps[0]; return p.name + '<br/>约 ' + p.value + ' 亿美元'; } }),
+    xAxis:{ type:'value',
+      axisLabel:{color:FAINT, fontSize:11},
+      splitLine:{lineStyle:{color:LINE}} },
+    yAxis:{ type:'category',
+      data:['Meta','微软','Alphabet','亚马逊'],
+      axisLine:{show:false}, axisTick:{show:false},
+      axisLabel:{color:INK, fontSize:12} },
+    series:[{ type:'bar', barWidth:18,
+      data:[1375, 1900, 2000, 2200],
+      itemStyle:{color:'#7E1F1F'},
+      label:{show:true, position:'right', color:SOFT, fontSize:11, formatter:'{c}'} }]
+  });
+  charts.push(c3);
+
+  window.addEventListener('resize', function(){
+    charts.forEach(function(c){ c.resize(); });
+  });
+}
+</script>
+</body>
+</html>
