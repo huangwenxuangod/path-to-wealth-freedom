@@ -1,0 +1,294 @@
+{
+  "brief": {
+    "title": "消息如何经过节点接力（格式示例）",
+    "question": "一次任务的消息如何到达结果？",
+    "answer": "节点按确定流程传递，局部接力构成整体流程；这是示意模型。",
+    "throughline": "同一枚消息光点",
+    "audience": "第一次接触流程图的观众",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 12,
+    "timingBasis": "estimated",
+    "rhythmMode": "music-driven"
+  },
+  "narrative": {
+    "openingPromise": "跟着一枚消息，看清局部动作如何形成整体流程。",
+    "closingPayoff": "回到全局，观众能指出消息从起点到结果的路径。",
+    "beats": [
+      {
+        "id": "question",
+        "newInformation": "建立一个消息和三个节点。"
+      },
+      {
+        "id": "relay",
+        "newInformation": "节点之间按顺序传递，而不是全体同时发光。"
+      },
+      {
+        "id": "system",
+        "newInformation": "局部动作属于同一条完整链路。"
+      }
+    ]
+  },
+  "review": {
+    "storyboard": "checked",
+    "motion": "pending",
+    "animatic": "pending",
+    "reviewer": "example author; not user approval"
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "beatId": "question",
+      "start": 0,
+      "end": 3,
+      "purpose": "先建立空间和待回答的问题。",
+      "startState": "三个节点轮廓与消息起点",
+      "endState": "观众辨认出待传递的消息",
+      "composition": "竖屏上中区展示节点，底部留短字幕区域",
+      "voice": "跟着这条消息，看任务如何被接力。",
+      "caption": "消息，怎样到达结果？",
+      "camera": {
+        "kind": "hold",
+        "motivation": "先让观众建立空间，不抢着移动",
+        "startView": "消息起点和三个节点全景",
+        "endView": "相同全景",
+        "startAt": 0,
+        "endAt": 0
+      },
+      "transition": {
+        "kind": "same-space",
+        "carry": "保持消息位置与节点方位，下一镜跟随消息"
+      },
+      "musicCue": {
+        "segmentIds": [
+          "phrase"
+        ],
+        "targetEventId": "E1",
+        "visualHit": "消息可见"
+      }
+    },
+    {
+      "id": "S2",
+      "beatId": "relay",
+      "start": 3,
+      "end": 8,
+      "purpose": "展示接力的顺序与连续对象。",
+      "startState": "消息位于第一个节点",
+      "endState": "消息经过第二节点到达第三节点",
+      "composition": "主消息位于画面中部，路径从上到下，标签临近节点",
+      "voice": "先到这一站，再到下一站。每一步都接着上一步。",
+      "caption": "顺序传递，逐站接力。",
+      "camera": {
+        "kind": "track",
+        "motivation": "追踪同一对象，避免丢失消息和传递顺序",
+        "startView": "第一个节点局部",
+        "endView": "第三个节点局部",
+        "startAt": 0.3,
+        "endAt": 3.8
+      },
+      "transition": {
+        "kind": "match-anchor",
+        "carry": "第三节点保持位置，作为拉远镜头的锚点"
+      },
+      "musicCue": {
+        "segmentIds": [
+          "phrase"
+        ],
+        "targetEventId": "E2",
+        "visualHit": "消息抵达下一节点"
+      }
+    },
+    {
+      "id": "S3",
+      "beatId": "system",
+      "start": 8,
+      "end": 12,
+      "purpose": "揭示完整流程并回答开头。",
+      "startState": "消息停在第三节点，局部景别",
+      "endState": "全流程可见，消息停在结果端",
+      "composition": "拉远显示完整纵向网络，减少次要标签保留三站顺序",
+      "voice": "拉远看，这些局部动作，连成了同一条流程。",
+      "caption": "局部接力，组成整体。",
+      "camera": {
+        "kind": "pull",
+        "motivation": "从刚才局部动作揭示全局关系",
+        "startView": "第三节点近景",
+        "endView": "完整三节点流程",
+        "startAt": 0,
+        "endAt": 1.4
+      },
+      "transition": {
+        "kind": "hold-and-end",
+        "carry": "停留读取完整链路后结束，不另起新信息"
+      },
+      "musicCue": {
+        "segmentIds": [
+          "phrase"
+        ],
+        "targetEventId": "E3",
+        "visualHit": "全局镜头拉远完成"
+      }
+    }
+  ],
+  "motion": [
+    {
+      "shotId": "S1",
+      "events": [
+        {
+          "start": 0,
+          "end": 0.6,
+          "domain": "overlay",
+          "target": "node outlines",
+          "property": "opacity",
+          "from": 0,
+          "to": 1,
+          "easing": "smooth",
+          "purpose": "建立结构"
+        },
+        {
+          "start": 0.9,
+          "end": 1.3,
+          "domain": "object",
+          "target": "message",
+          "property": "opacity",
+          "from": 0,
+          "to": 1,
+          "easing": "smooth",
+          "purpose": "指定贯穿对象"
+        }
+      ]
+    },
+    {
+      "shotId": "S2",
+      "events": [
+        {
+          "start": 0,
+          "end": 3.4,
+          "domain": "object",
+          "target": "route",
+          "property": "reveal",
+          "from": 0,
+          "to": 1,
+          "easing": "linear",
+          "purpose": "显示已行进段而非同时点亮全部路径"
+        },
+        {
+          "start": 0.3,
+          "end": 3.8,
+          "domain": "camera",
+          "target": "viewport",
+          "property": "center",
+          "from": "node1",
+          "to": "node3",
+          "easing": "smooth",
+          "purpose": "跟随消息与分镜运镜一致"
+        },
+        {
+          "start": 0.5,
+          "end": 3.5,
+          "domain": "object",
+          "target": "message",
+          "property": "path position",
+          "from": 0,
+          "to": 1,
+          "easing": "smooth",
+          "purpose": "展示接力顺序"
+        }
+      ]
+    },
+    {
+      "shotId": "S3",
+      "events": [
+        {
+          "start": 0,
+          "end": 1.4,
+          "domain": "camera",
+          "target": "viewport",
+          "property": "scale",
+          "from": 1.6,
+          "to": 1,
+          "easing": "smooth",
+          "purpose": "揭示全局"
+        },
+        {
+          "start": 1.8,
+          "end": 2.2,
+          "domain": "overlay",
+          "target": "conclusion caption",
+          "property": "opacity",
+          "from": 0,
+          "to": 1,
+          "easing": "smooth",
+          "purpose": "镜头停稳后给出结论，留足读数时间"
+        }
+      ]
+    }
+  ],
+  "musicMap": {
+    "source": "synthetic://format-example-not-reference-audio",
+    "version": "example-v1",
+    "duration": 12,
+    "basis": "synthetic",
+    "segments": [
+      {
+        "id": "phrase",
+        "start": 0,
+        "end": 12,
+        "role": "示意性建立、接力与全局揭示"
+      }
+    ],
+    "events": [
+      {
+        "id": "E1",
+        "time": 1.3,
+        "type": "synthetic-accent",
+        "strength": 0.8,
+        "status": "candidate"
+      },
+      {
+        "id": "E2",
+        "time": 6.5,
+        "type": "synthetic-accent",
+        "strength": 0.8,
+        "status": "candidate"
+      },
+      {
+        "id": "E3",
+        "time": 9.4,
+        "type": "synthetic-accent",
+        "strength": 0.8,
+        "status": "candidate"
+      }
+    ]
+  },
+  "sync": [
+    {
+      "shotId": "S1",
+      "eventId": "E1",
+      "prepareAt": 0.7,
+      "moveAt": 0.9,
+      "hitAt": 1.3,
+      "settleAt": 1.6,
+      "toleranceFrames": 1
+    },
+    {
+      "shotId": "S2",
+      "eventId": "E2",
+      "prepareAt": 0.3,
+      "moveAt": 0.5,
+      "hitAt": 3.5,
+      "settleAt": 3.8,
+      "toleranceFrames": 1
+    },
+    {
+      "shotId": "S3",
+      "eventId": "E3",
+      "prepareAt": 0,
+      "moveAt": 0,
+      "hitAt": 1.4,
+      "settleAt": 1.7,
+      "toleranceFrames": 1
+    }
+  ]
+}

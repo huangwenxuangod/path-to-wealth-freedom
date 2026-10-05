@@ -48,7 +48,7 @@ test.pdf
 videos/
 
 # ===== Twitter Archive =====
-data/
+/data/
 assets/fonts/
 assets/images/
 assets/js/
@@ -93,3 +93,16 @@ HyperFrames-AI视频项目/app/output/
 /ORIGINAL_*.txt
 /HANDSHAKE_*.txt
 /ROLLBACK_*.txt
+
+# ===== Remotion 本地渲染、验证与交易副本（源码与data保留） =====
+/remotion-studio/**/renders/
+/remotion-studio/**/evidence/
+/remotion-studio/**/deliverables/
+/remotion-studio/**/rollback-test-copy/
+/remotion-studio/**/BASELINE_*.tsx
+/remotion-studio/**/DIFF_FILE.*
+/remotion-studio/**/VERIFICATION.txt
+/remotion-studio/**/VERIFY.sh
+/remotion-studio/**/ROLLBACK.sh
+__pycache__/
+*.pyc

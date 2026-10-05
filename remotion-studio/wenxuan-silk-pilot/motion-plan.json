@@ -1,0 +1,55 @@
+{
+  "stage": "pilot; user go accepted storyboard and representative sample",
+  "duration": 20.5,
+  "startAt": 44,
+  "fps": 30,
+  "audio": "existing refined reference mix; no added SFX",
+  "events": [
+    {
+      "time": 49.9929,
+      "frame": 180,
+      "meaning": "hands meet; silk at centre",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 51.5893,
+      "frame": 228,
+      "meaning": "receiver takes ownership",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 56.8972,
+      "frame": 387,
+      "meaning": "cargo joins map",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 57.9548,
+      "frame": 419,
+      "meaning": "relay waypoint 2",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 59.8206,
+      "frame": 475,
+      "meaning": "relay waypoint 3",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 61.407,
+      "frame": 522,
+      "meaning": "relay waypoint 4",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    },
+    {
+      "time": 63.2727,
+      "frame": 578,
+      "meaning": "relay endpoint",
+      "status": "candidate; selected for prototype, not listening-confirmed"
+    }
+  ],
+  "sequence": "hands establish -> meet -> receiver withdraws with same silk -> same cargo joins map -> sequential waypoint arrivals",
+  "reading": "original captions preserved in sample; rewritten full-script remains unrecorded",
+  "visualContinuity": "single silk object at identical bridge position across 55.6s; route trail accumulates",
+  "review": "listen/view prototype before certifying groove or applying full film"
+}

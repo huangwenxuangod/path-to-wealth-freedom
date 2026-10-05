@@ -1,0 +1,6 @@
+{
+  "name":"wenxuan-video-starter","version":"1.0.0","private":true,"type":"module",
+  "scripts":{"studio":"bun scripts/studio.ts","typecheck":"bun scripts/typecheck.ts","check":"bun scripts/check.ts","stills":"bun scripts/render.ts stills","render":"bun scripts/render.ts full"},
+  "dependencies":{"remotion":"4.0.524","@remotion/cli":"4.0.524","@remotion/bundler":"4.0.524","@remotion/renderer":"4.0.524","@remotion/fonts":"4.0.524","react":"19.2.3","react-dom":"19.2.3"},
+  "devDependencies":{"typescript":"5.9.3","@types/react":"19.2.7","@types/node":"25.0.9"}
+}

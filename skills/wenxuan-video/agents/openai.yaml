@@ -1,0 +1,4 @@
+interface:
+  display_name: "文轩知识动画导演"
+  short_description: "讲透一个问题，先拆BGM节奏再做分镜运镜，设计炫酷语义动效与声音命中，用Remotion制作"
+  default_prompt: "使用 $wenxuan-video，先研究我的问题并分析BGM，设计完整叙事、轻量分镜与运镜；我确认后再做踩点动效、音效和带声样片。"
