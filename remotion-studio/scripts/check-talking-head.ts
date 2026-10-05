@@ -1,0 +1,11 @@
+import {existsSync,readFileSync} from 'node:fs';
+import {talkingHeadSchema,talkingHeadMetadata} from '../src/talking-head/spec';
+import input from '../data/talking-head.json';
+import captions from '../data/talking-head-captions.json';
+let cases=0;const assert=(v:boolean,m:string)=>{if(!v)throw new Error(m);cases++;};
+const p=talkingHeadSchema.parse(input);assert(existsSync('public/'+p.videoSrc),'video asset');assert(talkingHeadMetadata({props:p}).durationInFrames===960,'duration');
+assert(captions.length===12,'captions');assert(captions.every((c,i)=>c.start<c.end&&c.start>=0&&(i===0||c.start>=captions[i-1].start)),'cue order');
+for(const patch of [{videoScale:2},{accent:'red'},{videoSrc:'../secret'},{introTitle:'12345678901'},{scene2Start:20},{subtitleSize:90},{edited:'yes'}])assert(!talkingHeadSchema.safeParse({...input,...patch}).success,'invalid input');
+assert(talkingHeadSchema.safeParse({...input,edited:false,fullScreenScenes:false}).success,'original mode');assert(p.scene2Start<p.scene3Start&&p.scene3Start<p.scene4Start,'scene order');
+const root=readFileSync('src/Root.tsx','utf8');assert(root.includes('TalkingHeadDesignLab')&&root.includes('TalkingHeadOriginal'),'compositions');assert(root.includes('AstraOverview')&&root.includes('AgentWorkflow')&&root.includes('BeamOverlay'),'existing compositions retained');
+console.log(`TALKING_HEAD_CHECK_PASS ${cases} cases`);

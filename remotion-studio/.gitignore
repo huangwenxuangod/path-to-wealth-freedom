@@ -31,3 +31,23 @@
 /evidence/**/DIFF_FILE
 /evidence/**/ROLLBACK.sh
 /evidence/**/VERIFICATION.txt
+
+# Generated inspection reports, frame manifests, GIFs and rollback snapshots.
+# Ignore every evidence entry, but retain the third-party license.
+/evidence/*
+!/evidence/MAGIC_UI_LICENSE.txt
+
+# Root-level transaction exports are local evidence, not application source.
+/MODIFIED_FILE
+/DIFF_FILE
+/DIFF_FILE.patch
+/VERIFICATION.txt
+/ROLLBACK.sh
+
+# Local source downloads and rendered media; keep asset manifests and logos.
+*.webm
+*.mov
+*.mkv
+*.mp3
+*.wav
+/public/talking-head/source.*

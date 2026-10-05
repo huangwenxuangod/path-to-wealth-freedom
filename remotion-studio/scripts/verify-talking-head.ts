@@ -1,0 +1,11 @@
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const p='renders/talking-head-design-lab.mp4';
+const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,codec_type,width,height,avg_frame_rate,nb_frames','-of','json',p],{encoding:'utf8'}));
+const v=probe.streams.find((s:any)=>s.codec_type==='video');const a=probe.streams.find((s:any)=>s.codec_type==='audio');
+if(v.width!==1920||v.height!==1080||v.avg_frame_rate!=='30/1'||Number(v.nb_frames)!==960||Math.abs(Number(probe.format.duration)-32)>.1||!a)throw new Error('Output metadata mismatch');
+execFileSync('ffmpeg',['-v','error','-i',p,'-f','null','-'],{stdio:['ignore','pipe','pipe']});
+const hash=createHash('sha256').update(readFileSync(p)).digest('hex');
+writeFileSync('evidence/talking-head/media-verification.json',JSON.stringify({probe,sha256:hash,decodeExit:0,checks:['1920x1080','30fps','960 frames','32 seconds','audio present','full decode exit 0']},null,2));
+console.log('TALKING_HEAD_VERIFY_PASS 1920x1080 30fps 960frames 32s audio present; full decode exit 0');

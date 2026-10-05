@@ -1,0 +1,5 @@
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+const urls={page:'https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education',video:'https://py.tedcdn.com/consus/projects/00/64/86/002/products/2023-sal-khan-002-fallback-d84f7410-8fa5-40de-8160-afa72aae4922-1200k.mp4',captions:'https://hls.ted.com/project_masters/8474/subtitles/en/full.vtt?intro_master_id=9294&preview='};
+const files=['public/talking-head/source.mp4','public/talking-head/sal-khan-33s.mp4','evidence/talking-head/en.vtt'];
+writeFileSync('public/talking-head/assets.json',JSON.stringify({retrievedAt:new Date().toISOString(),urls,usage:'Local visual redesign demonstration, retained speaker attribution; no third-party material licensed by this project. Original conceptual UI is distinct from source talk.',sourceRange:[25.438,57.438],sourceIntroSeconds:3.504,assets:files.map(path=>({path,sha256:createHash('sha256').update(readFileSync(path)).digest('hex')}))},null,2));

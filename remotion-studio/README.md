@@ -48,6 +48,33 @@ Studio：http://localhost:3000/AgentWorkflow 。macOS 默认使用已安装的 G
 
 ROLLBACK.sh 仅将原始文档快照恢复到一个新目录，并校验原哈希；当前工程和全局插件保持现状。
 
+## Talking Head V4
+
+`TalkingHeadDesignLab` 是口播叠加版，`TalkingHeadOriginal` 是原片对照。
+标题、颜色、场景时间和图层位置可在 Studio Props 中调整。
+设计与调参说明见 `docs/TALKING_HEAD_FLOW_V4.md` 和 `docs/TALKING_HEAD_ADJUST.md`。
+
+视频文件不进入 Git。新 checkout 需要先将本地片段放到
+`public/talking-head/sal-khan-33s.mp4`；来源、截取区间和原文件 SHA256
+记录在 `public/talking-head/assets.json`。已有字幕 JSON 随代码提交。
+`prepare-talking-head.ts` 和 `record-talking-head-assets.ts` 是可选的本地素材维护工具，
+依赖未提交的完整原视频或 VTT，不属于运行应用的前置步骤。
+
+```powershell
+$env:CHROME_PATH='C:\Program Files\Google\Chrome\Application\chrome.exe'
+bun run typecheck
+bun run check
+bun scripts/check-talking-head.ts
+bun scripts/test-flow-v4.ts modified
+bun scripts/render-talking-head.ts
+bun scripts/verify-talking-head.ts
+```
+
+`renders/`、`evidence/`（第三方许可除外）和根级交易导出均为本地产物。
+Git 中已跟踪的旧验证快照也已解除跟踪，磁盘文件保留；上文链接的
+`VERIFICATION.txt` / `ROLLBACK.sh` 仅在保留这些本地文件的工作区可用。
+正式提交包含 V4；V5 实验及旧组件副本留在本地，不作为当前版本发布。
+
 ## Astra6 总分总动画
 
 新增 `AstraOverview`：36 秒、1920×1080、30fps，冷白工作台视觉，包含总述、软件操作、工程执行、专业交付、总结。四个 Magic UI 组件源码已接入，视频版按 frame/fps 驱动。

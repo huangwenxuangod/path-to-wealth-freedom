@@ -1,0 +1,28 @@
+{
+  "retrievedAt": "2026-10-05T03:00:30.748Z",
+  "urls": {
+    "page": "https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education",
+    "video": "https://py.tedcdn.com/consus/projects/00/64/86/002/products/2023-sal-khan-002-fallback-d84f7410-8fa5-40de-8160-afa72aae4922-1200k.mp4",
+    "captions": "https://hls.ted.com/project_masters/8474/subtitles/en/full.vtt?intro_master_id=9294&preview="
+  },
+  "usage": "Local visual redesign demonstration, retained speaker attribution; no third-party material licensed by this project. Original conceptual UI is distinct from source talk.",
+  "sourceRange": [
+    25.438,
+    57.438
+  ],
+  "sourceIntroSeconds": 3.504,
+  "assets": [
+    {
+      "path": "public/talking-head/source.mp4",
+      "sha256": "6fbb9069f16cd02e0f2bc783c487e7804e1fbc2614880b0cd7b45ae8cddaa79e"
+    },
+    {
+      "path": "public/talking-head/sal-khan-33s.mp4",
+      "sha256": "bbad048cdc51b5a360e8b6bf86414461c87a65902964315ced359d85fdb73b24"
+    },
+    {
+      "path": "evidence/talking-head/en.vtt",
+      "sha256": "5c7eaab73d64826daa5d822d35887d9b6231d9395cf743b31c23360eb34cf4ba"
+    }
+  ]
+}
