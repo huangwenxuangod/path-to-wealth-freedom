@@ -1,0 +1,41 @@
+import React from 'react';
+import {AbsoluteFill,Audio,Composition,Sequence,registerRoot,staticFile,useCurrentFrame} from 'remotion';
+const red='#ff554b',cream='#f5eddf',mint='#77e0cc';
+const sat=(x:number)=>Math.max(0,Math.min(1,x));const sm=(x:number)=>{x=sat(x);return x*x*(3-2*x)};
+function Bowl({x,y,s=1}:{x:number;y:number;s?:number}){return <g transform={`translate(${x} ${y}) scale(${s})`}><ellipse cy="5" rx="52" ry="13" fill="#090b10" opacity=".5"/><path d="M-48 -22 Q-42 22 0 25 Q42 22 48 -22Z" fill="#e3d7bd"/><ellipse cy="-22" rx="48" ry="18" fill="#d29853" stroke={cream} strokeWidth="5"/><path d="M-28 -28Q0 -5 26 -30M-30 -16Q0 -38 30 -14M-23 -22Q0 -2 25 -23" fill="none" stroke="#f4d593" strokeWidth="4"/><circle cx="-15" cy="-21" r="6" fill="#74a859"/><circle cx="18" cy="-19" r="5" fill="#74a859"/><path d="M-13 -55Q-28 -78 -9 -94M11 -50Q28 -74 8 -95" fill="none" stroke={cream} strokeWidth="3" opacity=".35"/></g>}
+function Shop({x,y,newer=false,p=1}:{x:number;y:number;newer?:boolean;p?:number}){const col=newer?red:cream;return <g transform={`translate(${x} ${y-80*(1-p)})`} opacity={p}>
+<ellipse cx="155" cy="415" rx="190" ry="48" fill="#000" opacity=".45"/><path d="M0 20L40 -10H340L300 20Z" fill="#353944"/><path d="M300 20L340 -10V343L300 375Z" fill="#171c26"/>
+<rect y="20" width="300" height="355" rx="5" fill="#2c3039" stroke="#59616e" strokeWidth="2"/><rect x="14" y="31" width="272" height="72" rx="4" fill={newer?'#87332d':'#bdaa87'}/><text x="150" y="80" textAnchor="middle" fill={newer?cream:'#242730'} fontSize="36" fontWeight="800">{newer?'隔壁面馆':'老街面馆'}</text>
+<path d="M-16 113H316L335 160H-35Z" fill={newer?'#a8443e':'#626970'}/>{Array.from({length:8},(_,i)=><path key={i} d={`M${i*42-16} 113h20l11 47h-24Z`} fill={newer?'#e3c4b7':'#c5bdaa'}/>)}<path d="M-35 160H335V179H-35Z" fill="#252a34"/>
+<rect x="23" y="196" width="155" height="145" fill="#111824"/><rect x="194" y="195" width="78" height="160" fill="#171d27" stroke="#606975" strokeWidth="3"/><path d="M232 196V353" stroke="#606975" strokeWidth="3"/><rect x="15" y="275" width="169" height="25" fill="#8b7660"/>
+<Bowl x={94} y={264} s={.68}/><rect x="35" y="205" width="123" height="43" fill="#252e37"/><text x="96" y="235" textAnchor="middle" fontSize="23" fill={col}>现煮 · 面</text>
+<path d="M-5 374H307L323 392H-20Z" fill="#555962"/><path d="M-20 392H323V407H-20Z" fill="#303540"/><rect x="-35" y="314" width="76" height="110" rx="5" fill="#202630" stroke={col} strokeWidth="3"/><text x="3" y="346" textAnchor="middle" fill={col} fontSize="19">每碗</text><text x="3" y="391" textAnchor="middle" fill={col} fontSize={newer?31:36} fontWeight="800">{newer?'9.9':'15'}</text></g>}
+function Txt({x,y,children,size=32,color=cream,anchor='start'}:{x:number;y:number;children:React.ReactNode;size?:number;color?:string;anchor?:'start'|'middle'|'end'}){return <text x={x} y={y} fontSize={size} fill={color} textAnchor={anchor} fontWeight="650">{children}</text>}
+const subtitle=(t:number,cost:boolean)=>cost?(t<3.5?'9.9元，就一定黑心吗？':t<6?'打开成本账本。':t<11?'老店：售价15 − 可变成本9 = 贡献6':t<16?'新店：售价9.9 − 可变成本3.9 = 贡献6':t<23?'便宜，可能来自不同的成本路径。':'只看标价，判断不了品质。'):(t<3?'老店十五元，隔壁九块九。':t<7?'你以为他抄的是你的配方？':'他先利用的是你完成的市场验证。');
+export function Film(){const f=useCurrentFrame(),t=f/30,cost=t>=12,u=cost?t-12:t;
+const arrival=sm((u-1.8)/.786207),pan=sm((u-3)/1.4);const ledger=sm((u-2.6)/.917241);const branch=sm((u-16)/.965517);
+return <AbsoluteFill style={{background:'#0b1018',fontFamily:'Wenxuan, sans-serif'}}><style>{`@font-face{font-family:Wenxuan;src:url('${staticFile('fonts/NotoSansSC.ttf')}')}@font-face{font-family:Mono;src:url('${staticFile('fonts/mono.woff2')}')}`}</style>
+<Audio src={staticFile('rhythm.wav')} volume={.5}/><Sequence from={15} durationInFrames={340}><Audio src={staticFile('intro.wav')} volume={1}/></Sequence><Sequence from={372}><Audio src={staticFile('cost.wav')} volume={1}/></Sequence>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920"><defs><radialGradient id="glow"><stop stopColor={cost?'#514038':'#354252'} stopOpacity=".65"/><stop offset="1" stopColor="#0b1018" stopOpacity="0"/></radialGradient><linearGradient id="road" x2="0" y2="1"><stop stopColor="#303642"/><stop offset="1" stopColor="#101722"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="22" floodOpacity=".45"/></filter></defs>
+<rect width="1080" height="1920" fill="#0b1018"/><ellipse cx="560" cy="840" rx="700" ry="790" fill="url(#glow)"/>
+<Txt x={64} y={96} size={22} color="#9ba6b4">WENXUAN / 竞争的底层逻辑</Txt><Txt x={1016} y={96} size={22} anchor="end" color="#9ba6b4">{cost?'02 / 成本':'01 / 入场'}</Txt>
+{!cost?<><Txt x={64} y={230} size={66}>隔壁，为什么总有人</Txt><Txt x={64} y={318} size={88} color={red}>卖得比你便宜？</Txt><Txt x={64} y={400} size={28} color="#9ba6b4">老店 15元  /  新店 9.9元</Txt>
+<g transform={`translate(${80-50*pan} ${500-25*pan}) scale(${1.1-.05*pan})`}><path d="M-100 530L1100 470L1220 800L-200 850Z" fill="url(#road)"/>{Array.from({length:8},(_,i)=><path key={i} d={`M${i*150-160} 560l80 280`} stroke="#58616d" strokeOpacity=".25"/>)}<path d="M-100 700L1100 640" stroke="#b6ad94" strokeWidth="4" strokeDasharray="52 34" opacity=".3"/>
+<Shop x={45} y={100}/><Shop x={510} y={100} newer p={arrival}/>
+{Array.from({length:12},(_,i)=>{const q=sm((u-4.4-i*.12)/2),x=220+i%3*25+(i<5?460*q:0),y=655-Math.floor(i/3)*34;return <g key={i} transform={`translate(${x} ${y})`} opacity={sm((u-3.8)/.5)}><circle cy="-20" r="9" fill={i<5?mint:cream}/><path d="M0 -9V14M-12 4L0 -5L12 4M0 14L-9 31M0 14L9 31" stroke={i<5?mint:cream} strokeWidth="5" fill="none"/></g>})}
+<path d="M280 550Q490 640 650 550" fill="none" stroke={mint} strokeWidth="4" strokeDasharray="460" strokeDashoffset={460*(1-sm((u-4.5)/2))}/></g>
+<g opacity={sm((u-6.5)/.7)}><rect x="64" y="1410" width="952" height="170" rx="18" fill="#171f2b" stroke="#344456"/><Txt x={95} y={1474} size={24} color={mint}>不是“随机刷新”</Txt><Txt x={95} y={1535} size={39}>老店先证明了：这里有人买。</Txt></g></>:<>
+<Txt x={64} y={230} size={64}>便宜的钱，</Txt><Txt x={64} y={318} size={86} color={mint}>从哪里省出来？</Txt>
+<g transform={`translate(540 640) rotate(${-6*(1-ledger)}) scale(${.85+.15*ledger})`} filter="url(#shadow)"><rect x="-220" y="-155" width="440" height="270" rx="20" fill={red}/><Txt x={0} y={-85} size={29} anchor="middle">隔壁面馆 / 每碗</Txt><Txt x={0} y={28} size={124} anchor="middle">9.9</Txt><Txt x={160} y={76} size={25} anchor="middle">元</Txt></g>
+<g opacity={ledger} transform={`translate(0 ${70*(1-ledger)})`}><path d="M540 767V828M280 828H800M280 828V879M800 828V879" fill="none" stroke={cream} strokeWidth="3"/>
+<rect x="64" y="884" width="450" height="355" rx="18" fill="#f2e8d5"/><rect x="566" y="884" width="450" height="355" rx="18" fill="#202f32" stroke={mint} strokeWidth="2"/>
+<Txt x={96} y={946} size={29} color="#3c3b38">老店 / 每碗</Txt><Txt x={598} y={946} size={29} color={mint}>新店 / 效率分支</Txt>
+<Txt x={96} y={1023} size={52} color="#282d32">15 − 9</Txt><Txt x={598} y={1023} size={52}>9.9 − 3.9</Txt>
+<path d="M95 1060H480M597 1060H982" stroke="#718176" strokeWidth="2"/>
+<g opacity={sm((u-6)/.8)}><Txt x={96} y={1110} size={22} color="#5e625f">售价 − 单份可变成本</Txt><Txt x={96} y={1192} size={65} color="#282d32">= 6</Txt></g>
+<g opacity={sm((u-11)/.8)}><Txt x={598} y={1110} size={22} color="#a0b9b4">售价 − 单份可变成本</Txt><Txt x={598} y={1192} size={65} color={mint}>= 6</Txt></g></g>
+<g opacity={branch} transform={`translate(0 ${30*(1-branch)})`}><Txt x={64} y={1330} size={25} color="#9ba6b4">同样9.9元，三种可能</Txt>{[['效率','省掉低效率',mint],['缩水','减少实际品质',cream],['补贴','暂时让利',cream]].map(([a,b,c],i)=><g key={a} transform={`translate(${64+i*328} 1370)`}><rect width="296" height="170" rx="12" fill="#18212c" stroke={c} strokeOpacity=".6"/><Txt x={25} y={62} size={35} color={c}>{a}</Txt><Txt x={25} y={117} size={24} color="#abb6c3">{b}</Txt></g>)}</g>
+<Txt x={64} y={1620} size={22} color="#9ba6b4">假设成本示意 · 贡献毛益不是净利润</Txt></>}
+<path d="M64 1680H1016" stroke="#3c4655" strokeWidth="2"/><Txt x={540} y={1760} size={cost&&u>=6&&u<16?32:38} anchor="middle">{subtitle(u,cost)}</Txt><Txt x={64} y={1855} size={20} color="#7e8a9b">机制示意 / 不预设低价店品质更差</Txt><rect x="64" y="1880" width={952*t/40} height="3" fill={cost?mint:red}/>
+</svg></AbsoluteFill>}
+registerRoot(()=> <Composition id="ShopPolish" component={Film} durationInFrames={1200} fps={30} width={1080} height={1920}/>);

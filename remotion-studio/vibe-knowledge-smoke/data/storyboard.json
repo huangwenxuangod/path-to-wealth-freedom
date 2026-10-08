@@ -1,0 +1,7 @@
+{
+ "title":"利润信号与进入（示意）","width":1280,"height":720,"fps":30,"duration":8,
+ "theme":{"background":"#090c11","foreground":"#ecedf0","accent":"#d6bd7a","secondary":"#82b4db","muted":"#536070","fontFamily":"serif","fontFile":null},
+ "scenes":[{"id":"signal","start":0,"end":2,"purpose":"已有商家产生可观察的利润"},{"id":"entry","start":2,"end":6,"purpose":"信号吸引新增进入"},{"id":"margin","start":6,"end":8,"purpose":"进入改变价格与利润"}],
+ "captions":[{"start":0,"end":2,"text":"利润，是一个可被观察的信号。"},{"start":2,"end":6,"text":"进入成本足够低时，信号会吸引后来者。"},{"start":6,"end":8,"text":"竞争改变价格，也压缩原有利润。"}],
+ "audio":{"voice":null,"music":null,"voiceIntervals":[],"musicGain":0.14,"duckGain":0.07,"sfx":[]}
+}

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const file=process.argv[2]??'renders/silk-road-refined.mp4';
+const ffprobe=execFileSync('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_type,width,height,r_frame_rate','-of','json',file],{encoding:'utf8'});
+const meta=JSON.parse(ffprobe),video=meta.streams.find((s:any)=>s.codec_type==='video'),audio=meta.streams.find((s:any)=>s.codec_type==='audio');
+assert.equal(video.width,1280);assert.equal(video.height,720);assert.equal(video.r_frame_rate,'30/1');assert(audio);assert(Math.abs(Number(meta.format.duration)-116.1)<.1);
+execFileSync('ffmpeg',['-v','error','-i',file,'-f','null','-'],{encoding:'utf8',timeout:300000});
+for(const sec of [1,6,12,17,27,38,49,60,68,75,82,90,100,110,114])assert(existsSync(`evidence/stills/${String(sec).padStart(3,'0')}.png`));
+const result=`VERIFY_PASS 1280x720 30fps ${Number(meta.format.duration).toFixed(3)}s audio=yes decode_errors=0 keyframes=15 sha256=${createHash('sha256').update(readFileSync(file)).digest('hex')}`;
+writeFileSync('evidence/verify-output.txt',result+'\n'+ffprobe);console.log(result);

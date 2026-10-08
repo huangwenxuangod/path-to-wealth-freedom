@@ -1,0 +1,1 @@
+{"name":"wenxuan-shop-polish","private":true,"scripts":{"typecheck":"tsc --noEmit","render":"bun scripts/render.ts"}}
