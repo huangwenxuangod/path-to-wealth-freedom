@@ -1,0 +1,7 @@
+[
+  {"type":"datetime","name":"日期","style":{"format":"yyyy-MM-dd"}},
+  {"type":"text","name":"今日计划","description":"当天3条计划，零决策格式"},
+  {"type":"number","name":"完成数","style":{"type":"plain","precision":0}},
+  {"type":"text","name":"完成情况","description":"如：0/3"},
+  {"type":"text","name":"复盘备注","description":"卡点与明日调整"}
+]

@@ -1,0 +1,8 @@
+--- BASELINE
++++ MODIFIED
+@@ anatomy/SKILL.md @@
+-installed=False
++installed=True
++name: anatomy
++source commit: bc943e40c59998be5da61f9d39c6a983b1116099
++sha256: 1993151CA39AFD7880A20D871AACC0DDD348090530D8135DC5EA51AF28F25305

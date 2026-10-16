@@ -1,0 +1,33 @@
+TARGET / RESULT / NEXT: anatomy / installed / available next turn
+Changed branch/field: installed / SKILL.md
+Source: https://github.com/wheresryan22/anatomy at bc943e40c59998be5da61f9d39c6a983b1116099
+Original SKILL.md SHA256: 1993151CA39AFD7880A20D871AACC0DDD348090530D8135DC5EA51AF28F25305
+Installed SKILL.md SHA256: 1993151CA39AFD7880A20D871AACC0DDD348090530D8135DC5EA51AF28F25305
+MODIFIED_FILE: D:\path-to-wealth-freedom\.codex-install-evidence\anatomy\MODIFIED_FILE
+DIFF_FILE: D:\path-to-wealth-freedom\.codex-install-evidence\anatomy\DIFF_FILE
+VERIFICATION.txt: D:\path-to-wealth-freedom\.codex-install-evidence\anatomy\VERIFICATION.txt
+ROLLBACK.sh: D:\path-to-wealth-freedom\.codex-install-evidence\anatomy\ROLLBACK.sh
+
+BASELINE
+Command: $target='C:\Users\37453\.codex\skills\anatomy\SKILL.md'; $exists=Test-Path -LiteralPath $target; Write-Output "BASELINE installed=$exists"; if($exists){exit 1}else{exit 0}
+Input: target absent before install
+Literal output: BASELINE installed=False
+Exit status: 0
+
+INSTALL
+Command: py 'C:\Users\37453\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py' --repo wheresryan22/anatomy --path . --name anatomy --ref bc943e40c59998be5da61f9d39c6a983b1116099
+Literal output: Installed anatomy to C:\Users\37453/.codex\skills\anatomy
+Exit status: 0
+
+MODIFIED
+Command: $target='C:\Users\37453\.codex\skills\anatomy\SKILL.md'; $want='1993151CA39AFD7880A20D871AACC0DDD348090530D8135DC5EA51AF28F25305'; $got=(Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash; if($got -ne $want){Write-Output 'MODIFIED hash_match=False'; exit 1}; if(-not (Test-Path 'C:\Users\37453\.codex\skills\anatomy\kit\iso-kit.mjs')){Write-Output 'MODIFIED kit_present=False'; exit 1}; Write-Output 'MODIFIED installed=True hash_match=True kit_present=True'; exit 0
+Input: installed skill directory
+Literal output: MODIFIED installed=True hash_match=True kit_present=True
+Exit status: 0
+
+ROLLBACK
+Command: & 'C:\Program Files\Git\bin\bash.exe' 'D:\path-to-wealth-freedom\.codex-install-evidence\anatomy\ROLLBACK.sh' 'C:\Users\37453\AppData\Local\Temp\anatomy-rollback-d724b814'
+Input: separate copy of installed skill at C:\Users\37453\AppData\Local\Temp\anatomy-rollback-d724b814
+Literal output: ROLLBACK restored installed=False; saved copy=True
+Exit status: 0
+Restored behavior/status: trial path absent; trial saved as .rolled-back; actual installed skill remains present and hash-matched.
