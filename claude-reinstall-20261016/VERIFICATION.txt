@@ -1,0 +1,22 @@
+CHANGED BRANCH/FIELD: install_method=npm-global; cli_status=working; doctor_status=no installation issues found
+MODIFIED_FILE: D:\path-to-wealth-freedom\claude-reinstall-20261016\MODIFIED_FILE
+DIFF_FILE: D:\path-to-wealth-freedom\claude-reinstall-20261016\DIFF_FILE
+VERIFICATION.txt: D:\path-to-wealth-freedom\claude-reinstall-20261016\VERIFICATION.txt
+ROLLBACK.sh: D:\path-to-wealth-freedom\claude-reinstall-20261016\ROLLBACK.sh
+ORIGINAL SHA256 claude.ps1: B5F3D62824FFD02D9E9CA8786868F4D1233D78A68A199D8E91D3CD3A9A11B4F7
+BASELINE COMMAND: claude --version
+BASELINE INPUT: none
+BASELINE LITERAL OUTPUT: 2.1.289 (Claude Code)
+BASELINE EXIT: 0
+MODIFIED COMMAND: claude --version; claude doctor
+MODIFIED INPUT: none
+MODIFIED LITERAL OUTPUT: 2.1.289 (Claude Code); No installation issues found.
+MODIFIED EXIT: 0
+ROLLBACK COMMAND: bash ROLLBACK.sh --test-copy rollback-test-copy.txt
+ROLLBACK INPUT: copy of MODIFIED_FILE
+ROLLBACK LITERAL OUTPUT/RESULT: install_method=npm-global; version=2.1.289; launcher=claude.ps1; cli_status=working
+ROLLBACK EXIT: 0
+RESTORED BEHAVIOR/STATUS: test copy restored to npm-global 2.1.289 working state; live CLI remains reinstalled and working
+NATIVE INSTALL RESULT: failed, latest manifest request ECONNREFUSED 198.18.0.104:443
+NPM LATEST RESULT: failed, registry request ETIMEDOUT 198.18.0.114:443
+OFFLINE REINSTALL RESULT: succeeded from npm cache

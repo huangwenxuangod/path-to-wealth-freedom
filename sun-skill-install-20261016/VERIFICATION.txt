@@ -1,0 +1,21 @@
+CHANGED BRANCH/FIELD: skill installation: absent -> installed; name=justin-sun-perspective
+MODIFIED_FILE: D:\path-to-wealth-freedom\sun-skill-install-20261016\MODIFIED_FILE
+DIFF_FILE: D:\path-to-wealth-freedom\sun-skill-install-20261016\DIFF_FILE
+VERIFICATION.txt: D:\path-to-wealth-freedom\sun-skill-install-20261016\VERIFICATION.txt
+ROLLBACK.sh: D:\path-to-wealth-freedom\sun-skill-install-20261016\ROLLBACK.sh
+SOURCE COMMIT: f34609682095665e37d283bd6fdf6e0c2fceb492
+ORIGINAL HASH: absent (skill was not installed)
+INSTALLED SKILL.md SHA256: A80921F077F967B8EC3E582A3665635EB6AB766C3E7D4A71663A8D189170BA14
+BASELINE COMMAND: Test-Path C:\Users\37453\.codex\skills\sun-skill
+BASELINE INPUT: path
+BASELINE LITERAL OUTPUT: False
+BASELINE EXIT: 0
+MODIFIED COMMAND: skill installer --repo 0xquqi/sun-skill --path . --name sun-skill --method download; Get-FileHash SKILL.md
+MODIFIED INPUT: source commit f34609682095665e37d283bd6fdf6e0c2fceb492
+MODIFIED LITERAL OUTPUT: Installed sun-skill to C:\Users\37453/.codex\skills\sun-skill; SHA256 A80921F077F967B8EC3E582A3665635EB6AB766C3E7D4A71663A8D189170BA14; upstream match True
+MODIFIED EXIT: 0
+ROLLBACK COMMAND: bash ROLLBACK.sh --test-copy rollback-test-copy.md
+ROLLBACK INPUT: another copy of installed SKILL.md
+ROLLBACK LITERAL OUTPUT: copy restored to absent baseline
+ROLLBACK EXIT: 0
+RESTORED BEHAVIOR/STATUS: test copy absent as baseline; installed skill remains present

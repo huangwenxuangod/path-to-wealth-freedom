@@ -1,0 +1,6 @@
+install_method=npm-global
+version=2.1.289
+launcher=claude.ps1
+cli_status=working
+doctor_status=no installation issues found
+native_install_status=download failed: ECONNREFUSED

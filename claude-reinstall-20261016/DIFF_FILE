@@ -1,0 +1,10 @@
+--- baseline
++++ modified
+@@ install state @@
+-install_method=npm-global (original)
++install_method=npm-global (reinstalled from offline npm cache)
+-cli_status=working (before uninstall)
++cli_status=working (after reinstall)
+-doctor_status=not tested
++doctor_status=no installation issues found
++native_install_status=download failed: ECONNREFUSED
