@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b1430;
+  overflow: hidden;
+}
+
+#stage {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+#scene {
+  display: block;
+  width: 1920px;
+  height: 1080px;
+}
+
+#vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 95% at 50% 45%,
+    rgba(0, 0, 0, 0) 52%,
+    rgba(8, 12, 24, 0.28) 82%,
+    rgba(6, 9, 18, 0.5) 100%
+  );
+  mix-blend-mode: multiply;
+}
