@@ -1,0 +1,95 @@
+copying bundled library -> C:\Users\37453\lemo-opuscar
+
+added 2 packages in 10s
+Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243)[2m from https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip[22m
+|                                                                                |   0% of 114.6 MiB
+|■■■■■■■■                                                                        |  10% of 114.6 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 114.6 MiB
+Error: Request to https://storage.googleapis.com/chrome-for-testing-public/153.0.8010.12/win64/chrome-headless-shell-win64.zip timed out after 30000ms
+    at ClientRequest.<anonymous> (C:\Users\37453\lemo-opuscar\node_modules\playwright-core\lib\coreBundle.js:8793:15)
+    at Object.onceWrapper (node:events:622:28)
+    at ClientRequest.emit (node:events:508:28)
+    at TLSSocket.emitRequestTimeout (node:_http_client:927:9)
+    at Object.onceWrapper (node:events:622:28)
+    at TLSSocket.emit (node:events:520:35)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243)[2m from https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip[22m
+|                                                                                |   0% of 114.6 MiB
+Error: Download failed: server closed connection. URL: https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip
+    at IncomingMessage.<anonymous> (C:\Users\37453\lemo-opuscar\node_modules\playwright-core\lib\coreBundle.js:32579:24)
+    at IncomingMessage.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243)[2m from https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip[22m
+Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (node:_tls_wrap:1702:19)
+    at TLSSocket.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ECONNRESET',
+  path: undefined,
+  host: undefined,
+  port: undefined,
+  localAddress: undefined
+}
+Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243)[2m from https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip[22m
+Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (node:_tls_wrap:1702:19)
+    at TLSSocket.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ECONNRESET',
+  path: undefined,
+  host: undefined,
+  port: undefined,
+  localAddress: undefined
+}
+Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243)[2m from https://cdn.playwright.dev/builds/cft/153.0.8010.12/win64/chrome-headless-shell-win64.zip[22m
+Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (node:_tls_wrap:1702:19)
+    at TLSSocket.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'ECONNRESET',
+  path: undefined,
+  host: undefined,
+  port: undefined,
+  localAddress: undefined
+}
+Failed to install browsers
+Error: Failed to download Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243), caused by
+Error: Download failure, code=1
+    at ChildProcess.<anonymous> (C:\Users\37453\lemo-opuscar\node_modules\playwright-core\lib\coreBundle.js:32428:32)
+    at ChildProcess.emit (node:events:508:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12)
+Using CPython 3.12.13
+Creating virtual environment at: .venv
+Activate with: .venv\Scripts\activate
+WARN Retry attempt #0. Sleeping 1.4032267s before the next attempt
+WARN Retry attempt #0. Sleeping 1.5687588s before the next attempt
+WARN Retry attempt #0. Sleeping 1.2772824s before the next attempt
+WARN Retry attempt #0. Sleeping 1.5391977s before the next attempt
+WARN Retry attempt #0. Sleeping 1.4790367s before the next attempt
+WARN Retry attempt #1. Sleeping 1.2967802s before the next attempt
+WARN Retry attempt #1. Sleeping 1.5840557s before the next attempt
+WARN Retry attempt #1. Sleeping 3.3517636s before the next attempt
+WARN Retry attempt #1. Sleeping 1.3363008s before the next attempt
+WARN Retry attempt #1. Sleeping 1.4278392s before the next attempt
+WARN Retry attempt #2. Sleeping 2.5883577s before the next attempt
+WARN Retry attempt #2. Sleeping 6.5211884s before the next attempt
+WARN Retry attempt #2. Sleeping 7.3354203s before the next attempt
+WARN Retry attempt #2. Sleeping 2.9735722s before the next attempt
+WARN Retry attempt #2. Sleeping 7.5254096s before the next attempt
+error: Request failed after 3 retries in 16.3s
+  cause: Failed to fetch: `https://pypi.org/simple/numpy/`
+  cause: error sending request for url (https://pypi.org/simple/numpy/)
+  cause: client error (Connect)
+  cause: tunnel error: failed to create underlying connection
+  cause: tcp connect error
+  cause: No connection could be made because the target machine actively refused it. (os error 10061)
+LIB=C:\Users\37453\lemo-opuscar
+set: $env:LEMO_OPUSCAR_HOME = "C:\Users\37453\lemo-opuscar"
+render still: cd 'C:\Users\37453\lemo-opuscar'; node core/render/still.mjs <project> 1.5 3

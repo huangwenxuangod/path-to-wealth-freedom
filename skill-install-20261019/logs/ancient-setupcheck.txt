@@ -1,0 +1,9 @@
+python 3.14.3 -> C:\Users\37453\AppData\Local\Programs\Python\Python314\python.exe
+ffmpeg OK
+  ! missing: soundfile demucs faster-whisper pypinyin
+    install: C:\Users\37453\AppData\Local\Programs\Python\Python314\python.exe -m pip install soundfile demucs faster-whisper pypinyin   (about 1-2 GB with PyTorch)
+  optional (lipcheck.py only): mediapipe opencv-python
+
+NOT READY - fix the lines marked !
+Also needed: a Suno account, a Midjourney account, and a Jimeng (即梦) membership for Seedance 2.5.
+Optional H3 path: a MiniMax API key in the env var MINIMAX_API_KEY.

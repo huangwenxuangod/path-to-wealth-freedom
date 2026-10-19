@@ -1,0 +1,12 @@
+Cloning into 'D:\path-to-wealth-freedom\skill-install-20261019\tmp\mg'...
+Updating files:  10% (1/10)
+Updating files:  20% (2/10)
+Updating files:  30% (3/10)
+Updating files:  40% (4/10)
+Updating files:  50% (5/10)
+Updating files:  60% (6/10)
+Updating files:  70% (7/10)
+Updating files:  80% (8/10)
+Updating files:  90% (9/10)
+Updating files: 100% (10/10)
+Updating files: 100% (10/10), done.

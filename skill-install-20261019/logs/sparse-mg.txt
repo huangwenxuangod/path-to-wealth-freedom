@@ -1,0 +1,1 @@
+fatal: 'package.json' is not a directory; to treat it as a directory anyway, rerun with --skip-checks

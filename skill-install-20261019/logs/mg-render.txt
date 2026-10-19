@@ -1,0 +1,14 @@
+render demos\09-bauhaus: 1920x1080 @30fps frames 0-300 mb=8 shutter=0.5 workers=1
+(node:3596) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 101 error listeners added to [Socket]. MaxListeners is 100. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+  30/300 frames  59.7s  (1.99s/frame)
+  60/300 frames  118.3s  (1.97s/frame)
+  90/300 frames  173.5s  (1.93s/frame)
+  120/300 frames  225.9s  (1.88s/frame)
+  150/300 frames  283.6s  (1.89s/frame)
+  180/300 frames  335.1s  (1.86s/frame)
+  210/300 frames  453.2s  (2.16s/frame)
+  240/300 frames  558.0s  (2.32s/frame)
+  270/300 frames  615.1s  (2.28s/frame)
+  300/300 frames  669.7s  (2.23s/frame)
+done → D:\path-to-wealth-freedom\skill-install-20261019\tmp\mg-smoke\demos\09-bauhaus\out\video.mp4  (690.0s, no audio)

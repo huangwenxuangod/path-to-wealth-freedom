@@ -1,0 +1,4 @@
+copying bundled library -> D:\path-to-wealth-freedom\skill-install-20261019\tmp\lemo-home
+LIB=D:\path-to-wealth-freedom\skill-install-20261019\tmp\lemo-home
+set: $env:LEMO_OPUSCAR_HOME = "D:\path-to-wealth-freedom\skill-install-20261019\tmp\lemo-home"
+render still: cd 'D:\path-to-wealth-freedom\skill-install-20261019\tmp\lemo-home'; node core/render/still.mjs <project> 1.5 3

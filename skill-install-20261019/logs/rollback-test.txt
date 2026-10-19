@@ -1,0 +1,8 @@
+removed /d/path-to-wealth-freedom/skill-install-20261019/tmp/rollback-test/skills/mg-motion-design
+removed /d/path-to-wealth-freedom/skill-install-20261019/tmp/rollback-test/skills/weilanx-video-studio
+removed /d/path-to-wealth-freedom/skill-install-20261019/tmp/rollback-test/skills/video-production-playbook
+removed /d/path-to-wealth-freedom/skill-install-20261019/tmp/rollback-test/skills/lemo-opuscar
+removed /d/path-to-wealth-freedom/skill-install-20261019/tmp/rollback-test/skills/ancient-rap-battle
+restored registry: D:\path-to-wealth-freedom\skill-install-20261019\tmp\rollback-test\skills-registry.json
+baseline sha256: 77da69a8add91f6c7e72866a131da9cacf08f3792bfe01ed6f7d9c70f4ca9752
+target   sha256: \77da69a8add91f6c7e72866a131da9cacf08f3792bfe01ed6f7d9c70f4ca9752

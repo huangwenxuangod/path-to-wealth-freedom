@@ -1,0 +1,45 @@
+SKILL INSTALL VERIFICATION
+date: 2026-10-19T16:16:09.3096190+08:00
+skills_root: C:\Users\37453\.codex\skills
+
+== mg-motion-design ==
+path: C:\Users\37453\.codex\skills\mg-motion-design
+files: 186
+bytes: 70464344
+SKILL.md sha256: 588657AFD7EB74F561ACD63E8AA529C581EBDAC1BB3135B0881159802E585C1D
+
+== weilanx-video-studio ==
+path: C:\Users\37453\.codex\skills\weilanx-video-studio
+files: 779
+bytes: 16183027
+SKILL.md sha256: 2AD996A2D5B0B30BFB226D7FB9878CA1B3D5BDAA84BB0A106155C4B3AE4571C4
+
+== video-production-playbook ==
+path: C:\Users\37453\.codex\skills\video-production-playbook
+files: 98
+bytes: 3563842
+SKILL.md sha256: DD00F9127E9AD4D0FCEE3844B2959AF771BDD32ADA414E4174529880CC900DB9
+
+== lemo-opuscar ==
+path: C:\Users\37453\.codex\skills\lemo-opuscar
+files: 296
+bytes: 15359255
+SKILL.md sha256: E4B1668DFC2588442CCAA3017B3F33CA010D5E489D3E02844DBB90555895A555
+
+== ancient-rap-battle ==
+path: C:\Users\37453\.codex\skills\ancient-rap-battle
+files: 27
+bytes: 176899
+SKILL.md sha256: F47ED623D354E84513C52E9B5B31E314EC8AA7AFB583EAAA13166748E39835E6
+
+== checks ==
+frontmatter/required files: PASS (scripts/validate-skills.ps1, exit 0)
+weilanx vitest: 62 files / 316 tests passed (exit 0)
+weilanx tsc --noUnusedLocals: exit 0
+mg bauhaus stills: 4 png (exit 0)
+mg bauhaus render: 300 frames, 960x540 @30fps, 10.000s (exit 0)
+mg bauhaus audio: 10.000s, -14.33 LUFS, TP -1.98 dBTP (exit 0)
+mg mux: h264+aac 48k stereo 10.000s (exit 0)
+lemo setup.ps1 -SkipDeps: copied library, 52 STYLE.md (exit 0)
+ancient setup_check.py: exit 0, NOT READY (missing soundfile demucs faster-whisper pypinyin)
+rollback test: 5 dirs removed, registry restored to baseline sha (exit 0)

@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "generated_at": "2026-10-19T16:14:22.6733540+08:00",
+  "skills_root": "C:\\Users\\37453\\.codex\\skills",
+  "skills": [
+    {
+      "name": "mg-motion-design",
+      "status": "absent",
+      "path": "C:\\Users\\37453\\.codex\\skills\\mg-motion-design",
+      "files": 0,
+      "bytes": 0,
+      "skill_md_sha256": null
+    },
+    {
+      "name": "weilanx-video-studio",
+      "status": "absent",
+      "path": "C:\\Users\\37453\\.codex\\skills\\weilanx-video-studio",
+      "files": 0,
+      "bytes": 0,
+      "skill_md_sha256": null
+    },
+    {
+      "name": "video-production-playbook",
+      "status": "absent",
+      "path": "C:\\Users\\37453\\.codex\\skills\\video-production-playbook",
+      "files": 0,
+      "bytes": 0,
+      "skill_md_sha256": null
+    },
+    {
+      "name": "lemo-opuscar",
+      "status": "absent",
+      "path": "C:\\Users\\37453\\.codex\\skills\\lemo-opuscar",
+      "files": 0,
+      "bytes": 0,
+      "skill_md_sha256": null
+    },
+    {
+      "name": "ancient-rap-battle",
+      "status": "absent",
+      "path": "C:\\Users\\37453\\.codex\\skills\\ancient-rap-battle",
+      "files": 0,
+      "bytes": 0,
+      "skill_md_sha256": null
+    }
+  ]
+}

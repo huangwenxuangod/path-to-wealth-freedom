@@ -1,0 +1,17 @@
+Cloning into 'D:\path-to-wealth-freedom\skill-install-20261019\tmp\lemo'...
+Updating files:   6% (1/15)
+Updating files:  13% (2/15)
+Updating files:  20% (3/15)
+Updating files:  26% (4/15)
+Updating files:  33% (5/15)
+Updating files:  40% (6/15)
+Updating files:  46% (7/15)
+Updating files:  53% (8/15)
+Updating files:  60% (9/15)
+Updating files:  66% (10/15)
+Updating files:  73% (11/15)
+Updating files:  80% (12/15)
+Updating files:  86% (13/15)
+Updating files:  93% (14/15)
+Updating files: 100% (15/15)
+Updating files: 100% (15/15), done.

@@ -1,0 +1,21 @@
+node_modules
+out/
+.DS_Store
+
+# Generated or private media — never committed
+public/audio/
+public/footage/
+public/images/
+materials/
+*.mp4
+*.m4a
+*.wav
+*.mp3
+
+# 参考视频和拆解笔记（别人的作品，不进 git）
+template/
+__pycache__/
+*.pyc
+
+# 本机配置
+.claude/settings.local.json

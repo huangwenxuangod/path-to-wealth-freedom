@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "generated_at": "2026-10-19T16:14:22.6498201+08:00",
+  "skills_root": "C:\\Users\\37453\\.codex\\skills",
+  "skills": [
+    {
+      "name": "mg-motion-design",
+      "status": "installed",
+      "path": "C:\\Users\\37453\\.codex\\skills\\mg-motion-design",
+      "files": 186,
+      "bytes": 70464344.0,
+      "skill_md_sha256": "588657AFD7EB74F561ACD63E8AA529C581EBDAC1BB3135B0881159802E585C1D"
+    },
+    {
+      "name": "weilanx-video-studio",
+      "status": "installed",
+      "path": "C:\\Users\\37453\\.codex\\skills\\weilanx-video-studio",
+      "files": 779,
+      "bytes": 16183027.0,
+      "skill_md_sha256": "2AD996A2D5B0B30BFB226D7FB9878CA1B3D5BDAA84BB0A106155C4B3AE4571C4"
+    },
+    {
+      "name": "video-production-playbook",
+      "status": "installed",
+      "path": "C:\\Users\\37453\\.codex\\skills\\video-production-playbook",
+      "files": 98,
+      "bytes": 3563842.0,
+      "skill_md_sha256": "DD00F9127E9AD4D0FCEE3844B2959AF771BDD32ADA414E4174529880CC900DB9"
+    },
+    {
+      "name": "lemo-opuscar",
+      "status": "installed",
+      "path": "C:\\Users\\37453\\.codex\\skills\\lemo-opuscar",
+      "files": 296,
+      "bytes": 15359255.0,
+      "skill_md_sha256": "E4B1668DFC2588442CCAA3017B3F33CA010D5E489D3E02844DBB90555895A555"
+    },
+    {
+      "name": "ancient-rap-battle",
+      "status": "installed",
+      "path": "C:\\Users\\37453\\.codex\\skills\\ancient-rap-battle",
+      "files": 27,
+      "bytes": 176899.0,
+      "skill_md_sha256": "F47ED623D354E84513C52E9B5B31E314EC8AA7AFB583EAAA13166748E39835E6"
+    }
+  ]
+}

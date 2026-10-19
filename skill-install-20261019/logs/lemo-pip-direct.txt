@@ -1,0 +1,12 @@
+Using Python 3.12.13 environment at: C:\Users\37453\lemo-opuscar\.venv
+Resolved 8 packages in 4.07s
+Prepared 1 package in 1.60s
+Installed 8 packages in 1.93s
+ + cffi==2.1.1
+ + numpy==2.5.4
+ + pillow==13.0.0
+ + pycparser==3.11
+ + scipy==1.18.1
+ + soundfile==0.14.0
+ + soxr==1.1.0
+ + typing-extensions==4.16.0

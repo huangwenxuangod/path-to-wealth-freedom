@@ -1,0 +1,6 @@
+
+added 68 packages in 1m
+workspace: D:\path-to-wealth-freedom\skill-install-20261019\tmp\mg-smoke
+set before rendering: $env:MG_CHROME = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+render: node harness/render.mjs demos/09-bauhaus --stills 0.5,3,6,9
+audio:  uv run --python 3.12 --with numpy --with scipy --with soundfile --with numba --with pedalboard --with pyloudnorm python demos/09-bauhaus/audio.py

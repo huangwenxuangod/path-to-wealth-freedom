@@ -1,0 +1,26 @@
+{
+  "name": "weilanx-claude-videos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "NODE_OPTIONS=--max-old-space-size=4096 remotion studio src/index.ts",
+    "audio": "NODE_OPTIONS=--max-old-space-size=4096 node audio/synth.mjs && for f in audio/episodes/*.mjs; do node \"$f\"; done",
+    "cues": "NODE_OPTIONS=--max-old-space-size=4096 node scripts/srt2json.mjs",
+    "export": "NODE_OPTIONS=--max-old-space-size=4096 bash scripts/export.sh",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc -p . --noUnusedLocals",
+    "test": "NODE_OPTIONS=--max-old-space-size=4096 vitest run"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.529",
+    "@remotion/google-fonts": "^4.0.529",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.529"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}

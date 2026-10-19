@@ -1,0 +1,44 @@
+
+skill                     check detail                                                                   
+-----                     ----- ------                                                                   
+mg-motion-design          PASS  frontmatter name matches                                                 
+mg-motion-design          PASS  description 202 chars                                                    
+mg-motion-design          PASS  present: references\prompts\09-bauhaus.md                                
+mg-motion-design          PASS  present: references\rubric.md                                            
+mg-motion-design          PASS  present: references\template.md                                          
+mg-motion-design          PASS  present: assets\harness\render.mjs                                       
+mg-motion-design          PASS  present: assets\lib\audio\mgaudio\__init__.py                            
+mg-motion-design          PASS  present: assets\package.json                                             
+mg-motion-design          PASS  present: examples\09-bauhaus\film.js                                     
+mg-motion-design          PASS  present: scripts\setup-project.ps1                                       
+mg-motion-design          PASS  prompt files = 15                                                        
+weilanx-video-studio      PASS  frontmatter name matches                                                 
+weilanx-video-studio      PASS  description 193 chars                                                    
+weilanx-video-studio      PASS  present: assets\project\package.json                                     
+weilanx-video-studio      PASS  present: assets\project\AGENTS.md                                        
+weilanx-video-studio      PASS  present: assets\project\src\Root.tsx                                     
+weilanx-video-studio      PASS  present: assets\project\.claude\skills\weilanx-creator-vox-video\SKILL.md
+video-production-playbook PASS  frontmatter name matches                                                 
+video-production-playbook PASS  description 163 chars                                                    
+video-production-playbook PASS  present: references\docs\prompt-playbook.zh-CN.md                        
+video-production-playbook PASS  present: references\docs\production-brief.zh-CN.md                       
+video-production-playbook PASS  present: data\collection-index.csv                                       
+video-production-playbook PASS  present: data\collection-summary.json                                    
+lemo-opuscar              PASS  frontmatter name matches                                                 
+lemo-opuscar              PASS  description 167 chars                                                    
+lemo-opuscar              PASS  present: assets\library\AGENTS.md                                        
+lemo-opuscar              PASS  present: assets\library\DIRECTOR.md                                      
+lemo-opuscar              PASS  present: assets\library\TECHNIQUE.md                                     
+lemo-opuscar              PASS  present: assets\library\core\render\video.mjs                            
+lemo-opuscar              PASS  present: assets\library\styles\README.md                                 
+lemo-opuscar              PASS  present: scripts\setup.ps1                                               
+ancient-rap-battle        PASS  frontmatter name matches                                                 
+ancient-rap-battle        PASS  description 202 chars                                                    
+ancient-rap-battle        PASS  present: scripts\analyze_song.py                                         
+ancient-rap-battle        PASS  present: scripts\seedance_packs.py                                       
+ancient-rap-battle        PASS  present: scripts\package.py                                              
+ancient-rap-battle        PASS  present: references\lyrics-guide.md                                      
+ancient-rap-battle        PASS  present: examples\zhugeliang-vs-simayi\episode.json                      
+
+
+RESULT: PASS

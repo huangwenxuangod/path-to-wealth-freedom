@@ -1,0 +1,32 @@
+[
+  {
+    "skill": "mg-motion-design",
+    "files": 186,
+    "MB": 67.2,
+    "skill_md_sha256": "588657AFD7EB74F5"
+  },
+  {
+    "skill": "weilanx-video-studio",
+    "files": 779,
+    "MB": 15.43,
+    "skill_md_sha256": "2AD996A2D5B0B30B"
+  },
+  {
+    "skill": "video-production-playbook",
+    "files": 98,
+    "MB": 3.4,
+    "skill_md_sha256": "DD00F9127E9AD4D0"
+  },
+  {
+    "skill": "lemo-opuscar",
+    "files": 296,
+    "MB": 14.65,
+    "skill_md_sha256": "E4B1668DFC258844"
+  },
+  {
+    "skill": "ancient-rap-battle",
+    "files": 27,
+    "MB": 0.17,
+    "skill_md_sha256": "F47ED623D354E845"
+  }
+]

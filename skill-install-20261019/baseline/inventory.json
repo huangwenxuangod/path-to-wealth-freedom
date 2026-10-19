@@ -1,0 +1,233 @@
+{
+  "captured_at": "2026-10-19T15:19:13.3673463+08:00",
+  "skills_root": "C:\\Users\\37453\\.codex\\skills",
+  "existing": [
+    {
+      "name": ".system",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "anatomy",
+      "skill_md": true,
+      "sha256": "1993151CA39AFD7880A20D871AACC0DDD348090530D8135DC5EA51AF28F25305"
+    },
+    {
+      "name": "codex-primary-runtime",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "commit-context",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "commit-history",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "core-only",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "create-design-system",
+      "skill_md": true,
+      "sha256": "2A3507878FD2B78CE713C7BFDAE6F275253BD6CFFB5FF021EE36C16F4B4B0B7A"
+    },
+    {
+      "name": "find-skills",
+      "skill_md": true,
+      "sha256": "E2F2F737E3795BE94573711242341315CD82735B088248AB880FDAFBB2010B9A"
+    },
+    {
+      "name": "forget",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "frontend-design",
+      "skill_md": true,
+      "sha256": "74E15D6E8F37D617CBE72D63AF87D4657F47D79A47F28DA05EABFD575FFCEECA"
+    },
+    {
+      "name": "getagent",
+      "skill_md": true,
+      "sha256": "D07A130F9448F1D676B8F1B742F1E7CE2C78B969C1E0FE18ACD9FDF730B1E95A"
+    },
+    {
+      "name": "guizang-ppt-skill",
+      "skill_md": true,
+      "sha256": "46E9A2A0CC6C623AE59B21E7F6E8B3043B54D7447A530E4DC183EB029F13A462"
+    },
+    {
+      "name": "guizang-social-card-skill",
+      "skill_md": true,
+      "sha256": "111462AB555DB821B37F6121C2ACED8B4253B2148D9EA4B0B07123AC781883CA"
+    },
+    {
+      "name": "handoff",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "handoff-to-claude-code",
+      "skill_md": true,
+      "sha256": "A91550132C0B7B3439A244AB9BD45C72BF8B2753D6EB1D89AD4271B88467D3CF"
+    },
+    {
+      "name": "hyperframes",
+      "skill_md": true,
+      "sha256": "A6E5A1F0C8F65F54864530DD2C8FB7AE828BF55069188C2FA386DA6696BC8D1E"
+    },
+    {
+      "name": "hyperframes-animation",
+      "skill_md": true,
+      "sha256": "69A9903796E65C66EDBE9EC9621ECA8953C7CC2A93A718687306891DAF0463D4"
+    },
+    {
+      "name": "hyperframes-audio",
+      "skill_md": true,
+      "sha256": "B87290893ABDAFC28F26C18E362C069501FFBFFD5027E793D4BD9731F68465F3"
+    },
+    {
+      "name": "hyperframes-cli",
+      "skill_md": true,
+      "sha256": "1EA0EE445A628D1F7E8308B9B44FFDF9CD6B012D352476443AFDBF26F02DB093"
+    },
+    {
+      "name": "hyperframes-core",
+      "skill_md": true,
+      "sha256": "4DDA519B1ED10CCBEFFFD001BEF6E72C091CCDCF57FF68AAF4563100130CF002"
+    },
+    {
+      "name": "hyperframes-creative",
+      "skill_md": true,
+      "sha256": "488782FC741A43E002B5C6AC0DA69CC2B12ABAA42B6C0056DF2AA53BEA553C16"
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "skill_md": true,
+      "sha256": "924D038DC7EB20D16E05FA0E9837FA50BDCAC0CE131AEE80EBD8188CB67110D1"
+    },
+    {
+      "name": "hyperframes-registry",
+      "skill_md": true,
+      "sha256": "9BB3D0F74B47BF7FE93208228D4BD4431538BFF9440D074271A4B413A9F6CC3D"
+    },
+    {
+      "name": "interactive-prototype",
+      "skill_md": true,
+      "sha256": "CEA6EA4CE5689C9038083EA8F21A8A6C07886DDEFF68D8F7AAE19C30179B54FB"
+    },
+    {
+      "name": "make-a-deck",
+      "skill_md": true,
+      "sha256": "D52636E0C98FEE6DF86F26B348F2AC37701D1004698E457CB2782A0A868B3D6E"
+    },
+    {
+      "name": "make-tweakable",
+      "skill_md": true,
+      "sha256": "B8DCED07B7D52A694259B20379D027572062CA3139066643011C38EA471C1686"
+    },
+    {
+      "name": "media-use",
+      "skill_md": true,
+      "sha256": "1301EA7CB53A0A44F5C7D62C34CBA7E00B9E69B31BED57DC8D645417CEA0DA7C"
+    },
+    {
+      "name": "opendesign",
+      "skill_md": true,
+      "sha256": "0A23BB5DF5247AE55DDCD08AD6EE5A16D8B458C03F5CF6CB9AAD58358AD2AC4F"
+    },
+    {
+      "name": "pdf",
+      "skill_md": true,
+      "sha256": "724B72C932053FD87133144405B00FBEEC30285EE770168328C8F591EC89C134"
+    },
+    {
+      "name": "playwright",
+      "skill_md": true,
+      "sha256": "C52CC95125B720CDC3C9829B0294C2752D4AE9B85A5282AA153DA8BBA929AF87"
+    },
+    {
+      "name": "recall",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "recap",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "remember",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "research-clarity",
+      "skill_md": true,
+      "sha256": "4B0F30FD29A34AF74B5C6777EA89DDE698CD52177247404640785DD8D31D395C"
+    },
+    {
+      "name": "run-opendesign",
+      "skill_md": true,
+      "sha256": "FBB0300C2819AC0A69ABFB70A8C36FB7F876A8F54AE283B15009BB3278920B60"
+    },
+    {
+      "name": "session-history",
+      "skill_md": false,
+      "sha256": null
+    },
+    {
+      "name": "setup-opendesign",
+      "skill_md": true,
+      "sha256": "4D9AD88ED32D27C01B599A854C8927E7E99D5A368EFB3FF312BBE166E510923D"
+    },
+    {
+      "name": "sun-skill",
+      "skill_md": true,
+      "sha256": "A80921F077F967B8EC3E582A3665635EB6AB766C3E7D4A71663A8D189170BA14"
+    },
+    {
+      "name": "wenxuan-video",
+      "skill_md": true,
+      "sha256": "483980EB20C0B1A3B99745622EB3B0CC579A068B934FE228BE4106539BE7C549"
+    },
+    {
+      "name": "wireframe",
+      "skill_md": true,
+      "sha256": "C162169CEC63310426E95AB2DB202A89FD145CDD3AB4970E42E08FF85E87F5F0"
+    },
+    {
+      "name": "zero-lost",
+      "skill_md": false,
+      "sha256": null
+    }
+  ],
+  "targets": [
+    {
+      "name": "mg-motion-design",
+      "exists": false
+    },
+    {
+      "name": "weilanx-video-studio",
+      "exists": false
+    },
+    {
+      "name": "video-production-playbook",
+      "exists": false
+    },
+    {
+      "name": "lemo-opuscar",
+      "exists": false
+    },
+    {
+      "name": "ancient-rap-battle",
+      "exists": false
+    }
+  ]
+}
